@@ -1,64 +1,42 @@
 <!DOCTYPE html>
-
-<html lang='en'>
-
+<html lang="en">
 <head>
-
-    <meta charset='utf-8'>
-    <title> Portfolio </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='css/template.css' type='text/css'>
-    <link rel='stylesheet' href='css/about.css' type='text/css'>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Roboto'>
-    <script src="https://cdn.jsdelivr.net/npm/vivus@0.4.5/dist/vivus.min.js"
-        integrity="sha256-EQbVGDv8AeB/IA3V0dU2OSI1PDKb8wEG3sRDAdkgoGc=" crossorigin="anonymous">
-        </script>
-    <script src="./js/scripts.js">
-    </script>
-
+  <meta charset="utf-8">
+  <title> Portfolio </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/template.css" type="text/css">
+  <link rel="stylesheet" href="css/about.css" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
+  <script src="https://cdn.jsdelivr.net/npm/vivus@0.4.5/dist/vivus.min.js" integrity="sha256-EQbVGDv8AeB/IA3V0dU2OSI1PDKb8wEG3sRDAdkgoGc=" crossorigin="anonymous"></script>
+  <script src="./js/scripts.js"></script>
 </head>
-
 <body onload="check();" onscroll="sani();">
-
-    <div class='outer'>
-
-        <header>
-
-            <span role="img" aria-label="logo"></span>
-
-            <span role="img" aria-label="logotext"></span>
-
-            <button id="click2" onclick='tog("2");'> </button>
-
-            <nav id='menu2' class='disp'>
-
-                <ul id='men2'>
-                    <li> <a href='https://portfolio.sunnytemp.live/skills'> SKILLS </a> </li>
-                    <li>
-                        <h1>
-                            <a href='https://portfolio.sunnytemp.live/about'>
-                                ABOUT
-                            </a>
-                        </h1>
-                    </li>
-                    <li> <a href='https://portfolio.sunnytemp.live/contact'> CONTACT </a> </li>
-                    <li class='lihome'>
-                        <a href='https://portfolio.sunnytemp.live'> HOME </a>
-                    </li>
-                </ul>
-
-            </nav>
-
-        </header>
-
-
-        <div class='main'>
-
-            <section class='main-logo'>
-
-                <svg role="img" aria-label="globe" id='my-svg' height='90px' viewBox="0 0 480.1 480.1"
-                xmlns='http://www.w3.org/2000/svg' style="overflow: visible">
-                    <path fill='none' stroke='#FFF' stroke-width='7.5' d="M240.135,0.05C144.085,0.036,57.277,57.289,19.472,145.586l-2.992,0.992l1.16,3.48
+  <div class="outer">
+    <header>
+      <span role="img" aria-label="logo"></span>
+      <span role="img" aria-label="logotext"></span>
+      <button id="click2" onclick="tog('2');"> </button>
+      <nav id="menu2" class="disp">
+        <ul id="men2">
+          <li> <a href="https://portfolio.sunnytemp.live/skills"> SKILLS </a> </li>
+          <li>
+            <h1>
+              <a href="https://portfolio.sunnytemp.live/about">
+                ABOUT
+              </a>
+            </h1>
+          </li>
+          <li> <a href="https://portfolio.sunnytemp.live/contact"> CONTACT </a> </li>
+          <li class="lihome">
+            <a href="https://portfolio.sunnytemp.live"> HOME </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="main">
+      <section class="main-logo">
+        <svg role="img" aria-label="globe" id="my-svg" height="90px" viewBox="0 0 480.1 480.1" xmlns="http://www.w3.org/2000/svg" style="overflow: visible">
+          <path fill="none" stroke="#FFF" stroke-width="7.5" d="M240.135,0.05C144.085,0.036,57.277,57.289,19.472,145.586l-2.992,0.992l1.16,3.48
                     c-49.776,122.766,9.393,262.639,132.159,312.415c28.673,11.626,59.324,17.594,90.265,17.577
                     c132.548,0.02,240.016-107.416,240.036-239.964S372.684,0.069,240.135,0.05z M428.388,361.054l-12.324-12.316V320.05
                     c0.014-1.238-0.26-2.462-0.8-3.576l-31.2-62.312V224.05c0-2.674-1.335-5.172-3.56-6.656l-24-16
@@ -89,133 +67,109 @@
                     c-2.122,0-4.156,0.844-5.656,2.344l-24,24c-1.782,1.781-2.621,4.298-2.264,6.792l8,56c0.403,2.769,2.223,5.126,4.8,6.216l56,24
                     c1.604,0.695,3.394,0.838,5.088,0.408l28.568-7.144l17.464,11.664v27.72c-0.014,1.238,0.26,2.462,0.8,3.576l31.2,62.312v30.112
                     c0,2.122,0.844,4.156,2.344,5.656l16.736,16.744C344.921,473.383,204.549,493.415,105.616,419.191z" />
-                </svg>
-
-                <h2>portfolio ABOUT</h2>
-
-                <span role="img" aria-label="divider" class='main-logo-span'></span>
-
-                <br class='clearfloat' />
-            </section>
-
-            <section class='template'>
-
-                <h3>About</h3>
-
-                <div class='template-img-cont'>
-
-                    <div role="img" aria-label="about 1" class='template-img'></div>
-
-                </div>
-
-                <div class='template-p-cont'>
-
-                    <span class='template-p-img'></span>
-
-                    <p class='template-p'>
-                        Sports
-                        <br>
-                        &#x263C;
-                        <br>
-                        <br>
-                        &bull; Sailing Windsurfing Swimming Motorsport
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        Passtimes
-                        <br>
-                        &#x2941;
-                        <br>
-                        <br>
-                        &bull; Fitness Socializing Study
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        Hobbies
-                        <br>
-                        &#x2685;
-                        <br>
-                        <br>
-                        &bull; Music Reading Games Pets
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        Certifications
-                        <br>
-                        &#x272A;
-                        <br>
-                        <br>
-                        &bull; Certificate
-                        <br>
-                        Technical University of Munich
-                        <br>
-                        Make Your Own App 2020
-                        <br>
-                        <br>
-                        &bull; Currently enrolled at Tafe in
-                        <br>
-                        Certificate 4 Web Based Technologies
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        Experience
-                        <br>
-                        &#x2616;
-                        <br>
-                        <br>
-                        &bull; Eight years in an
-                        <br>
-                        Iron Ore Technician and
-                        <br>
-                        Storage role. Performing
-                        <br>
-                        sample prep, driving
-                        <br>
-                        forklift's and C class
-                        <br>
-                        vehicles and managing stores.
-                        <br>
-                        <br>
-                    </p>
-
-                </div>
-
-                <br class='clearfloat' />
-            </section>
-
-            <div role="img" aria-label="divider" class='template-div'></div>
-
-            <div role="img" aria-label="about 2" class='template-img-0'></div>
-
-            <br class='clearfloat' />
+        </svg>
+        <h2>portfolio ABOUT</h2>
+        <span role="img" aria-label="divider" class="main-logo-span"></span>
+        <br class="clearfloat" />
+      </section>
+      <section class="template">
+        <h3>About</h3>
+        <div class="template-img-cont">
+          <div role="img" aria-label="about 1" class="template-img"></div>
         </div>
-
-        <footer>
-
-            <span role="img" aria-label="web logo"></span>
-
-            <ul>
-                <li class='sm'>
-                    <h2>Site Map:</h2>
-                </li>
-                <li> <a href='https://portfolio.sunnytemp.live/skills'> SKILLS </a> </li>
-                <li> <a href='https://portfolio.sunnytemp.live/about'> ABOUT </a> </li>
-                <li> <a href='https://portfolio.sunnytemp.live/contact'> CONTACT </a> </li>
-                <li class='lihome'> <a href='https://portfolio.sunnytemp.live/'> HOME </a> </li>
-            </ul>
-
-        </footer>
-
+        <div class="template-p-cont">
+          <span class="template-p-img"></span>
+          <p class="template-p">
+            Sports
+            <br>
+            &#x263C;
+            <br>
+            <br>
+            &bull; Sailing Windsurfing Swimming Motorsport
+            <br>
+            <br>
+            <br>
+            <br>
+            Passtimes
+            <br>
+            &#x2941;
+            <br>
+            <br>
+            &bull; Fitness Socializing Study
+            <br>
+            <br>
+            <br>
+            <br>
+            Hobbies
+            <br>
+            &#x2685;
+            <br>
+            <br>
+            &bull; Music Reading Games Pets
+            <br>
+            <br>
+            <br>
+            <br>
+            Certifications
+            <br>
+            &#x272A;
+            <br>
+            <br>
+            &bull; Certificate
+            <br>
+            Technical University of Munich
+            <br>
+            Make Your Own App 2020
+            <br>
+            <br>
+            &bull; Currently enrolled at Tafe in
+            <br>
+            Certificate 4 Web Based Technologies
+            <br>
+            <br>
+            <br>
+            <br>
+            Experience
+            <br>
+            &#x2616;
+            <br>
+            <br>
+            &bull; Eight years in an
+            <br>
+            Iron Ore Technician and
+            <br>
+            Storage role. Performing
+            <br>
+            sample prep, driving
+            <br>
+            forklift's and C class
+            <br>
+            vehicles and managing stores.
+            <br>
+            <br>
+          </p>
+        </div>
+        <br class="clearfloat" />
+      </section>
+      <div role="img" aria-label="divider" class="template-div"></div>
+      <div role="img" aria-label="about 2" class="template-img-0"></div>
+      <br class="clearfloat" />
     </div>
-
-    <script>
-        new Vivus('my-svg', { duration: 800 });
-    </script>
-
+    <footer>
+      <span role="img" aria-label="web logo"></span>
+      <ul>
+        <li class="sm">
+          <h2>Site Map:</h2>
+        </li>
+        <li> <a href="https://portfolio.sunnytemp.live/skills"> SKILLS </a> </li>
+        <li> <a href="https://portfolio.sunnytemp.live/about"> ABOUT </a> </li>
+        <li> <a href="https://portfolio.sunnytemp.live/contact"> CONTACT </a> </li>
+        <li class="lihome"> <a href="https://portfolio.sunnytemp.live/"> HOME </a> </li>
+      </ul>
+    </footer>
+  </div>
+  <script>
+    new Vivus('my-svg', { duration: 800 });
+  </script>
 </body>
-
 </html>
