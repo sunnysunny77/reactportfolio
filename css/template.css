@@ -56,10 +56,15 @@ h4 {
 nav ul {
     padding: 0;
     margin: 0;
+    list-style-type: none;
 }
 
 nav ul li, footer ul li {
     display: inline;
+}
+
+nav .lihome {
+    margin: 0 0 0 5%;
 }
 
 nav ul li a, footer ul li a {
@@ -75,12 +80,36 @@ nav ul li a {
     border-radius: 25px;
 }
 
-nav ul li a:hover, footer ul li a:hover {
-    color: rgb(251, 175, 93);
+footer ul li a {
+    padding: 4px 10px;
 }
 
-.lihome {
-    margin: 0 0 0 5%;
+footer ul {
+    float: right;
+    text-align: center;
+    width: 47.5%;
+    padding: 0;
+    margin: 15% 9% 0 0;
+    list-style-type: none;
+}
+
+footer h2 {
+    font-size: small;
+    color: rgb(36, 177, 77);
+    font-style: oblique;
+    opacity: 0.6;
+}
+
+footer .lihome {
+    margin: 0;
+}
+
+.sm {
+    padding-right: 1%;
+}
+
+nav ul li a:hover, footer ul li a:hover {
+    color: rgb(251, 175, 93);
 }
 
 /* HEADER */
@@ -288,34 +317,6 @@ footer span {
     background-image: url(../images/template/sitemap.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-}
-
-footer ul {
-    float: right;
-    text-align: center;
-    width: 47.5%;
-    padding: 0;
-    margin: 15% 9% 0 0;
-}
-
-footer h2 {
-    font-size: small;
-    color: rgb(36, 177, 77);
-    font-style: oblique;
-    opacity: 0.6;
-}
-
-footer ul li a {
-    border: none;
-    padding: 4px 10px;
-}
-
-footer .lihome {
-    margin: 0;
-}
-
-.sm {
-    padding-right: 1%;
 }
 
 /* RESPONSIVE */
