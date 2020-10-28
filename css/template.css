@@ -369,7 +369,7 @@ footer span {
         padding: 4px 0px;
         font-size: smaller;
     }
-    .lihome {
+    nav .lihome, footer .lihome {
         margin: auto;
     }
     .main-logo {
