@@ -51,67 +51,6 @@ h4 {
     line-height: 0px;
 }
 
-/* UL */
-
-nav ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-}
-
-nav ul li, footer ul li {
-    display: inline;
-}
-
-nav .lihome {
-    margin: 0 0 0 5%;
-}
-
-nav ul li a, footer ul li a {
-    color: rgb(36, 177, 77);
-    margin: 0.75%;
-    text-decoration: none;
-    background-color: transparent;
-}
-
-nav ul li a {
-    padding: 4px 22.5px;
-    border: 1px solid rgb(211, 252, 216);
-    border-radius: 25px;
-}
-
-footer ul li a {
-    padding: 4px 10px;
-}
-
-footer ul {
-    float: right;
-    text-align: center;
-    width: 47.5%;
-    padding: 0;
-    margin: 15% 9% 0 0;
-    list-style-type: none;
-}
-
-footer h2 {
-    font-size: small;
-    color: rgb(36, 177, 77);
-    font-style: oblique;
-    opacity: 0.6;
-}
-
-footer .lihome {
-    margin: 0;
-}
-
-.sm {
-    padding-right: 1%;
-}
-
-nav ul li a:hover, footer ul li a:hover {
-    color: rgb(251, 175, 93);
-}
-
 /* HEADER */
 
 header {
@@ -147,8 +86,10 @@ header>span+span {
 }
 
 nav {
-    margin: 35.5px 7.9% auto auto;
-    float: right;
+    display: inline-block;
+    margin: auto 7.9% auto 12.991%;
+    position: relative;
+    top: -24px;
     width: 47.5%;
 }
 
@@ -164,6 +105,69 @@ header button {
     cursor: pointer;
     outline: none;
     border-radius: 10px;
+}
+
+/* UL */
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+nav ul li, footer ul li {
+    display: inline;
+}
+
+nav .lihome {
+    margin: 0 0 0 5%;
+}
+
+nav ul li a, footer ul li a {
+    color: rgb(36, 177, 77);
+    margin: 0.75%;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+nav ul li a {
+    padding: 4px 22.5px;
+    border: 1px solid rgb(211, 252, 216);
+    border-radius: 25px;
+}
+
+footer ul li a {
+    padding: 4px 10px;
+}
+
+footer ul {
+    display: inline-block;
+    position: relative;
+    top: -21px;
+    text-align: center;
+    width: 47.5%;
+    padding: 0;
+    margin: 0 9% 0 27%;
+    list-style-type: none;
+}
+
+footer h2 {
+    font-size: small;
+    color: rgb(36, 177, 77);
+    font-style: oblique;
+    opacity: 0.6;
+}
+
+footer .lihome {
+    margin: 0;
+}
+
+.sm {
+    padding-right: 1%;
+}
+
+nav ul li a:hover, footer ul li a:hover {
+    color: rgb(251, 175, 93);
 }
 
 /* MAIN */
@@ -342,7 +346,8 @@ footer span {
         display: block;
     }
     nav {
-        float: none;
+        position: initial;
+        top: initial;
         margin: auto;
         width: 100%;
         text-align: center;
@@ -443,7 +448,6 @@ footer span {
     footer ul {
         width: 100%;
         margin: auto;
-        position: relative;
         top: 25px;
     }
     .sm {
