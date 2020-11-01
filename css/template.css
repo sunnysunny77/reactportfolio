@@ -345,7 +345,7 @@ footer span {
   }
   nav {
     margin: auto;
-    width: 100%;
+    width: 100%;  
     text-align: center;
     padding-bottom: 20px;
   }
@@ -420,8 +420,7 @@ footer span {
     border-left: none;
     border-top: 2.5px solid rgba(154, 218, 218, 0.4);
     border-bottom: 2.5px solid rgba(154, 218, 218, 0.4);
-    margin: 10px auto;
-    width: auto;
+    margin: 10px auto;   
     padding: 10px 5% 10px 5%;
     font-size: initial;
   }
@@ -445,10 +444,8 @@ footer span {
     transform: scale(0.75);
   }
   footer ul {
-    display: block;
-    width: 100%;
+    display: block;   
     margin: auto;
-    top: 25px;
   }
   .sm {
     display: none;
