@@ -446,6 +446,7 @@ footer span {
   footer ul {
     display: block;   
     margin: auto;
+    width: 100%;
   }
   .sm {
     display: none;
