@@ -320,8 +320,7 @@ footer span {
     height: initial;
   }
   header > span {
-    display: none;
-    margin: auto;
+    display: none;    
   }
   header > span + span {
     display: block;
