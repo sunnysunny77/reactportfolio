@@ -375,8 +375,7 @@ footer span {
     margin: auto;
   }
   .main-logo {
-    padding-top: 70px;
-    margin: auto auto auto 7.5%;
+    margin-left: 7.5%;
     width: 92.5%;
   }
   .main-logo svg {
