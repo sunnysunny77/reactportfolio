@@ -2,101 +2,101 @@
 /* GLOBAL */
 
 .template-img {
-    background-image: url(../images/contact/contact.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
+  background-image: url(../images/contact/contact.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 
 .template-img-0 {
-    border: 5px solid whitesmoke;
-    background-image: url(../images/contact/contimg.jpg);
-    background-size: 90% 90%;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 500px;
-    width: 80.041%;
-    margin: auto auto 150px auto;
-    visibility: hidden;
+  border: 5px solid whitesmoke;
+  background-image: url(../images/contact/contimg.jpg);
+  background-size: 90% 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  width: 80.041%;
+  margin: auto;
+  visibility: hidden;
 }
 
 .template-p {
-    text-align: initial !important;
+  text-align: initial !important;
 }
 
 fieldset {
-    border: none;
-    padding: 0;
-    margin: 0;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 legend {
-    padding: 0;
-    margin: 0 0 0 5%;
+  padding: 0;
+  margin: 0 0 0 5%;
 }
 
 .template-p ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .template-p ul li {
-    padding-bottom: 5.5%;
-    margin: 0 10% 0 10%;
-    width: 80%;
+  padding-bottom: 5.5%;
+  margin: 0 10% 0 10%;
+  width: 80%;
 }
 
 label {
-    color: rgb(251, 175, 93);
+  color: rgb(251, 175, 93);
 }
 
 textarea {
-    width: 100%;
-    resize: none;
-    font: inherit;
-    padding: 0;
-    margin: 0;
-    font-size: inherit;
-    background-image: url(../images/template/text.jpg);
-    border: 1px solid rgb(65, 147, 188);
-    overflow-y: auto;
-    overflow-x: hidden;
-    scrollbar-color: black rgb(251, 175, 93);
-    scrollbar-width: thin;
+  width: 100%;
+  resize: none;
+  font: inherit;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  background-image: url(../images/template/text.jpg);
+  border: 1px solid rgb(65, 147, 188);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-color: black rgb(251, 175, 93);
+  scrollbar-width: thin;
 }
 
 textarea::-webkit-scrollbar {
-    width: 7px;
+  width: 7px;
 }
 
 textarea::-webkit-scrollbar-thumb {
-    background: rgb(251, 175, 93);
+  background: rgb(251, 175, 93);
 }
 
 textarea::-webkit-scrollbar-track {
-    background: black;
+  background: black;
 }
 
 textarea::-webkit-scrollbar-thumb:hover {
-    background: rgb(251, 175, 93);
+  background: rgb(251, 175, 93);
 }
 
 input {
-    width: 100%;
-    font-style: inherit;
-    padding: 0;
-    margin: 0;
-    font: inherit;
-    background-image: url(../images/template/text.jpg);
-    border: 1px solid rgb(65, 147, 188);
+  width: 100%;
+  font-style: inherit;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  background-image: url(../images/template/text.jpg);
+  border: 1px solid rgb(65, 147, 188);
 }
 
 #sub {
-    width: 35%;
-    display: block;
-    margin: auto;
-    color: rgb(36, 177, 77);
-    border-radius: 10px;
+  width: 35%;
+  display: block;
+  margin: auto;
+  color: rgb(36, 177, 77);
+  border-radius: 10px;
 }

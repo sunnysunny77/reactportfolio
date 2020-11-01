@@ -1,63 +1,65 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/template.css" type="text/css" />
+    <link rel="stylesheet" href="css/cont.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/vivus@0.4.5/dist/vivus.min.js"
+      integrity="sha256-EQbVGDv8AeB/IA3V0dU2OSI1PDKb8wEG3sRDAdkgoGc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/scripts.js"></script>
+  </head>
 
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Portfolio </title>
-    <link rel="stylesheet" href="css/template.css" type="text/css">
-    <link rel="stylesheet" href="css/cont.css" type="text/css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
-    <script src="https://cdn.jsdelivr.net/npm/vivus@0.4.5/dist/vivus.min.js"
-        integrity="sha256-EQbVGDv8AeB/IA3V0dU2OSI1PDKb8wEG3sRDAdkgoGc=" crossorigin="anonymous">
-        </script>
-    <script src="./js/scripts.js">
-    </script>
-
-</head>
-
-<body onload="check();" onscroll="sani();">
-
+  <body onload="check();" onscroll="sani();">
     <div class="outer">
+      <header>
+        <span role="img" aria-label="logo"></span>
 
-        <header>
+        <span role="img" aria-label="logotext"></span>
 
-            <span role="img" aria-label="logo"></span>
+        <button aria-label="Menu" id="click1" onclick="tog('1');"></button>
 
-            <span role="img" aria-label="logotext"></span>
+        <nav id="menu1" class="disp">
+          <ul id="men1">
+            <li><a href="skills"> SKILLS </a></li>
+            <li><a href="about"> ABOUT </a></li>
+            <li>
+              <h1>
+                <a href="contact"> CONTACT </a>
+              </h1>
+            </li>
+            <li class="lihome">
+              <a href="./"> HOME </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-            <button aria-label="Menu" id="click1" onclick="tog('1');"> </button>
-
-            <nav id="menu1" class="disp">
-
-                <ul id="men1">
-                    <li> <a href="skills"> SKILLS </a> </li>
-                    <li> <a href="about"> ABOUT </a> </li>
-                    <li>
-                        <h1>
-                            <a href="contact">
-                                CONTACT
-                            </a>
-                        </h1>
-                    </li>
-                    <li class="lihome">
-                        <a href="./"> HOME </a>
-                    </li>
-                </ul>
-
-            </nav>
-
-        </header>
-
-        <div class="main">
-
-            <section class="main-logo">
-
-                <svg role="img" aria-label="globe" id="my-svg" height="90px" viewBox="0 0 480.1 480.1"
-                    xmlns="http://www.w3.org/2000/svg" style="overflow: visible">
-                    <path fill="none" stroke="#FFF" stroke-width="7.5" d="M240.135,0.05C144.085,0.036,57.277,57.289,19.472,145.586l-2.992,0.992l1.16,3.48
+      <div class="main">
+        <section class="main-logo">
+          <svg
+            role="img"
+            aria-label="globe"
+            id="my-svg"
+            height="90px"
+            viewBox="0 0 480.1 480.1"
+            xmlns="http://www.w3.org/2000/svg"
+            style="overflow: visible"
+          >
+            <path
+              fill="none"
+              stroke="#FFF"
+              stroke-width="7.5"
+              d="M240.135,0.05C144.085,0.036,57.277,57.289,19.472,145.586l-2.992,0.992l1.16,3.48
                     c-49.776,122.766,9.393,262.639,132.159,312.415c28.673,11.626,59.324,17.594,90.265,17.577
                     c132.548,0.02,240.016-107.416,240.036-239.964S372.684,0.069,240.135,0.05z M428.388,361.054l-12.324-12.316V320.05
                     c0.014-1.238-0.26-2.462-0.8-3.576l-31.2-62.312V224.05c0-2.674-1.335-5.172-3.56-6.656l-24-16
@@ -87,136 +89,158 @@
                     c8.961,9.981,17.014,20.741,24.064,32.152l-39.36,13.12l-42.616-7.104l-14.08-21.12c-1.476-2.213-3.956-3.547-6.616-3.56h-48
                     c-2.122,0-4.156,0.844-5.656,2.344l-24,24c-1.782,1.781-2.621,4.298-2.264,6.792l8,56c0.403,2.769,2.223,5.126,4.8,6.216l56,24
                     c1.604,0.695,3.394,0.838,5.088,0.408l28.568-7.144l17.464,11.664v27.72c-0.014,1.238,0.26,2.462,0.8,3.576l31.2,62.312v30.112
-                    c0,2.122,0.844,4.156,2.344,5.656l16.736,16.744C344.921,473.383,204.549,493.415,105.616,419.191z" />
-                </svg>
+                    c0,2.122,0.844,4.156,2.344,5.656l16.736,16.744C344.921,473.383,204.549,493.415,105.616,419.191z"
+            />
+          </svg>
 
-                <h2>portfolio CONTACT</h2>
+          <h2>portfolio CONTACT</h2>
 
-                <span role="img" aria-label="divider" class="main-logo-span"></span>
+          <span role="img" aria-label="divider" class="main-logo-span"></span>
+        </section>
 
-                <br class="clearfloat" />
-            </section>
+        <section class="template">
+          <h3>Contact</h3>
 
-            <section class="template">
+          <div class="template-img-cont">
+            <div
+              role="img"
+              aria-label="phone contact 1"
+              class="template-img"
+            ></div>
+          </div>
 
-                <h3> Contact</h3>
+          <div class="template-p-cont">
+            <span class="template-p-img"></span>
 
-                <div class="template-img-cont">
+            <script>
+              function loadDoc(event) {
+                event.preventDefault();
+                var formData = new FormData(
+                  document.getElementById("contact-form")
+                );
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                  if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("contact-form").reset();
+                    document.getElementById("sub").style.display = "none";
+                    document.getElementById("sent").style.display = "block";
 
-                    <div role="img" aria-label="phone contact 1" class="template-img"></div>
+                    document.getElementById(
+                      "sent"
+                    ).innerHTML = this.responseText;
+                    setTimeout(function () {
+                      document.getElementById("sent").style.display = "none";
+                      document.getElementById("sub").style.display = "block";
+                    }, 5000);
+                  }
+                };
+                xhttp.open("POST", "cont.php", true);
+                xhttp.send(formData);
+              }
+            </script>
 
-                </div>
+            <form
+              id="contact-form"
+              class="template-p"
+              onsubmit="loadDoc(event)"
+              method="post"
+            >
+              <fieldset>
+                <legend>Email Us:</legend>
 
-                <div class="template-p-cont">
+                <ul>
+                  <li>
+                    <br />
+                    <label for="name">Names:</label>
+                    <br />
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder="First Last"
+                      maxlength="26"
+                      value=""
+                    />
+                  </li>
+                  <li>
+                    <br />
+                    <label for="phone">Phone:</label>
+                    <br />
+                    <input
+                      type="tel"
+                      name="phone"
+                      id="phone"
+                      placeholder="#"
+                      maxlength="11"
+                      value=""
+                      pattern="[0-9]+"
+                    />
+                  </li>
+                  <li>
+                    <br />
+                    <label for="email">Email:</label>
+                    <br />
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="eg@example.com"
+                      maxlength="26"
+                      value=""
+                    />
+                  </li>
+                  <li>
+                    <br />
+                    <label for="message">Message:</label>
+                    <br />
+                    <textarea
+                      name="message"
+                      id="message"
+                      maxlength="1000"
+                      rows="3"
+                    >
+                    </textarea>
+                  </li>
+                </ul>
+              </fieldset>
 
-                    <span class="template-p-img"></span>
+              <p id="sent" style="text-align: center"></p>
 
-                    <script>
-                        function loadDoc(event) {
-                            event.preventDefault();
-                            var formData = new FormData(document.getElementById("contact-form"));
-                            var xhttp = new XMLHttpRequest();
-                            xhttp.onreadystatechange = function () {
-                                if (this.readyState == 4 && this.status == 200) {
-                                    document.getElementById("contact-form").reset();
-                                    document.getElementById("sub").style.display = "none";
-                                    document.getElementById("sent").style.display = "block";
+              <input type="submit" value="Send" id="sub" />
 
-                                    document.getElementById("sent").innerHTML = this.responseText;
-                                    setTimeout(function () {
-                                        document.getElementById("sent").style.display = "none";
-                                        document.getElementById("sub").style.display = "block";
-                                    }, 5000);
-                                }
-                            };
-                            xhttp.open("POST", "cont.php", true);
-                            xhttp.send(formData);
-                        }
-                    </script>
+              <br />
+            </form>
+          </div>
+        </section>
 
-                    <form id="contact-form" class="template-p" onsubmit="loadDoc(event)" method="post">
+        <div role="img" aria-label="divider" class="template-div"></div>
 
-                        <fieldset>
+        <div
+          role="img"
+          aria-label="phone contact 2"
+          class="template-img-0"
+        ></div>
+      </div>
 
-                            <legend>Email Us:</legend>
+      <footer>
+        <span role="img" aria-label="web logo"></span>
 
-                            <ul>
-                                <li>
-                                    <br>
-                                    <label for="name">Names:</label>
-                                    <br>
-                                    <input type="text" name="name" id="name" placeholder="First Last" maxlength="26"
-                                        value="" />
-                                </li>
-                                <li>
-                                    <br>
-                                    <label for="phone">Phone:</label>
-                                    <br>
-                                    <input type="tel" name="phone" id="phone" placeholder="#" maxlength="11" value=""
-                                        pattern="[0-9]+">
-                                </li>
-                                <li>
-                                    <br>
-                                    <label for="email">Email:</label>
-                                    <br>
-                                    <input type="email" name="email" id="email" placeholder="eg@example.com"
-                                        maxlength="26" value="">
-                                </li>
-                                <li>
-                                    <br>
-                                    <label for="message">Message:</label>
-                                    <br>
-                                    <textarea name="message" id="message" maxlength="1000" rows="3">
-                                        </textarea>
-                                </li>
-                            </ul>
-                        </fieldset>
-
-                        <p id="sent" style="text-align: center;"></p>
-
-                        <input type="submit" value="Send" id="sub" />
-
-                        <br>
-
-                    </form>
-
-                </div>
-
-                <br class="clearfloat" />
-            </section>
-
-
-            <div role="img" aria-label="divider" class="template-div"></div>
-
-            <div role="img" aria-label="phone contact 2" class="template-img-0"></div>
-
-            <br class="clearfloat" />
-        </div>
-
-        <footer>
-
-            <span role="img" aria-label="web logo"></span>
-
-            <ul>
-                <li class="sm">
-                    <h2>Site Map:</h2>
-                </li>
-                <li> <a href="skills"> SKILLS </a> </li>
-                <li> <a href="about"> ABOUT </a> </li>
-                <li> <a href="contact"> CONTACT </a> </li>
-                <li class="lihome"> 
-                    <a href="./"> HOME </a> 
-                </li>
-            </ul>
-
-        </footer>
-
+        <ul>
+          <li class="sm">
+            <h2>Site Map:</h2>
+          </li>
+          <li><a href="skills"> SKILLS </a></li>
+          <li><a href="about"> ABOUT </a></li>
+          <li><a href="contact"> CONTACT </a></li>
+          <li class="lihome">
+            <a href="./"> HOME </a>
+          </li>
+        </ul>
+      </footer>
     </div>
 
     <script>
-        new Vivus("my-svg", { duration: 800 });
+      new Vivus("my-svg", { duration: 800 });
     </script>
-
-</body>
-
+  </body>
 </html>
