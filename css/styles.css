@@ -232,9 +232,11 @@
     display: block;
   }
   .template-div {
+    margin: auto !important;
+    height: 75px !important;
     position: absolute;
     width: 60%;
-    bottom: -3.5%;
+    bottom: 0;
     left: 20%;
   }
 }
