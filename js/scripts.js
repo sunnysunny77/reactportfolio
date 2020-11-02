@@ -108,7 +108,7 @@ function sani() {
         }
         if (document.getElementById("home-div")) {
             if (scroll_pos > document.getElementById("home-div").offsetTop + a && !document.getElementById("home-div").querySelector("ani0")) {
-                document.getElementById("home-div").classList.add("ani0");
+                document.getElementById("home-div").classList.add("ani5");
             }
         }
         if (document.querySelector(".template-img-0")) {
