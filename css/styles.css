@@ -113,6 +113,15 @@
   height: 100%;
 }
 
+#s57 {
+  background-image: url(../images/home/wp.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+}
+
+
 #ob0 {
   height: 50%;
   margin: 13% 0;
@@ -216,7 +225,8 @@
   #s53,
   #s54,
   #s55,
-  #s56 {
+  #s56,
+  #s57 {
     background-size: 47%;
     padding: 23%;
   }

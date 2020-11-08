@@ -487,7 +487,8 @@ header span {
 #s53,
 #s54,
 #s55,
-#s56 {
+#s56,
+#s57 {
   opacity: 1;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
