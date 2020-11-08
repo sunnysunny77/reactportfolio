@@ -1,17 +1,39 @@
 function tog(a) {
+
     document.getElementById("menu" + a).classList.toggle("disp");
     document.getElementById("click" + a).classList.toggle("ani");
     document.getElementById("men" + a).classList.toggle("ani1");
 }
 
 function none(a, b, c, d, e, f, g)  {
-    document.getElementById(b).style.display = 'none';
-    document.getElementById(c).style.display = 'none';
-    document.getElementById(d).style.display = 'none';
-    document.getElementById(e).style.display = 'none';
-    document.getElementById(f).style.display = 'none';
-    document.getElementById(g).style.display = 'none';
-    document.getElementById(a).style.display = 'block';
+
+    var element = document.getElementById(a)
+    var style = window.getComputedStyle(element)
+    var top = style.getPropertyValue('display')
+    
+    if (top === 'none') {
+        
+        document.getElementById(b).style.display = 'none';
+        document.getElementById(c).style.display = 'none';
+        document.getElementById(d).style.display = 'none';
+        document.getElementById(e).style.display = 'none';
+        document.getElementById(f).style.display = 'none';
+        document.getElementById(g).style.display = 'none';
+        document.getElementById(a).style.display = 'block';
+
+        document.getElementById(a).classList.add("an");
+        setTimeout(function(){ 
+            document.getElementById(a).classList.remove("an");
+         }, 500);
+
+       if (a == "s51"){
+
+        document.getElementById(a).classList.add("ani0");
+        setTimeout(function(){ 
+            document.getElementById(a).classList.remove("ani0"); 
+        }, 1500);
+       }       
+    }   
 }
 
 function high() {
@@ -55,6 +77,7 @@ function high() {
 }
 
 function check() {
+
     if (window.screen.width <= 992) {
 
         if (document.querySelector(".template-img-cont")) {
@@ -64,11 +87,11 @@ function check() {
         if (document.querySelector(".template-p")) {
             document.querySelector(".template-p").classList.add("vis1");
             document.querySelector(".template-p").classList.add("ani2");   
-        }           
+        }                    
     }
    
     if (window.screen.width >= 992) {
-
+      
         if (document.querySelector(".template-img-cont")) {
 
             document.querySelector(".template-img-cont").classList.add("vis1");    
@@ -96,6 +119,12 @@ function check() {
         if (document.getElementById("s5")) {
 
             document.getElementById("s5").classList.add("vis1");
+
+            document.getElementById("s51").classList.add("ani0");
+
+            setTimeout(function(){ 
+                document.getElementById("s51").classList.remove("ani0");
+             }, 1500);
         }
     }
 }
@@ -129,13 +158,14 @@ function sani() {
             }
         }
         if (document.getElementById("s5")) {
-            if (scroll_pos > document.getElementById("s5").offsetTop  + a && !document.getElementById("s5").querySelector("ani2") && !document.getElementById("s51").querySelector("ani3")) {
+            if (scroll_pos > document.getElementById("s5").offsetTop  + a && !document.getElementById("s5").querySelector("ani2") && !document.getElementById("s51").querySelector("ani6")) {
                 document.getElementById("s5").classList.add("vis1");
-                document.getElementById("s5").classList.add("ani2");
-                document.getElementById("s51").classList.add("ani0");
+                document.getElementById("s5").classList.add("ani2");     
+                document.getElementById("s51").classList.add("ani6");
+                                  
             }
-        }
-     
+        } 
+      
     }
 }
 

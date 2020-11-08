@@ -483,12 +483,7 @@ header span {
   animation: fadeInBack 0.75s ease-in-out;
 }
 
-#s52,
-#s53,
-#s54,
-#s55,
-#s56,
-#s57 {
+.an {
   opacity: 1;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
@@ -512,11 +507,6 @@ header span {
   visibility: visible !important;
 }
 
-@media only screen and (min-width: 992px) {
-  #s51 {
-    animation: scale0 1.5s ease-in;
-  }
-}
 
 @media only screen and (max-width: 992px) {
   .ani2 {
@@ -533,6 +523,9 @@ header span {
   }
   .ani5 {
     animation: scale2 3.5s ease-in-out;
+  }
+  .ani6 {
+    animation: scale0 1.5s ease-in;
   }
 }
 
