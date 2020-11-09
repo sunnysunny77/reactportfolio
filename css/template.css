@@ -73,8 +73,8 @@ header > span + span {
 }
 
 nav {
-  margin: 3.5% 8.3% 2.5% 13%;
-  width: 47.5%;
+  margin: 3.5% 8% 2.1% 13%;
+  width: 47.8%;
   height: max-content;
 }
 
@@ -182,6 +182,11 @@ footer ul li a:hover {
   display: block;
   margin: 9% auto 3% 55.5%;
   width: 44.5%;
+}
+
+.main-logo svg {
+  width: 90px;
+  height: 90px;
 }
 
 .main-logo h2 {
@@ -317,7 +322,7 @@ footer span {
   header {
     padding: 10px 0;
     flex-direction: column;
-    height: initial;
+    height: auto;
   }
   header > span {
     display: none;
@@ -416,7 +421,7 @@ footer span {
     background-size: 88% !important;
     width: calc(70% - 10px) !important;
     padding: 22% 0 22% 0;
-    height: initial !important;
+    height: auto !important;
   }
   footer {
     flex-direction: column;

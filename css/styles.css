@@ -192,7 +192,7 @@
     float: none;
     display: block;
     width: 90%;
-    height: initial;
+    height: auto;
     margin: auto;
     right: 0;
     border-top: 5px solid rgb(251, 175, 93);
@@ -260,7 +260,7 @@
     border-right: 5px solid whitesmoke;
   }
   #close {
-    bottom: initial;
+    bottom: auto;
     top: 15px;
   }
 }
