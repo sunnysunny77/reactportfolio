@@ -120,13 +120,8 @@ function sani() {
 
     let scroll_pos = window.scrollY + window.innerHeight;
 
-    if (document.getElementById("home-div")) {
-        let elementh = document.getElementById("home-div");
-        let styleh = window.getComputedStyle(elementh);
-        let vish= styleh.getPropertyValue("visibility");
-      if (scroll_pos > document.getElementById("home-div").offsetTop + a &&
-      vish === "hidden") {
-        document.getElementById("home-div").classList.add("vis1");
+    if (document.getElementById("home-div")) {    
+      if (scroll_pos > document.getElementById("home-div").offsetTop + a) {        
         document.getElementById("home-div").classList.add("ani5");
       }
     }
