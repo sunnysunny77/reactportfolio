@@ -322,6 +322,10 @@ footer span {
   visibility: visible !important;
 }
 
+.disp {
+  display: none;
+}
+
 header span {
   animation: slideIn 1.5s ease-in-out;
 }
@@ -587,9 +591,6 @@ header span {
     width: 100%;
   }
   .sm {
-    display: none;
-  }
-  .disp {
     display: none;
   }
 }
