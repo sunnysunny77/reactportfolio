@@ -8,7 +8,6 @@ function none(a, b, c, d, e, f, g) {
   let element = document.getElementById(a);
   let style = window.getComputedStyle(element);
   let dis = style.getPropertyValue("display");
-
   if (dis === "none") {
     document.getElementById(b).style.display = "none";
     document.getElementById(c).style.display = "none";
@@ -17,17 +16,16 @@ function none(a, b, c, d, e, f, g) {
     document.getElementById(f).style.display = "none";
     document.getElementById(g).style.display = "none";
     document.getElementById(a).style.display = "block";
-
-    document.getElementById(a).classList.add("an");
-    setTimeout(function () {
-      document.getElementById(a).classList.remove("an");
-    }, 500);
-
     if (a == "s51") {
       document.getElementById(a).classList.add("ani0");
       setTimeout(function () {
         document.getElementById(a).classList.remove("ani0");
       }, 1500);
+    } else {
+      document.getElementById(a).classList.add("an");
+      setTimeout(function () {
+        document.getElementById(a).classList.remove("an");
+      }, 750);
     }
   }
 }
@@ -36,16 +34,13 @@ function high() {
   let a = document.getElementById("ob0").scrollHeight;
   let b = document.getElementById("ob0").clientHeight;
   let c = document.getElementById("pff").offsetHeight;
-
   let d = document.getElementById("cand").offsetTop;
   let e = document.getElementById("rec").offsetTop;
   let f = document.getElementById("dig").offsetTop;
   let g = document.getElementById("pff").offsetTop;
   let h = document.getElementById("link").offsetTop;
-
   let p = document.getElementById("ob0").scrollTop;
   let v = a - b - c;
-
   if (p < d) {
     none("s51", "s52", "s53", "s54", "s55", "s56", "s57");
   }
@@ -80,52 +75,43 @@ function check() {
       document.querySelector(".template-p").classList.add("ani2");
     }
   }
-
   if (window.screen.width >= 992) {
     if (document.querySelector(".template-img-cont")) {
       document.querySelector(".template-img-cont").classList.add("vis1");
     }
-
     if (document.querySelector(".template-div")) {
       document.querySelector(".template-div").classList.add("vis1");
     }
-
     if (document.querySelector(".template-p")) {
       document.querySelector(".template-p").classList.add("vis1");
     }
-
     if (document.querySelector(".template-img-0")) {
       document.querySelector(".template-img-0").classList.add("vis1");
     }
-
     if (document.getElementById("ob0")) {
       document.getElementById("ob0").classList.add("vis1");
     }
-
     if (document.getElementById("s5")) {
       document.getElementById("s5").classList.add("vis1");
     }
     if (document.getElementById("s51")) {
-        document.getElementById("s51").classList.add("ani0");
-        setTimeout(function () {
-            document.getElementById("s51").classList.remove("ani0");
-          }, 1500);        
-      }
+      document.getElementById("s51").classList.add("ani0");
+      setTimeout(function () {
+        document.getElementById("s51").classList.remove("ani0");
+      }, 1500);
+    }
   }
 }
 
 function sani() {
   if (window.screen.width <= 992) {
     let a = document.querySelector("header").scrollHeight;
-
     let scroll_pos = window.scrollY + window.innerHeight;
-
-    if (document.getElementById("home-div")) {    
-      if (scroll_pos > document.getElementById("home-div").offsetTop + a) {        
+    if (document.getElementById("home-div")) {
+      if (scroll_pos > document.getElementById("home-div").offsetTop + a) {
         document.getElementById("home-div").classList.add("ani5");
       }
     }
-
     if (document.querySelector(".template-div")) {
       let elementt = document.querySelector(".template-div");
       let stylet = window.getComputedStyle(elementt);
@@ -138,7 +124,6 @@ function sani() {
         document.querySelector(".template-div").classList.add("ani3");
       }
     }
-
     if (document.querySelector(".template-img-0")) {
       let element0 = document.querySelector(".template-img-0");
       let style0 = window.getComputedStyle(element0);
@@ -151,7 +136,6 @@ function sani() {
         document.querySelector(".template-img-0").classList.add("ani2");
       }
     }
-
     if (document.getElementById("s4")) {
       let elemento = document.getElementById("ob0");
       let styleo = window.getComputedStyle(elemento);
@@ -164,7 +148,6 @@ function sani() {
         document.getElementById("ob0").classList.add("ani2");
       }
     }
-
     if (document.getElementById("s5")) {
       let element5 = document.getElementById("s5");
       let style5 = window.getComputedStyle(element5);

@@ -322,10 +322,6 @@ footer span {
   visibility: visible !important;
 }
 
-.disp {
-  display: none;
-}
-
 header span {
   animation: slideIn 1.5s ease-in-out;
 }
@@ -336,38 +332,38 @@ header span {
 
 .an {
   opacity: 1;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 0.5s;
-}
-
-.ani {
-  animation: scale1 0.5s;
+  animation: fadeInOpacity 0.75s ease-in;
 }
 
 .ani0 {
   animation: scale0 1.5s ease-in;
 }
 
-.ani1 {
-  animation: slideInOp 0.75s, slideIn0 0.75s;
-}
-
-.ani2 {
-  animation: fadeInBack 3.5s ease-in;
-  visibility: visible;
-}
-.ani3 {
-  animation: scale0 3.5s ease-in;
-  visibility: visible;
-}
-.ani4 {
-  animation: fadeInBack 1.5s ease-in;
-  animation: scale0 1.5s ease-in;
-}
-.ani5 {
-  animation: scale2 3.5s ease-in-out;
+@media only screen and (max-width: 1024px) {
+  .disp {
+    display: none;
+  }
+  .ani {
+    animation: scale1 0.5s;
+  }
+  .ani1 {
+    animation: slideInOp 0.75s, slideIn0 0.75s;
+  }
+  .ani2 {
+    animation: fadeInBack 3.5s ease-in;
+    visibility: visible;
+  }
+  .ani3 {
+    animation: scale0 3.5s ease-in;
+    visibility: visible;
+  }
+  .ani4 {
+    animation: fadeInBack 1.5s ease-in;
+    animation: scale0 1.5s ease-in;
+  }
+  .ani5 {
+    animation: scale2 3.5s ease-in-out;
+  }
 }
 
 @keyframes fadeInBack {
