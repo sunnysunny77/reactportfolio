@@ -17,9 +17,9 @@
 
 #s4 {
   height: 280px;
-  width: calc(992px - 46.02%);
+  width: calc(992px - 46.026%);
   margin: 4% auto auto calc(987px - 95%);
-  display: inline-block;
+  float: left;
   background-color: rgb(251, 251, 238);
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;

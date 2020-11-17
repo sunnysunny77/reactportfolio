@@ -217,23 +217,24 @@ footer ul li a:hover {
 
 .template-img-cont {
   width: calc(992px - 73.991%);
-  height: 250px;
-  display: inline-block;
+  height: 250px; 
   margin-left: calc(987px - 95%);
   border: 5px solid whitesmoke;
   padding: 5%;
   visibility: hidden;
+  float: left;
 }
 
 .template-p-cont {
   height: 280px;
-  width: calc(992px - 46.02%);
+  width: calc(992px - 46.026%);
   float: right;
   margin: 4% calc(987px - 95%) 0 0;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   background-image: url(../images/template/text.jpg);
   background-size: 100% 100%;
+
 }
 
 .template-p-img {
@@ -532,6 +533,7 @@ header span {
     font-size: large;
   }
   .template-img-cont {
+    float: none;
     display: block;
     margin: auto auto 5% auto;
     width: 168px;
