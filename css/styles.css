@@ -121,6 +121,14 @@
   height: 100%;
 }
 
+#s58 {
+  background-image: url(../images/home/store.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+}
+
 
 #ob0 {
   height: 50%;
@@ -226,7 +234,8 @@
   #s54,
   #s55,
   #s56,
-  #s57 {
+  #s57,
+  #s58 {
     background-size: 47%;
     padding: 23%;
   }

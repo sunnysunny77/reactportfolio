@@ -4,7 +4,7 @@ function tog(a) {
   document.getElementById("men" + a).classList.toggle("ani1");
 }
 
-function none(a, b, c, d, e, f, g) {
+function none(a, b, c, d, e, f, g, h) {
   let element = document.getElementById(a);
   let style = window.getComputedStyle(element);
   let dis = style.getPropertyValue("display");
@@ -15,6 +15,7 @@ function none(a, b, c, d, e, f, g) {
     document.getElementById(e).style.display = "none";
     document.getElementById(f).style.display = "none";
     document.getElementById(g).style.display = "none";
+    document.getElementById(h).style.display = "none";
     document.getElementById(a).style.display = "block";
     if (a == "s51") {
       document.getElementById(a).classList.add("ani0");
@@ -39,28 +40,32 @@ function high() {
   let f = document.getElementById("dig").offsetTop;
   let g = document.getElementById("pff").offsetTop;
   let h = document.getElementById("link").offsetTop;
+  let i = document.getElementById("wp").offsetTop;
   let p = document.getElementById("ob0").scrollTop;
   let v = a - b - c;
   if (p < d) {
-    none("s51", "s52", "s53", "s54", "s55", "s56", "s57");
+    none("s51", "s52", "s53", "s54", "s55", "s56", "s57", "s58");
   }
   if (p > d && p < e) {
-    none("s52", "s51", "s53", "s54", "s55", "s56", "s57");
+    none("s52", "s51", "s53", "s54", "s55", "s56", "s57", "s58");
   }
   if (p > e && p < f) {
-    none("s53", "s51", "s52", "s54", "s55", "s56", "s57");
+    none("s53", "s51", "s52", "s54", "s55", "s56", "s57", "s58");
   }
   if (p > f && p < g) {
-    none("s54", "s51", "s52", "s53", "s55", "s56", "s57");
+    none("s54", "s51", "s52", "s53", "s55", "s56", "s57", "s58");
   }
   if (p > g && p < h) {
-    none("s55", "s51", "s52", "s53", "s54", "s56", "s57");
+    none("s55", "s51", "s52", "s53", "s54", "s56", "s57", "s58");
   }
-  if (p > h && p < v) {
-    none("s56", "s51", "s52", "s53", "s54", "s55", "s57");
+  if (p > h && p < i) {
+    none("s56", "s51", "s52", "s53", "s54", "s55", "s57", "s58");
+  }
+  if (p > i && p < v) {
+    none("s57", "s51", "s52", "s53", "s54", "s55", "s56", "s58");
   }
   if (p > v) {
-    none("s57", "s51", "s52", "s53", "s54", "s55", "s56");
+    none("s58", "s51", "s52", "s53", "s54", "s55", "s56" , "s57");
   }
 }
 
