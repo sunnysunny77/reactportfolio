@@ -36,11 +36,11 @@ function high() {
   let b = document.getElementById("ob0").clientHeight;
   let c = document.getElementById("pff").offsetHeight;
   let d = document.getElementById("cand").offsetTop;
-  let e = document.getElementById("rec").offsetTop;
+  let e = document.getElementById("wp").offsetTop;
   let f = document.getElementById("dig").offsetTop;
   let g = document.getElementById("pff").offsetTop;
   let h = document.getElementById("link").offsetTop;
-  let i = document.getElementById("wp").offsetTop;
+  let i = document.getElementById("rec").offsetTop;
   let p = document.getElementById("ob0").scrollTop;
   let v = a - b - c;
   if (p < d) {
