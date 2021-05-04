@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <body>
-
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_REQUEST["name"];
@@ -17,14 +16,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     Phone: ".$phone."
     Email: ".$email."
     Message: ".$message;
-
     $contactus  = wordwrap($contactus ,70);
-
     mail($to_email,$subject,$contactus);
 }
 ?>
-
-    <pre> Thanks, sent to &#128231; </pre> 
-
+   Thanks, sent to &#128231; 
 </body>
 </html>

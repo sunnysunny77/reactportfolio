@@ -115,22 +115,21 @@
             <script>
               function loadDoc(event) {
                 event.preventDefault();
-                var formData = new FormData(
-                  document.getElementById("contact-form")
-                );
+                const contactForm = document.getElementById("contact-form");
+                const sub = document.getElementById("sub");
+                const sent = document.getElementById("sent");
+                var formData = new FormData(contactForm);
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function () {
                   if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("contact-form").reset();
-                    document.getElementById("sub").style.display = "none";
-                    document.getElementById("sent").style.display = "block";
-
-                    document.getElementById(
-                      "sent"
-                    ).innerHTML = this.responseText;
+                    contactForm.reset();
+                    sub.style.display = "none";
+                    sent.style.display = "block";
+                    sent.innerHTML = this.responseText;
                     setTimeout(function () {
-                      document.getElementById("sent").style.display = "none";
-                      document.getElementById("sub").style.display = "block";
+                      sent.style.display = "none";
+                      sent.innerHTML = "";
+                      sub.style.display = "block";
                     }, 5000);
                   }
                 };
@@ -204,7 +203,7 @@
                 </ul>
               </fieldset>
 
-              <p id="sent" style="text-align: center"></p>
+              <p id="sent" style="text-align: center; height: 23px; display: none; margin: 0 auto;"></p>
 
               <input type="submit" value="Send" id="sub" />
 
