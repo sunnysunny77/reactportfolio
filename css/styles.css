@@ -129,6 +129,13 @@
   height: 100%;
 }
 
+#s59 {
+  background-image: url(../images/home/acc.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+}
 
 #ob0 {
   height: 50%;
@@ -235,7 +242,8 @@
   #s55,
   #s56,
   #s57,
-  #s58 {
+  #s58,
+  #s59 {
     background-size: 47%;
     padding: 23%;
   }
