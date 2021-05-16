@@ -224,10 +224,22 @@ function eventListner(obj, type, callback, opt) {
 
 window.onload = function () {
   check();
-  eventListner(window, "scroll", sani,  { passive: true });
-  eventListner(document.getElementsByClassName("click")[0], "click", tog, false);
+  eventListner(window, "scroll", sani, { passive: true });
+  eventListner(
+    document.getElementsByClassName("click")[0],
+    "click",
+    tog,
+    false
+  );
   eventListner(document.getElementById("close"), "click", close, false);
-  eventListner(document.getElementById("ob0"), "scroll", high, { passive: true });
-  eventListner(document.getElementById("contact-form"), "submit", loadDoc, false);
+  eventListner(document.getElementById("ob0"), "scroll", high, {
+    passive: true,
+  });
+  eventListner(
+    document.getElementById("contact-form"),
+    "submit",
+    loadDoc,
+    false
+  );
   new Vivus("my-svg", { duration: 800 });
 };
