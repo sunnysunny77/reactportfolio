@@ -63,39 +63,40 @@ function none(a) {
 function high() {
   let a = document.getElementById("ob0").scrollHeight;
   let b = document.getElementById("ob0").clientHeight;
-  let c = document.getElementById("pff").offsetHeight;
-  let d = document.getElementById("cand").offsetTop;
-  let e = document.getElementById("wp").offsetTop;
-  let f = document.getElementById("dig").offsetTop;
-  let g = document.getElementById("pff").offsetTop;
-  let h = document.getElementById("link").offsetTop;
-  let i = document.getElementById("rec").offsetTop;
-  let j = document.getElementById("store").offsetTop;
-  // last id not needed, for scroll calc
+  let c = document.getElementById("cand").offsetTop;
+  let d = document.getElementById("wp").offsetTop;
+  let e = document.getElementById("dig").offsetTop;
+  let f = document.getElementById("pff").offsetTop;
+  let g = document.getElementById("link").offsetTop;
+  let h = document.getElementById("rec").offsetTop;
+  let i = document.getElementById("store").offsetTop;
+  let j = document.getElementById("acc").offsetHeight;
   let p = document.getElementById("ob0").scrollTop;
-  let v = a - b - c;
-  if (p < d) {
+  // a - b - last obj
+  let v = a - b - j;
+  if (p < c) {
     none(pictureID[0]);
   }
-  if (p > d && p < e) {
+  if (p > c && p < d) {
     none(pictureID[1]);
   }
-  if (p > e && p < f) {
+  if (p > d && p < e) {
     none(pictureID[2]);
   }
-  if (p > f && p < g) {
+  if (p > e && p < f) {
     none(pictureID[3]);
   }
-  if (p > g && p < h) {
+  if (p > f && p < g) {
     none(pictureID[4]);
   }
-  if (p > h && p < i) {
+  if (p > g && p < h) {
     none(pictureID[5]);
   }
-  if (p > i && p < j) {
+  if (p > h && p < i) {
     none(pictureID[6]);
   }
-  if (p > j && p < v) {
+  // v last obj
+  if (p > i && p < v) {
     none(pictureID[7]);
   }
   if (p > v) {
