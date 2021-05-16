@@ -246,7 +246,12 @@ window.onload = function () {
     tog,
     false
   );
-  eventListner(document.getElementById("close"), "click", close, false);
+  eventListner(
+    document.getElementById("close"), 
+    "click", 
+    close, 
+    false
+  );
   eventListner(
     document.getElementById("ob0"),
     "scroll",
