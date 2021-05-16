@@ -145,11 +145,10 @@ function check() {
 
 function sani() {
   if (window.screen.width <= 992) {
-    let a = document.querySelector("header").scrollHeight;
-    let scroll_pos = window.scrollY + window.innerHeight;
+    let scroll_pos = window.scrollY + window.innerHeight / 1.5;
     if (document.getElementById("home-div")) {
       const homeD = document.getElementById("home-div");
-      if (scroll_pos > homeD.offsetTop + a) {
+      if (scroll_pos > homeD.offsetTop) {
         homeD.classList.add("ani5");
       }
     }
@@ -157,7 +156,7 @@ function sani() {
       const tempDiv = document.querySelector(".template-div");
       let style = window.getComputedStyle(tempDiv).getPropertyValue("visibility");
       if (
-        scroll_pos > tempDiv.offsetTop + a &&
+        scroll_pos > tempDiv.offsetTop &&
         style === "hidden"
       ) {
         tempDiv.classList.add("vis1");
@@ -168,7 +167,7 @@ function sani() {
       const tempImg0 = document.querySelector(".template-img-0");
       let style = window.getComputedStyle(tempImg0).getPropertyValue("visibility");
       if (
-        scroll_pos > tempImg0.offsetTop + a &&
+        scroll_pos > tempImg0.offsetTop &&
         style === "hidden"
       ) {
         tempImg0.classList.add("vis1");
@@ -179,7 +178,7 @@ function sani() {
       const ob0 = document.getElementById("ob0");
       let style = window.getComputedStyle(ob0).getPropertyValue("visibility");
       if (
-        scroll_pos > document.getElementById("s4").offsetTop + a &&
+        scroll_pos > document.getElementById("s4").offsetTop &&
         style === "hidden"
       ) {
         ob0.classList.add("vis1");
@@ -191,7 +190,7 @@ function sani() {
       const s51 = document.getElementById("s51");
       let style = window.getComputedStyle(s5).getPropertyValue("visibility");
       if (
-        scroll_pos > s5.offsetTop + a &&
+        scroll_pos > s5.offsetTop &&
         style === "hidden"
       ) {
         s5.classList.add("vis1");
