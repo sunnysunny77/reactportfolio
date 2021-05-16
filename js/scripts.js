@@ -1,33 +1,59 @@
-function tog(a) {
-  document.getElementById("menu" + a).classList.toggle("disp");
-  document.getElementById("click" + a).classList.toggle("ani");
-  document.getElementById("men" + a).classList.toggle("ani1");
+const pictureID = [
+  "s51",
+  "s52",
+  "s53",
+  "s54",
+  "s55",
+  "s56",
+  "s57",
+  "s58",
+  "s59",
+];
+
+function loadDoc() {
+  window.event.preventDefault();
+  const contactForm = document.getElementById("contact-form");
+  const sub = document.getElementById("sub");
+  const sent = document.getElementById("sent");
+  var formData = new FormData(contactForm);
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      contactForm.reset();
+      sub.style.display = "none";
+      sent.style.display = "block";
+      sent.innerHTML = this.responseText;
+      setTimeout(function () {
+        sent.style.display = "none";
+        sent.innerHTML = "";
+        sub.style.display = "block";
+      }, 5000);
+    }
+  };
+  xhttp.open("POST", "cont.php", true);
+  xhttp.send(formData);
 }
 
-function none(one, two, three, four, five, six, seven, eight, nine) {
-  let element = document.getElementById(one);
-  let style = window.getComputedStyle(element);
-  let dis = style.getPropertyValue("display");
-  if (dis === "none") {
-    document.getElementById(two).style.display = "none";
-    document.getElementById(three).style.display = "none";
-    document.getElementById(four).style.display = "none";
-    document.getElementById(five).style.display = "none";
-    document.getElementById(six).style.display = "none";
-    document.getElementById(seven).style.display = "none";
-    document.getElementById(eight).style.display = "none";
-    document.getElementById(nine).style.display = "none";
-    document.getElementById(one).style.display = "block";
-    if (one == "s51") {
-      document.getElementById(one).classList.add("ani0");
-      setTimeout(function () {
-        document.getElementById(one).classList.remove("ani0");
-      }, 1500);
+function none(a) {
+  for (let x in pictureID) {
+    let obj = document.getElementById(pictureID[x]);
+    if (obj.id === a) {
+      if (window.getComputedStyle(obj).getPropertyValue("display") === "none") {
+        obj.style.display = "block";
+        if (obj.id !== "s51") {
+          obj.classList.add("an");
+          setTimeout(function () {
+            obj.classList.remove("an");
+          }, 750);
+        } else {
+          obj.classList.add("ani0");
+          setTimeout(function () {
+            obj.classList.remove("ani0");
+          }, 1500);
+        }
+      }
     } else {
-      document.getElementById(one).classList.add("an");
-      setTimeout(function () {
-        document.getElementById(one).classList.remove("an");
-      }, 750);
+      obj.style.display = "none";
     }
   }
 }
@@ -47,43 +73,45 @@ function high() {
   let p = document.getElementById("ob0").scrollTop;
   let v = a - b - c;
   if (p < d) {
-    none("s51", "s52", "s53", "s54", "s55", "s56", "s57", "s58","s59");
+    none(pictureID[0]);
   }
   if (p > d && p < e) {
-    none("s52", "s51", "s53", "s54", "s55", "s56", "s57", "s58","s59");
+    none(pictureID[1]);
   }
   if (p > e && p < f) {
-    none("s53", "s51", "s52", "s54", "s55", "s56", "s57", "s58","s59");
+    none(pictureID[2]);
   }
   if (p > f && p < g) {
-    none("s54", "s51", "s52", "s53", "s55", "s56", "s57", "s58","s59");
+    none(pictureID[3]);
   }
   if (p > g && p < h) {
-    none("s55", "s51", "s52", "s53", "s54", "s56", "s57", "s58","s59");
+    none(pictureID[4]);
   }
   if (p > h && p < i) {
-    none("s56", "s51", "s52", "s53", "s54", "s55", "s57", "s58","s59");
+    none(pictureID[5]);
   }
   if (p > i && p < j) {
-    none("s57", "s51", "s52", "s53", "s54", "s55", "s56", "s58","s59");
+    none(pictureID[6]);
   }
   if (p > j && p < v) {
-    none("s58", "s51", "s52", "s53", "s54", "s55", "s56", "s57","s59");
+    none(pictureID[7]);
   }
   if (p > v) {
-    none("s59", "s51", "s52", "s53", "s54", "s55", "s56" , "s57","s58");
+    none(pictureID[8]);
   }
 }
 
 function check() {
   if (window.screen.width <= 992) {
     if (document.querySelector(".template-img-cont")) {
-      document.querySelector(".template-img-cont").classList.add("vis1");
-      document.querySelector(".template-img-cont").classList.add("ani4");
+      const imgCont = document.querySelector(".template-img-cont");
+      imgCont.classList.add("vis1");
+      imgCont.classList.add("ani4");
     }
     if (document.querySelector(".template-p")) {
-      document.querySelector(".template-p").classList.add("vis1");
-      document.querySelector(".template-p").classList.add("ani2");
+      const tempP = document.querySelector(".template-p");
+      tempP.classList.add("vis1");
+      tempP.classList.add("ani2");
     }
   }
   if (window.screen.width >= 992) {
@@ -106,9 +134,10 @@ function check() {
       document.getElementById("s5").classList.add("vis1");
     }
     if (document.getElementById("s51")) {
-      document.getElementById("s51").classList.add("ani0");
+      const s51 = document.getElementById("s51");
+      s51.classList.add("ani0");
       setTimeout(function () {
-        document.getElementById("s51").classList.remove("ani0");
+        s51.classList.remove("ani0");
       }, 1500);
     }
   }
@@ -119,61 +148,92 @@ function sani() {
     let a = document.querySelector("header").scrollHeight;
     let scroll_pos = window.scrollY + window.innerHeight;
     if (document.getElementById("home-div")) {
-      if (scroll_pos > document.getElementById("home-div").offsetTop + a) {
-        document.getElementById("home-div").classList.add("ani5");
+      const homeD = document.getElementById("home-div");
+      if (scroll_pos > homeD.offsetTop + a) {
+        homeD.classList.add("ani5");
       }
     }
     if (document.querySelector(".template-div")) {
-      let elementt = document.querySelector(".template-div");
-      let stylet = window.getComputedStyle(elementt);
-      let vist = stylet.getPropertyValue("visibility");
+      const tempDiv = document.querySelector(".template-div");
+      let style = window.getComputedStyle(tempDiv).getPropertyValue("visibility");
       if (
-        scroll_pos > document.querySelector(".template-div").offsetTop + a &&
-        vist === "hidden"
+        scroll_pos > tempDiv.offsetTop + a &&
+        style === "hidden"
       ) {
-        document.querySelector(".template-div").classList.add("vis1");
-        document.querySelector(".template-div").classList.add("ani3");
+        tempDiv.classList.add("vis1");
+        tempDiv.classList.add("ani3");
       }
     }
     if (document.querySelector(".template-img-0")) {
-      let element0 = document.querySelector(".template-img-0");
-      let style0 = window.getComputedStyle(element0);
-      let vis0 = style0.getPropertyValue("visibility");
+      const tempImg0 = document.querySelector(".template-img-0");
+      let style = window.getComputedStyle(tempImg0).getPropertyValue("visibility");
       if (
-        scroll_pos > document.querySelector(".template-img-0").offsetTop + a &&
-        vis0 === "hidden"
+        scroll_pos > tempImg0.offsetTop + a &&
+        style === "hidden"
       ) {
-        document.querySelector(".template-img-0").classList.add("vis1");
-        document.querySelector(".template-img-0").classList.add("ani2");
+        tempImg0.classList.add("vis1");
+        tempImg0.classList.add("ani2");
       }
     }
     if (document.getElementById("s4")) {
-      let elemento = document.getElementById("ob0");
-      let styleo = window.getComputedStyle(elemento);
-      let viso = styleo.getPropertyValue("visibility");
+      const ob0 = document.getElementById("ob0");
+      let style = window.getComputedStyle(ob0).getPropertyValue("visibility");
       if (
         scroll_pos > document.getElementById("s4").offsetTop + a &&
-        viso === "hidden"
+        style === "hidden"
       ) {
-        document.getElementById("ob0").classList.add("vis1");
-        document.getElementById("ob0").classList.add("ani2");
+        ob0.classList.add("vis1");
+        ob0.classList.add("ani2");
       }
     }
     if (document.getElementById("s5")) {
-      let element5 = document.getElementById("s5");
-      let style5 = window.getComputedStyle(element5);
-      let vis5 = style5.getPropertyValue("visibility");
+      const s5 = document.getElementById("s5");
+      const s51 = document.getElementById("s51");
+      let style = window.getComputedStyle(s5).getPropertyValue("visibility");
       if (
-        scroll_pos > document.getElementById("s5").offsetTop + a &&
-        vis5 === "hidden"
+        scroll_pos > s5.offsetTop + a &&
+        style === "hidden"
       ) {
-        document.getElementById("s5").classList.add("vis1");
-        document.getElementById("s5").classList.add("ani2");
-        document.getElementById("s51").classList.add("ani0");
+        s5.classList.add("vis1");
+        s5.classList.add("ani2");
+        s51.classList.add("ani0");
         setTimeout(function () {
-          document.getElementById("s51").classList.remove("ani0");
+          s51.classList.remove("ani0");
         }, 1500);
       }
     }
   }
 }
+
+function close() {
+  for (let x in pictureID) {
+    if (x > 0) {
+      let obj = document.getElementById(pictureID[x]);
+      obj.style.display = "none";
+    }
+  }
+  document.getElementById(pictureID[0]).style.display = "block";
+  document.getElementById("ob0").scrollTop = 0;
+}
+
+function tog() {
+  document.getElementsByClassName("click")[0].classList.toggle("ani");
+  document.getElementsByClassName("menu0")[0].classList.toggle("disp");
+  document.getElementsByClassName("menu1")[0].classList.toggle("ani1");
+}
+
+function eventListner(obj, type, callback) {
+  if (obj) {
+    obj.addEventListener(type, callback);
+  }
+}
+
+window.onload = function () {
+  check();
+  eventListner(window, "scroll", sani);
+  eventListner(document.getElementsByClassName("click")[0], "click", tog);
+  eventListner(document.getElementById("close"), "click", close);
+  eventListner(document.getElementById("ob0"), "scroll", high);
+  eventListner(document.getElementById("contact-form"), "submit", loadDoc);
+  new Vivus("my-svg", { duration: 800 });
+};

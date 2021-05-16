@@ -20,17 +20,17 @@
     <script src="./js/scripts.js"></script>
   </head>
 
-  <body onload="check();" onscroll="sani();">
+  <body>
     <div class="outer">
       <header>
         <span role="img" aria-label="logo"></span>
 
         <span role="img" aria-label="logo"></span>
 
-        <button aria-label="Menu" id="click0" onclick="tog('0');"></button>
+        <button aria-label="Menu" class="click"></button>
 
-        <nav id="menu0" class="disp">
-          <ul id="men0">
+        <nav class="disp menu0">
+          <ul class="menu1">
             <li><a href="skills"> SKILLS </a></li>
             <li><a href="about"> ABOUT </a></li>
             <li><a href="contact"> CONTACT </a></li>
@@ -159,13 +159,8 @@
           <h3>Sites</h3>
 
           <div id="s4">
-            <span
-              id="close"
-              onclick="none('s51', 's52', 's53', 's54', 's55', 's56','s57','s58','s59');"
-              >X</span
-            >
-
-            <ul id="ob0" onscroll="high();">
+            <span id="close">X</span>
+            <ul id="ob0">
               <li>
                 Scroll preview
                 <ol>
@@ -366,8 +361,5 @@
       </footer>
     </div>
 
-    <script>
-      new Vivus("my-svg", { duration: 800 });
-    </script>
   </body>
 </html>
