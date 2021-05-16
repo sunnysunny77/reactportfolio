@@ -1,3 +1,5 @@
+let cached = null;
+
 const pictureID = [
   "s51",
   "s52",
@@ -224,7 +226,20 @@ function eventListner(obj, type, callback, opt) {
 
 window.onload = function () {
   check();
-  eventListner(window, "scroll", sani, { passive: true });
+  eventListner(
+    window,
+    "scroll",
+    function (event) {
+      if (!cached) {
+        setTimeout(function () {
+          sani();
+          cached = null;
+        }, 300);
+      }
+      cached = event;
+    },
+    { passive: true }
+  );
   eventListner(
     document.getElementsByClassName("click")[0],
     "click",
@@ -232,9 +247,20 @@ window.onload = function () {
     false
   );
   eventListner(document.getElementById("close"), "click", close, false);
-  eventListner(document.getElementById("ob0"), "scroll", high, {
-    passive: true,
-  });
+  eventListner(
+    document.getElementById("ob0"),
+    "scroll",
+    function (event) {
+      if (!cached) {
+        setTimeout(function () {
+          high();
+          cached = null;
+        }, 300);
+      }
+      cached = event;
+    },
+    { passive: true }
+  );
   eventListner(
     document.getElementById("contact-form"),
     "submit",
