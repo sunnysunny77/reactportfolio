@@ -1,5 +1,3 @@
-let scrolling = false;
-
 const pictureID = [
   "s51",
   "s52",
@@ -61,52 +59,46 @@ function none(a) {
 }
 
 function high() {
-  scrolling = true;
-  setInterval(function () {
-    if (scrolling) {
-      scrolling = false;
-      let a = document.getElementById("ob0").scrollHeight;
-      let b = document.getElementById("ob0").clientHeight;
-      let c = document.getElementById("pff").offsetHeight;
-      let d = document.getElementById("cand").offsetTop;
-      let e = document.getElementById("wp").offsetTop;
-      let f = document.getElementById("dig").offsetTop;
-      let g = document.getElementById("pff").offsetTop;
-      let h = document.getElementById("link").offsetTop;
-      let i = document.getElementById("rec").offsetTop;
-      let j = document.getElementById("store").offsetTop;
-      // last id not needed, for scroll calc
-      let p = document.getElementById("ob0").scrollTop;
-      let v = a - b - c;
-      if (p < d) {
-        none(pictureID[0]);
-      }
-      if (p > d && p < e) {
-        none(pictureID[1]);
-      }
-      if (p > e && p < f) {
-        none(pictureID[2]);
-      }
-      if (p > f && p < g) {
-        none(pictureID[3]);
-      }
-      if (p > g && p < h) {
-        none(pictureID[4]);
-      }
-      if (p > h && p < i) {
-        none(pictureID[5]);
-      }
-      if (p > i && p < j) {
-        none(pictureID[6]);
-      }
-      if (p > j && p < v) {
-        none(pictureID[7]);
-      }
-      if (p > v) {
-        none(pictureID[8]);
-      }
-    }
-  }, 300);
+  let a = document.getElementById("ob0").scrollHeight;
+  let b = document.getElementById("ob0").clientHeight;
+  let c = document.getElementById("pff").offsetHeight;
+  let d = document.getElementById("cand").offsetTop;
+  let e = document.getElementById("wp").offsetTop;
+  let f = document.getElementById("dig").offsetTop;
+  let g = document.getElementById("pff").offsetTop;
+  let h = document.getElementById("link").offsetTop;
+  let i = document.getElementById("rec").offsetTop;
+  let j = document.getElementById("store").offsetTop;
+  // last id not needed, for scroll calc
+  let p = document.getElementById("ob0").scrollTop;
+  let v = a - b - c;
+  if (p < d) {
+    none(pictureID[0]);
+  }
+  if (p > d && p < e) {
+    none(pictureID[1]);
+  }
+  if (p > e && p < f) {
+    none(pictureID[2]);
+  }
+  if (p > f && p < g) {
+    none(pictureID[3]);
+  }
+  if (p > g && p < h) {
+    none(pictureID[4]);
+  }
+  if (p > h && p < i) {
+    none(pictureID[5]);
+  }
+  if (p > i && p < j) {
+    none(pictureID[6]);
+  }
+  if (p > j && p < v) {
+    none(pictureID[7]);
+  }
+  if (p > v) {
+    none(pictureID[8]);
+  }
 }
 
 function check() {
@@ -153,67 +145,57 @@ function check() {
 
 function sani() {
   if (window.screen.width <= 992) {
-    scrolling = true;
     let scroll_pos = window.scrollY + window.innerHeight / 1.5;
-    setInterval(function () {
-      if (scrolling) {
-        scrolling = false;
-        if (document.getElementById("home-div")) {
-          const homeD = document.getElementById("home-div");
-          if (scroll_pos > homeD.offsetTop) {
-            homeD.classList.add("ani5");
-          }
-        }
-        if (document.querySelector(".template-div")) {
-          const tempDiv = document.querySelector(".template-div");
-          let style = window
-            .getComputedStyle(tempDiv)
-            .getPropertyValue("visibility");
-          if (scroll_pos > tempDiv.offsetTop && style === "hidden") {
-            tempDiv.classList.add("vis1");
-            tempDiv.classList.add("ani3");
-          }
-        }
-        if (document.querySelector(".template-img-0")) {
-          const tempImg0 = document.querySelector(".template-img-0");
-          let style = window
-            .getComputedStyle(tempImg0)
-            .getPropertyValue("visibility");
-          if (scroll_pos > tempImg0.offsetTop && style === "hidden") {
-            tempImg0.classList.add("vis1");
-            tempImg0.classList.add("ani2");
-          }
-        }
-        if (document.getElementById("s4")) {
-          const ob0 = document.getElementById("ob0");
-          let style = window
-            .getComputedStyle(ob0)
-            .getPropertyValue("visibility");
-          if (
-            scroll_pos > document.getElementById("s4").offsetTop &&
-            style === "hidden"
-          ) {
-            ob0.classList.add("vis1");
-            ob0.classList.add("ani2");
-          }
-        }
-        if (document.getElementById("s5")) {
-          const s5 = document.getElementById("s5");
-          const s51 = document.getElementById("s51");
-          let style = window
-            .getComputedStyle(s5)
-            .getPropertyValue("visibility");
-          if (scroll_pos > s5.offsetTop && style === "hidden") {
-            s5.classList.add("vis1");
-            s5.classList.add("ani2");
-            s51.classList.add("ani0");
-            setTimeout(function () {
-              s51.classList.remove("ani0");
-            }, 1500);
-          }
-        }
+    if (document.getElementById("home-div")) {
+      const homeD = document.getElementById("home-div");
+      if (scroll_pos > homeD.offsetTop) {
+        homeD.classList.add("ani5");
       }
-    }, 300);
+    }
+    if (document.querySelector(".template-div")) {
+      const tempDiv = document.querySelector(".template-div");
+      let style = window
+        .getComputedStyle(tempDiv)
+        .getPropertyValue("visibility");
+      if (scroll_pos > tempDiv.offsetTop && style === "hidden") {
+        tempDiv.classList.add("vis1");
+        tempDiv.classList.add("ani3");
+      }
+    }
+    if (document.querySelector(".template-img-0")) {
+      const tempImg0 = document.querySelector(".template-img-0");
+      let style = window
+        .getComputedStyle(tempImg0)
+        .getPropertyValue("visibility");
+      if (scroll_pos > tempImg0.offsetTop && style === "hidden") {
+        tempImg0.classList.add("vis1");
+        tempImg0.classList.add("ani2");
+      }
+    }
+    if (document.getElementById("s4")) {
+      const ob0 = document.getElementById("ob0");
+      let style = window.getComputedStyle(ob0).getPropertyValue("visibility");
+      if (
+        scroll_pos > document.getElementById("s4").offsetTop &&
+        style === "hidden"
+      ) {
+        ob0.classList.add("vis1");
+        ob0.classList.add("ani2");
+      }
+    }
+    if (document.getElementById("s5")) {
+      const s5 = document.getElementById("s5");
+      const s51 = document.getElementById("s51");
+      let style = window.getComputedStyle(s5).getPropertyValue("visibility");
+      if (scroll_pos > s5.offsetTop && style === "hidden") {
+        s5.classList.add("vis1");
+        s5.classList.add("ani2");
+        s51.classList.add("ani0");
+        setTimeout(function () {
+          s51.classList.remove("ani0");
+        }, 1500);
+      }
+    }
   }
 }
 
@@ -234,18 +216,18 @@ function tog() {
   document.getElementsByClassName("menu1")[0].classList.toggle("ani1");
 }
 
-function eventListner(obj, type, callback) {
+function eventListner(obj, type, callback, opt) {
   if (obj) {
-    obj.addEventListener(type, callback);
+    obj.addEventListener(type, callback, opt);
   }
 }
 
 window.onload = function () {
   check();
-  eventListner(window, "scroll", sani);
-  eventListner(document.getElementsByClassName("click")[0], "click", tog);
-  eventListner(document.getElementById("close"), "click", close);
-  eventListner(document.getElementById("ob0"), "scroll", high);
-  eventListner(document.getElementById("contact-form"), "submit", loadDoc);
+  eventListner(window, "scroll", sani,  { passive: true });
+  eventListner(document.getElementsByClassName("click")[0], "click", tog, false);
+  eventListner(document.getElementById("close"), "click", close, false);
+  eventListner(document.getElementById("ob0"), "scroll", high, { passive: true });
+  eventListner(document.getElementById("contact-form"), "submit", loadDoc, false);
   new Vivus("my-svg", { duration: 800 });
 };
