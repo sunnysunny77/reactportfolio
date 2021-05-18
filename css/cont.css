@@ -108,6 +108,7 @@ input {
 .msg {
   color: red;
   font-size: smaller;
+  padding-left: 2.5px;
 }
 
 @media only screen and (max-width: 240px) {

@@ -44,7 +44,7 @@ function valid(bool, obj, msg, sub) {
       newNode.className = "msg";
       newNode.id = "msg" + obj.id;
       newNode.innerHTML = msg;
-      obj.parentNode.insertBefore(newNode, obj);
+      obj.previousElementSibling.appendChild(newNode); 
     }
   } else {
     if (document.getElementById("msg" + obj.id)) {
@@ -60,10 +60,10 @@ function form(event) {
   const formData = new FormData(this);
   const entries = formData.entries();
   const data = Object.fromEntries(entries);
-  const name = document.getElementById("name");
-  const phone = document.getElementById("phone");
-  const email = document.getElementById("email");
-  const message = document.getElementById("message");
+  const name = this.children[0].children[1].children[0].children[2];
+  const phone = this.children[0].children[1].children[1].children[2];
+  const email = this.children[0].children[1].children[2].children[2];
+  const message = this.children[0].children[1].children[3].children[2];
   if (/^[A-Z \.\-']{2,40}$/i.test(data.name)) {
     valid(false, name, null, null);
   } else {
