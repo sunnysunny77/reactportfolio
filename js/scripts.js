@@ -87,7 +87,7 @@ function form(event) {
     }, 5000);
   } else {
     send(formData, this.children[1], this.children[2]);
-    this.reset()
+    this.reset();
   }
   event.preventDefault();
 }
