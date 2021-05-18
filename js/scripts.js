@@ -12,18 +12,17 @@ const pictureID = [
   "s59",
 ];
 
-function send(formData, form) {
+function send(formData, sent, sub) {
   let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      form.reset();
-      form.children[1].innerHTML = this.responseText;
-      form.children[2].style.display = "none";
-      form.children[1].style.display = "block";
+      sent.innerHTML = this.responseText;
+      sub.style.display = "none";
+      sent.style.display = "block";
       setTimeout(function () {
-        form.children[1].style.display = "none";
-        form.children[1].innerHTML = "";
-        form.children[2].style.display = "block";
+        sent.style.display = "none";
+        sent.innerHTML = "";
+        sub.style.display = "block";
       }, 5000);
     }
   };
@@ -92,7 +91,8 @@ function form(event) {
   if (error) {
     return false;
   } else {
-    send(formData, this);
+    send(formData, this.children[1], this.children[2]);
+    this.reset()
   }
 }
 
