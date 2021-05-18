@@ -9,7 +9,7 @@ const pictureID = [
   "s56",
   "s57",
   "s58",
-  "s59",
+  "s59"
 ];
 
 function loadDoc() {
@@ -37,7 +37,7 @@ function loadDoc() {
 }
 
 function none(a) {
-  for (let x in pictureID) {
+  for (let x = 0; x < pictureID.length ; x++) {
     const obj = document.getElementById(pictureID[x]);
     if (obj.id === a) {
       if (window.getComputedStyle(obj).getPropertyValue("display") === "none") {
@@ -207,7 +207,7 @@ function sani() {
 }
 
 function close() {
-  for (let x in pictureID) {
+  for (let x = 0; x < pictureID.length; x++) {
     if (x > 0) {
       const obj = document.getElementById(pictureID[x]);
       obj.style.display = "none";
