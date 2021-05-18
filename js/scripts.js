@@ -29,31 +29,22 @@ function send(formData, sent, sub) {
   xhttp.open("POST", "cont.php", true);
   xhttp.send(formData);
 }
-
-function valid(bool, obj, msg, sub) {
-  if (bool) {
-    sub.classList.add("red");
-    sub.value = "Validation Error ↑";
-    setTimeout(function () {
-      sub.value = "Send";
-      sub.classList.remove("red");
-    }, 5000);
-    if (!document.getElementById("msg" + obj.id)) {
-      obj.classList.add("red");
-      const newNode = document.createElement("span");
-      newNode.className = "msg";
-      newNode.id = "msg" + obj.id;
-      newNode.innerHTML = msg;
-      obj.previousElementSibling.appendChild(newNode); 
-    }
-  } else if (document.getElementById("msg" + obj.id)) {
+    
+function valid(bool, obj, msg) {
+  if (!document.getElementById("msg" + obj.id) && bool) {
+    obj.classList.add("red");
+    const newNode = document.createElement("span");
+    newNode.className = "msg";
+    newNode.id = "msg" + obj.id;
+    newNode.innerHTML = msg;
+    obj.previousElementSibling.appendChild(newNode); 
+  } else if (document.getElementById("msg" + obj.id) && !bool) {
     document.getElementById("msg" + obj.id).remove();
     obj.classList.remove("red");
   }
 }
 
 function form(event) {
-  event.preventDefault();
   let error;
   const formData = new FormData(this);
   const entries = formData.entries();
@@ -65,33 +56,40 @@ function form(event) {
   if (/^[A-Z \.\-']{2,40}$/i.test(data.name)) {
     valid(false, name, null, null);
   } else {
-    valid(true, name, "Enter your name", this.children[2]);
+    valid(true, name, "Enter your name");
     error = true;
   }
   if (/^[+]?[0-9]{3,15}$/.test(data.phone)) {
     valid(false, phone, null, null);
   } else {
-    valid(true, phone, "+###############", this.children[2]);
+    valid(true, phone, "+###############");
     error = true;
   }
   if (/^[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}$/.test(data.email)) {
     valid(false, email, null, null);
   } else {
-    valid(true, email, "Enter your email", this.children[2]);
+    valid(true, email, "Enter your email");
     error = true;
   }
   if (/^.*[a-zA-Z0-9].*$/.test(data.message)) {
     valid(false, message, null, null);
   } else {
-    valid(true, message, "Enter your message", this.children[2]) ;
+    valid(true, message, "Enter your message") ;
     error = true;
   }
   if (error) {
-    return false;
+    const sub = this.children[2];
+    sub.classList.add("red");
+    sub.value = "Validation Error ↑";
+    setTimeout(function () {
+      sub.value = "Send";
+      sub.classList.remove("red");
+    }, 5000);
   } else {
     send(formData, this.children[1], this.children[2]);
     this.reset()
   }
+  event.preventDefault();
 }
 
 function none(a) {
