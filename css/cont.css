@@ -57,7 +57,7 @@ textarea {
   resize: none;
   font: inherit;
   padding: 0;
-  margin: 0;
+  margin: 5px 0 0 0;
   font-size: inherit;
   background-image: url(../images/template/text.jpg);
   border: 1px solid rgb(65, 147, 188);
@@ -87,16 +87,31 @@ input {
   width: 100%;
   font-style: inherit;
   padding: 0;
-  margin: 0;
+  margin: 5px 0 0 0;
   font: inherit;
   background-image: url(../images/template/text.jpg);
   border: 1px solid rgb(65, 147, 188);
 }
 
 #sub {
-  width: 35%;
+  width: 155px;
   display: block;
   margin: auto;
   color: rgb(36, 177, 77);
   border-radius: 10px;
+}
+
+.red {
+  border-color: red;
+}
+
+.msg {
+  color: red;
+  font-size: smaller;
+}
+
+@media only screen and (max-width: 240px) {
+  .msg {
+    font-size: x-small;
+  }
 }

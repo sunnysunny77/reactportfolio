@@ -9,22 +9,17 @@ const pictureID = [
   "s56",
   "s57",
   "s58",
-  "s59"
+  "s59",
 ];
 
-function loadDoc() {
-  window.event.preventDefault();
-  const contactForm = document.getElementById("contact-form");
-  const sub = document.getElementById("sub");
-  const sent = document.getElementById("sent");
-  const formData = new FormData(contactForm);
+function send(formData, sub, sent, form) {
   let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      contactForm.reset();
+      form.reset();
+      sent.innerHTML = this.responseText;
       sub.style.display = "none";
       sent.style.display = "block";
-      sent.innerHTML = this.responseText;
       setTimeout(function () {
         sent.style.display = "none";
         sent.innerHTML = "";
@@ -36,8 +31,72 @@ function loadDoc() {
   xhttp.send(formData);
 }
 
+function valid(bool, classAddRremove, obj, msg, sub) {
+  if (bool) {
+    sub.classList.add("red");
+    sub.value = "Validation Error ↑";
+    setTimeout(function () {
+      sub.value = "Send";
+      sub.classList.remove("red");
+    }, 5000);
+    if (!document.getElementById("msg" + obj.id)) {
+      const newNode = document.createElement("span");
+      newNode.className = "msg"
+      newNode.id = "msg" + obj.id
+      newNode.innerHTML = msg
+      obj.parentNode.insertBefore(newNode, obj);
+    }
+  } else if (document.getElementById("msg" + obj.id)) {
+    document.getElementById("msg" + obj.id).remove();
+  }
+  classAddRremove;
+}
+
+function form(event) {
+  event.preventDefault();
+  let error;
+  const formData = new FormData(this);
+  const entries = formData.entries();
+  const data = Object.fromEntries(entries);
+  const sub = document.getElementById("sub");
+  const sent = document.getElementById("sent");
+  const name = document.getElementById("name");
+  const phone = document.getElementById("phone");
+  const email = document.getElementById("email");
+  const message = document.getElementById("message");
+  if (/^[A-Z \.\-']{2,40}$/i.test(data.name)) {
+    valid(false, name.classList.remove("red"), name, null, sub);
+  } else {
+    valid(true, name.classList.add("red"), name,"Enter your name", sub);
+    error = true;
+  }
+  if (/^[+]?[0-9]{3,15}$/.test(data.phone)) {
+    valid(false, phone.classList.remove("red"), phone, null, sub);
+  } else {
+    valid(true, phone.classList.add("red"), phone,"+###############", sub);
+    error = true;
+  }
+  if (/^[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}$/.test(data.email)) {
+    valid(false, email.classList.remove("red"), email, null, sub);
+  } else {
+    valid(true, email.classList.add("red"), email, "Enter your email", sub);
+    error = true;
+  }
+  if (/^.*[a-zA-Z0-9].*$/.test(data.message)) {
+    valid(false, message.classList.remove("red"), message, null, sub);
+  } else {
+    valid(true, message.classList.add("red"), message, "Enter your message", sub);
+    error = true;
+  }
+  if (error) {
+    return false;
+  } else {
+    send(formData, sub, sent, this);
+  }
+}
+
 function none(a) {
-  for (let x = 0; x < pictureID.length ; x++) {
+  for (let x = 0; x < pictureID.length; x++) {
     const obj = document.getElementById(pictureID[x]);
     if (obj.id === a) {
       if (window.getComputedStyle(obj).getPropertyValue("display") === "none") {
@@ -177,9 +236,7 @@ function sani() {
     }
     if (document.getElementById("s4")) {
       const ob0 = document.getElementById("ob0");
-      const style = window
-      .getComputedStyle(ob0)
-      .getPropertyValue("visibility");
+      const style = window.getComputedStyle(ob0).getPropertyValue("visibility");
       if (
         scroll_pos > document.getElementById("s4").offsetTop &&
         style === "hidden"
@@ -191,9 +248,7 @@ function sani() {
     if (document.getElementById("s5")) {
       const s5 = document.getElementById("s5");
       const s51 = document.getElementById("s51");
-      const style = window
-      .getComputedStyle(s5)
-      .getPropertyValue("visibility");
+      const style = window.getComputedStyle(s5).getPropertyValue("visibility");
       if (scroll_pos > s5.offsetTop && style === "hidden") {
         s5.classList.add("vis1");
         s5.classList.add("ani2");
@@ -252,11 +307,10 @@ window.onload = function () {
     false
   );
   eventListner(
-    document.getElementById("close"), 
+    document.getElementById("close"),
     "click", 
     close, 
-    false
-  );
+    false);
   eventListner(
     document.getElementById("ob0"),
     "scroll",
@@ -272,10 +326,9 @@ window.onload = function () {
     { passive: true }
   );
   eventListner(
-    document.getElementById("contact-form"),
-    "submit",
-    loadDoc,
-    false
-  );
+    document.getElementById("contact-form"), 
+    "submit", 
+    form, 
+    false);
   new Vivus("my-svg", { duration: 800 });
 };
