@@ -9,7 +9,7 @@ const pictureID = [
   "s56",
   "s57",
   "s58",
-  "s59",
+  "s59"
 ];
 
 function send(formData, sent, sub) {
@@ -54,25 +54,25 @@ function form(event) {
   const email = this.children[0].children[1].children[2].children[2];
   const message = this.children[0].children[1].children[3].children[2];
   if (/^[A-Z \.\-']{2,40}$/i.test(data.name)) {
-    valid(false, name, null, null);
+    valid(false, name, null);
   } else {
     valid(true, name, "Enter your name");
     error = true;
   }
   if (/^[+]?[0-9]{3,15}$/.test(data.phone)) {
-    valid(false, phone, null, null);
+    valid(false, phone, null);
   } else {
     valid(true, phone, "+###############");
     error = true;
   }
   if (/^[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}$/.test(data.email)) {
-    valid(false, email, null, null);
+    valid(false, email, null);
   } else {
     valid(true, email, "Enter your email");
     error = true;
   }
   if (/^.*[a-zA-Z0-9].*$/.test(data.message)) {
-    valid(false, message, null, null);
+    valid(false, message, null);
   } else {
     valid(true, message, "Enter your message") ;
     error = true;
@@ -128,7 +128,7 @@ function high() {
   const i = document.getElementById("store").offsetTop;
   const j = document.getElementById("acc").offsetHeight;
   let scroll_pos = document.getElementById("ob0").scrollTop;
-  // a - b - last obj
+  // a - b - last obj offsetHeight
   const botCalc = a - b - j;
   if (scroll_pos < c) {
     none(pictureID[0]);
@@ -206,7 +206,7 @@ function sani() {
     let head = document.getElementsByTagName("header")[0].offsetHeight;
     let scroll_pos = window.scrollY + window.innerHeight / 1.25 - head;
     if (document.getElementById("home-div")) {
-      let homeD = document.getElementById("home-div");
+      const homeD = document.getElementById("home-div");
       if (scroll_pos > homeD.offsetTop) {
         homeD.classList.add("ani5");
       }
@@ -233,11 +233,10 @@ function sani() {
     }
     if (document.getElementById("s4")) {
       const ob0 = document.getElementById("ob0");
-      const style = window.getComputedStyle(ob0).getPropertyValue("visibility");
-      if (
-        scroll_pos > document.getElementById("s4").offsetTop &&
-        style === "hidden"
-      ) {
+      const style = window
+        .getComputedStyle(ob0)
+        .getPropertyValue("visibility");
+      if (scroll_pos > document.getElementById("s4").offsetTop && style === "hidden") {
         ob0.classList.add("vis1");
         ob0.classList.add("ani2");
       }
@@ -245,7 +244,9 @@ function sani() {
     if (document.getElementById("s5")) {
       const s5 = document.getElementById("s5");
       const s51 = document.getElementById("s51");
-      const style = window.getComputedStyle(s5).getPropertyValue("visibility");
+      const style = window
+        .getComputedStyle(s5)
+        .getPropertyValue("visibility");
       if (scroll_pos > s5.offsetTop && style === "hidden") {
         s5.classList.add("vis1");
         s5.classList.add("ani2");
