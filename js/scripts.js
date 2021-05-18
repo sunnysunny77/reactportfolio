@@ -31,8 +31,7 @@ function send(formData, form) {
   xhttp.send(formData);
 }
 
-function valid(bool, obj, msg) {
-  const sub = document.getElementById("sub");
+function valid(bool, obj, msg, sub) {
   if (bool) {
     obj.classList.add("red");
     sub.classList.add("red");
@@ -67,27 +66,27 @@ function form(event) {
   const email = document.getElementById("email");
   const message = document.getElementById("message");
   if (/^[A-Z \.\-']{2,40}$/i.test(data.name)) {
-    valid(false, name, null);
+    valid(false, name, null, null);
   } else {
-    valid(true, name, "Enter your name");
+    valid(true, name, "Enter your name", this.children[2]);
     error = true;
   }
   if (/^[+]?[0-9]{3,15}$/.test(data.phone)) {
-    valid(false, phone, null);
+    valid(false, phone, null, null);
   } else {
-    valid(true, phone,"+###############");
+    valid(true, phone,"+###############", this.children[2]);
     error = true;
   }
   if (/^[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}$/.test(data.email)) {
-    valid(false, email, null);
+    valid(false, email, null, null);
   } else {
-    valid(true, email, "Enter your email");
+    valid(true, email, "Enter your email", this.children[2]);
     error = true;
   }
   if (/^.*[a-zA-Z0-9].*$/.test(data.message)) {
-    valid(false, message, null);
+    valid(false, message, null, null);
   } else {
-    valid(true, message, "Enter your message");
+    valid(true, message, "Enter your message", this.children[2]) ;
     error = true;
   }
   if (error) {
