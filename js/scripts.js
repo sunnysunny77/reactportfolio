@@ -32,7 +32,6 @@ function send(formData, sent, sub) {
 
 function valid(bool, obj, msg, sub) {
   if (bool) {
-    obj.classList.add("red");
     sub.classList.add("red");
     sub.value = "Validation Error ↑";
     setTimeout(function () {
@@ -40,6 +39,7 @@ function valid(bool, obj, msg, sub) {
       sub.classList.remove("red");
     }, 5000);
     if (!document.getElementById("msg" + obj.id)) {
+      obj.classList.add("red");
       const newNode = document.createElement("span");
       newNode.className = "msg";
       newNode.id = "msg" + obj.id;
