@@ -46,10 +46,8 @@ function valid(bool, obj, msg, sub) {
       newNode.innerHTML = msg;
       obj.previousElementSibling.appendChild(newNode); 
     }
-  } else {
-    if (document.getElementById("msg" + obj.id)) {
-       document.getElementById("msg" + obj.id).remove();
-    }
+  } else if (document.getElementById("msg" + obj.id)) {
+    document.getElementById("msg" + obj.id).remove();
     obj.classList.remove("red");
   }
 }
@@ -73,7 +71,7 @@ function form(event) {
   if (/^[+]?[0-9]{3,15}$/.test(data.phone)) {
     valid(false, phone, null, null);
   } else {
-    valid(true, phone,"+###############", this.children[2]);
+    valid(true, phone, "+###############", this.children[2]);
     error = true;
   }
   if (/^[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}$/.test(data.email)) {
