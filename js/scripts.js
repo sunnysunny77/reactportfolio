@@ -147,9 +147,10 @@ function check() {
 
 function sani() {
   if (window.screen.width <= 992) {
-    let scroll_pos = window.scrollY + window.innerHeight / 1.5;
+    let head = document.getElementsByTagName("header")[0].offsetHeight;
+    let scroll_pos = window.scrollY + window.innerHeight / 1.25 - head;
     if (document.getElementById("home-div")) {
-      const homeD = document.getElementById("home-div");
+      let homeD = document.getElementById("home-div");
       if (scroll_pos > homeD.offsetTop) {
         homeD.classList.add("ani5");
       }
