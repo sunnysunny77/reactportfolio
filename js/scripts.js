@@ -12,18 +12,18 @@ const pictureID = [
   "s59",
 ];
 
-function send(formData, sub, sent, form) {
+function send(formData, form) {
   let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       form.reset();
-      sent.innerHTML = this.responseText;
-      sub.style.display = "none";
-      sent.style.display = "block";
+      form.children[1].innerHTML = this.responseText;
+      form.children[2].style.display = "none";
+      form.children[1].style.display = "block";
       setTimeout(function () {
-        sent.style.display = "none";
-        sent.innerHTML = "";
-        sub.style.display = "block";
+        form.children[1].style.display = "none";
+        form.children[1].innerHTML = "";
+        form.children[2].style.display = "block";
       }, 5000);
     }
   };
@@ -31,8 +31,10 @@ function send(formData, sub, sent, form) {
   xhttp.send(formData);
 }
 
-function valid(bool, classAddRremove, obj, msg, sub) {
+function valid(bool, obj, msg) {
+  const sub = document.getElementById("sub");
   if (bool) {
+    obj.classList.add("red");
     sub.classList.add("red");
     sub.value = "Validation Error ↑";
     setTimeout(function () {
@@ -41,15 +43,17 @@ function valid(bool, classAddRremove, obj, msg, sub) {
     }, 5000);
     if (!document.getElementById("msg" + obj.id)) {
       const newNode = document.createElement("span");
-      newNode.className = "msg"
-      newNode.id = "msg" + obj.id
-      newNode.innerHTML = msg
+      newNode.className = "msg";
+      newNode.id = "msg" + obj.id;
+      newNode.innerHTML = msg;
       obj.parentNode.insertBefore(newNode, obj);
     }
-  } else if (document.getElementById("msg" + obj.id)) {
-    document.getElementById("msg" + obj.id).remove();
+  } else {
+    if (document.getElementById("msg" + obj.id)) {
+       document.getElementById("msg" + obj.id).remove();
+    }
+    obj.classList.remove("red");
   }
-  classAddRremove;
 }
 
 function form(event) {
@@ -58,40 +62,38 @@ function form(event) {
   const formData = new FormData(this);
   const entries = formData.entries();
   const data = Object.fromEntries(entries);
-  const sub = document.getElementById("sub");
-  const sent = document.getElementById("sent");
   const name = document.getElementById("name");
   const phone = document.getElementById("phone");
   const email = document.getElementById("email");
   const message = document.getElementById("message");
   if (/^[A-Z \.\-']{2,40}$/i.test(data.name)) {
-    valid(false, name.classList.remove("red"), name, null, sub);
+    valid(false, name, null);
   } else {
-    valid(true, name.classList.add("red"), name,"Enter your name", sub);
+    valid(true, name, "Enter your name");
     error = true;
   }
   if (/^[+]?[0-9]{3,15}$/.test(data.phone)) {
-    valid(false, phone.classList.remove("red"), phone, null, sub);
+    valid(false, phone, null);
   } else {
-    valid(true, phone.classList.add("red"), phone,"+###############", sub);
+    valid(true, phone,"+###############");
     error = true;
   }
   if (/^[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}$/.test(data.email)) {
-    valid(false, email.classList.remove("red"), email, null, sub);
+    valid(false, email, null);
   } else {
-    valid(true, email.classList.add("red"), email, "Enter your email", sub);
+    valid(true, email, "Enter your email");
     error = true;
   }
   if (/^.*[a-zA-Z0-9].*$/.test(data.message)) {
-    valid(false, message.classList.remove("red"), message, null, sub);
+    valid(false, message, null);
   } else {
-    valid(true, message.classList.add("red"), message, "Enter your message", sub);
+    valid(true, message, "Enter your message");
     error = true;
   }
   if (error) {
     return false;
   } else {
-    send(formData, sub, sent, this);
+    send(formData, this);
   }
 }
 
