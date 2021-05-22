@@ -159,46 +159,15 @@ function high() {
   }
 }
 
-function check() {
-  if (window.screen.width <= 992) {
-    if (document.querySelector(".template-img-cont")) {
-      const imgCont = document.querySelector(".template-img-cont");
-      imgCont.classList.add("vis1");
-      imgCont.classList.add("ani4");
-    }
-    if (document.querySelector(".template-p")) {
-      const tempP = document.querySelector(".template-p");
-      tempP.classList.add("vis1");
-      tempP.classList.add("ani2");
+function close() {
+  for (let x = 0; x < pictureID.length; x++) {
+    if (x > 0) {
+      const obj = document.getElementById(pictureID[x]);
+      obj.style.display = "none";
     }
   }
-  if (window.screen.width >= 992) {
-    if (document.querySelector(".template-img-cont")) {
-      document.querySelector(".template-img-cont").classList.add("vis1");
-    }
-    if (document.querySelector(".template-div")) {
-      document.querySelector(".template-div").classList.add("vis1");
-    }
-    if (document.querySelector(".template-p")) {
-      document.querySelector(".template-p").classList.add("vis1");
-    }
-    if (document.querySelector(".template-img-0")) {
-      document.querySelector(".template-img-0").classList.add("vis1");
-    }
-    if (document.getElementById("ob0")) {
-      document.getElementById("ob0").classList.add("vis1");
-    }
-    if (document.getElementById("s5")) {
-      document.getElementById("s5").classList.add("vis1");
-    }
-    if (document.getElementById("s51")) {
-      const s51 = document.getElementById("s51");
-      s51.classList.add("ani0");
-      setTimeout(function () {
-        s51.classList.remove("ani0");
-      }, 1500);
-    }
-  }
+  document.getElementById(pictureID[0]).style.display = "block";
+  document.getElementById("ob0").scrollTop = 0;
 }
 
 function sani() {
@@ -259,17 +228,6 @@ function sani() {
   }
 }
 
-function close() {
-  for (let x = 0; x < pictureID.length; x++) {
-    if (x > 0) {
-      const obj = document.getElementById(pictureID[x]);
-      obj.style.display = "none";
-    }
-  }
-  document.getElementById(pictureID[0]).style.display = "block";
-  document.getElementById("ob0").scrollTop = 0;
-}
-
 function tog() {
   document.getElementsByClassName("click")[0].classList.toggle("ani");
   document.getElementsByClassName("menu0")[0].classList.toggle("disp");
@@ -282,8 +240,61 @@ function eventListner(obj, type, callback, opt) {
   }
 }
 
+function vivus () {
+  new Vivus('my-svg', { duration: 800, file: '../images/template/svg.svg' }, null);
+}
+
+function check() {
+  if (window.screen.width <= 992) {
+    if (document.querySelector(".template-img-cont")) {
+      const imgCont = document.querySelector(".template-img-cont");
+      imgCont.classList.add("vis1");
+      imgCont.classList.add("ani4");
+    }
+    if (document.querySelector(".template-p")) {
+      const tempP = document.querySelector(".template-p");
+      tempP.classList.add("vis1");
+      tempP.classList.add("ani2");
+    }
+  }
+  if (window.screen.width >= 992) {
+    if (document.querySelector(".template-img-cont")) {
+      document.querySelector(".template-img-cont").classList.add("vis1");
+    }
+    if (document.querySelector(".template-div")) {
+      document.querySelector(".template-div").classList.add("vis1");
+    }
+    if (document.querySelector(".template-p")) {
+      document.querySelector(".template-p").classList.add("vis1");
+    }
+    if (document.querySelector(".template-img-0")) {
+      document.querySelector(".template-img-0").classList.add("vis1");
+    }
+    if (document.getElementById("ob0")) {
+      document.getElementById("ob0").classList.add("vis1");
+    }
+    if (document.getElementById("s5")) {
+      document.getElementById("s5").classList.add("vis1");
+    }
+    if (document.getElementById("s51")) {
+      const s51 = document.getElementById("s51");
+      s51.classList.add("ani0");
+      setTimeout(function () {
+        s51.classList.remove("ani0");
+      }, 1500);
+    }
+  }
+}
+
 window.onload = function () {
   check();
+  vivus();
+  eventListner(
+    document.getElementsByClassName("click")[0],
+    "click",
+    tog,
+    false
+  );
   eventListner(
     window,
     "scroll",
@@ -299,16 +310,10 @@ window.onload = function () {
     { passive: true }
   );
   eventListner(
-    document.getElementsByClassName("click")[0],
-    "click",
-    tog,
-    false
-  );
-  eventListner(
     document.getElementById("close"),
     "click", 
     close, 
-    false);
+    false); 
   eventListner(
     document.getElementById("ob0"),
     "scroll",
@@ -327,6 +332,7 @@ window.onload = function () {
     document.getElementById("contact-form"), 
     "submit", 
     form, 
-    false);
-    new Vivus('my-svg', { duration: 800, file: '../images/template/svg.svg' }, null);
+    false
+  );
 };
+
