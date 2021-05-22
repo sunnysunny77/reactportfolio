@@ -328,5 +328,5 @@ window.onload = function () {
     "submit", 
     form, 
     false);
-  new Vivus("my-svg", { duration: 800 });
+    new Vivus('my-svg', { duration: 800, file: '../images/template/svg.svg' }, null);
 };

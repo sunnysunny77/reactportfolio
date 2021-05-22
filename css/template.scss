@@ -185,7 +185,11 @@ footer ul li a:hover {
   width: 44.5%;
 }
 
-.main-logo svg {
+#my-svg {
+  display: inline-block;
+}
+
+.main-logo span svg, #my-svg {
   width: 90px;
   height: 90px;
 }
@@ -519,7 +523,7 @@ header span {
     margin-left: 7.5%;
     width: 92.5%;
   }
-  .main-logo svg {
+  .main-logo span svg, #my-svg  {
     width: 55px;
     height: 55px;
   }
