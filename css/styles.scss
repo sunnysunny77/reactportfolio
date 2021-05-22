@@ -1,78 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto");
+@import "./variables.scss";
+
 /* images */
-#s51 {
-  background-image: url("../images/home/global.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
-}
 
-#s52 {
-  background-image: url("../images/home/candid.jpg");
+$img: '../images/home/global.png','../images/home/candid.jpg','../images/home/wp.jpg','../images/home/tafe.jpg','../images/home/pff.jpg','../images/home/sc.jpg','../images/home/rec.jpg','../images/home/store.jpg','../images/home/acc.jpg';
+ 
+@for $i from 1 through length($img) {
+  #s5#{$i} {
+  background-image: url(nth($img, $i));
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
   height: 100%;
-}
-
-#s53 {
-  background-image: url("../images/home/wp.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
-}
-
-#s54 {
-  background-image: url("../images/home/tafe.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
-}
-
-#s55 {
-  background-image: url("../images/home/pff.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
-}
-
-#s56 {
-  background-image: url("../images/home/sc.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
-}
-
-#s57 {
-  background-image: url("../images/home/rec.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
-}
-
-#s58 {
-  background-image: url("../images/home/store.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
-}
-
-#s59 {
-  background-image: url("../images/home/acc.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
+  }
 }
 
 /* GLOBAL */
+
 .template-img {
   background-image: url(../images/home/home.png);
   background-position: center;
@@ -82,6 +25,7 @@
 }
 
 /* Scroll */
+
 #site h3 {
   margin-left: 5%;
 }
@@ -91,7 +35,7 @@
   width: calc(992px - 46.026%);
   margin: 4% auto auto calc(987px - 95%);
   float: left;
-  background-color: #fbfbee;
+  background-color: rgb(251, 251, 238);
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
   background-image: url(../images/template/text.jpg);
@@ -105,8 +49,8 @@
   margin: 1.25% 2.5% 0 0;
   padding: 2.5px 5px;
   font-size: x-small;
-  color: black;
-  border: 1px solid black;
+  color: $c5;
+  border: 1px solid $c5;
   border-radius: 100px;
   opacity: 0.15;
 }
@@ -116,7 +60,7 @@
   height: 250px;
   float: right;
   padding: 5%;
-  border: 5px solid whitesmoke;
+  border: 5px solid $c2;
   margin-right: calc(987px - 95%);
   visibility: hidden;
   position: relative;
@@ -130,12 +74,12 @@
   position: absolute;
   top: 10px;
   left: 30px;
-  color: black;
+  color: $c5;
   font-size: x-large;
 }
 
 #s5 a:hover {
-  color: whitesmoke;
+  color: $c2;
   text-decoration: none;
 }
 
@@ -144,13 +88,13 @@
   margin: 13% 0;
   padding: 0 7px 0 40px;
   position: relative;
-  color: #4193bc;
+  color: rgb(65, 147, 188);
   text-align: left;
   list-style-type: none;
   overflow-y: auto;
   overflow-x: hidden;
   overflow-y: overlay;
-  scrollbar-color: black #fbaf5d;
+  scrollbar-color: $c5 $c4;
   scrollbar-width: thin;
   font-size: large;
   word-wrap: break-word;
@@ -167,15 +111,15 @@
 }
 
 #ob0::-webkit-scrollbar-thumb {
-  background: #fbaf5d;
+  background: $c4;
 }
 
 #ob0::-webkit-scrollbar-track {
-  background: black;
+  background: $c5;
 }
 
 #ob0::-webkit-scrollbar-thumb:hover {
-  background: #fbaf5d;
+  background: $c4;
 }
 
 #home-div {
@@ -187,15 +131,15 @@
   height: 60px;
   width: 60px;
   margin: 8.7% auto;
-  opacity: 0.65;
+  opacity: 0.65;  
 }
 
 /* RESPONSIVE */
+
 @media only screen and (max-width: 1024px) {
   #site h3 {
     font-size: large;
   }
-
   #s4 {
     float: none;
     display: block;
@@ -205,7 +149,6 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-
   #s5 {
     float: none;
     display: block;
@@ -213,58 +156,18 @@
     height: auto;
     margin: auto;
     right: 0;
-    border-top: 5px solid #fbaf5d;
+    border-top: 5px solid $c4;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     border-left: 0;
     border-right: 0;
   }
-
-  #s51 {
-    background-size: 47%;
-    padding: 23%;
+  @for $i from 1 through length($img) {
+    #s5#{$i} {
+      background-size: 47%;
+      padding: 23%;
+    }
   }
-
-  #s52 {
-    background-size: 47%;
-    padding: 23%;
-  }
-
-  #s53 {
-    background-size: 47%;
-    padding: 23%;
-  }
-
-  #s54 {
-    background-size: 47%;
-    padding: 23%;
-  }
-
-  #s55 {
-    background-size: 47%;
-    padding: 23%;
-  }
-
-  #s56 {
-    background-size: 47%;
-    padding: 23%;
-  }
-
-  #s57 {
-    background-size: 47%;
-    padding: 23%;
-  }
-
-  #s58 {
-    background-size: 47%;
-    padding: 23%;
-  }
-
-  #s59 {
-    background-size: 47%;
-    padding: 23%;
-  }
-
   #ob0 {
     border-left: none;
     display: inline-block;
@@ -274,20 +177,16 @@
     padding: 10px 6% 10px 6%;
     font-size: initial;
   }
-
   #ob0 ol li h4 {
     font-size: large;
   }
-
   #ob0 ul li {
     padding: 0 40px;
   }
-
   #s5 a {
     top: 5px;
     font-size: small;
   }
-
   #close {
     float: none;
     position: absolute;
@@ -296,11 +195,9 @@
     bottom: -35px;
     margin: 0;
   }
-
   #home-div {
     display: block;
   }
-
   .template-div {
     margin: auto !important;
     height: 75px !important;
@@ -310,30 +207,30 @@
     left: 20%;
   }
 }
+
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
   #s5 {
     width: calc(40% - 10px);
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
-    border-left: 5px solid whitesmoke;
-    border-right: 5px solid whitesmoke;
+    border-left: 5px solid $c2;
+    border-right: 5px solid $c2;
   }
-
   #close {
     bottom: auto;
     top: 15px;
   }
 }
+
 @media only screen and (max-width: 320px) {
   #s5 a {
     top: 2.5px;
     font-size: xx-small;
   }
 }
+
 @media only screen and (max-width: 240px) {
   #s5 a {
     top: 0;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */

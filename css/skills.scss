@@ -1,5 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto");
+@import "./variables.scss";
+
 /* GLOBAL */
+
 .template-img {
   background-image: url(../images/skills/skills.png);
   background-size: cover;
@@ -9,7 +11,7 @@
 }
 
 .template-img-0 {
-  border: 5px solid whitesmoke;
+  border: 5px solid $c2;
   background-image: url(../images/skills/skillsimg.jpg);
   background-size: 90% 90%;
   background-repeat: no-repeat;
@@ -21,7 +23,5 @@
 }
 
 #sa {
-  color: #4193bc;
+  color: $c3;
 }
-
-/*# sourceMappingURL=skills.css.map */

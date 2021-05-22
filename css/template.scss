@@ -1,8 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto");
+@import "./variables.scss";
+
 /* GLOBAL */
+
 body {
-  font-family: "Roboto", sans-serif;
-  background-color: honeydew;
+  font-family: $font;
+  background-color: $mainbg;
 }
 
 .outer {
@@ -20,31 +22,32 @@ h1 {
 
 h2 {
   display: inline;
-  color: #fbaf5d;
+  color: $heading2;
   font-size: 1.8em;
   margin: 0;
   padding: 0;
 }
 
 h3 {
-  color: rgba(251, 175, 93, 0.9);
+  color: $heading3;
   font-size: 1.4em;
   width: 7.5px;
-  border-top: 7.5px solid rgba(36, 177, 77, 0.4);
+  border-top: 7.5px solid $headingBoarder;
 }
 
 h4 {
-  color: #24b14d;
+  color: $heading4;
   font-size: xx-large;
 }
 
 /* HEADER */
+
 header {
   width: 100%;
   background-image: url(../images/template/head-back.jpg);
   background-size: 100% 100%;
   height: 75px;
-  border-bottom: 8px solid honeydew;
+  border-bottom: 8px solid $mainbg;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   display: flex;
@@ -91,6 +94,7 @@ header button {
 }
 
 /* UL */
+
 nav ul {
   padding: 0;
   margin: 0;
@@ -108,7 +112,7 @@ nav .lihome {
 
 nav ul li a,
 footer ul li a {
-  color: #24b14d;
+  color: $Acolor;
   margin: 0.75%;
   text-decoration: none;
   background-color: transparent;
@@ -116,7 +120,7 @@ footer ul li a {
 
 nav ul li a {
   padding: 4px 22.5px;
-  border: 1px solid #d3fcd8;
+  border: 1px solid $c1;
   border-radius: 25px;
 }
 
@@ -134,7 +138,7 @@ footer ul {
 
 footer h2 {
   font-size: small;
-  color: #24b14d;
+  color: $Acolor;
   font-style: oblique;
   opacity: 0.6;
 }
@@ -149,10 +153,11 @@ footer .lihome {
 
 nav ul li a:hover,
 footer ul li a:hover {
-  color: #fbaf5d;
+  color: $aHover;
 }
 
 /* MAIN */
+
 .main {
   position: relative;
   width: 100%;
@@ -190,7 +195,7 @@ footer ul li a:hover {
   font-style: oblique;
   margin-left: 2.5%;
   position: absolute;
-  text-shadow: 0 0 2.5px #d3fcd8;
+  text-shadow: 0 0 2.5px $c1;
 }
 
 .main-logo-span {
@@ -206,15 +211,16 @@ footer ul li a:hover {
 }
 
 /* TEMPLATE */
+
 .template h3 {
   margin-left: 5%;
 }
 
 .template-img-cont {
   width: calc(992px - 73.991%);
-  height: 250px;
+  height: 250px; 
   margin-left: calc(987px - 95%);
-  border: 5px solid whitesmoke;
+  border: 5px solid $c2;
   padding: 5%;
   visibility: hidden;
   float: left;
@@ -229,6 +235,7 @@ footer ul li a:hover {
   border-bottom-right-radius: 25px;
   background-image: url(../images/template/text.jpg);
   background-size: 100% 100%;
+
 }
 
 .template-p-img {
@@ -250,13 +257,13 @@ footer ul li a:hover {
   height: 50%;
   margin: 13% 0;
   padding: 0 40px;
-  color: #4193bc;
-  border-left: 5px solid #fbaf5d;
+  color: $c3;
+  border-left: 5px solid $c4;
   text-align: right;
   overflow-y: auto;
   overflow-x: hidden;
   overflow-y: overlay;
-  scrollbar-color: black #fbaf5d;
+  scrollbar-color: $c5 $c4;
   scrollbar-width: thin;
   font-size: large;
   word-wrap: break-word;
@@ -268,15 +275,15 @@ footer ul li a:hover {
 }
 
 .template-p::-webkit-scrollbar-thumb {
-  background: #fbaf5d;
+  background: $c4;
 }
 
 .template-p::-webkit-scrollbar-track {
-  background: black;
+  background: $c5;
 }
 
 .template-p::-webkit-scrollbar-thumb:hover {
-  background: #fbaf5d;
+  background: $c4;
 }
 
 .template-div {
@@ -290,11 +297,12 @@ footer ul li a:hover {
 }
 
 /* FOOTER */
+
 footer {
   height: 220px;
   background-image: url(../images/template/foot-back.jpg);
   background-size: 100% 100%;
-  border-top: 8px solid honeydew;
+  border-top: 8px solid $mainbg;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   display: flex;
@@ -311,6 +319,7 @@ footer span {
 }
 
 /* ANIMATION */
+
 .vis1 {
   visibility: visible !important;
 }
@@ -336,34 +345,29 @@ header span {
   .disp {
     display: none;
   }
-
   .ani {
     animation: scale1 0.5s;
   }
-
   .ani1 {
     animation: slideInOp 0.75s, slideIn0 0.75s;
   }
-
   .ani2 {
     animation: fadeInBack 3.5s ease-in;
     visibility: visible;
   }
-
   .ani3 {
     animation: scale0 3.5s ease-in;
     visibility: visible;
   }
-
   .ani4 {
     animation: fadeInBack 1.5s ease-in;
     animation: scale0 1.5s ease-in;
   }
-
   .ani5 {
     animation: scale2 3.5s ease-in-out;
   }
 }
+
 @keyframes fadeInBack {
   0% {
     opacity: 0;
@@ -387,6 +391,7 @@ header span {
     opacity: 1;
   }
 }
+
 @keyframes slideIn {
   0% {
     top: -75px;
@@ -396,6 +401,7 @@ header span {
     top: 0;
   }
 }
+
 @keyframes slideIn0 {
   0% {
     margin-top: -75px;
@@ -404,6 +410,7 @@ header span {
     margin-top: 0;
   }
 }
+
 @keyframes slideInOp {
   0% {
     opacity: 0;
@@ -415,6 +422,7 @@ header span {
     opacity: 1;
   }
 }
+
 @keyframes scale0 {
   0% {
     transform: scale(0.85);
@@ -423,9 +431,10 @@ header span {
     transform: scale(1);
   }
 }
+
 @keyframes scale1 {
   0% {
-    background-color: whitesmoke;
+    background-color: $c2;
     border-radius: 10px;
     transform: scale(0.85);
   }
@@ -435,6 +444,7 @@ header span {
     background-color: transparent;
   }
 }
+
 @keyframes scale2 {
   0% {
     transform: scale(1);
@@ -446,6 +456,7 @@ header span {
     transform: scale(1);
   }
 }
+
 @keyframes fadeInOpacity {
   0% {
     opacity: 0;
@@ -454,51 +465,45 @@ header span {
     opacity: 1;
   }
 }
+
 /* RESPONSIVE */
+
 @media only screen and (max-width: 1024px) {
   header {
     padding: 10px 0;
     flex-direction: column;
     height: auto;
   }
-
   header > span {
     display: none;
   }
-
   header > span + span {
     display: block;
     margin: auto;
   }
-
   header button {
     display: block;
   }
-
   nav {
     margin: auto;
     width: 100%;
     text-align: center;
     padding-bottom: 20px;
   }
-
   nav ul {
     width: 100%;
     margin: auto;
   }
-
   nav ul li {
     line-height: 35px;
     padding: 0;
   }
-
   nav ul li a {
     width: 30%;
     display: inline-block;
     border-radius: 0;
     font-size: 0.92em;
   }
-
   footer ul li a {
     display: inline;
     border-radius: 0;
@@ -506,35 +511,28 @@ header span {
     padding: 4px 0px;
     font-size: smaller;
   }
-
   nav .lihome,
-footer .lihome {
+  footer .lihome {
     margin: auto;
   }
-
   .main-logo {
     margin-left: 7.5%;
     width: 92.5%;
   }
-
   .main-logo svg {
     width: 55px;
     height: 55px;
   }
-
   .main-logo h2 {
     font-size: x-large;
     text-shadow: none;
   }
-
   .main-logo-span {
     display: none;
   }
-
   .template h3 {
     font-size: large;
   }
-
   .template-img-cont {
     float: none;
     display: block;
@@ -544,48 +542,41 @@ footer .lihome {
     border: none;
     padding: 0;
   }
-
   .template-p-cont {
     width: 100%;
     height: 140px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     margin: auto;
-    border-top: 5px solid #fbaf5d;
+    border-top: 5px solid $c4;
     position: relative;
   }
-
   .template-p-img {
     display: inline-block;
   }
-
   .template-p {
     text-align: center;
     display: block;
     height: calc(100% - 45px);
     border-left: none;
-    border-top: 2.5px solid rgba(154, 218, 218, 0.4);
-    border-bottom: 2.5px solid rgba(154, 218, 218, 0.4);
+    border-top: 2.5px solid $tempBoarder;
+    border-bottom: 2.5px solid $tempBoarder;
     margin: 10px auto;
     padding: 10px 5% 10px 5%;
     font-size: initial;
   }
-
   .template-div {
     position: relative;
   }
-
   .template-img-0 {
     background-size: 88% !important;
     width: calc(70% - 10px) !important;
     padding: 22% 0 22% 0;
     height: auto !important;
   }
-
   footer {
     flex-direction: column;
   }
-
   footer span {
     display: block;
     margin: auto auto 2% auto;
@@ -593,17 +584,16 @@ footer .lihome {
     top: 25px;
     transform: scale(0.75);
   }
-
   footer ul {
     display: block;
     margin: auto;
     width: 100%;
   }
-
   .sm {
     display: none;
   }
 }
+
 @media only screen and (max-width: 720px) and (orientation: portrait) {
   .template-img-0 {
     width: 100% !important;
@@ -617,11 +607,11 @@ footer .lihome {
     padding-bottom: 34%;
   }
 }
+
 @media only screen and (max-width: 320px) {
   .main-logo h2 {
     font-size: medium;
   }
-
   .template-img-0 {
     width: 100% !important;
     padding: 32% 0 32% 0;
@@ -629,10 +619,9 @@ footer .lihome {
     border-right: 0 !important;
   }
 }
+
 @media only screen and (max-width: 240px) {
   .main-logo h2 {
     font-size: smaller;
   }
 }
-
-/*# sourceMappingURL=template.css.map */
