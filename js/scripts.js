@@ -170,6 +170,12 @@ function close() {
   document.getElementById("ob0").scrollTop = 0;
 }
 
+function tog() {
+  document.getElementsByClassName("click")[0].classList.toggle("ani");
+  document.getElementsByClassName("menu0")[0].classList.toggle("disp");
+  document.getElementsByClassName("menu1")[0].classList.toggle("ani1");
+}
+
 function sani() {
   if (window.screen.width <= 992) {
     let head = document.getElementsByTagName("header")[0].offsetHeight;
@@ -228,10 +234,8 @@ function sani() {
   }
 }
 
-function tog() {
-  document.getElementsByClassName("click")[0].classList.toggle("ani");
-  document.getElementsByClassName("menu0")[0].classList.toggle("disp");
-  document.getElementsByClassName("menu1")[0].classList.toggle("ani1");
+function vivus () {
+  new Vivus('my-svg', { duration: 800, file: 'https://gendrive.s3-ap-southeast-2.amazonaws.com/svg.svg' }, null);
 }
 
 function eventListner(obj, type, callback, opt) {
@@ -240,8 +244,21 @@ function eventListner(obj, type, callback, opt) {
   }
 }
 
-function vivus () {
-  new Vivus('my-svg', { duration: 800, file: '../images/template/svg.svg' }, null);
+function script () {
+  const obj0 = document.getElementsByClassName("outer")[0];
+  let script = document.createElement("script");
+  script.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js");
+  script.setAttribute("integrity", "sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg==");
+  script.setAttribute("crossorigin", "anonymous");
+  script.setAttribute("referrerpolicy", "no-referrer");
+  script.setAttribute("id", "script");
+  obj0.parentNode.insertBefore(script, obj0.nextSibling);
+  eventListner(
+    script,
+    "load",
+    vivus,
+    null
+  );
 }
 
 function check() {
@@ -288,13 +305,7 @@ function check() {
 
 window.onload = function () {
   check();
-  vivus();
-  eventListner(
-    document.getElementsByClassName("click")[0],
-    "click",
-    tog,
-    false
-  );
+  script();
   eventListner(
     window,
     "scroll",
@@ -308,6 +319,12 @@ window.onload = function () {
       cached = event;
     },
     { passive: true }
+  );
+  eventListner(
+    document.getElementsByClassName("click")[0],
+    "click",
+    tog,
+    false
   );
   eventListner(
     document.getElementById("close"),
