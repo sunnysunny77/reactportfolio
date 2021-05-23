@@ -251,7 +251,6 @@ function script () {
   script.setAttribute("integrity", "sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg==");
   script.setAttribute("crossorigin", "anonymous");
   script.setAttribute("referrerpolicy", "no-referrer");
-  script.setAttribute("id", "script");
   obj.parentNode.insertBefore(script, obj.nextSibling);
   eventListner(
     script,
