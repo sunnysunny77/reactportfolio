@@ -234,6 +234,19 @@ function sani() {
   }
 }
 
+function cache (event) {
+  if (!cached) {
+    setTimeout(function () {
+      sani();
+      if (document.getElementById("ob0")) {
+      high();
+      }
+      cached = null;
+    }, 300);
+  }
+  cached = event;
+}
+
 function vivus () {
   new Vivus('my-svg', { duration: 800, file: 'https://gendrive.s3-ap-southeast-2.amazonaws.com/svg.svg' }, null);
 }
@@ -308,15 +321,7 @@ window.onload = function () {
   eventListner(
     window,
     "scroll",
-    function (event) {
-      if (!cached) {
-        setTimeout(function () {
-          sani();
-          cached = null;
-        }, 300);
-      }
-      cached = event;
-    },
+    cache,
     { passive: true }
   );
   eventListner(
@@ -334,15 +339,7 @@ window.onload = function () {
   eventListner(
     document.getElementById("ob0"),
     "scroll",
-    function (event) {
-      if (!cached) {
-        setTimeout(function () {
-          high();
-          cached = null;
-        }, 300);
-      }
-      cached = event;
-    },
+    cache,
     { passive: true }
   );
   eventListner(
