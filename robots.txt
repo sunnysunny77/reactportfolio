@@ -1,0 +1,2 @@
+User-agent: * 
+Sitemap: https://portfolio.sunnyhome.site/sitemap.xml
