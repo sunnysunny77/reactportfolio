@@ -245,14 +245,14 @@ function eventListner(obj, type, callback, opt) {
 }
 
 function script () {
-  const obj0 = document.getElementsByClassName("outer")[0];
+  const obj = document.getElementsByClassName("outer")[0];
   let script = document.createElement("script");
   script.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js");
   script.setAttribute("integrity", "sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg==");
   script.setAttribute("crossorigin", "anonymous");
   script.setAttribute("referrerpolicy", "no-referrer");
   script.setAttribute("id", "script");
-  obj0.parentNode.insertBefore(script, obj0.nextSibling);
+  obj.parentNode.insertBefore(script, obj.nextSibling);
   eventListner(
     script,
     "load",
@@ -330,7 +330,8 @@ window.onload = function () {
     document.getElementById("close"),
     "click", 
     close, 
-    false); 
+    false
+  ); 
   eventListner(
     document.getElementById("ob0"),
     "scroll",
