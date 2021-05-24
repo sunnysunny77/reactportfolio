@@ -42,6 +42,14 @@ nav ul, footer ul {
   letter-spacing: 0.75px;
 }
 
+nav ul li, footer ul li {
+  display: inline;
+}
+
+.button:hover, footer ul li a:hover {
+  color: #fbaf5d;
+}
+
 /* HEADER */
 header {
   width: 100%;
@@ -105,19 +113,11 @@ nav ul {
   text-align: center;
 }
 
-nav ul li {
-  display: inline;
-}
-
 .button {
   width: 17%;
   cursor: pointer;
   display: inline-block;
   color: whitesmoke;
-}
-
-.button:hover {
-  color: #fbaf5d;
 }
 
 .button .label {
@@ -300,10 +300,6 @@ footer ul {
   list-style-type: none;
 }
 
-footer ul li {
-  display: inline;
-}
-
 footer ul li a {
   color: #24b14d;
   margin: 0.75%;
@@ -320,10 +316,6 @@ footer h2 {
 
 .sm {
   padding-right: 1%;
-}
-
-footer ul li a:hover {
-  color: #fbaf5d;
 }
 
 /* ANIMATION */
@@ -508,7 +500,6 @@ header > span, header > span + span {
 
   .button .icon:before, .button .icon:after {
     height: 1px;
-    opacity: 0;
     content: "";
     position: absolute;
     display: block;
@@ -555,7 +546,6 @@ header > span, header > span + span {
   .button:hover .icon:before, .button:hover .icon:after {
     transition-delay: 0s;
     width: 25%;
-    opacity: 1;
   }
 
   .button:hover .icon:before {
@@ -574,7 +564,6 @@ header > span, header > span + span {
   .button:hover .icon2 {
     transform: skew(-40deg, 0deg);
     transition-delay: 0s;
-    opacity: 0;
   }
 }
 @media only screen and (max-width: 1024px) {
