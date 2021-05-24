@@ -102,7 +102,7 @@ nav {
 
 nav ul {
   padding: 2% 0 0 0;
-  margin: 0 0 0 0;
+  margin: 0;
   list-style-type: none;
   height: inherit;
   width: 85%;
@@ -115,7 +115,6 @@ nav ul li {
 
 .button {
   width: 17%;
-  font-family: "Roboto", sans-serif;
   cursor: pointer;
   display: inline-block;
   -webkit-transform: translateZ(0px);
@@ -540,7 +539,7 @@ header > span, header > span + span   {
     content: "";
     position: absolute;
     display: block;
-    width: 2px;
+    width: 1px;
     transition: all 0.225s;
     background: $Acolor;
   }
@@ -608,8 +607,6 @@ header > span, header > span + span   {
     margin: 1%;
     border: 1px solid $c2;
     color: $Acolor;
-    transition: border;
-    transition-delay: 0.225s;
   }
   .main-logo {
     margin-left: 7.5%;
