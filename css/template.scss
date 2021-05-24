@@ -117,8 +117,6 @@ nav ul li {
   width: 17%;
   cursor: pointer;
   display: inline-block;
-  -webkit-transform: translateZ(0px);
-  transform: translateZ(0px);
   color: $c2;
 }
 
@@ -134,7 +132,6 @@ nav ul li {
 nav a {
   color: inherit;
   text-decoration: none;
-  background-color: transparent;
 }
 
 /* MAIN */
@@ -319,7 +316,6 @@ footer ul li a {
   color: $Acolor;
   margin: 0.75%;
   text-decoration: none;
-  background-color: transparent;
   padding: 4px 10px;
 }
 
@@ -489,6 +485,10 @@ header > span, header > span + span   {
 /* RESPONSIVE */
 
 @media only screen and (min-width: 1024px) {
+  .button {
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
+  }
   .button .label {
     transition: all 0.225s;
     transition-delay: 0s;
