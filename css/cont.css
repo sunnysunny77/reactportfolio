@@ -92,6 +92,13 @@ input {
   border: 1px solid #4193bc;
 }
 
+#sent {
+  text-align: center;
+  height: 23px;
+  display: none;
+  margin: 0 auto;
+}
+
 #sub {
   width: 155px;
   display: block;
