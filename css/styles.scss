@@ -164,11 +164,9 @@ $img: '../images/home/global.png','../images/home/candid.jpg','../images/home/wp
     border-left: 0;
     border-right: 0;
   }
-  @for $i from 1 through length($img) {
-    #s5#{$i} {
-      background-size: 47%;
-      padding: 23%;
-    }
+  #s5 span {
+    background-size: 47%;
+    padding: 23%;
   }
   #ob0 {
     border-left: none;
