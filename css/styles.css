@@ -1,70 +1,41 @@
 /* images */
 #s51 {
   background-image: url("../images/home/global.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
 }
 
 #s52 {
   background-image: url("../images/home/candid.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
 }
 
 #s53 {
   background-image: url("../images/home/wp.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
 }
 
 #s54 {
   background-image: url("../images/home/tafe.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
 }
 
 #s55 {
   background-image: url("../images/home/pff.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
 }
 
 #s56 {
   background-image: url("../images/home/sc.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
 }
 
 #s57 {
   background-image: url("../images/home/rec.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
 }
 
 #s58 {
   background-image: url("../images/home/store.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
 }
 
 #s59 {
   background-image: url("../images/home/acc.jpg");
+}
+
+#s5 span {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;

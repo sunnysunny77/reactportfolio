@@ -6,13 +6,16 @@ $img: '../images/home/global.png','../images/home/candid.jpg','../images/home/wp
  
 @for $i from 1 through length($img) {
   #s5#{$i} {
-  background-image: url(nth($img, $i));
+    background-image: url(nth($img, $i));
+  }
+}
+
+#s5 span {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
   height: 100%;
-  }
-}
+} 
 
 /* GLOBAL */
 
