@@ -273,6 +273,10 @@
     font-size: initial;
   }
 
+  #ob0 li > span {
+    padding-left: 15px;
+  }
+
   #ob0 ol li h4 {
     font-size: large;
   }
