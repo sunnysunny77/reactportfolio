@@ -255,9 +255,10 @@ function eventListner(obj, type, callback, opt) {
 
 function script () {
   const obj = document.getElementsByClassName("outer")[0];
-
   let script = document.createElement("script");
-  script.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js");
+  script.setAttribute("src", "https://cdn.jsdelivr.net/npm/vivus@0.4.6/dist/vivus.min.js");
+  script.setAttribute("integrity", "sha256-DSPDv+rS5PAURHc6mTaH9/kBinkq/DA+KRuXganawp4=");
+  script.setAttribute("crossorigin", "anonymous");
   obj.parentNode.insertBefore(script, obj.nextSibling);
 
   eventListner(
@@ -271,6 +272,8 @@ function script () {
 
   let script0 = document.createElement("script");
   script0.setAttribute("src", "https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js");
+  script0.setAttribute("integrity", "sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=");
+  script0.setAttribute("crossorigin", "anonymous");
   obj.parentNode.insertBefore(script0, obj.nextSibling);
 
   eventListner(
