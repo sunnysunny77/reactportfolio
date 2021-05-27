@@ -102,9 +102,10 @@ input {
 }
 
 #sub {
-  width: 155px;
+  width: auto;
   display: block;
   margin: auto;
+  padding: 0 10px;
   color: $c6;
   border-radius: 10px;
 }
