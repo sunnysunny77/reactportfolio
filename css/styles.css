@@ -71,7 +71,7 @@
 
 #close {
   float: right;
-  margin: 1.25% 2.5% 0 0;
+  margin: 5.5% 6.5% 0 0;
   padding: 2.5px 5px;
   font-size: x-small;
   color: black;
@@ -116,35 +116,15 @@
   color: #4193bc;
   text-align: left;
   list-style-type: none;
-  overflow-y: auto;
-  overflow-x: hidden;
-  overflow-y: overlay;
-  scrollbar-color: black #fbaf5d;
-  scrollbar-width: thin;
   font-size: large;
   word-wrap: break-word;
   visibility: hidden;
+  overflow: overlay;
 }
 
 #ob0 h4 {
   margin: 2% 0;
   padding: 0;
-}
-
-#ob0::-webkit-scrollbar {
-  width: 7px;
-}
-
-#ob0::-webkit-scrollbar-thumb {
-  background: #fbaf5d;
-}
-
-#ob0::-webkit-scrollbar-track {
-  background: black;
-}
-
-#ob0::-webkit-scrollbar-thumb:hover {
-  background: #fbaf5d;
 }
 
 #home-div {

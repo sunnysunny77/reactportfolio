@@ -59,26 +59,6 @@ textarea {
   font-size: inherit;
   background-image: url(../images/template/text.jpg);
   border: 1px solid #4193bc;
-  overflow-y: auto;
-  overflow-x: hidden;
-  scrollbar-color: black #fbaf5d;
-  scrollbar-width: thin;
-}
-
-textarea::-webkit-scrollbar {
-  width: 7px;
-}
-
-textarea::-webkit-scrollbar-thumb {
-  background: #fbaf5d;
-}
-
-textarea::-webkit-scrollbar-track {
-  background: black;
-}
-
-textarea::-webkit-scrollbar-thumb:hover {
-  background: #fbaf5d;
 }
 
 input {

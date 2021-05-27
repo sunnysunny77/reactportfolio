@@ -234,30 +234,10 @@ nav a {
   color: #4193bc;
   border-left: 5px solid #fbaf5d;
   text-align: right;
-  overflow-y: auto;
-  overflow-x: hidden;
-  overflow-y: overlay;
-  scrollbar-color: black #fbaf5d;
-  scrollbar-width: thin;
   font-size: large;
   word-wrap: break-word;
   visibility: hidden;
-}
-
-.template-p::-webkit-scrollbar {
-  width: 7px;
-}
-
-.template-p::-webkit-scrollbar-thumb {
-  background: #fbaf5d;
-}
-
-.template-p::-webkit-scrollbar-track {
-  background: black;
-}
-
-.template-p::-webkit-scrollbar-thumb:hover {
-  background: #fbaf5d;
+  overflow: overlay;
 }
 
 .template-div {

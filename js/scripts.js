@@ -247,10 +247,6 @@ function cache (event) {
   cached = event;
 }
 
-function vivus () {
-  new Vivus('my-svg', { duration: 800, file: 'https://gendrive.s3-ap-southeast-2.amazonaws.com/svg.svg' }, null);
-}
-
 function eventListner(obj, type, callback, opt) {
   if (obj) {
     obj.addEventListener(type, callback, opt);
@@ -259,16 +255,50 @@ function eventListner(obj, type, callback, opt) {
 
 function script () {
   const obj = document.getElementsByClassName("outer")[0];
+
   let script = document.createElement("script");
   script.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js");
-  script.setAttribute("integrity", "sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg==");
-  script.setAttribute("crossorigin", "anonymous");
-  script.setAttribute("referrerpolicy", "no-referrer");
   obj.parentNode.insertBefore(script, obj.nextSibling);
+
   eventListner(
     script,
     "load",
-    vivus,
+    function () {
+      new Vivus('my-svg', { duration: 800, file: 'https://gendrive.s3-ap-southeast-2.amazonaws.com/svg.svg' }, null);
+    },
+    null
+  );
+
+  let script0 = document.createElement("script");
+  script0.setAttribute("src", "https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js");
+  obj.parentNode.insertBefore(script0, obj.nextSibling);
+
+  eventListner(
+    script0,
+    "load",
+    function () {
+      let script1 = document.createElement("script");
+      script1.setAttribute("src", "https://cdn.jsdelivr.net/npm/jquery.nicescroll@3.7.6/jquery.nicescroll.min.js");
+      obj.parentNode.insertBefore(script1, obj.nextSibling);
+        
+      eventListner(
+      script1,
+      "load",
+      function () {
+        $(".template-p").niceScroll({
+          cursoropacitymin:0.7,
+          autohidemode:'leave',
+          cursorcolor:'rgb(240, 159, 5)'
+        });
+        $("#ob0").niceScroll({
+          cursoropacitymin:0.7,
+          autohidemode:'leave',
+          cursorcolor:'rgb(240, 159, 5)'
+        });
+      },
+      null
+      );
+    },
     null
   );
 }

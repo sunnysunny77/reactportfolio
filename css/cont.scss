@@ -62,26 +62,6 @@ textarea {
   font-size: inherit;
   background-image: url(../images/template/text.jpg);
   border: 1px solid $c3;
-  overflow-y: auto;
-  overflow-x: hidden;
-  scrollbar-color: $c5 $c4;
-  scrollbar-width: thin;
-}
-
-textarea::-webkit-scrollbar {
-  width: 7px;
-}
-
-textarea::-webkit-scrollbar-thumb {
-  background: $c4;
-}
-
-textarea::-webkit-scrollbar-track {
-  background: $c5;
-}
-
-textarea::-webkit-scrollbar-thumb:hover {
-  background: $c4;
 }
 
 input {
