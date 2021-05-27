@@ -293,14 +293,17 @@ function script () {
           autohidemode:'leave',
           cursorcolor:'rgb(240, 159, 5)'
         });
-        $("#ob0").niceScroll({
-          cursoropacitymin:0.7,
-          autohidemode:'leave',
-          cursorcolor:'rgb(240, 159, 5)'
-        });
+        if (document.getElementById("ob0")) {
+          $("#ob0").niceScroll({
+            cursoropacitymin:0.7,
+            autohidemode:'leave',
+            cursorcolor:'rgb(240, 159, 5)'
+          });
+        }
       },
       null
       );
+      
     },
     null
   );
