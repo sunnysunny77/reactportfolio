@@ -2,6 +2,7 @@
 body {
   font-family: Tahoma, sans-serif;
   background-color: honeydew;
+  overflow: hidden;
 }
 
 .outer {
