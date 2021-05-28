@@ -288,23 +288,36 @@ function script () {
       script1,
       "load",
       function () {
+        
         $(".template-p").niceScroll({
           cursoropacitymin:0.7,
           autohidemode:'leave',
-          cursorcolor:'rgb(240, 159, 5)'
+          cursorcolor:'rgb(251, 175, 93)'
         });
         if (document.getElementById("ob0")) {
           $("#ob0").niceScroll({
             cursoropacitymin:0.7,
             autohidemode:'leave',
-            cursorcolor:'rgb(240, 159, 5)'
+            cursorcolor:'rgb(251, 175, 93)'
           });
         }
-      },
+
+        eventListner(
+          window,
+          "resize",
+          function () {
+
+            $(".template-p").getNiceScroll().resize();
+            if (document.getElementById("ob0")) {
+              $("#ob0").getNiceScroll().resize();
+            }
+          },
+          null
+          );
+       },
       null
       );
-      
-    },
+      },
     null
   );
 }
