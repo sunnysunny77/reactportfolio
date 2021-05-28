@@ -313,11 +313,11 @@ function script () {
             }
           },
           null
-          );
-       },
+        );
+      },
       null
       );
-      },
+    },
     null
   );
 }
