@@ -119,7 +119,7 @@
   font-size: large;
   word-wrap: break-word;
   visibility: hidden;
-  overflow: overlay;
+  overflow: hidden;
 }
 
 #ob0 h4 {

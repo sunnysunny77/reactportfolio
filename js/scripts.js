@@ -1,5 +1,3 @@
-let cached = null;
-
 const pictureID = [
   "s51",
   "s52",
@@ -159,23 +157,6 @@ function high() {
   }
 }
 
-function close() {
-  for (let x = 0; x < pictureID.length; x++) {
-    if (x > 0) {
-      const obj = document.getElementById(pictureID[x]);
-      obj.style.display = "none";
-    }
-  }
-  document.getElementById(pictureID[0]).style.display = "block";
-  document.getElementById("ob0").scrollTop = 0;
-}
-
-function tog() {
-  document.getElementsByClassName("click")[0].classList.toggle("ani");
-  document.getElementsByClassName("menu0")[0].classList.toggle("disp");
-  document.getElementsByClassName("menu1")[0].classList.toggle("ani1");
-}
-
 function sani() {
   if (window.screen.width <= 992) {
     let head = document.getElementsByTagName("header")[0].offsetHeight;
@@ -234,24 +215,79 @@ function sani() {
   }
 }
 
-function cache (event) {
-  if (!cached) {
-    setTimeout(function () {
-      sani();
-      if (document.getElementById("ob0")) {
-      high();
-      }
-      cached = null;
-    }, 300);
+function close() {
+  for (let x = 0; x < pictureID.length; x++) {
+    if (x > 0) {
+      const obj = document.getElementById(pictureID[x]);
+      obj.style.display = "none";
+    }
   }
-  cached = event;
+  document.getElementById(pictureID[0]).style.display = "block";
+  document.getElementById("ob0").scrollTop = 0;
 }
 
-function eventListner(obj, type, callback, opt) {
-  if (obj) {
-    obj.addEventListener(type, callback, opt);
-  }
+function tog() {
+  document.getElementsByClassName("click")[0].classList.toggle("ani");
+  document.getElementsByClassName("menu0")[0].classList.toggle("disp");
+  document.getElementsByClassName("menu1")[0].classList.toggle("ani1");
 }
+
+function nices () {
+
+  $("body").niceScroll({
+    autohidemode:'scroll',
+    cursorcolor:'rgb(251, 175, 93)',
+    zindex: 9999,
+    emulatetouch: true,
+    cursordragontouch: true,
+    touchbehavior: true,
+    preventmultitouchscrolling: false,
+    smoothscroll: true 
+  });
+
+  $(".template-p").niceScroll({
+    cursoropacitymin:0.7,
+    autohidemode:'leave',
+    cursorcolor:'rgb(251, 175, 93)'
+  });
+  
+  if (document.getElementById("ob0")) {
+
+    $("#ob0").niceScroll({
+      cursoropacitymin:0.7,
+      autohidemode:'leave',
+      cursorcolor:'rgb(251, 175, 93)',
+    });
+  } 
+
+  eventListner(
+    window,
+    "resize",
+    function () {
+
+      $(".template-p").getNiceScroll().resize();
+      if (document.getElementById("ob0")) {
+        $("#ob0").getNiceScroll().resize();
+      }
+    },
+    null
+  );
+
+  eventListner(
+    window,
+    "scroll",
+    sani,
+    null
+  );
+
+  eventListner(
+    document.getElementById("ob0"),
+    "scroll",
+    high,
+    null
+  ); 
+}
+
 
 function script () {
   const obj = document.getElementsByClassName("outer")[0];
@@ -259,7 +295,15 @@ function script () {
   script.setAttribute("src", "https://cdn.jsdelivr.net/npm/vivus@0.4.6/dist/vivus.min.js");
   script.setAttribute("integrity", "sha256-DSPDv+rS5PAURHc6mTaH9/kBinkq/DA+KRuXganawp4=");
   script.setAttribute("crossorigin", "anonymous");
+  let script0 = document.createElement("script");
+  script0.setAttribute("src", "https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js");
+  script0.setAttribute("integrity", "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=");
+  script0.setAttribute("crossorigin", "anonymous");
+  let script1 = document.createElement("script");
+  script1.setAttribute("src", "https://cdn.jsdelivr.net/npm/jquery.nicescroll@3.7.6/jquery.nicescroll.min.js");
+
   obj.parentNode.insertBefore(script, obj.nextSibling);
+  obj.parentNode.insertBefore(script0, obj.nextSibling);
 
   eventListner(
     script,
@@ -270,56 +314,23 @@ function script () {
     null
   );
 
-  let script0 = document.createElement("script");
-  script0.setAttribute("src", "https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js");
-  script0.setAttribute("integrity", "sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=");
-  script0.setAttribute("crossorigin", "anonymous");
-  obj.parentNode.insertBefore(script0, obj.nextSibling);
-
   eventListner(
     script0,
     "load",
     function () {
-      let script1 = document.createElement("script");
-      script1.setAttribute("src", "https://cdn.jsdelivr.net/npm/jquery.nicescroll@3.7.6/jquery.nicescroll.min.js");
-      obj.parentNode.insertBefore(script1, obj.nextSibling);
-        
-      eventListner(
-      script1,
-      "load",
-      function () {
-        
-        $(".template-p").niceScroll({
-          cursoropacitymin:0.7,
-          autohidemode:'leave',
-          cursorcolor:'rgb(251, 175, 93)'
-        });
-        if (document.getElementById("ob0")) {
-          $("#ob0").niceScroll({
-            cursoropacitymin:0.7,
-            autohidemode:'leave',
-            cursorcolor:'rgb(251, 175, 93)'
-          });
-        }
-
-        eventListner(
-          window,
-          "resize",
-          function () {
-
-            $(".template-p").getNiceScroll().resize();
-            if (document.getElementById("ob0")) {
-              $("#ob0").getNiceScroll().resize();
-            }
-          },
-          null
-        );
-      },
-      null
-      );
+      obj.parentNode.insertBefore(script1, obj.nextSibling); 
     },
     null
   );
+
+  eventListner(
+    script1,
+    "load",
+    nices,
+    null
+  );
+
+ 
 }
 
 function check() {
@@ -364,15 +375,15 @@ function check() {
   }
 }
 
+function eventListner(obj, type, callback, opt) {
+  if (obj) {
+    obj.addEventListener(type, callback, opt);
+  }
+}
+
 window.onload = function () {
   check();
   script();
-  eventListner(
-    window,
-    "scroll",
-    cache,
-    { passive: true }
-  );
   eventListner(
     document.getElementsByClassName("click")[0],
     "click",
@@ -384,14 +395,8 @@ window.onload = function () {
     "click", 
     close, 
     false
-  ); 
-  eventListner(
-    document.getElementById("ob0"),
-    "scroll",
-    cache,
-    { passive: true }
   );
-  eventListner(
+ eventListner(
     document.getElementById("contact-form"), 
     "submit", 
     form, 
