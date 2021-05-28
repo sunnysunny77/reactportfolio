@@ -114,8 +114,8 @@ function none(a) {
   }
 }
 
-function high() {
-  const a = document.getElementById("ob0").scrollHeight;
+function high(el) {
+  const a = el.scrollHeight;
   const b = document.getElementById("ob0").clientHeight;
   const c = document.getElementById("cand").offsetTop;
   const d = document.getElementById("wp").offsetTop;
@@ -125,9 +125,11 @@ function high() {
   const h = document.getElementById("rec").offsetTop;
   const i = document.getElementById("store").offsetTop;
   const j = document.getElementById("acc").offsetHeight;
-  let scroll_pos = document.getElementById("ob0").scrollTop;
-  // a - b - last obj offsetHeight
+  let scroll_pos = el.scrollTop
+ 
+  //a - b - last obj offsetHeight
   const botCalc = a - b - j;
+  
   if (scroll_pos < c) {
     none(pictureID[0]);
   }
@@ -151,10 +153,16 @@ function high() {
   }
   if (scroll_pos > i && scroll_pos < botCalc) {
     none(pictureID[7]);
-  }
-  if (scroll_pos > botCalc) {
+ }
+ if (scroll_pos > botCalc) {
     none(pictureID[8]);
-  }
+ }
+}
+
+function tog() {
+  document.getElementsByClassName("click")[0].classList.toggle("ani");
+  document.getElementsByClassName("menu0")[0].classList.toggle("disp");
+  document.getElementsByClassName("menu1")[0].classList.toggle("ani1");
 }
 
 function sani() {
@@ -215,79 +223,32 @@ function sani() {
   }
 }
 
-function close() {
-  for (let x = 0; x < pictureID.length; x++) {
-    if (x > 0) {
-      const obj = document.getElementById(pictureID[x]);
-      obj.style.display = "none";
-    }
-  }
-  document.getElementById(pictureID[0]).style.display = "block";
-  document.getElementById("ob0").scrollTop = 0;
-}
-
-function tog() {
-  document.getElementsByClassName("click")[0].classList.toggle("ani");
-  document.getElementsByClassName("menu0")[0].classList.toggle("disp");
-  document.getElementsByClassName("menu1")[0].classList.toggle("ani1");
-}
-
 function nices () {
 
-  $("body").niceScroll({
-    autohidemode:'scroll',
-    cursorcolor:'rgb(251, 175, 93)',
-    zindex: 9999,
-    emulatetouch: true,
-    cursordragontouch: true,
-    touchbehavior: true,
-    preventmultitouchscrolling: false,
-    smoothscroll: true 
-  });
+  let instance = OverlayScrollbars(document.getElementById("ob0"), { className : "os-theme-dark os-theme-dark-edgy" , callbacks: {
+    onScroll: function(e) {
+     high(e.target)
+    }
+  }}); 
 
-  $(".template-p").niceScroll({
-    cursoropacitymin:0.7,
-    autohidemode:'leave',
-    cursorcolor:'rgb(251, 175, 93)'
-  });
+   OverlayScrollbars(document.getElementsByClassName("template-p")[0], { className : "os-theme-dark os-theme-dark-edgy" });
   
-  if (document.getElementById("ob0")) {
-
-    $("#ob0").niceScroll({
-      cursoropacitymin:0.7,
-      autohidemode:'leave',
-      cursorcolor:'rgb(251, 175, 93)',
-    });
-  } 
-
   eventListner(
-    window,
-    "resize",
+    document.getElementById("close"),
+    "click", 
     function () {
-
-      $(".template-p").getNiceScroll().resize();
-      if (document.getElementById("ob0")) {
-        $("#ob0").getNiceScroll().resize();
+      for (let x = 0; x < pictureID.length; x++) {
+        if (x > 0) {
+          const obj = document.getElementById(pictureID[x]);
+          obj.style.display = "none";
+        }
       }
-    },
-    null
+      document.getElementById(pictureID[0]).style.display = "block";
+      instance.scroll({y : 0 });
+    }, 
+    false
   );
-
-  eventListner(
-    window,
-    "scroll",
-    sani,
-    null
-  );
-
-  eventListner(
-    document.getElementById("ob0"),
-    "scroll",
-    high,
-    null
-  ); 
 }
-
 
 function script () {
   const obj = document.getElementsByClassName("outer")[0];
@@ -295,15 +256,13 @@ function script () {
   script.setAttribute("src", "https://cdn.jsdelivr.net/npm/vivus@0.4.6/dist/vivus.min.js");
   script.setAttribute("integrity", "sha256-DSPDv+rS5PAURHc6mTaH9/kBinkq/DA+KRuXganawp4=");
   script.setAttribute("crossorigin", "anonymous");
-  let script0 = document.createElement("script");
-  script0.setAttribute("src", "https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js");
-  script0.setAttribute("integrity", "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=");
-  script0.setAttribute("crossorigin", "anonymous");
   let script1 = document.createElement("script");
-  script1.setAttribute("src", "https://cdn.jsdelivr.net/npm/jquery.nicescroll@3.7.6/jquery.nicescroll.min.js");
+  script1.setAttribute("src", "https://cdn.jsdelivr.net/npm/overlayscrollbars@1.13.1/js/OverlayScrollbars.js");
+  script1.setAttribute("integrity", "sha256-Rs7Y0cBeqx7icqenWHEkPIGYzQBN1sBE1OnHAuOS7L4=");
+  script1.setAttribute("crossorigin", "anonymous");
 
   obj.parentNode.insertBefore(script, obj.nextSibling);
-  obj.parentNode.insertBefore(script0, obj.nextSibling);
+  obj.parentNode.insertBefore(script1, obj.nextSibling);
 
   eventListner(
     script,
@@ -315,22 +274,11 @@ function script () {
   );
 
   eventListner(
-    script0,
-    "load",
-    function () {
-      obj.parentNode.insertBefore(script1, obj.nextSibling); 
-    },
-    null
-  );
-
-  eventListner(
     script1,
     "load",
     nices,
     null
   );
-
- 
 }
 
 function check() {
@@ -385,18 +333,18 @@ window.onload = function () {
   check();
   script();
   eventListner(
+    window,
+    "scroll",
+    sani,
+    null
+  );
+  eventListner(
     document.getElementsByClassName("click")[0],
     "click",
     tog,
     false
   );
   eventListner(
-    document.getElementById("close"),
-    "click", 
-    close, 
-    false
-  );
- eventListner(
     document.getElementById("contact-form"), 
     "submit", 
     form, 

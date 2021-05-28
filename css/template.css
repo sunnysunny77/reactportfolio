@@ -1,8 +1,13 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.1/css/OverlayScrollbars.css");
 /* GLOBAL */
+.os-theme-dark.os-theme-dark-edgy > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
+  background: #fbaf5d;
+}
+
 body {
   font-family: Tahoma, sans-serif;
   background-color: honeydew;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .outer {
@@ -48,6 +53,10 @@ nav ul li, footer ul li {
 
 .button:hover, footer ul li a:hover {
   color: #fbaf5d;
+}
+
+.simplebar-scrollbar::before {
+  background-color: #fbaf5d;
 }
 
 /* HEADER */

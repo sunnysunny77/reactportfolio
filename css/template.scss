@@ -1,11 +1,16 @@
 @import "./variables.scss";
-
+@import url("https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.1/css/OverlayScrollbars.css");
 /* GLOBAL */
+
+
+.os-theme-dark.os-theme-dark-edgy > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
+  background: $c4;
+}
 
 body {
   font-family: $font;
   background-color: $mainbg;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .outer {
@@ -50,6 +55,10 @@ nav ul li, footer ul li {
 
 .button:hover, footer ul li a:hover {
   color: $aHover;
+}
+
+.simplebar-scrollbar::before {
+  background-color: $c4;
 }
 
 /* HEADER */
