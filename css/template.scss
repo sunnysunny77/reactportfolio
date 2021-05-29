@@ -55,6 +55,8 @@ nav ul li, footer ul li {
 
 .os-theme-dark.os-theme-dark-edgy > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
   background: $c4;
+  min-height: 30px;
+  max-height: 30px;
 }
 
 .cont {
