@@ -90,75 +90,6 @@ function form(event) {
   event.preventDefault();
 }
 
-function none(a) {
-  for (let x = 0; x < pictureID.length; x++) {
-    const obj = document.getElementById(pictureID[x]);
-    if (obj.id === a) {
-      if (window.getComputedStyle(obj).getPropertyValue("display") === "none") {
-        obj.style.display = "block";
-        if (obj.id !== "s51") {
-          obj.classList.add("an");
-          setTimeout(function () {
-            obj.classList.remove("an");
-          }, 750);
-        } else {
-          obj.classList.add("ani0");
-          setTimeout(function () {
-            obj.classList.remove("ani0");
-          }, 1500);
-        }
-      }
-    } else {
-      obj.style.display = "none";
-    }
-  }
-}
-
-function high(el) {
-  const a = el.scrollHeight;
-  const b = document.getElementById("ob0").clientHeight;
-  const c = document.getElementById("cand").offsetTop;
-  const d = document.getElementById("wp").offsetTop;
-  const e = document.getElementById("dig").offsetTop;
-  const f = document.getElementById("pff").offsetTop;
-  const g = document.getElementById("link").offsetTop;
-  const h = document.getElementById("rec").offsetTop;
-  const i = document.getElementById("store").offsetTop;
-  const j = document.getElementById("acc").offsetHeight;
-  let scroll_pos = el.scrollTop
- 
-  //a - b - last obj offsetHeight
-  const botCalc = a - b - j;
-  
-  if (scroll_pos < c) {
-    none(pictureID[0]);
-  }
-  if (scroll_pos > c && scroll_pos < d) {
-    none(pictureID[1]);
-  }
-  if (scroll_pos > d && scroll_pos < e) {
-    none(pictureID[2]);
-  }
-  if (scroll_pos > e && scroll_pos < f) {
-    none(pictureID[3]);
-  }
-  if (scroll_pos > f && scroll_pos < g) {
-    none(pictureID[4]);
-  }
-  if (scroll_pos > g && scroll_pos < h) {
-    none(pictureID[5]);
-  }
-  if (scroll_pos > h && scroll_pos < i) {
-    none(pictureID[6]);
-  }
-  if (scroll_pos > i && scroll_pos < botCalc) {
-    none(pictureID[7]);
- }
- if (scroll_pos > botCalc) {
-    none(pictureID[8]);
- }
-}
-
 function tog() {
   document.getElementsByClassName("click")[0].classList.toggle("ani");
   document.getElementsByClassName("menu0")[0].classList.toggle("disp");
@@ -227,31 +158,101 @@ function sani() {
   }
 }
 
-function nices () {
-
-  let instance = OverlayScrollbars(document.getElementById("ob0"), { className : "os-theme-dark os-theme-dark-edgy" , callbacks: {
-    onScroll: function(e) {
-     high(e.target)
-    }
-  }}); 
-
-  OverlayScrollbars(document.getElementsByClassName("template-p")[0], { className : "os-theme-dark os-theme-dark-edgy" });
-  
-  eventListner(
-    document.getElementById("close"),
-    "click", 
-    function () {
-      for (let x = 0; x < pictureID.length; x++) {
-        if (x > 0) {
-          const obj = document.getElementById(pictureID[x]);
-          obj.style.display = "none";
+function none(a) {
+  for (let x = 0; x < pictureID.length; x++) {
+    const obj = document.getElementById(pictureID[x]);
+    if (obj.id === a) {
+      if (window.getComputedStyle(obj).getPropertyValue("display") === "none") {
+        obj.style.display = "block";
+        if (obj.id !== "s51") {
+          obj.classList.add("an");
+          setTimeout(function () {
+            obj.classList.remove("an");
+          }, 750);
+        } else {
+          obj.classList.add("ani0");
+          setTimeout(function () {
+            obj.classList.remove("ani0");
+          }, 1500);
         }
       }
-      document.getElementById(pictureID[0]).style.display = "block";
-      instance.scroll({y : 0 });
-    }, 
-    false
-  );
+    } else {
+      obj.style.display = "none";
+    }
+  }
+}
+
+function high(el) {
+  const a = el.scrollHeight;
+  const b = document.getElementById("ob0").clientHeight;
+  const c = document.getElementById("cand").offsetTop;
+  const d = document.getElementById("wp").offsetTop;
+  const e = document.getElementById("dig").offsetTop;
+  const f = document.getElementById("pff").offsetTop;
+  const g = document.getElementById("link").offsetTop;
+  const h = document.getElementById("rec").offsetTop;
+  const i = document.getElementById("store").offsetTop;
+  const j = document.getElementById("acc").offsetHeight;
+  let scroll_pos = el.scrollTop
+  //a - b - last obj offsetHeight
+  const botCalc = a - b - j;
+  if (scroll_pos < c) {
+    none(pictureID[0]);
+  }
+  if (scroll_pos > c && scroll_pos < d) {
+    none(pictureID[1]);
+  }
+  if (scroll_pos > d && scroll_pos < e) {
+    none(pictureID[2]);
+  }
+  if (scroll_pos > e && scroll_pos < f) {
+    none(pictureID[3]);
+  }
+  if (scroll_pos > f && scroll_pos < g) {
+    none(pictureID[4]);
+  }
+  if (scroll_pos > g && scroll_pos < h) {
+    none(pictureID[5]);
+  }
+  if (scroll_pos > h && scroll_pos < i) {
+    none(pictureID[6]);
+  }
+  if (scroll_pos > i && scroll_pos < botCalc) {
+    none(pictureID[7]);
+ }
+ if (scroll_pos > botCalc) {
+    none(pictureID[8]);
+ }
+}
+
+function nices () {
+  OverlayScrollbars(document.getElementsByClassName("template-p")[0], { className : "os-theme-dark os-theme-dark-edgy" });
+  if (document.getElementById("ob0")) {
+    let instance = OverlayScrollbars(document.getElementById("ob0"), { className : "os-theme-dark os-theme-dark-edgy" , callbacks: {
+      onScroll: function(e) {
+      high(e.target)
+      }
+    }}); 
+    eventListner(
+      document.getElementById("close"),
+      "click", 
+      function () {
+        for (let x = 0; x < pictureID.length; x++) {
+          if (x > 0) {
+            const obj = document.getElementById(pictureID[x]);
+            obj.style.display = "none";
+          }
+        }
+        document.getElementById(pictureID[0]).style.display = "block";
+        instance.scroll({y : 0 });
+      }, 
+      false
+    );
+  }
+}
+
+function vivus () {
+  new Vivus('my-svg', { duration: 800, file: 'https://gendrive.s3-ap-southeast-2.amazonaws.com/svg.svg' }, null);
 }
 
 function script () {
@@ -264,19 +265,14 @@ function script () {
   script1.setAttribute("src", "https://cdn.jsdelivr.net/npm/overlayscrollbars@1.13.1/js/OverlayScrollbars.js");
   script1.setAttribute("integrity", "sha256-Rs7Y0cBeqx7icqenWHEkPIGYzQBN1sBE1OnHAuOS7L4=");
   script1.setAttribute("crossorigin", "anonymous");
-
   obj.parentNode.insertBefore(script, obj.nextSibling);
   obj.parentNode.insertBefore(script1, obj.nextSibling);
-
   eventListner(
     script,
     "load",
-    function () {
-      new Vivus('my-svg', { duration: 800, file: 'https://gendrive.s3-ap-southeast-2.amazonaws.com/svg.svg' }, null);
-    },
+    vivus,
     null
   );
-
   eventListner(
     script1,
     "load",
@@ -301,14 +297,11 @@ function check() {
     }
   }
   if (window.screen.width >= 992) {
- 
     let all = document.querySelectorAll(".vis0");
     for (let i= 0; i < all.length; i++) {
       all[i].classList.remove("vis0");
       all[i].classList.add("vis1");
-    
     }
-
     if (document.getElementById("s51")) {
       const s51 = document.getElementById("s51");
       s51.classList.add("ani0");
