@@ -19,7 +19,7 @@
 }
 
 .template-p {
-  text-align: initial !important;
+  text-align: initial;
 }
 
 fieldset {
@@ -96,6 +96,22 @@ input {
   padding-left: 2.5px;
 }
 
+@media only screen and (max-width: 720px) and (orientation: portrait) {
+  .template-img-0 {
+    width: 100%;
+    padding: 32% 0 32% 0;
+    border-left: 0;
+    border-right: 0;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .template-img-0 {
+    width: 100%;
+    padding: 32% 0 32% 0;
+    border-left: 0;
+    border-right: 0;
+  }
+}
 @media only screen and (max-width: 240px) {
   .msg {
     font-size: xx-small;

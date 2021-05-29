@@ -178,9 +178,9 @@ $img: '../images/home/global.png','../images/home/candid.jpg','../images/home/wp
   #home-div {
     display: block;
   }
-  .template-div {
-    margin: auto !important;
-    height: 75px !important;
+  #template-div {
+    margin: auto;
+    height: 75px;
     position: absolute;
     width: 60%;
     bottom: 0;
