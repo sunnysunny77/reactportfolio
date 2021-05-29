@@ -258,13 +258,10 @@ function vivus () {
 function script () {
   const obj = document.getElementsByClassName("outer")[0];
   let script = document.createElement("script");
-  script.setAttribute("src", "https://cdn.jsdelivr.net/npm/vivus@0.4.6/dist/vivus.min.js");
-  script.setAttribute("integrity", "sha256-DSPDv+rS5PAURHc6mTaH9/kBinkq/DA+KRuXganawp4=");
-  script.setAttribute("crossorigin", "anonymous");
+  script.setAttribute("src", "./node_modules/vivus/dist/vivus.min.js");
+ 
   let script1 = document.createElement("script");
-  script1.setAttribute("src", "https://cdn.jsdelivr.net/npm/overlayscrollbars@1.13.1/js/OverlayScrollbars.js");
-  script1.setAttribute("integrity", "sha256-Rs7Y0cBeqx7icqenWHEkPIGYzQBN1sBE1OnHAuOS7L4=");
-  script1.setAttribute("crossorigin", "anonymous");
+  script1.setAttribute("src", "./node_modules/overlayscrollbars/js/OverlayScrollbars.js");
   obj.parentNode.insertBefore(script, obj.nextSibling);
   obj.parentNode.insertBefore(script1, obj.nextSibling);
   eventListner(

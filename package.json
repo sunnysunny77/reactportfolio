@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/sunnysunny77/portfolio#readme",
   "dependencies": {
-    "sass": "^1.34.0"
+    "sass": "^1.34.0",
+    "vivus": "^0.4.6",
+    "overlayscrollbars": "^1.13.1"
   }
 }
