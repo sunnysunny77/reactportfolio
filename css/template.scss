@@ -672,14 +672,6 @@ header > span, header > span + span   {
   }
 }
 
-@media only screen and (max-width: 720px) and (orientation: portrait) {
-  .template-img-0 {
-    width: 100% !important;
-    padding: 32% 0 32% 0;
-    border-left: 0 !important;
-    border-right: 0 !important;
-  }
-}
 @media only screen and (max-width: 480px) {
   .main {
     padding-bottom: 34%;
@@ -689,12 +681,6 @@ header > span, header > span + span   {
 @media only screen and (max-width: 320px) {
   .main-logo h2 {
     font-size: medium;
-  }
-  .template-img-0 {
-    width: 100% !important;
-    padding: 32% 0 32% 0;
-    border-left: 0 !important;
-    border-right: 0 !important;
   }
 }
 
