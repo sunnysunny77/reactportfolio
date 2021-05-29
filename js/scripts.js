@@ -160,21 +160,6 @@ function sani() {
   }
 }
 
-function cache (event) {
-  if (!cached) {
-    setTimeout(function () {
-     if (event.target.nodeName === "#document") {
-        sani()
-      }
-      if(event.target.nodeName === "DIV") {
-        high(event.target)
-      }
-      cached = null;
-    }, 300);
-  }
-  cached = event;
-}
-
 function none(a) {
   for (let x = 0; x < pictureID.length; x++) {
     const obj = document.getElementById(pictureID[x]);
@@ -240,6 +225,21 @@ function high(event) {
  if (scroll_pos > botCalc) {
     none(pictureID[8]);
  }
+}
+
+function cache (event) {
+  if (!cached) {
+    setTimeout(function () {
+     if (event.target.nodeName === "#document") {
+        sani()
+      }
+      if(event.target.nodeName === "DIV") {
+        high(event.target)
+      }
+      cached = null;
+    }, 300);
+  }
+  cached = event;
 }
 
 function nices () {
