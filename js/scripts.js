@@ -1,3 +1,5 @@
+let cached = null;
+
 const pictureID = [
   "s51",
   "s52",
@@ -158,6 +160,21 @@ function sani() {
   }
 }
 
+function cache (event) {
+  if (!cached) {
+    setTimeout(function () {
+     if (event.target.nodeName === "#document") {
+        sani()
+      }
+      if(event.target.nodeName === "DIV") {
+        high(event.target)
+      }
+      cached = null;
+    }, 300);
+  }
+  cached = event;
+}
+
 function none(a) {
   for (let x = 0; x < pictureID.length; x++) {
     const obj = document.getElementById(pictureID[x]);
@@ -182,8 +199,8 @@ function none(a) {
   }
 }
 
-function high(el) {
-  const a = el.scrollHeight;
+function high(event) {
+  const a = event.scrollHeight;
   const b = document.getElementById("ob0").clientHeight;
   const c = document.getElementById("cand").offsetTop;
   const d = document.getElementById("wp").offsetTop;
@@ -193,7 +210,7 @@ function high(el) {
   const h = document.getElementById("rec").offsetTop;
   const i = document.getElementById("store").offsetTop;
   const j = document.getElementById("acc").offsetHeight;
-  let scroll_pos = el.scrollTop
+  let scroll_pos = event.scrollTop
   //a - b - last obj offsetHeight
   const botCalc = a - b - j;
   if (scroll_pos < c) {
@@ -229,9 +246,7 @@ function nices () {
   OverlayScrollbars(document.getElementsByClassName("template-p")[0], { className : "os-theme-dark os-theme-dark-edgy" });
   if (document.getElementById("ob0")) {
     let instance = OverlayScrollbars(document.getElementById("ob0"), { className : "os-theme-dark os-theme-dark-edgy" , callbacks: {
-      onScroll: function(e) {
-      high(e.target)
-      }
+      onScroll: cache
     }}); 
     eventListner(
       document.getElementById("close"),
@@ -259,7 +274,6 @@ function script () {
   const obj = document.getElementsByClassName("outer")[0];
   let script = document.createElement("script");
   script.setAttribute("src", "./node_modules/vivus/dist/vivus.min.js");
- 
   let script1 = document.createElement("script");
   script1.setAttribute("src", "./node_modules/overlayscrollbars/js/OverlayScrollbars.js");
   obj.parentNode.insertBefore(script, obj.nextSibling);
@@ -321,7 +335,7 @@ window.onload = function () {
   eventListner(
     window,
     "scroll",
-    sani,
+    cache,
     null
   );
   eventListner(
