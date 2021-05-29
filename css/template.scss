@@ -59,10 +59,6 @@ nav ul li, footer ul li {
   max-height: 30px;
 }
 
-.cont {
-  margin: 0;
-}
-
 /* HEADER */
 
 header {
@@ -254,6 +250,10 @@ nav a {
   font-size: large;
   word-wrap: break-word;
   overflow: hidden;
+}
+
+.cont {
+  margin: unset;
 }
 
 .template-div {
