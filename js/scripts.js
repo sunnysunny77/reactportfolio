@@ -181,6 +181,7 @@ function sani() {
         .getComputedStyle(tempDiv)
         .getPropertyValue("visibility");
       if (scroll_pos > tempDiv.offsetTop && style === "hidden") {
+        tempDiv.classList.remove("vis0");
         tempDiv.classList.add("vis1");
         tempDiv.classList.add("ani3");
       }
@@ -191,18 +192,20 @@ function sani() {
         .getComputedStyle(tempImg0)
         .getPropertyValue("visibility");
       if (scroll_pos > tempImg0.offsetTop && style === "hidden") {
+        tempImg0.classList.remove("vis0");
         tempImg0.classList.add("vis1");
         tempImg0.classList.add("ani2");
       }
     }
     if (document.getElementById("s4")) {
-      const ob0 = document.getElementById("ob0");
+      const ob0ul = document.getElementById("ob0ul");
       const style = window
-        .getComputedStyle(ob0)
+        .getComputedStyle(ob0ul)
         .getPropertyValue("visibility");
       if (scroll_pos > document.getElementById("s4").offsetTop && style === "hidden") {
-        ob0.classList.add("vis1");
-        ob0.classList.add("ani2");
+        ob0ul.classList.remove("vis0");
+        ob0ul.classList.add("vis1");
+        ob0ul.classList.add("ani2");
       }
     }
     if (document.getElementById("s5")) {
@@ -212,6 +215,7 @@ function sani() {
         .getComputedStyle(s5)
         .getPropertyValue("visibility");
       if (scroll_pos > s5.offsetTop && style === "hidden") {
+        s5.classList.remove("vis0");
         s5.classList.add("vis1");
         s5.classList.add("ani2");
         s51.classList.add("ani0");
@@ -231,7 +235,7 @@ function nices () {
     }
   }}); 
 
-   OverlayScrollbars(document.getElementsByClassName("template-p")[0], { className : "os-theme-dark os-theme-dark-edgy" });
+  OverlayScrollbars(document.getElementsByClassName("template-p")[0], { className : "os-theme-dark os-theme-dark-edgy" });
   
   eventListner(
     document.getElementById("close"),
@@ -285,34 +289,26 @@ function check() {
   if (window.screen.width <= 992) {
     if (document.querySelector(".template-img-cont")) {
       const imgCont = document.querySelector(".template-img-cont");
+      imgCont.classList.remove("vis0");
       imgCont.classList.add("vis1");
       imgCont.classList.add("ani4");
     }
-    if (document.querySelector(".template-p")) {
-      const tempP = document.querySelector(".template-p");
-      tempP.classList.add("vis1");
-      tempP.classList.add("ani2");
+    if (document.querySelector(".cont")) {
+      const cont = document.querySelector(".cont");
+      cont.classList.remove("vis0");
+      cont.classList.add("vis1");
+      cont.classList.add("ani2");
     }
   }
   if (window.screen.width >= 992) {
-    if (document.querySelector(".template-img-cont")) {
-      document.querySelector(".template-img-cont").classList.add("vis1");
+ 
+    let all = document.querySelectorAll(".vis0");
+    for (let i= 0; i < all.length; i++) {
+      all[i].classList.remove("vis0");
+      all[i].classList.add("vis1");
+    
     }
-    if (document.querySelector(".template-div")) {
-      document.querySelector(".template-div").classList.add("vis1");
-    }
-    if (document.querySelector(".template-p")) {
-      document.querySelector(".template-p").classList.add("vis1");
-    }
-    if (document.querySelector(".template-img-0")) {
-      document.querySelector(".template-img-0").classList.add("vis1");
-    }
-    if (document.getElementById("ob0")) {
-      document.getElementById("ob0").classList.add("vis1");
-    }
-    if (document.getElementById("s5")) {
-      document.getElementById("s5").classList.add("vis1");
-    }
+
     if (document.getElementById("s51")) {
       const s51 = document.getElementById("s51");
       s51.classList.add("ani0");

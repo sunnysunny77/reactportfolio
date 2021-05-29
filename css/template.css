@@ -1,9 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.1/css/OverlayScrollbars.css");
 /* GLOBAL */
-.os-theme-dark.os-theme-dark-edgy > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
-  background: #fbaf5d;
-}
-
 body {
   font-family: Tahoma, sans-serif;
   background-color: honeydew;
@@ -55,8 +51,12 @@ nav ul li, footer ul li {
   color: #fbaf5d;
 }
 
-.simplebar-scrollbar::before {
-  background-color: #fbaf5d;
+.os-theme-dark.os-theme-dark-edgy > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
+  background: #fbaf5d;
+}
+
+.cont {
+  margin: 0;
 }
 
 /* HEADER */
@@ -207,7 +207,6 @@ nav a {
   margin-left: calc(987px - 95%);
   border: 5px solid whitesmoke;
   padding: 5%;
-  visibility: hidden;
   float: left;
 }
 
@@ -246,7 +245,6 @@ nav a {
   text-align: right;
   font-size: large;
   word-wrap: break-word;
-  visibility: hidden;
   overflow: hidden;
 }
 
@@ -257,7 +255,6 @@ nav a {
   margin: 7.5% auto;
   width: 90.021%;
   height: 109px;
-  visibility: hidden;
 }
 
 /* FOOTER */
@@ -308,8 +305,12 @@ footer h2 {
 }
 
 /* ANIMATION */
+.vis0 {
+  visibility: hidden;
+}
+
 .vis1 {
-  visibility: visible !important;
+  visibility: visible;
 }
 
 header > span, header > span + span {
@@ -344,12 +345,10 @@ header > span, header > span + span {
 
   .ani2 {
     animation: fadeInBack 3.5s ease-in;
-    visibility: visible;
   }
 
   .ani3 {
     animation: scale0 3.5s ease-in;
-    visibility: visible;
   }
 
   .ani4 {

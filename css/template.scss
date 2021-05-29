@@ -2,11 +2,6 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.1/css/OverlayScrollbars.css");
 /* GLOBAL */
 
-
-.os-theme-dark.os-theme-dark-edgy > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
-  background: $c4;
-}
-
 body {
   font-family: $font;
   background-color: $mainbg;
@@ -49,6 +44,7 @@ h4 {
 nav ul, footer ul {
   letter-spacing: 0.75px;
 }
+
 nav ul li, footer ul li {
   display: inline;
 }
@@ -57,8 +53,12 @@ nav ul li, footer ul li {
   color: $aHover;
 }
 
-.simplebar-scrollbar::before {
-  background-color: $c4;
+.os-theme-dark.os-theme-dark-edgy > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
+  background: $c4;
+}
+
+.cont {
+  margin: 0;
 }
 
 /* HEADER */
@@ -213,7 +213,6 @@ nav a {
   margin-left: calc(987px - 95%);
   border: 5px solid $c2;
   padding: 5%;
-  visibility: hidden;
   float: left;
 }
 
@@ -226,7 +225,6 @@ nav a {
   border-bottom-right-radius: 25px;
   background-image: url(../images/template/text.jpg);
   background-size: 100% 100%;
-
 }
 
 .template-p-img {
@@ -253,7 +251,6 @@ nav a {
   text-align: right;
   font-size: large;
   word-wrap: break-word;
-  visibility: hidden;
   overflow: hidden;
 }
 
@@ -264,7 +261,6 @@ nav a {
   margin: 7.5% auto;
   width: 90.021%;
   height: 109px;
-  visibility: hidden;
 }
 
 /* FOOTER */
@@ -317,8 +313,13 @@ footer h2 {
 
 /* ANIMATION */
 
+
+.vis0 {
+  visibility: hidden;
+}
+
 .vis1 {
-  visibility: visible !important;
+  visibility: visible;
 }
 
 header > span, header > span + span   {
@@ -350,11 +351,9 @@ header > span, header > span + span   {
   }
   .ani2 {
     animation: fadeInBack 3.5s ease-in;
-    visibility: visible;
   }
   .ani3 {
     animation: scale0 3.5s ease-in;
-    visibility: visible;
   }
   .ani4 {
     animation: fadeInBack 1.5s ease-in;
