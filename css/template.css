@@ -657,13 +657,6 @@ header > span, header > span + span {
     position: relative;
   }
 
-  .template-img-0 {
-    background-size: 88% !important;
-    width: calc(70% - 10px) !important;
-    padding: 22% 0 22% 0;
-    height: auto !important;
-  }
-
   footer {
     flex-direction: column;
   }
