@@ -143,7 +143,7 @@ nav a {
 
 /* MAIN */
 
-.main {
+main {
   position: relative;
   width: 100%;
   display: flex;
@@ -151,7 +151,7 @@ nav a {
   padding-bottom: 27.5%;
 }
 
-.main::after {
+main::after {
   content: "";
   background-image: url(../images/template/back.jpg);
   opacity: 1;
@@ -328,7 +328,7 @@ header > span, header > span + span   {
   animation: slideIn 1.5s ease-in-out;
 }
 
-.main::after {
+main::after {
   animation: fadeInBack 0.75s ease-in-out;
 }
 
@@ -667,7 +667,7 @@ header > span, header > span + span   {
 }
 
 @media only screen and (max-width: 480px) {
-  .main {
+  main {
     padding-bottom: 34%;
   }
 }
