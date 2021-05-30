@@ -2,6 +2,7 @@
 <html>
 <body>
 <?php
+$res;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_REQUEST["name"];
     $phone = $_REQUEST["phone"];
@@ -17,9 +18,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     Email: ".$email."
     Message: ".$message;
     $contactus  = wordwrap($contactus ,70);
-    mail($to_email,$subject,$contactus);
+    $mail = mail($to_email,$subject,$contactus);
+    if (!$mail) {
+      $res = print_r(error_get_last()['message']);
+    } else {
+      $res = "Thanks, sent to &#128231;";
+    }
 }
 ?>
-   Thanks, sent to &#128231; 
+   <?php echo $res; ?>  
 </body>
 </html>

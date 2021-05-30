@@ -13,21 +13,40 @@ const pictureID = [
 ];
 
 function send(formData, sent, sub) {
-  let xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      sent.innerHTML = this.responseText;
+  let myPromise = new Promise(function(myResolve, myReject) {
+  let req = new XMLHttpRequest();
+  req.open("POST", "cont.php", true);
+  req.onload = function() {
+      if (req.status == 200) {
+        myResolve(req.responseText);
+      } else {
+        myReject("File not Found");
+      }
+    };
+    req.send(formData);
+    });
+    myPromise.then(
+      function(value) {
+      sent.innerHTML = value;
       sub.style.display = "none";
       sent.style.display = "block";
       setTimeout(function () {
-        sent.style.display = "none";
-        sent.innerHTML = "";
-        sub.style.display = "block";
+      sent.style.display = "none";
+      sent.innerHTML = "";
+      sub.style.display = "block";
+      }, 5000);
+    },
+      function(error) {
+      sent.innerHTML = error;
+      sub.style.display = "none";
+      sent.style.display = "block";
+      setTimeout(function () {
+      sent.style.display = "none";
+      sent.innerHTML = "";
+      sub.style.display = "block";
       }, 5000);
     }
-  };
-  xhttp.open("POST", "cont.php", true);
-  xhttp.send(formData);
+  );
 }
     
 function valid(bool, obj, msg) {
