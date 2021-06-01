@@ -152,7 +152,10 @@ function sani() {
     } 
     if (document.getElementById("home-div")) {
       const homeD = document.getElementById("home-div");
-      if (scroll_pos > homeD.offsetTop) {
+      const style = window
+      .getComputedStyle(homeD)
+      .getPropertyValue("display");
+      if (scroll_pos > homeD.offsetTop && style === "block") {
         homeD.classList.add("ani5");
       } 
     }
