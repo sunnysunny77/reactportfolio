@@ -338,11 +338,7 @@ main::after {
   animation: scale0 1.5s ease-in;
 }
 
-@media only screen and (max-width: 1024px) {
-  .disp {
-    display: none;
-  }
-
+@media only screen and (max-width: 768px) {
   .ani {
     animation: scale1 0.5s;
   }
@@ -576,6 +572,10 @@ main::after {
   header > span + span {
     display: block;
     margin: auto;
+  }
+
+  .disp {
+    display: none;
   }
 
   header button {
