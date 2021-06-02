@@ -2,7 +2,7 @@
 
 /* images */
 
-$img: '../images/home/global.png','../images/home/candid.jpg','../images/home/wp.jpg','../images/home/tafe.jpg','../images/home/pff.jpg','../images/home/sc.jpg','../images/home/rec.jpg','../images/home/store.jpg','../images/home/acc.jpg';
+$img: '../images/home/global.png','../images/home/candid.jpg','../images/home/wp.jpg','../images/home/tafe.jpg','../images/home/pff.jpg','../images/home/sc.jpg','../images/home/rec.jpg','../images/home/store.jpg','../images/home/acc.jpg','../images/home/stick.jpg';
  
 @for $i from 1 through length($img) {
   #s5#{$i} {

@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = $_REQUEST["phone"];
     $email = $_REQUEST["email"];
     $message = $_REQUEST["message"];
-    $to_email = "@gmail.com";
+    $to_email = "shlooby07@gmail.com";
     $subject = "New Contact Us Message";
     
     $contactus = "
