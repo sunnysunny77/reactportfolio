@@ -10,14 +10,15 @@ const pictureID = [
   "s57",
   "s58",
   "s59",
-  "s510"
+  "s510",
+  "s511",
 ];
 
 function send(formData, sent, sub) {
-  let myPromise = new Promise(function(myResolve, myReject) {
-  let req = new XMLHttpRequest();
-  req.open("POST", "cont.php", true);
-  req.onload = function() {
+  let myPromise = new Promise(function (myResolve, myReject) {
+    let req = new XMLHttpRequest();
+    req.open("POST", "cont.php", true);
+    req.onload = function () {
       if (req.status == 200) {
         myResolve(req.responseText);
       } else {
@@ -25,31 +26,31 @@ function send(formData, sent, sub) {
       }
     };
     req.send(formData);
-    });
-    myPromise.then(
-      function(value) {
+  });
+  myPromise.then(
+    function (value) {
       sent.innerHTML = value;
       sub.style.display = "none";
       sent.style.display = "block";
       setTimeout(function () {
-      sent.style.display = "none";
-      sent.innerHTML = "";
-      sub.style.display = "block";
+        sent.style.display = "none";
+        sent.innerHTML = "";
+        sub.style.display = "block";
       }, 5000);
     },
-      function(error) {
+    function (error) {
       sent.innerHTML = error;
       sub.style.display = "none";
       sent.style.display = "block";
       setTimeout(function () {
-      sent.style.display = "none";
-      sent.innerHTML = "";
-      sub.style.display = "block";
+        sent.style.display = "none";
+        sent.innerHTML = "";
+        sub.style.display = "block";
       }, 5000);
     }
   );
 }
-    
+
 function valid(bool, obj, msg) {
   if (!document.getElementById("msg" + obj.id) && bool) {
     obj.classList.add("red");
@@ -57,7 +58,7 @@ function valid(bool, obj, msg) {
     newNode.className = "msg";
     newNode.id = "msg" + obj.id;
     newNode.innerHTML = msg;
-    obj.previousElementSibling.appendChild(newNode); 
+    obj.previousElementSibling.appendChild(newNode);
   } else if (document.getElementById("msg" + obj.id) && !bool) {
     document.getElementById("msg" + obj.id).remove();
     obj.classList.remove("red");
@@ -94,7 +95,7 @@ function form(event) {
   if (/^.*[a-zA-Z0-9].*$/.test(data.message)) {
     valid(false, message, null);
   } else {
-    valid(true, message, "Enter your message") ;
+    valid(true, message, "Enter your message");
     error = true;
   }
   if (error) {
@@ -121,11 +122,11 @@ function tog() {
 function sani() {
   if (window.screen.width <= 992) {
     let head = document.getElementsByTagName("header")[0].offsetHeight;
-    let scroll_pos = window.scrollY + window.innerHeight /  0.75 - head;
-    const imgCont = document.querySelector(".template-img-cont");   
+    let scroll_pos = window.scrollY + window.innerHeight / 0.75 - head;
+    const imgCont = document.querySelector(".template-img-cont");
     const imgContstyle = window
-    .getComputedStyle(imgCont)
-    .getPropertyValue("visibility");
+      .getComputedStyle(imgCont)
+      .getPropertyValue("visibility");
     if (scroll_pos > imgCont.offsetTop && imgContstyle === "hidden") {
       const imgCont = document.querySelector(".template-img-cont");
       imgCont.classList.remove("vis0");
@@ -134,8 +135,8 @@ function sani() {
     }
     const cont = document.querySelector(".cont");
     const contstyle = window
-    .getComputedStyle(cont) 
-    .getPropertyValue("visibility");
+      .getComputedStyle(cont)
+      .getPropertyValue("visibility");
     if (document.querySelector(".cont").offsetTop && contstyle === "hidden") {
       const cont = document.querySelector(".cont");
       cont.classList.remove("vis0");
@@ -150,15 +151,13 @@ function sani() {
       tempDiv.classList.remove("vis0");
       tempDiv.classList.add("vis1");
       tempDiv.classList.add("ani3");
-    } 
+    }
     if (document.getElementById("home-div")) {
       const homeD = document.getElementById("home-div");
-      const style = window
-      .getComputedStyle(homeD)
-      .getPropertyValue("display");
+      const style = window.getComputedStyle(homeD).getPropertyValue("display");
       if (scroll_pos > homeD.offsetTop && style === "block") {
         homeD.classList.add("ani5");
-      } 
+      }
     }
     if (document.querySelector(".template-img-0")) {
       const tempImg0 = document.querySelector(".template-img-0");
@@ -176,7 +175,10 @@ function sani() {
       const style = window
         .getComputedStyle(ob0ul)
         .getPropertyValue("visibility");
-      if (scroll_pos > document.getElementById("s4").offsetTop && style === "hidden") {
+      if (
+        scroll_pos > document.getElementById("s4").offsetTop &&
+        style === "hidden"
+      ) {
         ob0ul.classList.remove("vis0");
         ob0ul.classList.add("vis1");
         ob0ul.classList.add("ani2");
@@ -185,9 +187,7 @@ function sani() {
     if (document.getElementById("s5")) {
       const s5 = document.getElementById("s5");
       const s51 = document.getElementById("s51");
-      const style = window
-        .getComputedStyle(s5)
-        .getPropertyValue("visibility");
+      const style = window.getComputedStyle(s5).getPropertyValue("visibility");
       if (scroll_pos > s5.offsetTop && style === "hidden") {
         s5.classList.remove("vis0");
         s5.classList.add("vis1");
@@ -235,11 +235,12 @@ function high(event) {
   const g = document.getElementById("link").offsetTop;
   const h = document.getElementById("rec").offsetTop;
   const i = document.getElementById("store").offsetTop;
-  const j = document.getElementById("acc").offsetTop
-  const k = document.getElementById("stick").offsetHeight;
-  let scroll_pos = event.scrollTop
+  const j = document.getElementById("acc").offsetTop;
+  const k = document.getElementById("stick").offsetTop;
+  const l = document.getElementById("bus").offsetHeight;
+  let scroll_pos = event.scrollTop;
   //a - b - last obj offsetHeight
-  const botCalc = a - b - k;
+  const botCalc = a - b - l;
   if (scroll_pos < c) {
     none(pictureID[0]);
   }
@@ -264,22 +265,25 @@ function high(event) {
   if (scroll_pos > i && scroll_pos < j) {
     none(pictureID[7]);
   }
-  if (scroll_pos >j && scroll_pos < botCalc) {
+  if (scroll_pos > j && scroll_pos < k) {
     none(pictureID[8]);
- }
- if (scroll_pos > botCalc) {
+  }
+  if (scroll_pos > k && scroll_pos < botCalc) {
     none(pictureID[9]);
- }
+  }
+  if (scroll_pos > botCalc) {
+    none(pictureID[10]);
+  }
 }
 
-function cache (event) {
+function cache(event) {
   if (!cached) {
     setTimeout(function () {
-     if (event.target.nodeName === "#document") {
-        sani()
+      if (event.target.nodeName === "#document") {
+        sani();
       }
-      if(event.target.nodeName === "DIV") {
-        high(event.target)
+      if (event.target.nodeName === "DIV") {
+        high(event.target);
       }
       cached = null;
     }, 300);
@@ -287,15 +291,20 @@ function cache (event) {
   cached = event;
 }
 
-function nices () {
-  OverlayScrollbars(document.getElementsByClassName("template-p")[0], { className : "os-theme-dark os-theme-dark-edgy" });
+function nices() {
+  OverlayScrollbars(document.getElementsByClassName("template-p")[0], {
+    className: "os-theme-dark os-theme-dark-edgy",
+  });
   if (document.getElementById("ob0")) {
-    let instance = OverlayScrollbars(document.getElementById("ob0"), { className : "os-theme-dark os-theme-dark-edgy" , callbacks: {
-      onScroll: cache
-    }}); 
+    let instance = OverlayScrollbars(document.getElementById("ob0"), {
+      className: "os-theme-dark os-theme-dark-edgy",
+      callbacks: {
+        onScroll: cache,
+      },
+    });
     eventListner(
       document.getElementById("close"),
-      "click", 
+      "click",
       function () {
         for (let x = 0; x < pictureID.length; x++) {
           if (x > 0) {
@@ -304,73 +313,84 @@ function nices () {
           }
         }
         document.getElementById(pictureID[0]).style.display = "block";
-        instance.scroll({y : 0 });
-      }, 
+        instance.scroll({ y: 0 });
+      },
       false
     );
   }
 }
 
-function vivus () {
-  new Vivus('my-svg', { duration: 800, file: 'https://gendrive.s3-ap-southeast-2.amazonaws.com/svg.svg' }, null);
+function vivus() {
+  new Vivus(
+    "my-svg",
+    {
+      duration: 800,
+      file: "https://gendrive.s3-ap-southeast-2.amazonaws.com/svg.svg",
+    },
+    null
+  );
 }
 
-function script () {
+function script() {
   const obj = document.getElementsByClassName("outer")[0];
   let script = document.createElement("script");
   script.setAttribute("src", "./node_modules/vivus/dist/vivus.min.js");
   let script1 = document.createElement("script");
-  script1.setAttribute("src", "./node_modules/overlayscrollbars/js/OverlayScrollbars.js");
+  script1.setAttribute(
+    "src",
+    "./node_modules/overlayscrollbars/js/OverlayScrollbars.js"
+  );
   obj.parentNode.insertBefore(script, obj.nextSibling);
   obj.parentNode.insertBefore(script1, obj.nextSibling);
-  eventListner(
-    script,
-    "load",
-    vivus,
-    null
-  );
-  eventListner(
-    script1,
-    "load",
-    nices,
-    null
-  );
+  eventListner(script, "load", vivus, null);
+  eventListner(script1, "load", nices, null);
 }
 
 function check() {
-  let line =  window.innerHeight - document.getElementsByTagName("header")[0].offsetHeight ;
-  if (window.screen.width <= 992 ) {
-    if (document.querySelector(".template-img-cont").offsetTop < line ) {
+  let line =
+    window.innerHeight -
+    document.getElementsByTagName("header")[0].offsetHeight;
+  if (window.screen.width <= 992) {
+    if (document.querySelector(".template-img-cont").offsetTop < line) {
       const imgCont = document.querySelector(".template-img-cont");
       imgCont.classList.remove("vis0");
       imgCont.classList.add("vis1");
       imgCont.classList.add("ani4");
     }
-    if (document.querySelector(".cont").offsetTop < line ) {
+    if (document.querySelector(".cont").offsetTop < line) {
       const cont = document.querySelector(".cont");
       cont.classList.remove("vis0");
       cont.classList.add("vis1");
       cont.classList.add("ani2");
     }
-    if (document.querySelector(".template-div").offsetTop < line ) {
+    if (document.querySelector(".template-div").offsetTop < line) {
       const tempDiv = document.querySelector(".template-div");
       tempDiv.classList.remove("vis0");
       tempDiv.classList.add("vis1");
       tempDiv.classList.add("ani3");
     }
-    if (document.querySelector(".template-img-0") && document.querySelector(".template-img-0").offsetTop < line ) {
+    if (
+      document.querySelector(".template-img-0") &&
+      document.querySelector(".template-img-0").offsetTop < line
+    ) {
       const tempImg0 = document.querySelector(".template-img-0");
       tempImg0.classList.remove("vis0");
       tempImg0.classList.add("vis1");
       tempImg0.classList.add("ani2");
     }
-    if (document.getElementById("s4") && document.getElementById("s4").offsetTop < line ) {
+    if (
+      document.getElementById("s4") &&
+      document.getElementById("s4").offsetTop < line
+    ) {
       const ob0ul = document.getElementById("ob0ul");
       ob0ul.classList.remove("vis0");
       ob0ul.classList.add("vis1");
       ob0ul.classList.add("ani2");
     }
-    if (document.getElementById("s5") && document.getElementById("s5").offsetTop < line ) {
+    if (
+      document.getElementById("s5") &&
+      document.getElementById("s5").offsetTop < line
+    ) {
       const s5 = document.getElementById("s5");
       const s51 = document.getElementById("s51");
       s5.classList.remove("vis0");
@@ -381,11 +401,10 @@ function check() {
         s51.classList.remove("ani0");
       }, 1500);
     }
-  
   }
-  if (window.screen.width >= 992 ) {
+  if (window.screen.width >= 992) {
     let all = document.querySelectorAll(".vis0");
-    for (let i= 0; i < all.length; i++) {
+    for (let i = 0; i < all.length; i++) {
       all[i].classList.remove("vis0");
       all[i].classList.add("vis1");
     }
@@ -408,23 +427,12 @@ function eventListner(obj, type, callback, opt) {
 window.onload = function () {
   check();
   script();
-  eventListner(
-    window,
-    "scroll",
-    cache,
-    null
-  );
+  eventListner(window, "scroll", cache, null);
   eventListner(
     document.getElementsByClassName("click")[0],
     "click",
     tog,
     false
   );
-  eventListner(
-    document.getElementById("contact-form"), 
-    "submit", 
-    form, 
-    false
-  );
+  eventListner(document.getElementById("contact-form"), "submit", form, false);
 };
-
