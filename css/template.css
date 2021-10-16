@@ -1,5 +1,9 @@
 @import url("../node_modules/overlayscrollbars/css/OverlayScrollbars.css");
 /* GLOBAL */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   font-family: Tahoma, sans-serif;
   background-color: honeydew;

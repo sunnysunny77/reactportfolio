@@ -2,6 +2,10 @@
 @import url("../node_modules/overlayscrollbars/css/OverlayScrollbars.css");
 /* GLOBAL */
 
+html {
+  -webkit-text-size-adjust: 100%; 
+}
+
 body {
   font-family: $font;
   background-color: $mainbg;
