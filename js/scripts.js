@@ -9,11 +9,6 @@ const pictureID = [
   "s56",
   "s57",
   "s58",
-  "s59",
-  "s510",
-  "s511",
-  "s512",
-  "s513",
 ];
 
 function send(formData, sent, sub) {
@@ -230,21 +225,16 @@ function none(a) {
 function high(event) {
   const a = event.scrollHeight;
   const b = document.getElementById("ob0").clientHeight;
-  const c = document.getElementById("cand").offsetTop;
-  const d = document.getElementById("wp").offsetTop;
-  const e = document.getElementById("dig").offsetTop;
-  const f = document.getElementById("pff").offsetTop;
-  const g = document.getElementById("link").offsetTop;
-  const h = document.getElementById("rec").offsetTop;
-  const i = document.getElementById("store").offsetTop;
-  const j = document.getElementById("acc").offsetTop;
-  const k = document.getElementById("stick").offsetTop;
-  const l = document.getElementById("bus").offsetTop;
-  const m = document.getElementById("sec").offsetTop;
-  const n = document.getElementById("cart").offsetHeight;
+  const c = document.getElementById("wp").offsetTop;
+  const d = document.getElementById("pff").offsetTop;
+  const e = document.getElementById("acc").offsetTop;
+  const f = document.getElementById("stick").offsetTop;
+  const g = document.getElementById("bus").offsetTop;
+  const h = document.getElementById("sec").offsetTop;
+  const i = document.getElementById("cart").offsetHeight;
   let scroll_pos = event.scrollTop;
   //a - b - last obj offsetHeight
-  const botCalc = a - b - n;
+  const botCalc = a - b - i;
   if (scroll_pos < c) {
     none(pictureID[0]);
   }
@@ -263,26 +253,11 @@ function high(event) {
   if (scroll_pos > g && scroll_pos < h) {
     none(pictureID[5]);
   }
-  if (scroll_pos > h && scroll_pos < i) {
+  if (scroll_pos > h && scroll_pos < botCalc) {
     none(pictureID[6]);
   }
-  if (scroll_pos > i && scroll_pos < j) {
-    none(pictureID[7]);
-  }
-  if (scroll_pos > j && scroll_pos < k) {
-    none(pictureID[8]);
-  }
-  if (scroll_pos > k && scroll_pos < l) {
-    none(pictureID[9]);
-  }
-  if (scroll_pos > l && scroll_pos < m) {
-    none(pictureID[10]);
-  }
-  if (scroll_pos > m && scroll_pos < botCalc) {
-    none(pictureID[11]);
-  }
   if (scroll_pos > botCalc) {
-    none(pictureID[12]);
+    none(pictureID[7]);
   }
 }
 
