@@ -10,6 +10,7 @@ const pictureID = [
   "s57",
   "s58",
   "s59",
+  "s510",
 ];
 
 function send(formData, sent, sub) {
@@ -233,10 +234,11 @@ function high(event) {
   const g = document.getElementById("bus").offsetTop;
   const h = document.getElementById("sec").offsetTop;
   const i = document.getElementById("cart").offsetTop;
-  const j = document.getElementById("cand").offsetHeight;
+  const j = document.getElementById("store").offsetTop;
+  const k = document.getElementById("cand").offsetHeight;
   let scroll_pos = event.scrollTop;
   //a - b - last obj offsetHeight
-  const botCalc = a - b - j;
+  const botCalc = a - b - k;
   if (scroll_pos < c) {
     none(pictureID[0]);
   }
@@ -258,11 +260,14 @@ function high(event) {
   if (scroll_pos > h && scroll_pos < i) {
     none(pictureID[6]);
   }
-  if (scroll_pos > i && scroll_pos < botCalc) {
+  if (scroll_pos > i && scroll_pos < j) {
     none(pictureID[7]);
   }
-  if (scroll_pos > botCalc) {
+  if (scroll_pos > j && scroll_pos < botCalc) {
     none(pictureID[8]);
+  }
+  if (scroll_pos > botCalc) {
+    none(pictureID[9]);
   }
 }
 
