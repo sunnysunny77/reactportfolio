@@ -30,6 +30,7 @@
     height: auto;
   }
 }
+
 @media only screen and (max-width: 720px) and (orientation: portrait) {
   .template-img-0 {
     width: 100%;
@@ -38,6 +39,7 @@
     border-right: 0;
   }
 }
+
 @media only screen and (max-width: 320px) {
   .template-img-0 {
     width: 100%;
@@ -46,5 +48,4 @@
     border-right: 0;
   }
 }
-
 /*# sourceMappingURL=skills.css.map */

@@ -43,15 +43,18 @@ h4 {
   font-size: x-large;
 }
 
-nav ul, footer ul {
+nav ul,
+footer ul {
   letter-spacing: 0.75px;
 }
 
-nav ul li, footer ul li {
+nav ul li,
+footer ul li {
   display: inline;
 }
 
-.button:hover, footer ul li a:hover {
+.button:hover,
+footer ul li a:hover {
   color: #fbaf5d;
 }
 
@@ -132,14 +135,14 @@ nav ul {
   text-align: center;
 }
 
-.button {
+nav ul .button {
   width: 17%;
   cursor: pointer;
   display: inline-block;
   color: whitesmoke;
 }
 
-.button .label {
+nav ul .button .label {
   display: inline-block;
   padding: 10px;
 }
@@ -182,11 +185,12 @@ main::after {
   width: 44.5%;
 }
 
-#my-svg {
+.main-logo #my-svg {
   display: inline-block;
 }
 
-.main-logo span svg, #my-svg {
+.main-logo span svg,
+.main-logo #my-svg {
   width: 90px;
   height: 90px;
 }
@@ -340,7 +344,8 @@ footer h2 {
   visibility: visible;
 }
 
-header > span, header > span + span {
+header > span,
+header > span + span {
   -webkit-animation: slideIn 1.5s ease-in-out;
           animation: slideIn 1.5s ease-in-out;
 }
@@ -642,7 +647,8 @@ main::after {
     -webkit-transform: skew(10deg, 0deg);
             transform: skew(10deg, 0deg);
   }
-  .button .icon:before, .button .icon:after {
+  .button .icon:before,
+  .button .icon:after {
     height: 1px;
     content: "";
     position: absolute;
@@ -661,7 +667,8 @@ main::after {
     bottom: 0;
     right: calc(50% - 30px);
   }
-  .button .icon span:before, .button .icon span:after {
+  .button .icon span:before,
+  .button .icon span:after {
     height: 0;
     -webkit-transition-delay: 0s;
             transition-delay: 0s;
@@ -685,7 +692,8 @@ main::after {
     -webkit-transform: skew(-40deg, 0deg);
             transform: skew(-40deg, 0deg);
   }
-  .button:hover .icon:before, .button:hover .icon:after {
+  .button:hover .icon:before,
+  .button:hover .icon:after {
     -webkit-transition-delay: 0s;
             transition-delay: 0s;
     width: 25%;
@@ -696,7 +704,8 @@ main::after {
   .button:hover .icon:after {
     right: 0;
   }
-  .button:hover .icon span:before, .button:hover .icon span:after {
+  .button:hover .icon span:before,
+  .button:hover .icon span:after {
     height: 50%;
     -webkit-transition-delay: 0.45s;
             transition-delay: 0.45s;
@@ -725,11 +734,11 @@ main::after {
     display: block;
     margin: auto;
   }
-  .disp {
-    display: none;
-  }
   header button {
     display: block;
+  }
+  .disp {
+    display: none;
   }
   nav {
     width: 100%;
@@ -743,7 +752,7 @@ main::after {
     width: 100%;
     padding: 0;
   }
-  .button {
+  nav ul .button {
     min-width: 140px;
     width: 31%;
     margin: 1%;
@@ -754,7 +763,8 @@ main::after {
     margin-left: 7.5%;
     width: 92.5%;
   }
-  .main-logo span svg, #my-svg {
+  .main-logo span svg,
+  .main-logo #my-svg {
     width: 55px;
     height: 55px;
   }
@@ -762,7 +772,7 @@ main::after {
     font-size: x-large;
     text-shadow: none;
   }
-  .main-logo-span {
+  .main-logo .main-logo-span {
     display: none;
   }
   .template h3 {
@@ -816,15 +826,15 @@ main::after {
     margin: 63px auto 24px auto;
     width: 100%;
   }
-  .sm {
-    display: block;
-  }
   footer ul li a {
     display: inline;
     border-radius: 0;
     margin: 0;
     padding: 4px 0px;
     font-size: smaller;
+  }
+  .sm {
+    display: block;
   }
 }
 

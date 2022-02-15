@@ -3,7 +3,7 @@
 /* GLOBAL */
 
 html {
-  -webkit-text-size-adjust: 100%; 
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -45,15 +45,18 @@ h4 {
   font-size: x-large;
 }
 
-nav ul, footer ul {
+nav ul,
+footer ul {
   letter-spacing: 0.75px;
 }
 
-nav ul li, footer ul li {
+nav ul li,
+footer ul li {
   display: inline;
 }
 
-.button:hover, footer ul li a:hover {
+.button:hover,
+footer ul li a:hover {
   color: $aHover;
 }
 
@@ -74,42 +77,38 @@ header {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   display: flex;
+  > span {
+    height: 75px;
+    width: 260px;
+    margin-left: 5%;
+    background-image: url(../images/template/logotext.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  > span + span {
+    display: none;
+    height: 75px;
+    width: 123px;
+    background-image: url(../images/template/textonly.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  button {
+    display: none;
+    background-image: url(../images/template/menu.png);
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    margin: auto auto 15px auto;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+  }
 }
-
-header > span {
-  height: 75px;
-  width: 260px;
-  margin-left: 5%;
-  background-image: url(../images/template/logotext.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-header > span + span {
-  display: none;
-  height: 75px;
-  width: 123px;
-  background-image: url(../images/template/textonly.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-header button {
-  display: none;
-  background-image: url(../images/template/menu.png);
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
-  padding: 0;
-  border: none;
-  margin: auto auto 15px auto;
-  cursor: pointer;
-  outline: none;
-  border-radius: 10px;
-}
-
 /* NAV */
 
 nav {
@@ -117,32 +116,28 @@ nav {
   align-items: center;
   justify-content: flex-end;
   width: calc(95% - 260px);
-}
-
-nav ul {
-  padding: 2% 0 0 0;
-  margin: 0;
-  list-style-type: none;
-  height: inherit;
-  width: 85%;
-  text-align: center;
-}
-
-.button {
-  width: 17%;
-  cursor: pointer;
-  display: inline-block;
-  color: $c2;
-}
-
-.button .label {
-  display: inline-block;
-  padding: 10px;
-}
-
-nav a {
-  color: inherit;
-  text-decoration: none;
+  ul {
+    padding: 2% 0 0 0;
+    margin: 0;
+    list-style-type: none;
+    height: inherit;
+    width: 85%;
+    text-align: center;
+    .button {
+      width: 17%;
+      cursor: pointer;
+      display: inline-block;
+      color: $c2;
+      .label {
+        display: inline-block;
+        padding: 10px;
+      }
+    }
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 /* MAIN */
@@ -153,18 +148,17 @@ main {
   display: flex;
   flex-direction: column;
   padding-bottom: 27.5%;
-}
-
-main::after {
-  content: "";
-  background-image: url(../images/template/back.jpg);
-  opacity: 1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -999;
+  &::after {
+    content: "";
+    background-image: url(../images/template/back.jpg);
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -999;
+  }
 }
 
 .main-logo {
@@ -172,23 +166,21 @@ main::after {
   display: block;
   margin: 9% auto 3% 55.5%;
   width: 44.5%;
-}
-
-#my-svg {
-  display: inline-block;
-}
-
-.main-logo span svg, #my-svg {
-  width: 90px;
-  height: 90px;
-}
-
-.main-logo h2 {
-  display: inline-block;
-  font-style: oblique;
-  margin-left: 2.5%;
-  position: absolute;
-  text-shadow: 0 0 2.5px $c1;
+  #my-svg {
+    display: inline-block;
+  }
+  span svg,
+  #my-svg {
+    width: 90px;
+    height: 90px;
+  }
+  h2 {
+    display: inline-block;
+    font-style: oblique;
+    margin-left: 2.5%;
+    position: absolute;
+    text-shadow: 0 0 2.5px $c1;
+  }
 }
 
 .main-logo-span {
@@ -211,7 +203,7 @@ main::after {
 
 .template-img-cont {
   width: calc(992px - 73.991%);
-  height: 250px; 
+  height: 250px;
   margin-left: calc(987px - 95%);
   border: 5px solid $c2;
   padding: 5%;
@@ -280,51 +272,45 @@ footer {
   border-bottom-right-radius: 25px;
   display: flex;
   position: relative;
+  &::after {
+    content: "";
+    background-image: url(../images/template/foot-back.jpg);
+    background-size: 100% 100%;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -999;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  ul {
+    text-align: center;
+    width: 47.5%;
+    padding: 0;
+    margin: 11% 9.4% 5% 44%;
+    list-style-type: none;
+    li a {
+      color: $Acolor;
+      margin: 0.75%;
+      text-decoration: none;
+      padding: 4px 10px;
+    }
+  }
+  h2 {
+    font-size: small;
+    color: $Acolor;
+    font-style: oblique;
+    opacity: 0.6;
+  }
 }
-
-footer::after {
-  content: "";
-  background-image: url(../images/template/foot-back.jpg);
-  background-size: 100% 100%;
-  opacity: 1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -999;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-}
-
-footer ul {
-  text-align: center;
-  width: 47.5%;
-  padding: 0;
-  margin: 11% 9.4% 5% 44%;
-  list-style-type: none;
-}
-
-footer ul li a {
-  color: $Acolor;
-  margin: 0.75%;
-  text-decoration: none;
-  padding: 4px 10px;
-}
-
-footer h2 {
-  font-size: small;
-  color: $Acolor;
-  font-style: oblique;
-  opacity: 0.6;
-}
-
 .sm {
   padding-right: 1%;
 }
 
 /* ANIMATION */
-
 
 .vis0 {
   visibility: hidden;
@@ -334,7 +320,8 @@ footer h2 {
   visibility: visible;
 }
 
-header > span, header > span + span   {
+header > span,
+header > span + span {
   animation: slideIn 1.5s ease-in-out;
 }
 
@@ -477,88 +464,92 @@ main::after {
   .button {
     -webkit-transform: translateZ(0px);
     transform: translateZ(0px);
-  }
-  .button .label {
-    transition: all 0.225s;
-    transition-delay: 0s;
-  }
-  .button .icon2 {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: all 0.225s;
-    transform: skew(-40deg, 0deg);
-    transition-delay: 0.45s;
-  }
-  .button .icon {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: all 0.225s;
-    transition-delay: 0.15s;
-    transform: skew(10deg, 0deg);
-  }
-  .button .icon:before, .button .icon:after {
-    height: 1px;
-    content: "";
-    position: absolute;
-    display: block;
-    transition: all 0.375s;
-    transition-delay: 0.3s;
-    background: $Acolor;
-  }
-  .button .icon:before {
-    top: 0;
-    left: calc(50% - 30px);
-  }
-  .button .icon:after {
-    bottom: 0;
-    right: calc(50% - 30px);
-  }
-  .button .icon span:before, .button .icon span:after {
-    height: 0;
-    transition-delay: 0s;
-    content: "";
-    position: absolute;
-    display: block;
-    width: 1px;
-    transition: all 0.225s;
-    background: $Acolor;
-  }
-  .button .icon span:before {
-    left: 0;
-    top: 0;
-  }
-  .button .icon span:after {
-    right: 0;
-    bottom: 0;
-  }
-  .button:hover .icon {
-    transform: skew(-40deg, 0deg);
-  }
-  .button:hover .icon:before, .button:hover .icon:after {
-    transition-delay: 0s;
-    width: 25%;
-  }
-  .button:hover .icon:before {
-    left: 0;
-  }
-  .button:hover .icon:after {
-    right: 0;
-  }
-  .button:hover .icon span:before, .button:hover .icon span:after {
-    height: 50%;
-    transition-delay: 0.45s;
-  }
-  .button:hover .icon2 {
-    transform: skew(-40deg, 0deg);
-    transition-delay: 0s;
+    .label {
+      transition: all 0.225s;
+      transition-delay: 0s;
+    }
+    .icon2 {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.225s;
+      transform: skew(-40deg, 0deg);
+      transition-delay: 0.45s;
+    }
+    .icon {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.225s;
+      transition-delay: 0.15s;
+      transform: skew(10deg, 0deg);
+    }
+    .icon:before,
+    .icon:after {
+      height: 1px;
+      content: "";
+      position: absolute;
+      display: block;
+      transition: all 0.375s;
+      transition-delay: 0.3s;
+      background: $Acolor;
+    }
+    .icon:before {
+      top: 0;
+      left: calc(50% - 30px);
+    }
+    .icon:after {
+      bottom: 0;
+      right: calc(50% - 30px);
+    }
+    .icon span:before,
+    .icon span:after {
+      height: 0;
+      transition-delay: 0s;
+      content: "";
+      position: absolute;
+      display: block;
+      width: 1px;
+      transition: all 0.225s;
+      background: $Acolor;
+    }
+    .icon span:before {
+      left: 0;
+      top: 0;
+    }
+    .icon span:after {
+      right: 0;
+      bottom: 0;
+    }
+    &:hover .icon {
+      transform: skew(-40deg, 0deg);
+    }
+    &:hover .icon:before,
+    &:hover .icon:after {
+      transition-delay: 0s;
+      width: 25%;
+    }
+    &:hover .icon:before {
+      left: 0;
+    }
+    &:hover .icon:after {
+      right: 0;
+    }
+    &:hover .icon span:before,
+    &:hover .icon span:after {
+      height: 50%;
+      transition-delay: 0.45s;
+    }
+    &:hover .icon2 {
+      transform: skew(-40deg, 0deg);
+      transition-delay: 0s;
+    }
   }
 }
 
@@ -567,50 +558,53 @@ main::after {
     padding: 10px 0;
     flex-direction: column;
     height: auto;
-  }
-  header > span {
-    display: none;
-  }
-  header > span + span {
-    display: block;
-    margin: auto;
+    > span {
+      display: none;
+    }
+    > span + span {
+      display: block;
+      margin: auto;
+    }
+    button {
+      display: block;
+    }
   }
   .disp {
     display: none;
   }
-  header button {
-    display: block;
-  }
+
   nav {
     width: 100%;
     flex-direction: column;
+    ul {
+      margin: 0;
+      width: 100%;
+      padding: 0;
+      .button {
+        min-width: 140px;
+        width: 31%;
+        margin: 1%;
+        border: 1px solid $c2;
+        color: $Acolor;
+      }
+    }
   }
-  nav ul {
-    margin: 0;
-    width: 100%;
-    padding: 0;
-  }
-  .button {
-    min-width: 140px;
-    width: 31%;
-    margin: 1%;
-    border: 1px solid $c2;
-    color: $Acolor;
-  }
+
   .main-logo {
     margin-left: 7.5%;
     width: 92.5%;
-  }
-  .main-logo span svg, #my-svg  {
-    width: 55px;
-    height: 55px;
-  }
-  .main-logo h2 {
-    font-size: x-large;
-    text-shadow: none;
-  }
-  .main-logo-span {
-    display: none;
+    span svg,
+    #my-svg {
+      width: 55px;
+      height: 55px;
+    }
+    h2 {
+      font-size: x-large;
+      text-shadow: none;
+    }
+    .main-logo-span {
+      display: none;
+    }
   }
   .template h3 {
     font-size: large;
@@ -654,21 +648,21 @@ main::after {
   footer {
     flex-direction: column;
     height: 125px;
-  }
-  footer ul {
-    display: block;
-    margin: 63px auto 24px auto;
-    width: 100%;
+    ul {
+      display: block;
+      margin: 63px auto 24px auto;
+      width: 100%;
+      li a {
+        display: inline;
+        border-radius: 0;
+        margin: 0;
+        padding: 4px 0px;
+        font-size: smaller;
+      }
+    }
   }
   .sm {
     display: block;
-  }
-  footer ul li a {
-    display: inline;
-    border-radius: 0;
-    margin: 0;
-    padding: 4px 0px;
-    font-size: smaller;
   }
 }
 

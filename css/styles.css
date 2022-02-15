@@ -150,7 +150,6 @@
   #site h3 {
     font-size: large;
   }
-
   #s4 {
     float: none;
     display: block;
@@ -160,7 +159,6 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-
   #s5 {
     float: none;
     display: block;
@@ -174,12 +172,10 @@
     border-left: 0;
     border-right: 0;
   }
-
   #s5 span {
     background-size: 47%;
     padding: 23%;
   }
-
   #ob0 {
     height: calc(100% - 20px);
     margin: 10px 0;
@@ -187,20 +183,16 @@
     top: 10px;
     font-size: initial;
   }
-
   #ob0ul {
     padding: 0;
   }
-
   #ob0ul ol li h4 {
     font-size: large;
   }
-
   #s5 a {
     top: 5px;
     font-size: small;
   }
-
   #close {
     float: none;
     position: absolute;
@@ -209,11 +201,9 @@
     bottom: -35px;
     margin: 0;
   }
-
   #home-div {
     display: block;
   }
-
   #template-div {
     margin: auto;
     position: absolute;
@@ -221,6 +211,7 @@
     left: 5.0105%;
   }
 }
+
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
   #s5 {
     width: calc(40% - 10px);
@@ -229,22 +220,22 @@
     border-left: 5px solid whitesmoke;
     border-right: 5px solid whitesmoke;
   }
-
   #close {
     bottom: auto;
     top: 15px;
   }
 }
+
 @media only screen and (max-width: 320px) {
   #s5 a {
     top: 2.5px;
     font-size: xx-small;
   }
 }
+
 @media only screen and (max-width: 240px) {
   #s5 a {
     top: 0;
   }
 }
-
 /*# sourceMappingURL=styles.css.map */
