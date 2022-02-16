@@ -19,9 +19,13 @@
   margin: auto;
 }
 
-#sa {
+a[target="git"]{
   color: $c3;
+  &:hover {
+    color: $aHover;
+  }
 }
+
 
 @media only screen and (max-width: 1024px) {
   .template-img-0 {

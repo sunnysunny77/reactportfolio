@@ -16,8 +16,12 @@
   margin: auto;
 }
 
-#sa {
+a[target="git"] {
   color: #4193bc;
+}
+
+a[target="git"]:hover {
+  color: #fbaf5d;
 }
 
 @media only screen and (max-width: 1024px) {
