@@ -1,9 +1,7 @@
 /* GLOBAL */
 .template-img {
   background-image: url(../images/skills/skills.png);
-  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   height: 100%;
 }
 

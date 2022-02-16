@@ -50,16 +50,10 @@
 .template-img {
   background-image: url(../images/home/home.png);
   background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 100%;
 }
 
 /* Scroll */
-#site h3 {
-  margin-left: 5%;
-}
-
 #s4 {
   height: 280px;
   width: calc(992px - 46.026%);
@@ -68,7 +62,6 @@
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
   background-image: url(../images/template/text.jpg);
-  background-size: 100% 100%;
   position: relative;
   z-index: 999;
 }
@@ -152,7 +145,6 @@
   }
   #s4 {
     float: none;
-    display: block;
     width: 100%;
     height: 140px;
     margin: auto;
@@ -161,7 +153,6 @@
   }
   #s5 {
     float: none;
-    display: block;
     width: 90%;
     height: auto;
     margin: auto;

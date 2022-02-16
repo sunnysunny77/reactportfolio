@@ -5,8 +5,6 @@
 .template-img {
   background-image: url(../images/contact/contact.png);
   background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 100%;
 }
 
@@ -22,55 +20,50 @@
 }
 
 .template-p {
-  text-align: initial ;
+  text-align: initial;
 }
-
-fieldset {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-legend {
-  padding: 0;
-  margin: 0 0 0 5%;
-}
-
-.template-p ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.template-p ul li {
-  padding-bottom: 5.5%;
-  margin: 0 10% 0 10%;
-  width: 80%;
-}
-
-label {
-  color: $c4;
-}
-
-textarea {
-  width: 100%;
-  resize: none;
-  font: inherit;
-  padding: 0;
-  margin: 5px 0 0 0;
-  font-size: inherit;
-  background-image: url(../images/template/text.jpg);
-  border: 1px solid $c3;
-}
-
-input {
-  width: 100%;
-  font-style: inherit;
-  padding: 0;
-  margin: 5px 0 0 0;
-  font: inherit;
-  background-image: url(../images/template/text.jpg);
-  border: 1px solid $c3;
+form {
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    legend {
+      padding: 0;
+      margin: 0 0 0 5%;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      li {
+        padding-bottom: 5.5%;
+        margin: 0 10% 0 10%;
+        width: 80%;
+      }
+    }
+    label {
+      color: $c4;
+    }
+    textarea {
+      width: 100%;
+      resize: none;
+      font: inherit;
+      padding: 0;
+      margin: 5px 0 0 0;
+      font-size: inherit;
+      background-image: url(../images/template/text.jpg);
+      border: 1px solid $c3;
+    }
+  }
+  input {
+    width: 100%;
+    font-style: inherit;
+    padding: 0;
+    margin: 5px 0 0 0;
+    font: inherit;
+    background-image: url(../images/template/text.jpg);
+    border: 1px solid $c3;
+  }
 }
 
 #sent {
@@ -108,7 +101,6 @@ input {
   }
 }
 
-
 @media only screen and (max-width: 720px) and (orientation: portrait) {
   .template-img-0 {
     width: 100%;
@@ -119,7 +111,7 @@ input {
 }
 
 @media only screen and (max-width: 320px) {
- .template-img-0 {
+  .template-img-0 {
     width: 100%;
     padding: 32% 0 32% 0;
     border-left: 0;

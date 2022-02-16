@@ -17,28 +17,14 @@ body {
   margin: auto;
 }
 
-h1 {
-  display: inline;
-  font-size: medium;
-  margin: 0;
-  padding: 0;
-  font-weight: 500;
-}
-
-h2 {
-  display: inline;
-  color: $heading2;
-  font-size: 1.8em;
-  margin: 0;
-  padding: 0;
-}
-
 h3 {
+  margin-left: 5%;
   color: $heading3;
   font-size: 1.4em;
   width: 7.5px;
   border-top: 7.5px solid $headingBoarder;
 }
+
 
 h4 {
   color: $heading4;
@@ -69,10 +55,7 @@ footer ul li a:hover {
 /* HEADER */
 
 header {
-  width: 100%;
   background-image: url(../images/template/head-back.jpg);
-  background-size: 100% 100%;
-  height: 75px;
   border-bottom: 8px solid $mainbg;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
@@ -82,31 +65,13 @@ header {
     width: 260px;
     margin-left: 5%;
     background-image: url(../images/template/logotext.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
     position: relative;
   }
   > span + span {
     display: none;
-    height: 75px;
-    width: 123px;
-    background-image: url(../images/template/textonly.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    position: relative;
   }
   button {
     display: none;
-    background-image: url(../images/template/menu.png);
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
-    padding: 0;
-    border: none;
-    margin: auto auto 15px auto;
-    cursor: pointer;
-    outline: none;
-    border-radius: 10px;
   }
 }
 /* NAV */
@@ -119,7 +84,6 @@ nav {
   ul {
     padding: 2% 0 0 0;
     margin: 0;
-    list-style-type: none;
     height: inherit;
     width: 85%;
     text-align: center;
@@ -132,10 +96,15 @@ nav {
         display: inline-block;
         padding: 10px;
       }
+      h1 {
+        font-size: medium;
+        margin: 0;
+        padding: 0;
+        font-weight: 500;
+      }
     }
   }
   a {
-    color: inherit;
     text-decoration: none;
   }
 }
@@ -144,14 +113,12 @@ nav {
 
 main {
   position: relative;
-  width: 100%;
   display: flex;
   flex-direction: column;
   padding-bottom: 27.5%;
   &::after {
     content: "";
     background-image: url(../images/template/back.jpg);
-    opacity: 1;
     top: 0;
     left: 0;
     bottom: 0;
@@ -163,43 +130,37 @@ main {
 
 .main-logo {
   position: relative;
-  display: block;
   margin: 9% auto 3% 55.5%;
   width: 44.5%;
   #my-svg {
     display: inline-block;
   }
-  span svg,
-  #my-svg {
+  #my-svg,
+  span svg {
     width: 90px;
     height: 90px;
   }
   h2 {
-    display: inline-block;
     font-style: oblique;
-    margin-left: 2.5%;
+    margin: auto auto auto 2.5%;
     position: absolute;
     text-shadow: 0 0 2.5px $c1;
+    display: inline;
+    color: $heading2;
+    font-size: 1.8em;
   }
 }
 
 .main-logo-span {
-  display: block;
   position: absolute;
   height: 9px;
   width: 205px;
   bottom: 45px;
   left: 100px;
   background-image: url(../images/template/logo-main-underline.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
 }
 
 /* TEMPLATE */
-
-.template h3 {
-  margin-left: 5%;
-}
 
 .template-img-cont {
   width: calc(992px - 73.991%);
@@ -221,21 +182,6 @@ main {
   background-size: 100% 100%;
 }
 
-.template-p-img {
-  width: 25px;
-  height: 25px;
-  background-image: url(../images/template/equal0.png);
-  background-size: 25px 25px;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: none;
-  opacity: 0.3;
-  position: absolute;
-  right: 12px;
-  top: 57.5px;
-  z-index: 999;
-}
-
 .template-p {
   height: 50%;
   margin: 13% 0;
@@ -255,7 +201,6 @@ p.cont {
 .template-div {
   background-image: url(../images/template/div1.png);
   background-size: 100% 100%;
-  background-repeat: no-repeat;
   margin: 7.5% auto;
   width: 90.021%;
   height: 109px;
@@ -290,8 +235,7 @@ footer {
     text-align: center;
     width: 47.5%;
     padding: 0;
-    margin: 11% 9.4% 5% 44%;
-    list-style-type: none;
+    margin: 12% 9.4% 5% 44%;
     li a {
       color: $Acolor;
       margin: 0.75%;
@@ -304,6 +248,7 @@ footer {
     color: $Acolor;
     font-style: oblique;
     opacity: 0.6;
+    display: inline;
   }
 }
 .sm {
@@ -564,9 +509,21 @@ main::after {
     > span + span {
       display: block;
       margin: auto;
+      width: 123px;
+      background-image: url(../images/template/textonly.png);
+      position: relative;
     }
     button {
       display: block;
+      background-image: url(../images/template/menu.png);
+      width: 40px;
+      height: 40px;
+      background-color: transparent;
+      padding: 0;
+      border: none;
+      margin: auto auto 15px auto;
+      cursor: pointer;
+      outline: none;
     }
   }
   .disp {
@@ -575,9 +532,7 @@ main::after {
 
   nav {
     width: 100%;
-    flex-direction: column;
     ul {
-      margin: 0;
       width: 100%;
       padding: 0;
       .button {
@@ -589,12 +544,11 @@ main::after {
       }
     }
   }
-
   .main-logo {
     margin-left: 7.5%;
     width: 92.5%;
-    span svg,
-    #my-svg {
+    #my-svg,
+    span svg {
       width: 55px;
       height: 55px;
     }
@@ -602,16 +556,15 @@ main::after {
       font-size: x-large;
       text-shadow: none;
     }
-    .main-logo-span {
-      display: none;
-    }
+  }
+  .main-logo-span {
+    display: none;
   }
   .template h3 {
     font-size: large;
   }
   .template-img-cont {
     float: none;
-    display: block;
     margin: auto auto 5% auto;
     width: 168px;
     height: 163px;
@@ -628,7 +581,14 @@ main::after {
     position: relative;
   }
   .template-p-img {
-    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/template/equal0.png);
+    opacity: 0.3;
+    position: absolute;
+    right: 12px;
+    top: 57.5px;
+    z-index: 999;
   }
   .template-p {
     text-align: center;
@@ -643,18 +603,13 @@ main::after {
   .template-div {
     position: relative;
     margin: 12.5% auto;
-    height: 75px;
   }
   footer {
-    flex-direction: column;
     height: 125px;
     ul {
-      display: block;
       margin: 63px auto 24px auto;
       width: 100%;
       li a {
-        display: inline;
-        border-radius: 0;
         margin: 0;
         padding: 4px 0px;
         font-size: smaller;

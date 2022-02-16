@@ -2,8 +2,6 @@
 .template-img {
   background-image: url(../images/contact/contact.png);
   background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 100%;
 }
 
@@ -22,34 +20,34 @@
   text-align: initial;
 }
 
-fieldset {
+form fieldset {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-legend {
+form fieldset legend {
   padding: 0;
   margin: 0 0 0 5%;
 }
 
-.template-p ul {
+form fieldset ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-.template-p ul li {
+form fieldset ul li {
   padding-bottom: 5.5%;
   margin: 0 10% 0 10%;
   width: 80%;
 }
 
-label {
+form fieldset label {
   color: #fbaf5d;
 }
 
-textarea {
+form fieldset textarea {
   width: 100%;
   resize: none;
   font: inherit;
@@ -60,7 +58,7 @@ textarea {
   border: 1px solid #4193bc;
 }
 
-input {
+form input {
   width: 100%;
   font-style: inherit;
   padding: 0;
