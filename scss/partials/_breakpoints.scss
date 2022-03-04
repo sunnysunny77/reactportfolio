@@ -1,0 +1,35 @@
+@mixin ten_24 {
+    @media only screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin four_80 {
+    @media only screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin three_20 {
+    @media only screen and (max-width: 320px) {
+        @content;
+    }
+}
+
+@mixin two_40 {
+    @media only screen and (max-width: 240px) {
+        @content;
+    }
+}
+
+@mixin four_80_1024 {
+    @media only screen and (min-width: 480px) and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin seven_20_portrait {
+    @media only screen and (max-width: 720px) and (orientation: portrait) {
+        @content;
+    }
+}

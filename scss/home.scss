@@ -1,0 +1,197 @@
+@import "variables";
+
+/* images */
+
+$img: "../images/home/global.png", "../images/home/wp.jpg", "../images/home/pff.jpg", "../images/home/acc.jpg",
+  "../images/home/stick.jpg", "../images/home/bus.jpg", "../images/home/sec.jpg", "../images/home/cart.jpg",
+  "../images/home/store.jpg", "../images/home/candid.jpg";
+
+@for $i from 1 through length($img) {
+  #s5#{$i} {
+    background-image: url(nth($img, $i));
+  }
+}
+
+/* GLOBAL */
+
+.template-img {
+  background-image: url(../images/home/home.png);
+  background-position: center;
+  height: 100%;
+}
+
+@include ten_24 {
+  #site h3 {
+    font-size: large;
+  }
+}
+
+/* Scroll */
+
+#s4 {
+  height: 280px;
+  width: calc(992px - 46.026%);
+  margin: 4% auto auto calc(987px - 95%);
+  float: left;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  background-image: url(../images/template/text.jpg);
+  position: relative;
+  z-index: 999;
+  @include ten_24 {
+    float: none;
+    width: 100%;
+    height: 140px;
+    margin: auto;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+#close {
+  float: right;
+  margin: 5.5% 6.5% 0 0;
+  padding: 2.5px 5px;
+  font-size: x-small;
+  color: $c5;
+  border: 1px solid $c5;
+  border-radius: 100px;
+  opacity: 0.15;
+  @include ten_24 {
+    float: none;
+    position: absolute;
+    z-index: 99;
+    right: 25px;
+    bottom: -35px;
+    margin: 0;
+  }
+  @include four_80_1024 {
+    bottom: auto;
+    top: 15px;
+  }
+}
+
+#s5 {
+  width: calc(992px - 73.991%);
+  height: 250px;
+  float: right;
+  padding: 5%;
+  border: 5px solid $c2;
+  margin-right: calc(987px - 95%);
+  position: relative;
+  @include ten_24 {
+    float: none;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    right: 0;
+    border-top: 5px solid $c4;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+  span {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    @include ten_24 {
+      background-size: 47%;
+      padding: 23%;
+    }
+  }
+  a {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    color: $c5;
+    font-size: x-large;
+    @include ten_24 {
+      top: 5px;
+      font-size: small;
+    }
+    @include three_20 {
+      top: 2.5px;
+    }
+    @include two_40 {
+      top: 0;
+    }
+    &:hover,
+    &:focus {
+      color: $c2;
+      text-decoration: none;
+    }
+  }
+  @include four_80_1024 {
+    width: calc(40% - 10px);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-left: 5px solid $c2;
+    border-right: 5px solid $c2;
+  }
+}
+
+#s51 {
+  display: block;
+}
+
+#ob0 {
+  overflow: hidden;
+  height: 50%;
+  margin: 13% 0;
+  position: relative;
+  color: #4193bc;
+  text-align: left;
+  font-size: large;
+  word-wrap: break-word;
+  @include ten_24 {
+    height: calc(100% - 20px);
+    margin: 10px 0;
+    padding: 0 5%;
+    top: 10px;
+    font-size: initial;
+  }
+}
+
+#ob0ul {
+  margin: 0;
+  padding: 0 7px 0 40px;
+  list-style-type: none;
+  @include ten_24 {
+    padding: 0;
+    ol li h4 {
+      font-size: large;
+    }
+  }
+  h4 {
+    margin: 2% 0;
+    padding: 0;
+  }
+}
+
+#home-div {
+  display: none;
+  @include ten_24 {
+    display: block;
+    background-image: url(../images/home/equal.png);
+    background-size: 60px 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60px;
+    width: 60px;
+    margin: 8.7% auto;
+    opacity: 0.65;
+  }
+}
+
+@include ten_24 {
+  #template-div {
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    left: 5.0105%;
+  }
+}
+
+@import "template/template";

@@ -4,7 +4,8 @@
   "description": "portfolio",
   "main": "./js/scripts.js",
   "scripts": {
-    "build": "node ./node_modules/sass/sass.js ./css"
+    "build": "node ./node_modules/sass/sass.js ./scss:./css",
+    "watch": "node ./node_modules/sass/sass.js ./scss:./css -w"
   },
   "repository": {
     "type": "git",

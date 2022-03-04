@@ -19,4 +19,5 @@ $c5: black;
 $c6: rgb(36, 177, 77);
 $c7: red;
 
-
+@import "./partials/breakpoints";
+@import "./partials/mixins";

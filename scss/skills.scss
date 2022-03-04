@@ -1,0 +1,34 @@
+@import "variables";
+
+/* GLOBAL */
+
+.template-img {
+  background-image: url(../images/skills/skills.png);
+  background-position: center;
+  height: 100%;
+}
+
+.template-img-0 {
+  border: 5px solid $c2;
+  background-image: url(../images/skills/skillsimg.jpg);
+  background-size: 90% 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  width: 80.041%;
+  margin: auto;
+  @include image-0();
+}
+
+a[target="git"] {
+  color: $c3;
+  position: sticky;
+  top: 10px;
+  float: left;
+  &:hover,
+  &:focus {
+    color: $aHover;
+  }
+}
+
+@import "template/template";
