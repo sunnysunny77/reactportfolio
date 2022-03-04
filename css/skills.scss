@@ -21,6 +21,9 @@
 
 a[target="git"]{
   color: $c3;
+  position: sticky;
+  top: 10px;
+  float: left;
   &:hover {
     color: $aHover;
   }
