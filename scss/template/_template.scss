@@ -233,17 +233,16 @@ main {
       }
     }
   }
-}
-
-.main-logo-span {
-  position: absolute;
-  height: 9px;
-  width: 205px;
-  bottom: 45px;
-  left: 100px;
-  background-image: url(../images/template/logo-main-underline.png);
-  @include ten_24 {
-    display: none;
+  .main-logo-span {
+    position: absolute;
+    height: 9px;
+    width: 205px;
+    bottom: 45px;
+    left: 100px;
+    background-image: url(../images/template/logo-main-underline.png);
+    @include ten_24 {
+      display: none;
+    }
   }
 }
 
@@ -284,27 +283,38 @@ main {
     border-top: 5px solid $c4;
     position: relative;
   }
-}
-
-.template-p {
-  height: 50%;
-  margin: 13% 0;
-  padding: 0 40px;
-  color: $c3;
-  border-left: 5px solid $c4;
-  text-align: right;
-  font-size: large;
-  word-wrap: break-word;
-  overflow: hidden;
-  @include ten_24 {
-    text-align: center;
-    height: calc(100% - 45px);
-    border-left: none;
-    border-top: 2.5px solid $tempBoarder;
-    border-bottom: 2.5px solid $tempBoarder;
-    margin: 10px auto;
-    padding: 10px 5% 10px 5%;
-    font-size: initial;
+  .template-p-img {
+    @include ten_24 {
+      width: 25px;
+      height: 25px;
+      background-image: url(../images/template/equal0.png);
+      opacity: 0.3;
+      position: absolute;
+      right: 12px;
+      top: 57.5px;
+      z-index: 999;
+    }
+  }
+  .template-p {
+    height: 50%;
+    margin: 13% 0;
+    padding: 0 40px;
+    color: $c3;
+    border-left: 5px solid $c4;
+    text-align: right;
+    font-size: large;
+    word-wrap: break-word;
+    overflow: hidden;
+    @include ten_24 {
+      text-align: center;
+      height: calc(100% - 45px);
+      border-left: none;
+      border-top: 2.5px solid $tempBoarder;
+      border-bottom: 2.5px solid $tempBoarder;
+      margin: 10px auto;
+      padding: 10px 5% 10px 5%;
+      font-size: initial;
+    }
   }
 }
 
@@ -317,19 +327,6 @@ main {
   @include ten_24 {
     position: relative;
     margin: 12.5% auto;
-  }
-}
-
-.template-p-img {
-  @include ten_24 {
-    width: 25px;
-    height: 25px;
-    background-image: url(../images/template/equal0.png);
-    opacity: 0.3;
-    position: absolute;
-    right: 12px;
-    top: 57.5px;
-    z-index: 999;
   }
 }
 
@@ -398,35 +395,6 @@ footer {
 }
 
 @import "button";
-
-/* ANIMATION */
-
-.vis0 {
-  visibility: hidden;
-}
-
-.vis1 {
-  visibility: visible;
-}
-
-header > span,
-header > span + span {
-  animation: slideIn 1.5s ease-in-out;
-}
-
-main::after {
-  animation: fadeInBack 0.75s ease-in-out;
-}
-
-.an {
-  opacity: 1;
-  animation: fadeInOpacity 0.75s ease-in;
-}
-
-.ani0 {
-  animation: scale0 1.5s ease-in;
-}
-
-@import "keyframes";
+@import "animation";
 
 

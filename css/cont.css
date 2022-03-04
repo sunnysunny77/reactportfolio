@@ -41,32 +41,32 @@
   }
 }
 
-.template-p-cont .template-p {
+.template-p-cont div.template-p {
   text-align: initial;
 }
-.template-p-cont .template-p form fieldset {
+.template-p-cont div.template-p form fieldset {
   border: none;
   padding: 0;
   margin: 0;
 }
-.template-p-cont .template-p form fieldset legend {
+.template-p-cont div.template-p form fieldset legend {
   padding: 0;
   margin: 0 0 0 5%;
 }
-.template-p-cont .template-p form fieldset ul {
+.template-p-cont div.template-p form fieldset ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
-.template-p-cont .template-p form fieldset ul li {
+.template-p-cont div.template-p form fieldset ul li {
   padding-bottom: 5.5%;
   margin: 0 10% 0 10%;
   width: 80%;
 }
-.template-p-cont .template-p form fieldset label {
+.template-p-cont div.template-p form fieldset label {
   color: #fbaf5d;
 }
-.template-p-cont .template-p form fieldset textarea {
+.template-p-cont div.template-p form fieldset textarea {
   width: 100%;
   resize: none;
   font: inherit;
@@ -76,7 +76,7 @@
   background-image: url(../images/template/text.jpg);
   border: 1px solid #4193bc;
 }
-.template-p-cont .template-p form input {
+.template-p-cont div.template-p form input {
   width: 100%;
   font-style: inherit;
   padding: 0;
@@ -85,13 +85,13 @@
   background-image: url(../images/template/text.jpg);
   border: 1px solid #4193bc;
 }
-.template-p-cont .template-p form #sent {
+.template-p-cont div.template-p form #sent {
   text-align: center;
   height: 23px;
   display: none;
   margin: 0 auto;
 }
-.template-p-cont .template-p form #sub {
+.template-p-cont div.template-p form #sub {
   width: auto;
   display: block;
   margin: auto;
@@ -99,16 +99,16 @@
   color: #24b14d;
   border-radius: 10px;
 }
-.template-p-cont .template-p form .red {
+.template-p-cont div.template-p form .red {
   border-color: red;
 }
-.template-p-cont .template-p form .msg {
+.template-p-cont div.template-p form .msg {
   color: red;
   font-size: smaller;
   padding-left: 2.5px;
 }
 @media only screen and (max-width: 240px) {
-  .template-p-cont .template-p form .msg {
+  .template-p-cont div.template-p form .msg {
     font-size: xx-small;
   }
 }
@@ -371,8 +371,7 @@ main::after {
     font-size: smaller;
   }
 }
-
-.main-logo-span {
+.main-logo .main-logo-span {
   position: absolute;
   height: 9px;
   width: 205px;
@@ -381,7 +380,7 @@ main::after {
   background-image: url(../images/template/logo-main-underline.png);
 }
 @media only screen and (max-width: 1024px) {
-  .main-logo-span {
+  .main-logo .main-logo-span {
     display: none;
   }
 }
@@ -427,8 +426,19 @@ main::after {
     position: relative;
   }
 }
-
-.template-p {
+@media only screen and (max-width: 1024px) {
+  .template-p-cont .template-p-img {
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/template/equal0.png);
+    opacity: 0.3;
+    position: absolute;
+    right: 12px;
+    top: 57.5px;
+    z-index: 999;
+  }
+}
+.template-p-cont .template-p {
   height: 50%;
   margin: 13% 0;
   padding: 0 40px;
@@ -440,7 +450,7 @@ main::after {
   overflow: hidden;
 }
 @media only screen and (max-width: 1024px) {
-  .template-p {
+  .template-p-cont .template-p {
     text-align: center;
     height: calc(100% - 45px);
     border-left: none;
@@ -463,19 +473,6 @@ main::after {
   .template-div {
     position: relative;
     margin: 12.5% auto;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .template-p-img {
-    width: 25px;
-    height: 25px;
-    background-image: url(../images/template/equal0.png);
-    opacity: 0.3;
-    position: absolute;
-    right: 12px;
-    top: 57.5px;
-    z-index: 999;
   }
 }
 

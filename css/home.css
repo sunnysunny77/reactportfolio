@@ -47,9 +47,26 @@
   height: 100%;
 }
 
+#home-div {
+  display: none;
+}
 @media only screen and (max-width: 1024px) {
-  #site h3 {
-    font-size: large;
+  #home-div {
+    display: block;
+    background-image: url(../images/home/equal.png);
+    height: 60px;
+    width: 60px;
+    margin: 8.7% auto;
+    opacity: 0.65;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #template-div {
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    left: 5.0105%;
   }
 }
 /* Scroll */
@@ -74,8 +91,7 @@
     border-bottom-left-radius: 0;
   }
 }
-
-#close {
+#s4 #close {
   float: right;
   margin: 5.5% 6.5% 0 0;
   padding: 2.5px 5px;
@@ -86,7 +102,7 @@
   opacity: 0.15;
 }
 @media only screen and (max-width: 1024px) {
-  #close {
+  #s4 #close {
     float: none;
     position: absolute;
     z-index: 99;
@@ -96,10 +112,46 @@
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
-  #close {
+  #s4 #close {
     bottom: auto;
     top: 15px;
   }
+}
+#s4 #ob0 {
+  overflow: hidden;
+  height: 50%;
+  margin: 13% 0;
+  position: relative;
+  color: #4193bc;
+  text-align: left;
+  font-size: large;
+  word-wrap: break-word;
+}
+@media only screen and (max-width: 1024px) {
+  #s4 #ob0 {
+    height: calc(100% - 20px);
+    margin: 10px 0;
+    padding: 0 5%;
+    top: 10px;
+    font-size: initial;
+  }
+}
+#s4 #ob0 #ob0ul {
+  margin: 0;
+  padding: 0 7px 0 40px;
+  list-style-type: none;
+}
+@media only screen and (max-width: 1024px) {
+  #s4 #ob0 #ob0ul {
+    padding: 0;
+  }
+  #s4 #ob0 #ob0ul ol li h4 {
+    font-size: large;
+  }
+}
+#s4 #ob0 #ob0ul h4 {
+  margin: 2% 0;
+  padding: 0;
 }
 
 #s5 {
@@ -173,74 +225,10 @@
     border-right: 5px solid whitesmoke;
   }
 }
-
-#s51 {
+#s5 #s51 {
   display: block;
 }
 
-#ob0 {
-  overflow: hidden;
-  height: 50%;
-  margin: 13% 0;
-  position: relative;
-  color: #4193bc;
-  text-align: left;
-  font-size: large;
-  word-wrap: break-word;
-}
-@media only screen and (max-width: 1024px) {
-  #ob0 {
-    height: calc(100% - 20px);
-    margin: 10px 0;
-    padding: 0 5%;
-    top: 10px;
-    font-size: initial;
-  }
-}
-
-#ob0ul {
-  margin: 0;
-  padding: 0 7px 0 40px;
-  list-style-type: none;
-}
-@media only screen and (max-width: 1024px) {
-  #ob0ul {
-    padding: 0;
-  }
-  #ob0ul ol li h4 {
-    font-size: large;
-  }
-}
-#ob0ul h4 {
-  margin: 2% 0;
-  padding: 0;
-}
-
-#home-div {
-  display: none;
-}
-@media only screen and (max-width: 1024px) {
-  #home-div {
-    display: block;
-    background-image: url(../images/home/equal.png);
-    background-size: 60px 60px;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 60px;
-    width: 60px;
-    margin: 8.7% auto;
-    opacity: 0.65;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  #template-div {
-    margin: auto;
-    position: absolute;
-    bottom: 0;
-    left: 5.0105%;
-  }
-}
 /* GLOBAL */
 html {
   -webkit-text-size-adjust: 100%;
@@ -499,8 +487,7 @@ main::after {
     font-size: smaller;
   }
 }
-
-.main-logo-span {
+.main-logo .main-logo-span {
   position: absolute;
   height: 9px;
   width: 205px;
@@ -509,7 +496,7 @@ main::after {
   background-image: url(../images/template/logo-main-underline.png);
 }
 @media only screen and (max-width: 1024px) {
-  .main-logo-span {
+  .main-logo .main-logo-span {
     display: none;
   }
 }
@@ -555,8 +542,19 @@ main::after {
     position: relative;
   }
 }
-
-.template-p {
+@media only screen and (max-width: 1024px) {
+  .template-p-cont .template-p-img {
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/template/equal0.png);
+    opacity: 0.3;
+    position: absolute;
+    right: 12px;
+    top: 57.5px;
+    z-index: 999;
+  }
+}
+.template-p-cont .template-p {
   height: 50%;
   margin: 13% 0;
   padding: 0 40px;
@@ -568,7 +566,7 @@ main::after {
   overflow: hidden;
 }
 @media only screen and (max-width: 1024px) {
-  .template-p {
+  .template-p-cont .template-p {
     text-align: center;
     height: calc(100% - 45px);
     border-left: none;
@@ -591,19 +589,6 @@ main::after {
   .template-div {
     position: relative;
     margin: 12.5% auto;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .template-p-img {
-    width: 25px;
-    height: 25px;
-    background-image: url(../images/template/equal0.png);
-    opacity: 0.3;
-    position: absolute;
-    right: 12px;
-    top: 57.5px;
-    z-index: 999;
   }
 }
 

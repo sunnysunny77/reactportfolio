@@ -1,4 +1,33 @@
-@media only screen and (max-width: 768px) {
+/* ANIMATION */
+
+.vis0 {
+  visibility: hidden;
+}
+
+.vis1 {
+  visibility: visible;
+}
+
+header > span,
+header > span + span {
+  animation: slideIn 1.5s ease-in-out;
+}
+
+main::after {
+  animation: fadeInBack 0.75s ease-in-out;
+}
+
+.an {
+  opacity: 1;
+  animation: fadeInOpacity 0.75s ease-in;
+}
+
+.ani0 {
+  animation: scale0 1.5s ease-in;
+}
+
+
+@include seven_68 () {
     .ani {
       animation: scale1 0.5s;
     }

@@ -299,8 +299,7 @@ main::after {
     font-size: smaller;
   }
 }
-
-.main-logo-span {
+.main-logo .main-logo-span {
   position: absolute;
   height: 9px;
   width: 205px;
@@ -309,7 +308,7 @@ main::after {
   background-image: url(../images/template/logo-main-underline.png);
 }
 @media only screen and (max-width: 1024px) {
-  .main-logo-span {
+  .main-logo .main-logo-span {
     display: none;
   }
 }
@@ -355,8 +354,19 @@ main::after {
     position: relative;
   }
 }
-
-.template-p {
+@media only screen and (max-width: 1024px) {
+  .template-p-cont .template-p-img {
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/template/equal0.png);
+    opacity: 0.3;
+    position: absolute;
+    right: 12px;
+    top: 57.5px;
+    z-index: 999;
+  }
+}
+.template-p-cont .template-p {
   height: 50%;
   margin: 13% 0;
   padding: 0 40px;
@@ -368,7 +378,7 @@ main::after {
   overflow: hidden;
 }
 @media only screen and (max-width: 1024px) {
-  .template-p {
+  .template-p-cont .template-p {
     text-align: center;
     height: calc(100% - 45px);
     border-left: none;
@@ -391,19 +401,6 @@ main::after {
   .template-div {
     position: relative;
     margin: 12.5% auto;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .template-p-img {
-    width: 25px;
-    height: 25px;
-    background-image: url(../images/template/equal0.png);
-    opacity: 0.3;
-    position: absolute;
-    right: 12px;
-    top: 57.5px;
-    z-index: 999;
   }
 }
 

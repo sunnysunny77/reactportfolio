@@ -20,9 +20,24 @@ $img: "../images/home/global.png", "../images/home/wp.jpg", "../images/home/pff.
   height: 100%;
 }
 
+#home-div {
+  display: none;
+  @include ten_24 {
+    display: block;
+    background-image: url(../images/home/equal.png);
+    height: 60px;
+    width: 60px;
+    margin: 8.7% auto;
+    opacity: 0.65;
+  }
+}
+
 @include ten_24 {
-  #site h3 {
-    font-size: large;
+  #template-div {
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    left: 5.0105%;
   }
 }
 
@@ -46,28 +61,59 @@ $img: "../images/home/global.png", "../images/home/wp.jpg", "../images/home/pff.
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-}
-
-#close {
-  float: right;
-  margin: 5.5% 6.5% 0 0;
-  padding: 2.5px 5px;
-  font-size: x-small;
-  color: $c5;
-  border: 1px solid $c5;
-  border-radius: 100px;
-  opacity: 0.15;
-  @include ten_24 {
-    float: none;
-    position: absolute;
-    z-index: 99;
-    right: 25px;
-    bottom: -35px;
-    margin: 0;
-  }
-  @include four_80_1024 {
-    bottom: auto;
-    top: 15px;
+  #close {
+    float: right;
+    margin: 5.5% 6.5% 0 0;
+    padding: 2.5px 5px;
+    font-size: x-small;
+    color: $c5;
+    border: 1px solid $c5;
+    border-radius: 100px;
+    opacity: 0.15;
+    @include ten_24 {
+      float: none;
+      position: absolute;
+      z-index: 99;
+      right: 25px;
+      bottom: -35px;
+      margin: 0;
+    }
+    @include four_80_1024 {
+      bottom: auto;
+      top: 15px;
+    }
+  } 
+  #ob0 {
+    overflow: hidden;
+    height: 50%;
+    margin: 13% 0;
+    position: relative;
+    color: #4193bc;
+    text-align: left;
+    font-size: large;
+    word-wrap: break-word;
+    @include ten_24 {
+      height: calc(100% - 20px);
+      margin: 10px 0;
+      padding: 0 5%;
+      top: 10px;
+      font-size: initial;
+    }
+    #ob0ul {
+      margin: 0;
+      padding: 0 7px 0 40px;
+      list-style-type: none;
+      @include ten_24 {
+        padding: 0;
+        ol li h4 {
+          font-size: large;
+        }
+      }
+      h4 {
+        margin: 2% 0;
+        padding: 0;
+      }
+    } 
   }
 }
 
@@ -130,67 +176,8 @@ $img: "../images/home/global.png", "../images/home/wp.jpg", "../images/home/pff.
     border-left: 5px solid $c2;
     border-right: 5px solid $c2;
   }
-}
-
-#s51 {
-  display: block;
-}
-
-#ob0 {
-  overflow: hidden;
-  height: 50%;
-  margin: 13% 0;
-  position: relative;
-  color: #4193bc;
-  text-align: left;
-  font-size: large;
-  word-wrap: break-word;
-  @include ten_24 {
-    height: calc(100% - 20px);
-    margin: 10px 0;
-    padding: 0 5%;
-    top: 10px;
-    font-size: initial;
-  }
-}
-
-#ob0ul {
-  margin: 0;
-  padding: 0 7px 0 40px;
-  list-style-type: none;
-  @include ten_24 {
-    padding: 0;
-    ol li h4 {
-      font-size: large;
-    }
-  }
-  h4 {
-    margin: 2% 0;
-    padding: 0;
-  }
-}
-
-#home-div {
-  display: none;
-  @include ten_24 {
+  #s51 {
     display: block;
-    background-image: url(../images/home/equal.png);
-    background-size: 60px 60px;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 60px;
-    width: 60px;
-    margin: 8.7% auto;
-    opacity: 0.65;
-  }
-}
-
-@include ten_24 {
-  #template-div {
-    margin: auto;
-    position: absolute;
-    bottom: 0;
-    left: 5.0105%;
   }
 }
 
