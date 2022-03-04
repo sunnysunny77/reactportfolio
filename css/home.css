@@ -1,4 +1,3 @@
-/* images */
 @import url("../node_modules/overlayscrollbars/css/OverlayScrollbars.css");
 #s51 {
   background-image: url("../images/home/global.png");
@@ -40,7 +39,6 @@
   background-image: url("../images/home/candid.jpg");
 }
 
-/* GLOBAL */
 .template-img {
   background-image: url(../images/home/home.png);
   background-position: center;
@@ -63,7 +61,7 @@
 }
 
 @media only screen and (max-width: 1024px) {
-  #template-div {
+  div.template-div {
     margin: auto;
     position: absolute;
     bottom: 0;
@@ -163,6 +161,8 @@
 #s4 #ob0 #ob0ul h4 {
   margin: 2% 0;
   padding: 0;
+  color: #24b14d;
+  font-size: x-large;
 }
 
 #s5 {
@@ -266,6 +266,29 @@ body {
   margin: auto;
 }
 
+nav ul,
+footer ul {
+  letter-spacing: 0.75px;
+}
+
+nav ul li,
+footer ul li {
+  display: inline;
+}
+
+.button:hover,
+footer ul li a:hover,
+.button:focus,
+footer ul li a:focus {
+  color: #fbaf5d;
+}
+
+.os-theme-dark.os-theme-dark-edgy > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
+  background: #fbaf5d;
+  min-height: 30px;
+  max-height: 30px;
+}
+
 h3 {
   margin-left: 5%;
   color: rgba(251, 175, 93, 0.9);
@@ -288,38 +311,6 @@ h3::before {
   bottom: 0;
   right: 0;
   clip: rect(auto, 10px, auto, auto);
-}
-
-h4 {
-  color: #24b14d;
-  font-size: x-large;
-}
-
-nav ul,
-footer ul {
-  letter-spacing: 0.75px;
-}
-
-nav ul li,
-footer ul li {
-  display: inline;
-}
-
-.button:hover,
-footer ul li a:hover,
-.button:focus,
-footer ul li a:focus {
-  color: #fbaf5d;
-}
-
-p.cont {
-  margin: unset;
-}
-
-.os-theme-dark.os-theme-dark-edgy > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
-  background: #fbaf5d;
-  min-height: 30px;
-  max-height: 30px;
 }
 
 /* HEADER */
@@ -396,7 +387,6 @@ header button {
   }
 }
 
-/* NAV */
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -568,7 +558,6 @@ main::after {
   }
 }
 
-/* TEMPLATE */
 .template-img-cont {
   width: calc(992px - 73.991%);
   height: 250px;
@@ -623,6 +612,10 @@ main::after {
     top: 57.5px;
     z-index: 999;
   }
+}
+
+.template-p-cont p.cont {
+  margin: unset;
 }
 
 .template-p-cont .template-p {

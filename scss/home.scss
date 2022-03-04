@@ -1,7 +1,5 @@
 @import "variables";
 
-/* images */
-
 $img: "../images/home/global.png", "../images/home/wp.jpg", "../images/home/pff.jpg", "../images/home/acc.jpg",
   "../images/home/stick.jpg", "../images/home/bus.jpg", "../images/home/sec.jpg", "../images/home/cart.jpg",
   "../images/home/store.jpg", "../images/home/candid.jpg";
@@ -11,8 +9,6 @@ $img: "../images/home/global.png", "../images/home/wp.jpg", "../images/home/pff.
     background-image: url(nth($img, $i));
   }
 }
-
-/* GLOBAL */
 
 .template-img {
   background-image: url(../images/home/home.png);
@@ -33,7 +29,7 @@ $img: "../images/home/global.png", "../images/home/wp.jpg", "../images/home/pff.
 }
 
 @include ten_24 {
-  #template-div {
+  div.template-div {
     margin: auto;
     position: absolute;
     bottom: 0;
@@ -82,7 +78,7 @@ $img: "../images/home/global.png", "../images/home/wp.jpg", "../images/home/pff.
       bottom: auto;
       top: 15px;
     }
-  } 
+  }
   #ob0 {
     overflow: hidden;
     height: 50%;
@@ -112,8 +108,10 @@ $img: "../images/home/global.png", "../images/home/wp.jpg", "../images/home/pff.
       h4 {
         margin: 2% 0;
         padding: 0;
+        color: $heading4;
+        font-size: x-large;
       }
-    } 
+    }
   }
 }
 
