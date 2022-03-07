@@ -118,15 +118,24 @@ function tog() {
   document.getElementsByClassName("menu1")[0].classList.toggle("ani1");
 }
 
+function getPosition(element) {
+  let yPosition = 0;
+  while(element) {
+    yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+    element = element.offsetParent;
+  }
+  return yPosition;
+}
+
 function sani() {
   if (window.screen.width <= 992) {
-    let head = document.getElementsByTagName("header")[0].offsetHeight;
-    let scroll_pos = window.scrollY + window.innerHeight / 0.75 - head;
+    let scroll_pos = window.scrollY + window.innerHeight 
     const imgCont = document.querySelector(".template-img-cont");
     const imgContstyle = window
       .getComputedStyle(imgCont)
       .getPropertyValue("visibility");
-    if (scroll_pos > imgCont.offsetTop && imgContstyle === "hidden") {
+    if (scroll_pos > getPosition(imgCont) && imgContstyle === "hidden") {
+
       const imgCont = document.querySelector(".template-img-cont");
       imgCont.classList.remove("vis0");
       imgCont.classList.add("vis1");
@@ -136,7 +145,7 @@ function sani() {
     const contstyle = window
       .getComputedStyle(cont)
       .getPropertyValue("visibility");
-    if (document.querySelector(".cont").offsetTop && contstyle === "hidden") {
+    if (scroll_pos > getPosition(cont) && contstyle === "hidden") {
       const cont = document.querySelector(".cont");
       cont.classList.remove("vis0");
       cont.classList.add("vis1");
@@ -146,7 +155,7 @@ function sani() {
     const tempDivstyle = window
       .getComputedStyle(tempDiv)
       .getPropertyValue("visibility");
-    if (scroll_pos > tempDiv.offsetTop && tempDivstyle === "hidden") {
+    if (scroll_pos > getPosition(tempDiv) && tempDivstyle === "hidden") {
       tempDiv.classList.remove("vis0");
       tempDiv.classList.add("vis1");
       tempDiv.classList.add("ani3");
@@ -154,7 +163,7 @@ function sani() {
     if (document.getElementById("home-div")) {
       const homeD = document.getElementById("home-div");
       const style = window.getComputedStyle(homeD).getPropertyValue("display");
-      if (scroll_pos > homeD.offsetTop && style === "block") {
+      if (scroll_pos > getPosition(homeD) && style === "block") {
         homeD.classList.add("ani5");
       }
     }
@@ -163,7 +172,7 @@ function sani() {
       const style = window
         .getComputedStyle(tempImg0)
         .getPropertyValue("visibility");
-      if (scroll_pos > tempImg0.offsetTop && style === "hidden") {
+      if (scroll_pos > getPosition(tempImg0)  && style === "hidden") {
         tempImg0.classList.remove("vis0");
         tempImg0.classList.add("vis1");
         tempImg0.classList.add("ani2");
@@ -175,7 +184,7 @@ function sani() {
         .getComputedStyle(ob0ul)
         .getPropertyValue("visibility");
       if (
-        scroll_pos > document.getElementById("s4").offsetTop &&
+        scroll_pos > getPosition(document.getElementById("s4")) &&
         style === "hidden"
       ) {
         ob0ul.classList.remove("vis0");
@@ -187,7 +196,7 @@ function sani() {
       const s5 = document.getElementById("s5");
       const s51 = document.getElementById("s51");
       const style = window.getComputedStyle(s5).getPropertyValue("visibility");
-      if (scroll_pos > s5.offsetTop && style === "hidden") {
+      if (scroll_pos > getPosition(s5) && style === "hidden") {
         s5.classList.remove("vis0");
         s5.classList.add("vis1");
         s5.classList.add("ani2");
@@ -342,23 +351,22 @@ function script() {
 }
 
 function check() {
-  let line =
-    window.innerHeight -
-    document.getElementsByTagName("header")[0].offsetHeight;
+ 
   if (window.screen.width <= 992) {
-    if (document.querySelector(".template-img-cont").offsetTop < line) {
+    let line = window.innerHeight;
+    if (getPosition(document.querySelector(".template-img-cont")) < line) {
       const imgCont = document.querySelector(".template-img-cont");
       imgCont.classList.remove("vis0");
       imgCont.classList.add("vis1");
       imgCont.classList.add("ani4");
     }
-    if (document.querySelector(".cont").offsetTop < line) {
+    if (getPosition(document.querySelector(".cont")) < line) {
       const cont = document.querySelector(".cont");
       cont.classList.remove("vis0");
       cont.classList.add("vis1");
       cont.classList.add("ani2");
     }
-    if (document.querySelector(".template-div").offsetTop < line) {
+    if (getPosition(document.querySelector(".template-div")) < line) {
       const tempDiv = document.querySelector(".template-div");
       tempDiv.classList.remove("vis0");
       tempDiv.classList.add("vis1");
@@ -366,7 +374,7 @@ function check() {
     }
     if (
       document.querySelector(".template-img-0") &&
-      document.querySelector(".template-img-0").offsetTop < line
+      getPosition(document.querySelector(".template-img-0")) < line
     ) {
       const tempImg0 = document.querySelector(".template-img-0");
       tempImg0.classList.remove("vis0");
@@ -375,7 +383,7 @@ function check() {
     }
     if (
       document.getElementById("s4") &&
-      document.getElementById("s4").offsetTop < line
+      getPosition(document.getElementById("s4")) < line
     ) {
       const ob0ul = document.getElementById("ob0ul");
       ob0ul.classList.remove("vis0");
@@ -384,7 +392,7 @@ function check() {
     }
     if (
       document.getElementById("s5") &&
-      document.getElementById("s5").offsetTop < line
+      getPosition(document.getElementById("s5")) < line
     ) {
       const s5 = document.getElementById("s5");
       const s51 = document.getElementById("s51");
