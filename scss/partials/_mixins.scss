@@ -1,4 +1,6 @@
 @mixin image-0 {
+    background-color: rgba($main,0.25);
+    background-blend-mode: screen;
     @include ten_24 {
       background-size: 88%;
       width: calc(70% - 10px);

@@ -4,5 +4,3 @@ npm install
 compile css
 <br>
 npm run build
-<br>
-or npm run watch

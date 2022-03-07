@@ -51,6 +51,7 @@
         font-size: inherit;
         background-image: url(../images/template/text.jpg);
         border: 1px solid $c3;
+        color: $c3;
       }
     }
     input {
@@ -61,6 +62,7 @@
       font: inherit;
       background-image: url(../images/template/text.jpg);
       border: 1px solid $c3;
+      color: $c3;
     }
     #sent {
       text-align: center;
@@ -73,7 +75,7 @@
       display: block;
       margin: auto;
       padding: 0 10px;
-      color: $c6;
+      color: $c3;
       border-radius: 10px;
     }
     .red {
