@@ -77,6 +77,7 @@
   background-image: url(../images/template/text.jpg);
   border: 1px solid #2E86AB;
   color: #2E86AB;
+  outline: none;
 }
 .template-p-cont div.template-p form input {
   width: 100%;
@@ -87,6 +88,7 @@
   background-image: url(../images/template/text.jpg);
   border: 1px solid #2E86AB;
   color: #2E86AB;
+  outline: none;
 }
 .template-p-cont div.template-p form #sent {
   text-align: center;
@@ -99,7 +101,7 @@
   display: block;
   margin: auto;
   padding: 0 10px;
-  color: #2E86AB;
+  color: #24b14d;
   border-radius: 10px;
 }
 .template-p-cont div.template-p form .red {

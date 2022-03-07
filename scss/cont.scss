@@ -52,6 +52,7 @@
         background-image: url(../images/template/text.jpg);
         border: 1px solid $c3;
         color: $c3;
+        outline: none;
       }
     }
     input {
@@ -63,6 +64,7 @@
       background-image: url(../images/template/text.jpg);
       border: 1px solid $c3;
       color: $c3;
+      outline: none;
     }
     #sent {
       text-align: center;
@@ -75,7 +77,7 @@
       display: block;
       margin: auto;
       padding: 0 10px;
-      color: $c3;
+      color: $c8;
       border-radius: 10px;
     }
     .red {
