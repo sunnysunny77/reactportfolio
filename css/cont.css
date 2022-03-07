@@ -311,6 +311,7 @@ main::after {
   right: 0;
   position: absolute;
   z-index: -999;
+  background-size: cover;
 }
 
 .main-logo {
