@@ -96,3 +96,6 @@ function validation(event) {
     }
     event.preventDefault();
 }
+
+document.getElementById("contact-form").addEventListener("submit", validation, false);
+
