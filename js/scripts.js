@@ -129,7 +129,7 @@ function getPosition(element) {
 }
 
 function sani() {
-  if (window.screen.width <= 992) {
+  if (window.screen.width <= 768) {
 
     let scroll_pos = window.scrollY + window.innerHeight
 
@@ -362,7 +362,8 @@ function script() {
 
 function check() {
 
-  if (window.screen.width <= 992) {
+  
+  if (window.screen.width <= 768) {
 
     let line = window.innerHeight;
 
@@ -423,7 +424,7 @@ function check() {
     }
   }
 
-  if (window.screen.width > 992) {
+  if (window.screen.width > 768) {
     let all = document.querySelectorAll(".vis0");
     for (let i = 0; i < all.length; i++) {
       all[i].classList.remove("vis0");
