@@ -362,7 +362,7 @@ function script() {
 
 function check() {
 
-  if (window.screen.width <= 992 && !/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua) ) {
+  if (window.screen.width <= 992 && !/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(navigator.userAgent) ) {
 
     let line = window.innerHeight;
 
