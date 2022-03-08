@@ -129,7 +129,7 @@ function getPosition(element) {
 }
 
 function sani() {
-  if (window.screen.width <= 768) {
+  if (window.screen.width <= 992) {
 
     let scroll_pos = window.scrollY + window.innerHeight
 
@@ -362,8 +362,7 @@ function script() {
 
 function check() {
 
-  
-  if (window.screen.width <= 768) {
+  if (window.screen.width <= 992 && !/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua) ) {
 
     let line = window.innerHeight;
 
@@ -422,9 +421,7 @@ function check() {
         s51.classList.remove("ani0");
       }, 1500);
     }
-  }
-
-  if (window.screen.width > 768) {
+  } else {
     let all = document.querySelectorAll(".vis0");
     for (let i = 0; i < all.length; i++) {
       all[i].classList.remove("vis0");

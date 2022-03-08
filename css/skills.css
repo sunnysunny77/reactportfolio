@@ -596,7 +596,7 @@ main::after {
   animation: scale0 1.5s ease-in;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   .ani {
     animation: scale1 0.5s;
   }
