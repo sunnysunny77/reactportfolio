@@ -16,8 +16,8 @@ function vivus() {
 }
 
 window.onload = function () {
-  check();
   script();
+  check();
   eventListner(window, "scroll", cache, null);
   eventListner(document.getElementsByClassName("click")[0],"click",toggle,false);
   eventListner(document.getElementById("contact-form"), "submit", validation, false);

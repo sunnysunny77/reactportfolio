@@ -1,5 +1,3 @@
-let cached = null;
-
 function getPosition(element) {
     let yPosition = 0;
 
@@ -8,21 +6,6 @@ function getPosition(element) {
         element = element.offsetParent;
     }
     return yPosition;
-}
-
-function cache(event) {
-    if (!cached) {
-        setTimeout(function () {
-            if (event.target.nodeName === "#document") {
-                scrollAnimation();
-            }
-            if (event.target.nodeName === "DIV") {
-                range(event.target);
-            }
-            cached = null;
-        }, 300);
-    }
-    cached = event;
 }
 
 function insertAfter(newNode, existingNode) {
