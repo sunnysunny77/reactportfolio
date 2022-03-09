@@ -1,3 +1,8 @@
+function preloadImage(url) {
+    var img=new Image();
+    img.src=url;
+}
+
 function getPosition(element) {
     let yPosition = 0;
 
