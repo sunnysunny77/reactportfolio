@@ -11,6 +11,17 @@ const pictureID = [
     "s510",
 ];
 
+function close(isnt) {
+    for (let x = 0; x < pictureID.length; x++) {
+        if (x > 0) {
+            const obj = document.getElementById(pictureID[x]);
+            obj.style.display = "none";
+        }
+    }
+    document.getElementById(pictureID[0]).style.display = "block";
+    isnt.scroll({ y: 0 });
+}
+
 function none(a) {
     for (let x = 0; x < pictureID.length; x++) {
         const obj = document.getElementById(pictureID[x]);
@@ -81,3 +92,4 @@ function range(event) {
         none(pictureID[9]);
     }
 }
+

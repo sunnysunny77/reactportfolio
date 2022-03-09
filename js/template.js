@@ -15,9 +15,10 @@ function vivus() {
   );
 }
 
+eventListner(window, "scroll", cache, null);
+eventListner(document.getElementsByClassName("click")[0],"click",toggle,false);
+
 window.onload = function () {
   script();
   check();
-  eventListner(window, "scroll", cache, null);
-  eventListner(document.getElementsByClassName("click")[0],"click",toggle,false);
 };
