@@ -9,7 +9,7 @@ function scrollAnimation() {
             .getComputedStyle(imgCont)
             .getPropertyValue("visibility");
 
-        if (scroll_pos > getPosition(imgCont) + imgCont.offsetHeight && imgContstyle === "hidden") {
+        if (scroll_pos > getPosition(imgCont) && imgContstyle === "hidden") {
             imgCont.classList.remove("vis0");
             imgCont.classList.add("vis1");
             imgCont.classList.add("ani4");
