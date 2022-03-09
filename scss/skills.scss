@@ -1,5 +1,37 @@
 @import "variables";
 
+$imgSkills: (
+    "sass",
+    "htmlcssjs",
+    "boot",
+    "foundation",
+    "react",
+    "angular",
+    "photoshop",
+    "nodejs",
+    "php",
+    "apache",
+    "nginx",
+    "ubuntu",
+    "wordpress",
+    "cloud",
+    "sql",
+    "mongo",
+    "git"
+);
+
+@each $i in $imgSkills {
+    #skills-#{$i} {
+        width: 70px;
+        height: 50px;
+        background-image: url("../images/skills/#{$i}.png");
+        background-size: contain;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
 .template-img {
   background-image: url(../images/skills/skills.png);
   background-position: center;
@@ -28,5 +60,26 @@ a[target="git"] {
     color: $aHover;
   }
 }
+
+.img {
+
+  margin: 30px 0 30px 0;
+}
+
+@include three_20 {
+  span.img {
+
+      margin: 10px auto;
+  }
+}
+
+.last-img {
+  
+  margin: 30px 12.5px 30px 0;
+  @include ten_24 {
+    margin: 30px 0 30px 0;
+  }
+}
+
 
 @import "template/template";

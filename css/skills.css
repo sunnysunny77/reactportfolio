@@ -1,4 +1,174 @@
 @import url("../node_modules/overlayscrollbars/css/OverlayScrollbars.css");
+#skills-sass {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/sass.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#skills-htmlcssjs {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/htmlcssjs.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#skills-boot {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/boot.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#skills-foundation {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/foundation.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#skills-react {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/react.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#skills-angular {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/angular.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#skills-photoshop {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/photoshop.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#skills-nodejs {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/nodejs.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#skills-php {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/php.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#skills-apache {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/apache.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#skills-nginx {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/nginx.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#skills-ubuntu {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/ubuntu.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#skills-wordpress {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/wordpress.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#skills-cloud {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/cloud.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#skills-sql {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/sql.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#skills-mongo {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/mongo.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#skills-git {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/git.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .template-img {
   background-image: url(../images/skills/skills.png);
   background-position: center;
@@ -50,6 +220,24 @@ a[target=git] {
 }
 a[target=git]:hover, a[target=git]:focus {
   color: #FF9D4D;
+}
+
+.img {
+  margin: 30px 0 30px 0;
+}
+
+@media only screen and (max-width: 320px) {
+  span.img {
+    margin: 10px auto;
+  }
+}
+.last-img {
+  margin: 30px 12.5px 30px 0;
+}
+@media only screen and (max-width: 1024px) {
+  .last-img {
+    margin: 30px 0 30px 0;
+  }
 }
 
 /* GLOBAL */
