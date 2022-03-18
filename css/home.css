@@ -748,11 +748,11 @@ footer h2 {
 }
 /* ANIMATION */
 .vis0 {
-  visibility: hidden;
+  visibility: visible;
 }
 
 .vis1 {
-  visibility: visible;
+  visibility: hidden;
 }
 
 header > span,
