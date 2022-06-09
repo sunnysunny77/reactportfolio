@@ -39,6 +39,10 @@
   background-image: url("../images/home/candid.jpg");
 }
 
+#s511 {
+  background-image: url("../images/home/port.jpg");
+}
+
 .template-img {
   background-image: url(../images/home/home.png);
   background-position: center;
@@ -777,24 +781,19 @@ main::after {
   .ani {
     animation: scale1 0.5s;
   }
-
   .ani1 {
     animation: slideInOp 0.75s, slideIn0 0.75s;
   }
-
   .ani2 {
     animation: fadeInBack 3.5s ease-in;
   }
-
   .ani3 {
     animation: scale0 3.5s ease-in;
   }
-
   .ani4 {
     animation: fadeInBack 1.5s ease-in;
     animation: scale0 1.5s ease-in;
   }
-
   .ani5 {
     animation: scale2 3.5s ease-in-out;
   }
