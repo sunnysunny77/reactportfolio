@@ -75,6 +75,7 @@
   margin: 5px 0 0 0;
   font-size: inherit;
   background-image: url(../images/template/natural-paper.png);
+  background-color: #f9f9ed;
   border: 1px solid #2E86AB;
   color: #2E86AB;
   outline: none;
@@ -86,6 +87,7 @@
   margin: 5px 0 0 0;
   font: inherit;
   background-image: url(../images/template/natural-paper.png);
+  background-color: #f9f9ed;
   border: 1px solid #2E86AB;
   color: #2E86AB;
   outline: none;
