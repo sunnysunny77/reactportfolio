@@ -79,7 +79,8 @@
   float: left;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
-  background-image: url(../images/template/text.jpg);
+  background-image: url(../images/template/natural-paper.png);
+  background-color: #f9f9ed;
   position: relative;
   z-index: 999;
 }
@@ -163,7 +164,7 @@
   height: 250px;
   float: right;
   padding: 5%;
-  border: 5px solid whitesmoke;
+  border: 5px solid #f9f9ed;
   margin-right: calc(987px - 95%);
   position: relative;
 }
@@ -217,7 +218,7 @@
   }
 }
 #s5 a:hover, #s5 a:focus {
-  color: whitesmoke;
+  color: #f9f9ed;
   text-decoration: none;
 }
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
@@ -225,8 +226,8 @@
     width: calc(40% - 10px);
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
-    border-left: 5px solid whitesmoke;
-    border-right: 5px solid whitesmoke;
+    border-left: 5px solid #f9f9ed;
+    border-right: 5px solid #f9f9ed;
   }
 }
 #s5 #s51 {
@@ -240,7 +241,7 @@ html {
 
 body {
   font-family: Tahoma, sans-serif;
-  background-color: #e3f6f8;
+  background-color: mintcream;
   overflow: auto;
 }
 
@@ -296,8 +297,9 @@ h3::before {
 
 /* HEADER */
 header {
-  background-image: url(../images/template/head-back.jpg);
-  border-bottom: 8px solid #e3f6f8;
+  background-image: url(../images/template/handmade-paper.png);
+  background-color: #707e7f;
+  border-bottom: 8px solid mintcream;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   display: flex;
@@ -382,14 +384,14 @@ nav ul .button {
   width: 17%;
   cursor: pointer;
   display: inline-block;
-  color: whitesmoke;
+  color: #f9f9ed;
 }
 @media only screen and (max-width: 1024px) {
   nav ul .button {
     min-width: 140px;
     width: 31%;
     margin: 1%;
-    border: 1px solid whitesmoke;
+    border: 1px solid #f9f9ed;
     color: #caffd5;
   }
 }
@@ -500,7 +502,7 @@ main::after {
   width: calc(992px - 73.991%);
   height: 250px;
   margin-left: calc(987px - 95%);
-  border: 5px solid whitesmoke;
+  border: 5px solid #f9f9ed;
   padding: 5%;
   float: left;
 }
@@ -522,8 +524,8 @@ main::after {
   margin: 4% calc(987px - 95%) 0 0;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
-  background-image: url(../images/template/text.jpg);
-  background-size: 100% 100%;
+  background-image: url(../images/template/natural-paper.png);
+  background-color: #f9f9ed;
 }
 @media only screen and (max-width: 1024px) {
   .template-p-cont {
@@ -594,7 +596,7 @@ footer {
   height: 190px;
   background-image: url(../images/template/wave.svg);
   background-size: cover;
-  border-top: 8px solid #e3f6f8;
+  border-top: 8px solid mintcream;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   display: flex;
@@ -607,8 +609,8 @@ footer {
 }
 footer::after {
   content: "";
-  background-image: url(../images/template/foot-back.jpg);
-  background-size: 100% 100%;
+  background-image: url(../images/template/handmade-paper.png);
+  background-color: #818181;
   opacity: 1;
   top: 0;
   left: 0;
@@ -859,7 +861,7 @@ main::after {
 }
 @keyframes scale1 {
   0% {
-    background-color: whitesmoke;
+    background-color: #f9f9ed;
     border-radius: 10px;
     transform: scale(0.85);
   }

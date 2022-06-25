@@ -46,7 +46,8 @@ $img: "../images/home/global.png", "../images/home/wp.jpg", "../images/home/pff.
   float: left;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
-  background-image: url(../images/template/text.jpg);
+  background-image: url(../images/template/natural-paper.png);
+  background-color: $c2;
   position: relative;
   z-index: 999;
   @include ten_24 {

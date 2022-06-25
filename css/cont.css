@@ -6,7 +6,7 @@
 }
 
 .template-img-0 {
-  border: 5px solid whitesmoke;
+  border: 5px solid #f9f9ed;
   background-image: url(../images/contact/contimg.jpg);
   background-size: 90% 90%;
   background-repeat: no-repeat;
@@ -125,7 +125,7 @@ html {
 
 body {
   font-family: Tahoma, sans-serif;
-  background-color: #e3f6f8;
+  background-color: mintcream;
   overflow: auto;
 }
 
@@ -181,8 +181,9 @@ h3::before {
 
 /* HEADER */
 header {
-  background-image: url(../images/template/head-back.jpg);
-  border-bottom: 8px solid #e3f6f8;
+  background-image: url(../images/template/handmade-paper.png);
+  background-color: #707e7f;
+  border-bottom: 8px solid mintcream;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   display: flex;
@@ -267,14 +268,14 @@ nav ul .button {
   width: 17%;
   cursor: pointer;
   display: inline-block;
-  color: whitesmoke;
+  color: #f9f9ed;
 }
 @media only screen and (max-width: 1024px) {
   nav ul .button {
     min-width: 140px;
     width: 31%;
     margin: 1%;
-    border: 1px solid whitesmoke;
+    border: 1px solid #f9f9ed;
     color: #caffd5;
   }
 }
@@ -385,7 +386,7 @@ main::after {
   width: calc(992px - 73.991%);
   height: 250px;
   margin-left: calc(987px - 95%);
-  border: 5px solid whitesmoke;
+  border: 5px solid #f9f9ed;
   padding: 5%;
   float: left;
 }
@@ -407,8 +408,8 @@ main::after {
   margin: 4% calc(987px - 95%) 0 0;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
-  background-image: url(../images/template/text.jpg);
-  background-size: 100% 100%;
+  background-image: url(../images/template/natural-paper.png);
+  background-color: #f9f9ed;
 }
 @media only screen and (max-width: 1024px) {
   .template-p-cont {
@@ -479,7 +480,7 @@ footer {
   height: 190px;
   background-image: url(../images/template/wave.svg);
   background-size: cover;
-  border-top: 8px solid #e3f6f8;
+  border-top: 8px solid mintcream;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   display: flex;
@@ -492,8 +493,8 @@ footer {
 }
 footer::after {
   content: "";
-  background-image: url(../images/template/foot-back.jpg);
-  background-size: 100% 100%;
+  background-image: url(../images/template/handmade-paper.png);
+  background-color: #818181;
   opacity: 1;
   top: 0;
   left: 0;
@@ -666,24 +667,19 @@ main::after {
   .ani {
     animation: scale1 0.5s;
   }
-
   .ani1 {
     animation: slideInOp 0.75s, slideIn0 0.75s;
   }
-
   .ani2 {
     animation: fadeInBack 3.5s ease-in;
   }
-
   .ani3 {
     animation: scale0 3.5s ease-in;
   }
-
   .ani4 {
     animation: fadeInBack 1.5s ease-in;
     animation: scale0 1.5s ease-in;
   }
-
   .ani5 {
     animation: scale2 3.5s ease-in-out;
   }
@@ -749,7 +745,7 @@ main::after {
 }
 @keyframes scale1 {
   0% {
-    background-color: whitesmoke;
+    background-color: #f9f9ed;
     border-radius: 10px;
     transform: scale(0.85);
   }
