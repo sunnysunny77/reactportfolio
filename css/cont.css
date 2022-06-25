@@ -551,21 +551,6 @@ footer h2 {
     -webkit-transform: translateZ(0px);
     transform: translateZ(0px);
   }
-  .button .label {
-    transition: all 0.225s;
-    transition-delay: 0s;
-  }
-  .button .icon2 {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: all 0.225s;
-    transform: skew(-40deg, 0deg);
-    transition-delay: 0.45s;
-  }
   .button .icon {
     display: block;
     position: absolute;
@@ -573,16 +558,17 @@ footer h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: all 0.225s;
+    transition: transform 0.225s;
     transition-delay: 0.15s;
     transform: skew(10deg, 0deg);
   }
   .button .icon::before, .button .icon::after {
     height: 1px;
+    width: 0;
     content: "";
     position: absolute;
     display: block;
-    transition: all 0.375s;
+    transition: left 0.225s, right 0.225s, width 0.225s, height 0.225s;
     transition-delay: 0.3s;
     background: #caffd5;
   }
@@ -602,7 +588,7 @@ footer h2 {
     position: absolute;
     display: block;
     width: 1px;
-    transition: all 0.225s;
+    transition: left 0.225s, right 0.225s, width 0.225s, height 0.225s;
     background: #caffd5;
   }
   .button .icon span:before {
@@ -612,6 +598,17 @@ footer h2 {
   .button .icon span:after {
     right: 0;
     bottom: 0;
+  }
+  .button .icon2 {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.225s;
+    transform: skew(-40deg, 0deg);
+    transition-delay: 0.45s;
   }
   .button:hover .icon {
     transform: skew(-40deg, 0deg);
