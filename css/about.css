@@ -6,7 +6,7 @@
 }
 
 .template-img-0 {
-  border: 5px solid #f9f9ed;
+  border: 5px solid rgba(238, 238, 229, 0.948);
   background-image: url(../images/about/aboutimg.jpg);
   background-size: 90% 90%;
   background-repeat: no-repeat;
@@ -14,7 +14,7 @@
   height: 500px;
   width: 80.041%;
   margin: auto;
-  background-color: rgba(115, 210, 222, 0.25);
+  background-color: rgba(106, 203, 215, 0.25);
   background-blend-mode: screen;
 }
 @media only screen and (max-width: 1024px) {
@@ -72,18 +72,18 @@ footer ul li {
 footer ul li a:hover,
 .button:focus,
 footer ul li a:focus {
-  color: #FF9D4D;
+  color: #ff7f26;
 }
 
 .os-theme-dark.os-theme-dark-edgy > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
-  background: #FF9D4D;
+  background: #ff7f26;
   min-height: 30px;
   max-height: 30px;
 }
 
 h3 {
   margin-left: 5%;
-  color: rgba(255, 157, 77, 0.9);
+  color: rgba(255, 127, 38, 0.9);
   font-size: 1.4em;
   position: relative;
 }
@@ -106,7 +106,7 @@ h3::before {
 /* HEADER */
 header {
   background-image: url(../images/template/handmade-paper.png);
-  background-color: #707e7f;
+  background-color: #4A5354;
   border-bottom: 8px solid mintcream;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
@@ -192,14 +192,14 @@ nav ul .button {
   width: 17%;
   cursor: pointer;
   display: inline-block;
-  color: #f9f9ed;
+  color: rgba(238, 238, 229, 0.948);
 }
 @media only screen and (max-width: 1024px) {
   nav ul .button {
     min-width: 140px;
     width: 31%;
     margin: 1%;
-    border: 1px solid #f9f9ed;
+    border: 1px solid rgba(238, 238, 229, 0.948);
     color: #caffd5;
   }
 }
@@ -231,14 +231,14 @@ main {
 }
 main::after {
   content: "";
-  background-image: url(../images/template/back.jpg);
+  background-image: url(../images/template/paper-fibers.png);
+  background-color: #6acbd7;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
   z-index: -999;
-  background-size: cover;
 }
 
 .main-logo {
@@ -273,7 +273,7 @@ main::after {
   position: absolute;
   text-shadow: 0 0 2.5px #EEFFED;
   display: inline;
-  color: #FF9D4D;
+  color: #ff7f26;
   font-size: 1.8em;
 }
 @media only screen and (max-width: 1024px) {
@@ -310,7 +310,7 @@ main::after {
   width: calc(992px - 73.991%);
   height: 250px;
   margin-left: calc(987px - 95%);
-  border: 5px solid #f9f9ed;
+  border: 5px solid rgba(238, 238, 229, 0.948);
   padding: 5%;
   float: left;
 }
@@ -333,7 +333,7 @@ main::after {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   background-image: url(../images/template/natural-paper.png);
-  background-color: #f9f9ed;
+  background-color: rgba(238, 238, 229, 0.948);
 }
 @media only screen and (max-width: 1024px) {
   .template-p-cont {
@@ -342,7 +342,7 @@ main::after {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     margin: auto;
-    border-top: 5px solid #FF9D4D;
+    border-top: 5px solid #ff7f26;
     position: relative;
   }
 }
@@ -366,7 +366,7 @@ main::after {
   margin: 13% 0;
   padding: 0 40px;
   color: #2E86AB;
-  border-left: 5px solid #FF9D4D;
+  border-left: 5px solid #ff7f26;
   text-align: right;
   font-size: large;
   word-wrap: break-word;
@@ -377,8 +377,8 @@ main::after {
     text-align: center;
     height: calc(100% - 45px);
     border-left: none;
-    border-top: 2.5px solid rgba(115, 210, 222, 0.4);
-    border-bottom: 2.5px solid rgba(115, 210, 222, 0.4);
+    border-top: 2.5px solid rgba(106, 203, 215, 0.4);
+    border-bottom: 2.5px solid rgba(106, 203, 215, 0.4);
     margin: 10px auto;
     padding: 10px 5% 10px 5%;
     font-size: initial;
@@ -418,7 +418,7 @@ footer {
 footer::after {
   content: "";
   background-image: url(../images/template/handmade-paper.png);
-  background-color: #818181;
+  background-color: rgba(79, 79, 79, 0.9058823529);
   opacity: 1;
   top: 0;
   left: 0;
@@ -666,7 +666,7 @@ main::after {
 }
 @keyframes scale1 {
   0% {
-    background-color: #f9f9ed;
+    background-color: rgba(238, 238, 229, 0.948);
     border-radius: 10px;
     transform: scale(0.85);
   }

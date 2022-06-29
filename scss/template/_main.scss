@@ -10,14 +10,14 @@ main {
     }
     &::after {
         content: "";
-        background-image: url(../images/template/back.jpg);
+        background-image: url(../images/template/paper-fibers.png);
+        background-color: $main;
         top: 0;
         left: 0;
         bottom: 0;
         right: 0;
         position: absolute;
         z-index: -999;
-        background-size: cover;
     }
 }
 
