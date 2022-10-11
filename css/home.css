@@ -31,6 +31,10 @@
   background-image: url("../images/home/port.jpg");
 }
 
+#s59 {
+  background-image: url("../images/home/login.jpg");
+}
+
 .template-img {
   background-image: url(../images/home/home.png);
   background-position: center;
