@@ -69,6 +69,26 @@
   background-position: center;
 }
 
+#skills-oop {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/oop.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#skills-mvc {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/mvc.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 #skills-nodejs {
   width: 70px;
   height: 50px;
@@ -113,6 +133,16 @@
   width: 70px;
   height: 50px;
   background-image: url("../images/skills/ubuntu.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#skills-silverstripe {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/silverstripe.png");
   background-size: contain;
   display: inline-block;
   background-repeat: no-repeat;
