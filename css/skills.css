@@ -129,6 +129,16 @@
   background-position: center;
 }
 
+#skills-xml {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/xml.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 #skills-ubuntu {
   width: 70px;
   height: 50px;
