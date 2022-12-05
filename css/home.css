@@ -167,7 +167,7 @@
     height: auto;
     margin: auto;
     right: 0;
-    border-top: 5px solid #ff7f26;
+    border-top: 5px solid rgba(238, 238, 229, 0.948);
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     border-left: 0;
