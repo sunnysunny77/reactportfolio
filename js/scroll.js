@@ -5,54 +5,33 @@ function scrollAnimation() {
         let scroll_pos = window.scrollY + window.innerHeight
 
         const imgCont = document.querySelector(".template-img-cont");
-        const imgContstyle = window
-            .getComputedStyle(imgCont)
-            .getPropertyValue("visibility");
 
-        if (scroll_pos > getPosition(imgCont) && imgContstyle === "hidden") {
+        if (scroll_pos > getPosition(imgCont)) {
             imgCont.classList.remove("vis1");
             imgCont.classList.add("vis0");
             imgCont.classList.add("ani4");
         }
 
         const cont = document.querySelector(".cont");
-        const contstyle = window
-            .getComputedStyle(cont)
-            .getPropertyValue("visibility");
 
-        if (scroll_pos > getPosition(cont) && contstyle === "hidden") {
+        if (scroll_pos > getPosition(cont)) {
             cont.classList.remove("vis1");
             cont.classList.add("vis0");
             cont.classList.add("ani2");
         }
 
-        const tempDiv = document.querySelector(".template-div");
-        const tempDivstyle = window
-            .getComputedStyle(tempDiv)
-            .getPropertyValue("visibility");
-
-        if (scroll_pos > getPosition(tempDiv) && tempDivstyle === "hidden") {
-            tempDiv.classList.remove("vis1");
-            tempDiv.classList.add("vis0");
-            tempDiv.classList.add("ani3");
-        }
-
         if (document.getElementById("home-div")) {
             const homeD = document.getElementById("home-div");
-            const style = window.getComputedStyle(homeD).getPropertyValue("display");
 
-            if (scroll_pos > getPosition(homeD) && style === "block") {
+            if (scroll_pos > getPosition(homeD)) {
                 homeD.classList.add("ani5");
             }
         }
 
         if (document.querySelector(".template-img-0")) {
             const tempImg0 = document.querySelector(".template-img-0");
-            const style = window
-                .getComputedStyle(tempImg0)
-                .getPropertyValue("visibility");
 
-            if (scroll_pos > getPosition(tempImg0) && style === "hidden") {
+            if (scroll_pos > getPosition(tempImg0)) {
                 tempImg0.classList.remove("vis1");
                 tempImg0.classList.add("vis0");
                 tempImg0.classList.add("ani2");
@@ -61,11 +40,8 @@ function scrollAnimation() {
 
         if (document.getElementById("s4")) {
             const ob0ul = document.getElementById("ob0ul");
-            const style = window
-                .getComputedStyle(ob0ul)
-                .getPropertyValue("visibility");
 
-            if (scroll_pos > getPosition(document.getElementById("s4")) && style === "hidden") {
+            if (scroll_pos > getPosition(document.getElementById("s4"))) {
                 ob0ul.classList.remove("vis1");
                 ob0ul.classList.add("vis0");
                 ob0ul.classList.add("ani2");
@@ -114,13 +90,6 @@ function check() {
             cont.classList.remove("vis1");
             cont.classList.add("vis0");
             cont.classList.add("ani2");
-        }
-
-        if (getPosition(document.querySelector(".template-div")) < line) {
-            const tempDiv = document.querySelector(".template-div");
-            tempDiv.classList.remove("vis1");
-            tempDiv.classList.add("vis0");
-            tempDiv.classList.add("ani3");
         }
 
         if (
