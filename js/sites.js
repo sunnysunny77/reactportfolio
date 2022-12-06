@@ -15,7 +15,12 @@ function close(isnt) {
         const obj = document.getElementById(pictureID[x]);
         obj.style.display = "none";
     }
-    document.getElementById(pictureID[0]).style.display = "block";
+    const globe = document.getElementById(pictureID[0]);
+    globe.style.display = "block";
+    globe.classList.add("ani0");
+    setTimeout(function () {
+        globe.classList.remove("ani0");
+    }, 1500);
     isnt.scroll({ y: 0 });
 }
 
