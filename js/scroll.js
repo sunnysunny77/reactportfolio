@@ -24,7 +24,7 @@ function scrollAnimation() {
             const homeD = document.getElementById("home-div");
 
             if (scroll_pos > getPosition(homeD)) {
-                homeD.classList.add("ani5");
+                homeD.classList.add("ani3");
             }
         }
 
