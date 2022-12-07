@@ -11,6 +11,8 @@ footer {
     position: relative;
     @include ten_24 {
         height: 125px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
     }
     &::after {
         content: "";
@@ -25,6 +27,10 @@ footer {
         z-index: -999;
         border-bottom-left-radius: 25px;
         border-bottom-right-radius: 25px;
+        @include ten_24 {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
     }
     ul {
         text-align: center;

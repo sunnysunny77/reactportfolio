@@ -130,6 +130,11 @@ body {
   background-color: mintcream;
   overflow: auto;
 }
+@media only screen and (max-width: 1024px) {
+  body {
+    margin: 0;
+  }
+}
 
 .outer {
   max-width: 992px;
@@ -194,6 +199,8 @@ header {
   header {
     padding: 10px 0;
     flex-direction: column;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 }
 header > span {
@@ -279,6 +286,7 @@ nav ul .button {
     margin: 1%;
     border: 1px solid rgba(238, 238, 229, 0.948);
     color: #caffd5;
+    font-size: smaller;
   }
 }
 nav ul .button .label {
@@ -286,7 +294,7 @@ nav ul .button .label {
   padding: 10px;
 }
 nav ul .button h1 {
-  font-size: medium;
+  font-size: inherit;
   margin: 0;
   padding: 0;
   font-weight: 500;
@@ -491,6 +499,8 @@ footer {
 @media only screen and (max-width: 1024px) {
   footer {
     height: 125px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
 footer::after {
@@ -506,6 +516,12 @@ footer::after {
   z-index: -999;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
+}
+@media only screen and (max-width: 1024px) {
+  footer::after {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
 footer ul {
   text-align: center;

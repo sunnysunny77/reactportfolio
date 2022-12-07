@@ -30,10 +30,7 @@ $img: "../images/home/global.png", "../images/home/wp.jpg", "../images/home/pff.
 
 @include ten_24 {
   div.template-div {
-    margin: auto;
-    position: absolute;
-    bottom: 0;
-    left: 5.0105%;
+    display: none;
   }
 }
 

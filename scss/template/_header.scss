@@ -10,6 +10,8 @@ header {
     @include ten_24 {
         padding: 10px 0;
         flex-direction: column;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
     > span {
         height: 75px;
@@ -81,13 +83,14 @@ nav {
                 margin: 1%;
                 border: 1px solid $c2;
                 color: $Acolor;
+                font-size: smaller;
             }
             .label {
                 display: inline-block;
                 padding: 10px;
             }
             h1 {
-                font-size: medium;
+                font-size: inherit;
                 margin: 0;
                 padding: 0;
                 font-weight: 500;
