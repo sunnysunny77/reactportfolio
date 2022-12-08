@@ -164,7 +164,7 @@
     height: auto;
     margin: auto;
     right: 0;
-    border-top: 5px solid rgba(238, 238, 229, 0.948);
+    border-top: none;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     border-left: 0;
@@ -213,8 +213,6 @@
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
   #s5 {
     width: calc(40% - 10px);
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
     border-left: 5px solid rgba(238, 238, 229, 0.948);
     border-right: 5px solid rgba(238, 238, 229, 0.948);
   }

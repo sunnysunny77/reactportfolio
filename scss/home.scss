@@ -127,7 +127,7 @@ $img: "../images/home/global.png", "../images/home/wp.jpg", "../images/home/pff.
     height: auto;
     margin: auto;
     right: 0;
-    border-top: 5px solid $c2;
+    border-top: none;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     border-left: 0;
@@ -167,8 +167,6 @@ $img: "../images/home/global.png", "../images/home/wp.jpg", "../images/home/pff.
   }
   @include four_80_1024 {
     width: calc(40% - 10px);
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
     border-left: 5px solid $c2;
     border-right: 5px solid $c2;
   }
