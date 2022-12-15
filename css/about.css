@@ -401,7 +401,7 @@ main::after {
 footer {
   height: 190px;
   background-image: url(../images/template/wave.svg);
-  background-size: cover;
+  background-size: 100%;
   border-top: 8px solid mintcream;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
