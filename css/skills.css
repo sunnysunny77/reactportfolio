@@ -606,18 +606,6 @@ main::after {
     position: relative;
   }
 }
-@media only screen and (max-width: 1024px) {
-  .template-p-cont .template-p-img {
-    width: 25px;
-    height: 25px;
-    background-image: url(../images/template/equal0.png);
-    opacity: 0.3;
-    position: absolute;
-    right: 12px;
-    top: 57.5px;
-    z-index: 999;
-  }
-}
 .template-p-cont p.cont {
   margin: unset;
 }

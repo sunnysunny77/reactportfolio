@@ -110,18 +110,6 @@ main {
         border-top: 5px solid $c4;
         position: relative;
     }
-    .template-p-img {
-        @include ten_24 {
-            width: 25px;
-            height: 25px;
-            background-image: url(../images/template/equal0.png);
-            opacity: 0.3;
-            position: absolute;
-            right: 12px;
-            top: 57.5px;
-            z-index: 999;
-        }
-    }
     p.cont {
         margin: unset;
     }
