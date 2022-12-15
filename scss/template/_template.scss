@@ -10,9 +10,6 @@ body {
   font-family: $font;
   background-color: $mainbg;
   overflow: auto;
-  @include ten_24 {
-   margin: 0;
-  }
 }
 
 .outer {

@@ -52,11 +52,6 @@ body {
   background-color: mintcream;
   overflow: auto;
 }
-@media only screen and (max-width: 1024px) {
-  body {
-    margin: 0;
-  }
-}
 
 .outer {
   max-width: 992px;
