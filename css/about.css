@@ -86,6 +86,10 @@ footer ul li a:focus {
   max-height: 30px;
 }
 
+.os-theme-dark > .os-scrollbar > .os-scrollbar-track, .os-theme-light > .os-scrollbar > .os-scrollbar-track {
+  background: rgba(74, 83, 84, 0.1);
+}
+
 h3 {
   margin-left: 5%;
   color: rgba(255, 127, 38, 0.9);
@@ -385,8 +389,6 @@ main::after {
     text-align: center;
     height: calc(100% - 45px);
     border-left: none;
-    border-top: 2.5px solid rgba(106, 203, 215, 0.4);
-    border-bottom: 2.5px solid rgba(106, 203, 215, 0.4);
     margin: 10px auto;
     padding: 10px 5% 10px 5%;
     font-size: initial;

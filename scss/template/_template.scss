@@ -43,6 +43,10 @@ footer ul li a:focus {
   max-height: 30px;
 }
 
+.os-theme-dark > .os-scrollbar > .os-scrollbar-track, .os-theme-light > .os-scrollbar > .os-scrollbar-track {
+  background: $c11;
+}
+
 h3 {
   margin-left: 5%;
   color: $heading3;
