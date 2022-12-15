@@ -79,6 +79,7 @@
   border: 1px solid #2E86AB;
   color: #2E86AB;
   outline: none;
+  overflow-y: hidden;
 }
 .template-p-cont div.template-p form input {
   width: 100%;
