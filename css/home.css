@@ -575,6 +575,7 @@ footer {
   border-top: 8px solid mintcream;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
+  background-repeat: no-repeat;
   display: flex;
   position: relative;
 }
