@@ -42,8 +42,10 @@ function scrollAnimation() {
             const s4 = document.getElementById("s4");
             const ob0ul = document.getElementById("ob0ul");
             const s5 = document.getElementById("s5");
-           
-            if (scroll_pos > getPosition(document.getElementById("s4"))) {
+            const s51 = document.getElementById("s51");
+            const style = window.getComputedStyle(s4).getPropertyValue("visibility");
+              
+            if (scroll_pos > getPosition(document.getElementById("s4")) && style === "hidden") {
                 s4.classList.remove("vis1");
                 s4.classList.add("vis0");
                 s4.classList.add("ani2");
@@ -53,6 +55,10 @@ function scrollAnimation() {
                 s5.classList.remove("vis1");
                 s5.classList.add("vis0");
                 s5.classList.add("ani2");
+                s51.classList.add("ani0");
+                setTimeout(function () {
+                    s51.classList.remove("ani0");
+                }, 1500);
             }
         }
 
@@ -102,6 +108,7 @@ function check() {
             const s4 = document.getElementById("s4");
             const ob0ul = document.getElementById("ob0ul");
             const s5 = document.getElementById("s5");
+            const s51 = document.getElementById("s51");
             s4.classList.remove("vis1");
             s4.classList.add("vis0");
             s4.classList.add("ani2");
@@ -111,6 +118,10 @@ function check() {
             s5.classList.remove("vis1");
             s5.classList.add("vis0");
             s5.classList.add("ani2"); 
+            s51.classList.add("ani0");
+            setTimeout(function () {
+                s51.classList.remove("ani0");
+            }, 1500);
         }
 
     } else {
