@@ -86,6 +86,11 @@
     border-bottom-left-radius: 0;
   }
 }
+@media only screen and (max-width: 1023px) and (orientation: landscape) {
+  #site #s4 {
+    height: 75px;
+  }
+}
 #site #s4 #close {
   float: right;
   margin: 5.5% 6.5% 0 0;
@@ -181,6 +186,12 @@
     border-top: 3px solid rgba(74, 83, 84, 0.1);
   }
 }
+@media only screen and (max-width: 1023px) and (orientation: landscape) {
+  #site #s5 {
+    padding: 2%;
+    width: 91%;
+  }
+}
 #site #s5 span {
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -191,6 +202,12 @@
   #site #s5 span {
     background-size: 50%;
     padding: 25%;
+  }
+}
+@media only screen and (max-width: 1023px) and (orientation: landscape) {
+  #site #s5 span {
+    background-size: 25%;
+    padding: 12.5%;
   }
 }
 #site #s5 a {
