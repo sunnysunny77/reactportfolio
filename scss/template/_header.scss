@@ -14,23 +14,15 @@ header {
         border-top-right-radius: 0;
     }
     > span {
+        display: block;
+        margin: auto;
+        width: 123px;
         height: 75px;
-        width: 260px;
-        margin-left: 5%;
-        background-image: url(../images/template/logotext.png);
+        margin-left: 10%;
+        background-image: url(../images/template/textonly.png);
         position: relative;
         @include ten_24 {
-            display: none;
-        }
-    }
-    > span + span {
-        display: none;
-        @include ten_24 {
-            display: block;
             margin: auto;
-            width: 123px;
-            background-image: url(../images/template/textonly.png);
-            position: relative;
         }
     }
     button {

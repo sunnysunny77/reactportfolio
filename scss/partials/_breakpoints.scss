@@ -16,12 +16,6 @@
     }
 }
 
-@mixin seven_68 {
-    @media only screen and (max-width: 768px) {
-        @content;
-    }
-}
-
 @mixin four_80 {
     @media only screen and (max-width: 480px) {
         @content;
@@ -36,12 +30,6 @@
 
 @mixin two_40 {
     @media only screen and (max-width: 240px) {
-        @content;
-    }
-}
-
-@mixin four_80_1024 {
-    @media only screen and (min-width: 480px) and (max-width: 1024px) {
         @content;
     }
 }

@@ -55,34 +55,24 @@ function range(event) {
     let preview = document.querySelectorAll(".scrollPreview");
     const previewLength = preview.length;
 
-    for (let i = 0; i < previewLength - 1; i++) {
+    for (let i = 0; i < previewLength; i++) {
         ranges.push(preview[i].offsetTop)
     }
-    ranges.push(preview[previewLength - 1].offsetHeight);
-
+   
     const rangesLenght = ranges.length;
-    const pictureLenght = pictureID.length;
-
     let scroll_pos = event.scrollTop;
-
-    const a = event.scrollHeight;
-    const b = document.getElementById("ob0").clientHeight;
-    const botCalc = a - b - ranges[rangesLenght - 1];
 
     if (scroll_pos < ranges[0]) {
         pictureDisplay(pictureID[0]);
     }
-    for (let i = 0; i < rangesLenght - 2; i++) {
+    for (let i = 0; i < rangesLenght - 1; i++) {
         let y = i + 1;
         if (scroll_pos > ranges[i] && scroll_pos < ranges[y]) {
             pictureDisplay(pictureID[y]);
         }
     }
-    if (scroll_pos > ranges[rangesLenght - 2] && scroll_pos < botCalc) {
-        pictureDisplay(pictureID[pictureLenght - 2]);
-    }
-    if (scroll_pos > botCalc) {
-        pictureDisplay(pictureID[pictureLenght - 1]);
+    if (scroll_pos > ranges[rangesLenght - 1]) {
+        pictureDisplay(pictureID[pictureID.length -1]);
     }
 }
 

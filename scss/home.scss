@@ -1,7 +1,7 @@
 @import "variables";
 
-$img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.jpg", "../images/home/pff.jpg", "../images/home/acc.jpg",
-  "../images/home/stick.jpg", "../images/home/candid.jpg", "../images/home/port.jpg",
+$img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.jpg", "../images/home/pff.jpg",
+  "../images/home/acc.jpg", "../images/home/stick.jpg", "../images/home/candid.jpg", "../images/home/port.jpg",
   "../images/home/login.jpg";
 
 @for $i from 1 through length($img) {
@@ -36,143 +36,143 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
 
 /* Scroll */
 
-#s4 {
-  height: 280px;
-  width: calc(992px - 46.026%);
-  margin: 4% auto auto calc(987px - 95%);
-  float: left;
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
-  background-image: url(../images/template/natural-paper.png);
-  background-color: $c2;
+#site {
   position: relative;
-  z-index: 999;
-  @include ten_24 {
-    float: none;
-    width: 100%;
-    height: 140px;
-    margin: auto;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-  #close {
-    float: right;
-    margin: 5.5% 6.5% 0 0;
-    padding: 2.5px 5px;
-    font-size: x-small;
-    color: $c5;
-    border: 1px solid $c5;
-    border-radius: 100px;
-    opacity: 0.15;
+  #s4 {
+    height: 349px;
+    width: calc(992px - 46.026%);
+    margin: auto auto auto calc(992px - 95%);
+    float: left;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background-image: url(../images/template/natural-paper.png);
+    background-color: $c2;
     @include ten_24 {
+      position: relative;
       float: none;
-      position: absolute;
-      z-index: 99;
-      right: 25px;
-      bottom: -35px;
-      margin: 0;
+      width: 95%;
+      height: 120px;
+      margin: auto;
+      padding: 25px 0;
+      border-top-right-radius: 25px;
+      border-bottom-left-radius: 0;
     }
-    @include four_80_1024 {
-      bottom: auto;
-      top: 15px;
-    }
-  }
-  #ob0 {
-    overflow: hidden;
-    height: 50%;
-    margin: 13% 0;
-    position: relative;
-    color: #4193bc;
-    text-align: left;
-    font-size: large;
-    word-wrap: break-word;
-    @include ten_24 {
-      height: calc(100% - 20px);
-      margin: 10px 0;
-      padding: 0 5%;
-      top: 10px;
-      font-size: initial;
-    }
-    #ob0ul {
-      margin: 0;
-      padding: 0 7px 0 40px;
-      list-style-type: none;
+    #close {
+      float: right;
+      margin: 5.5% 6.5% 0 0;
+      padding: 2.5px 5px;
+      font-size: x-small;
+      color: $c5;
+      border: 1px solid $c5;
+      border-radius: 100px;
+      opacity: 0.15;
       @include ten_24 {
-        padding: 0;
-        ol li h4 {
-          font-size: large;
+        float: none;
+        position: absolute;
+        z-index: 99;
+        right: 25px;
+        top: 15px;
+        margin: 0;
+      }
+    }
+    #ob0 {
+      height: 60%;
+      margin: 13% 0;
+      color: #4193bc;
+      text-align: left;
+      font-size: large;
+      word-wrap: break-word;
+      position: absolute;
+      top: 0;
+      right: 5%;
+      bottom: 0;
+      left: 5%;
+      z-index: 1;
+      @include ten_24 {
+        position: inherit;
+        height: 100%;
+        padding: 0 5%;
+        margin: auto;
+        font-size: initial;
+        top: unset;
+        right: unset;
+        bottom: unset;
+        left: unset;
+      }
+      #ob0ul {
+        margin: 0;
+        width: 50%;
+        padding: 0 7px 0 40px;
+        list-style-type: none;
+        @include ten_24 {
+          width: 100%;
+          padding: 0;
+          ol {
+            padding-left: 20px;
+          }
+          ol li h4 {
+            font-size: initial;
+          }
+        }
+        h4 {
+          margin: 2% 0;
+          padding: 0;
+          color: $heading4;
+          font-size: x-large;
         }
       }
-      h4 {
-        margin: 2% 0;
-        padding: 0;
-        color: $heading4;
-        font-size: x-large;
+    }
+  }
+
+  #s5 {
+    width: calc(992px - 73.991%);
+    height: 250px;
+    float: right;
+    padding: 5%;
+    margin-right: calc(992px - 95%);
+    position: relative;
+    background-image: url(../images/template/natural-paper.png);
+    background-color: $c2;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    @include ten_24 {
+      float: none;
+      padding: 10%;
+      width: 75%;
+      height: auto;
+      margin: auto;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 25px;
+      border-top: 3px solid $c11;
+    }
+    span {
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 100%;
+      @include ten_24 {
+        background-size: 50%;
+        padding: 25%;
       }
     }
+    a {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      color: $c5;
+      font-size: large;
+      @include ten_24 {
+        font-size: smaller;
+      }
+      &:hover,
+      &:focus {
+        color: $c4;
+        text-decoration: none;
+      }
+    }
+    #s51 {
+      display: block;
+    }
   }
 }
-
-#s5 {
-  width: calc(992px - 73.991%);
-  height: 250px;
-  float: right;
-  padding: 5%;
-  border: 5px solid $c2;
-  margin-right: calc(987px - 95%);
-  position: relative;
-  @include ten_24 {
-    float: none;
-    width: 90%;
-    height: auto;
-    margin: auto;
-    right: 0;
-    border-top: none;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-left: 0;
-    border-right: 0;
-  }
-  span {
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100%;
-    @include ten_24 {
-      background-size: 47%;
-      padding: 23%;
-    }
-  }
-  a {
-    position: absolute;
-    top: 10px;
-    left: 30px;
-    color: $c5;
-    font-size: x-large;
-    @include ten_24 {
-      top: 5px;
-      font-size: small;
-    }
-    @include three_20 {
-      top: 2.5px;
-    }
-    @include two_40 {
-      top: 0;
-    }
-    &:hover,
-    &:focus {
-      color: $c2;
-      text-decoration: none;
-    }
-  }
-  @include four_80_1024 {
-    width: calc(40% - 10px);
-    border-left: 5px solid $c2;
-    border-right: 5px solid $c2;
-  }
-  #s51 {
-    display: block;
-  }
-}
-
 @import "template/template";
