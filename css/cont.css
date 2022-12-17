@@ -79,7 +79,19 @@
   border: 1px solid #2E86AB;
   color: #2E86AB;
   outline: none;
-  overflow-y: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-color: #ff7f26 rgba(74, 83, 84, 0.1);
+  scrollbar-width: thin;
+}
+.template-p-cont div.template-p form fieldset textarea::-webkit-scrollbar {
+  width: 5px;
+}
+.template-p-cont div.template-p form fieldset textarea::-webkit-scrollbar-track {
+  background: rgba(74, 83, 84, 0.1);
+}
+.template-p-cont div.template-p form fieldset textarea::-webkit-scrollbar-thumb {
+  background: #ff7f26;
 }
 .template-p-cont div.template-p form input {
   width: 100%;
