@@ -1,5 +1,5 @@
 function overlayInit() {
-    OverlayScrollbars(document.getElementsByClassName("template-p")[0], {
+    OverlayScrollbars(document.getElementById("overlay"), {
         className: "os-theme-dark os-theme-dark-edgy",
     });
     if (document.getElementById("ob0")) {

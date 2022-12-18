@@ -20,6 +20,6 @@
   "dependencies": {
     "sass": "latest",
     "vivus": "^0.4.6",
-    "overlayscrollbars": "^1.13.1"
+    "overlayscrollbars": "^1.13.3"
   }
 }
