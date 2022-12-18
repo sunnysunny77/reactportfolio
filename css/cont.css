@@ -62,7 +62,7 @@
   list-style-type: none;
 }
 .template-p-cont div.template-p form fieldset ul li {
-  padding-bottom: 5.5%;
+  padding-bottom: 35px;
   margin: 0 10% 0 10%;
   width: 80%;
 }
@@ -427,7 +427,7 @@ main::after {
 @media only screen and (max-width: 1024px) {
   .template-p-cont {
     width: 100%;
-    height: 140px;
+    height: 160px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     margin: auto;

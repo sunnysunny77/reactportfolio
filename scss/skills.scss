@@ -69,24 +69,14 @@ a[target="git"] {
 }
 
 .img {
-
   margin: 30px 0 30px 0;
 }
 
-@include three_20 {
-  span.img {
-
-      margin: 10px auto;
-  }
-}
-
 .last-img {
-  
-  margin: 30px 12.5px 30px 0;
+  margin-right: 12.5px;
   @include ten_24 {
-    margin: 30px 0 30px 0;
+    margin-right: 0;
   }
 }
-
 
 @import "template/template";
