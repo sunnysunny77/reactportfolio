@@ -76,7 +76,7 @@ function validation(event) {
         reply(true, email, "Enter your email");
         error = true;
     }
-    if (/^.*[a-zA-Z0-9].*$/.test(data.message)) {
+    if (/[a-zA-Z0-9]/.test(data.message)) {
         reply(false, message, null);
     } else {
         reply(true, message, "Enter your message");
