@@ -112,10 +112,10 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
         @include ten_24 {
           width: 87%;
           padding: 0;
-          ol {
+          li ol {
             padding-left: 20px;
           }
-          ol li h4 a {
+          li ol li h4 a {
             font-size: initial;
           }
         }
