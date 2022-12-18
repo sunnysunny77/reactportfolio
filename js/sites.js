@@ -49,16 +49,10 @@ function pictureDisplay(item) {
 }
 
 function range(event) {
-
-    let ranges = [];
-
+  
     let preview = document.querySelectorAll(".scrollPreview");
-    const previewLength = preview.length;
-
-    for (let i = 0; i < previewLength; i++) {
-        ranges.push(preview[i].offsetTop)
-    }
-   
+    let ranges = [...preview].map(item => item.offsetTop);
+  
     const rangesLenght = ranges.length;
     let scroll_pos = event.scrollTop;
 
