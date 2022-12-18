@@ -41,6 +41,8 @@ $imgSkills: (
   background-image: url(../images/skills/skills.png);
   background-position: center;
   height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .template-img-0 {

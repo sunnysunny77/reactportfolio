@@ -223,6 +223,8 @@
   background-image: url(../images/skills/skills.png);
   background-position: center;
   height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .template-img-0 {
@@ -615,7 +617,9 @@ main::after {
 
 .template-div {
   background-image: url(../images/template/div1.png);
-  background-size: 100% 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   margin: 7.5% auto;
   width: 90.021%;
   height: 109px;
