@@ -1,0 +1,21 @@
+{
+    "name": "Portfolio",
+    "short_name": "Portfolio",
+    "start_url": ".",
+    "background_color": "#6acbd7",
+    "theme_color": "#2E86AB",
+    "display": "standalone",
+    "icons": [       
+        {
+            "src": "images/template/global512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "images/template/global192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+   
+}

@@ -17,6 +17,22 @@ function vivus() {
 
 eventListner(window, "scroll", cache, null);
 eventListner(document.getElementsByClassName("click")[0],"click",toggle,false);
+eventListner(window, "load", () => {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('worker.js', { scope: '/' })
+        .then((registration) => {
+            const data = {
+                type: 'CACHE_URLS',
+                payload: [
+                    location.href,
+                    ...performance.getEntriesByType('resource').map((r) => r.name)
+                ]
+            };
+            registration.installing.postMessage(data);
+        })
+        .catch((err) => console.log('SW registration FAIL:', err));
+}
+}, null);
 
 window.onload = function () {
   script();
