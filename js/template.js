@@ -1,6 +1,6 @@
 function service() {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('worker.js', { scope: window.location.pathname })
+    navigator.serviceWorker.register('worker.js')
       .then((registration) => {
         const data = {
           type: 'CACHE_URLS',
