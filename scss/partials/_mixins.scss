@@ -1,6 +1,7 @@
 @mixin image-0 {
     background-color: rgba($main,0.25);
     background-blend-mode: screen;
+    border-radius: 25px;
     @include ten_24 {
       background-size: 88%;
       width: calc(70% - 10px);
@@ -12,11 +13,13 @@
       padding: 32% 0 32% 0;
       border-left: 0;
       border-right: 0;
+      border-radius: 0;
     }
     @include three_20 {
       width: 100%;
       padding: 32% 0 32% 0;
       border-left: 0;
       border-right: 0;
+      border-radius: 0;
     }
   }
