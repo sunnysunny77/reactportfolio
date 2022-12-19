@@ -1,20 +1,3 @@
-function service() {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('worker.js', { scope: window.location.pathname })
-      .then((registration) => {
-        const data = {
-          type: 'CACHE_URLS',
-          payload: [
-            location.href,
-            ...performance.getEntriesByType('resource').map((r) => r.name)
-          ]
-        };
-        registration.installing.postMessage(data);
-      })
-      .catch((err) => console.log('SW registration FAIL:', err));
-  }
-}
-
 function toggle() {
   document.getElementsByClassName("click")[0].classList.toggle("ani");
   document.getElementsByClassName("menu0")[0].classList.toggle("disp");
@@ -34,7 +17,6 @@ function vivus() {
 
 eventListner(window, "scroll", cache, null);
 eventListner(document.getElementsByClassName("click")[0], "click", toggle, false);
-eventListner(window, "load", service, null);
 
 window.onload = function () {
   script();
