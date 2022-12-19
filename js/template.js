@@ -21,4 +21,5 @@ eventListner(document.getElementsByClassName("click")[0], "click", toggle, false
 window.onload = function () {
   script();
   check();
+  console.log(...performance.getEntriesByType('resource').map((r) => r.name))
 };

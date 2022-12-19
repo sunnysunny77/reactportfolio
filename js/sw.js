@@ -4,7 +4,6 @@ window.addEventListener('load', () => {
         // site using the default scope.
         navigator.serviceWorker.register('/worker.js').then((registration) => {
             console.log('Service worker registration succeeded:', registration);
-            console.log(...performance.getEntriesByType('resource').map((r) => r.name))
         }, /*catch*/(error) => {
             console.error(`Service worker registration failed: ${error}`);
         });
