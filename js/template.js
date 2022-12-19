@@ -9,7 +9,7 @@ function vivus() {
     "my-svg",
     {
       duration: 800,
-      file: "https://gendrive.s3-ap-southeast-2.amazonaws.com/svg.svg",
+      file: "images/template/svg.svg",
     },
     null
   );

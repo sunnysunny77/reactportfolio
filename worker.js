@@ -62,6 +62,7 @@ self.addEventListener("install", (event) => {
           '/images/template/paper-fibers.png',
           '/images/template/textonly.png',
           '/images/template/wave.svg',
+          '/images/template/svg.svg',
           '/js/auto.js',
           '/js/cache.js',
           '/js/forms.js',
