@@ -449,6 +449,8 @@ main::after {
   right: 0;
   position: absolute;
   z-index: -999;
+  background-color: #6acbd7;
+  background-blend-mode: color;
 }
 
 .main-logo {
