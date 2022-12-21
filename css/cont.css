@@ -71,13 +71,19 @@
 @media only screen and (max-width: 1024px) {
   .template-img-0 {
     width: calc(90% - 10px);
-    padding: 22% 0 22% 0;
+    padding: 28% 0;
     height: auto;
   }
 }
-@media only screen and (max-width: 1024px) and (max-width: 720px) and (orientation: portrait) {
+@media only screen and (max-width: 720px) and (orientation: portrait) {
   .template-img-0 {
     border-radius: 10px;
+  }
+}
+@media only screen and (max-width: 1023px) and (orientation: landscape) {
+  .template-img-0 {
+    width: calc(70% - 10px);
+    padding: 22% 0;
   }
 }
 
