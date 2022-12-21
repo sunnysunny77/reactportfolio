@@ -249,9 +249,9 @@
   justify-content: end;
   color: rgba(238, 238, 229, 0.948);
   position: absolute;
-  top: 2%;
+  top: 0;
   right: 2%;
-  bottom: 2%;
+  bottom: 0;
   left: 2%;
   transition: background-color 1s linear, opacity 1s linear, top 1s linear, right 1s linear, bottom 1s linear, left 1s linear;
 }
@@ -294,6 +294,11 @@
     width: calc(90% - 10px);
     padding: 22% 0 22% 0;
     height: auto;
+  }
+}
+@media only screen and (max-width: 1024px) and (max-width: 720px) and (orientation: portrait) {
+  .template-img-0 {
+    border-radius: 10px;
   }
 }
 
