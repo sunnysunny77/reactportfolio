@@ -446,6 +446,7 @@ nav ul .button {
     border: 1px solid rgba(238, 238, 229, 0.948);
     color: #caffd5;
     font-size: smaller;
+    border-radius: 5px;
   }
 }
 nav ul .button .label {
