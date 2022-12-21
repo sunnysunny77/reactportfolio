@@ -104,9 +104,6 @@
       color: $c7;
       font-size: smaller;
       padding-left: 2.5px;
-      @include two_40 {
-        font-size: xx-small;
-      }
     }
   }
 }

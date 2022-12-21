@@ -54,14 +54,6 @@ main {
             font-size: x-large;
             text-shadow: none;
         }
-        @include three_20 {
-            font-size: medium;
-        }
-        @include two_40 {
-            .main-logo h2 {
-                font-size: smaller;
-            }
-        }
     }
     .main-logo-span {
         position: absolute;

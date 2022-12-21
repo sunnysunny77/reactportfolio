@@ -494,16 +494,6 @@ main::after {
     text-shadow: none;
   }
 }
-@media only screen and (max-width: 320px) {
-  .main-logo h2 {
-    font-size: medium;
-  }
-}
-@media only screen and (max-width: 240px) {
-  .main-logo h2 .main-logo h2 {
-    font-size: smaller;
-  }
-}
 .main-logo .main-logo-span {
   position: absolute;
   height: 9px;

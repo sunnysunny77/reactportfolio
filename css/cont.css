@@ -18,26 +18,66 @@
   margin: auto;
   background-color: rgba(106, 203, 215, 0.25);
   background-blend-mode: screen;
+  background-size: cover;
   border-radius: 25px;
+  position: relative;
+}
+.template-img-0 p {
+  display: flex;
+  border-radius: 25px;
+  flex-direction: column;
+  justify-content: end;
+  color: rgba(238, 238, 229, 0.948);
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  bottom: 2%;
+  left: 2%;
+  transition: background-color 1s linear, opacity 1s linear, top 1s linear, right 1s linear, bottom 1s linear, left 1s linear;
+}
+@media only screen and (max-width: 720px) and (orientation: portrait) {
+  .template-img-0 p {
+    border-radius: 0;
+  }
+}
+.template-img-0 p span {
+  margin: 5%;
+  opacity: 0;
+  transition: opacity 1s linear;
+  height: 15%;
+  width: 200px;
+}
+.template-img-0 p b {
+  margin: 5%;
+  color: #2E86AB;
+  background-color: rgba(238, 238, 229, 0.948);
+  padding: 1% 2%;
+  border-radius: 5px;
+  width: fit-content;
+}
+.template-img-0:hover b, .template-img-0:focus b {
+  color: rgba(238, 238, 229, 0.948);
+  background-color: unset;
+}
+.template-img-0:hover p, .template-img-0:focus p {
+  background-color: #2E86AB;
+  opacity: 0.75;
+  top: 8%;
+  right: 8%;
+  bottom: 8%;
+  left: 8%;
+}
+.template-img-0:hover p span, .template-img-0:focus p span {
+  opacity: 1;
 }
 @media only screen and (max-width: 1024px) {
   .template-img-0 {
-    background-size: 88%;
     width: calc(70% - 10px);
     padding: 22% 0 22% 0;
     height: auto;
   }
 }
 @media only screen and (max-width: 720px) and (orientation: portrait) {
-  .template-img-0 {
-    width: 100%;
-    padding: 32% 0 32% 0;
-    border-left: 0;
-    border-right: 0;
-    border-radius: 0;
-  }
-}
-@media only screen and (max-width: 320px) {
   .template-img-0 {
     width: 100%;
     padding: 32% 0 32% 0;
@@ -131,11 +171,6 @@
   color: #D81159;
   font-size: smaller;
   padding-left: 2.5px;
-}
-@media only screen and (max-width: 240px) {
-  .template-p-cont div.template-p form .msg {
-    font-size: xx-small;
-  }
 }
 
 /* GLOBAL */
@@ -375,16 +410,6 @@ main::after {
   .main-logo h2 {
     font-size: x-large;
     text-shadow: none;
-  }
-}
-@media only screen and (max-width: 320px) {
-  .main-logo h2 {
-    font-size: medium;
-  }
-}
-@media only screen and (max-width: 240px) {
-  .main-logo h2 .main-logo h2 {
-    font-size: smaller;
   }
 }
 .main-logo .main-logo-span {

@@ -27,5 +27,3 @@ async function pageScroll () {
 }
 
 window.onload = pageScroll();
- 
-  
