@@ -17,9 +17,6 @@
     left: 2%;
     transition: background-color 1s linear, opacity 1s linear, top 1s linear, right 1s linear, bottom 1s linear,
       left 1s linear;
-    @include seven_20_portrait {
-      border-radius: 0;
-    }
     span {
       margin: 5% auto auto 5%;
       opacity: 0;
