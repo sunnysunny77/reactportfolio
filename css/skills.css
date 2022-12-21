@@ -228,16 +228,15 @@
 }
 
 .template-img-0 {
-  border: 5px solid rgba(238, 238, 229, 0.948);
   background-image: url(../images/skills/skillsimg.jpg);
-  background-size: 90% 90%;
+  background-color: rgba(106, 203, 215, 0.25);
+  background-blend-mode: screen;
+  border: 5px solid rgba(238, 238, 229, 0.948);
   background-repeat: no-repeat;
   background-position: center;
   height: 500px;
   width: 80.041%;
   margin: auto;
-  background-color: rgba(106, 203, 215, 0.25);
-  background-blend-mode: screen;
   background-size: cover;
   border-radius: 25px;
   position: relative;

@@ -1,6 +1,12 @@
 @mixin image-0 {
   background-color: rgba($main, 0.25);
   background-blend-mode: screen;
+  border: 5px solid $c2;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  width: 80.041%;
+  margin: auto;
   background-size: cover;
   border-radius: 25px;
   position: relative;

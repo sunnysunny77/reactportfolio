@@ -9,14 +9,7 @@
 }
 
 .template-img-0 {
-  border: 5px solid $c2;
   background-image: url(../images/contact/contimg.jpg);
-  background-size: 90% 90%;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 500px;
-  width: 80.041%;
-  margin: auto;
   @include image-0();
 }
 
