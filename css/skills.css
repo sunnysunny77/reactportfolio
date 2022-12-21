@@ -261,14 +261,13 @@
   }
 }
 .template-img-0 p span {
-  margin: 5%;
+  margin: 5% auto auto 5%;
   opacity: 0;
   transition: opacity 1s linear;
-  height: 15%;
   width: 200px;
 }
 .template-img-0 p b {
-  margin: 5%;
+  margin: auto auto 5% 5%;
   color: #2E86AB;
   background-color: rgba(238, 238, 229, 0.948);
   padding: 1% 2%;
@@ -292,7 +291,7 @@
 }
 @media only screen and (max-width: 1024px) {
   .template-img-0 {
-    width: calc(80% - 10px);
+    width: calc(90% - 10px);
     padding: 22% 0 22% 0;
     height: auto;
   }
