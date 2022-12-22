@@ -160,11 +160,11 @@ header {
   border-bottom: 8px solid mintcream;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
+  background-blend-mode: multiply;
   display: flex;
 }
 @media only screen and (max-width: 1024px) {
   header {
-    padding: 10px 0;
     flex-direction: column;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -196,7 +196,7 @@ header button {
     background-color: transparent;
     padding: 0;
     border: none;
-    margin: auto auto 15px auto;
+    margin: auto;
     cursor: pointer;
     outline: none;
   }
@@ -284,6 +284,11 @@ main::after {
   z-index: -999;
   background-color: #6acbd7;
   background-blend-mode: color;
+}
+@media only screen and (max-width: 1024px) {
+  main::after {
+    background-image: url(../images/template/handmade-paper.png);
+  }
 }
 
 .main-logo {
@@ -442,6 +447,7 @@ footer::after {
   content: "";
   background-image: url(../images/template/handmade-paper.png);
   background-color: rgba(79, 79, 79, 0.9058823529);
+  background-blend-mode: multiply;
   opacity: 1;
   top: 0;
   left: 0;

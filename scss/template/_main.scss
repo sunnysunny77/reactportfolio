@@ -19,6 +19,9 @@ main {
         z-index: -999;
         background-color: $main;
         background-blend-mode: color;
+        @include ten_24 {
+            background-image: url(../images/template/handmade-paper.png);
+        }
     }
 }
 

@@ -6,9 +6,9 @@ header {
     border-bottom: 8px solid $mainbg;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+    background-blend-mode: multiply;
     display: flex;
     @include ten_24 {
-        padding: 10px 0;
         flex-direction: column;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
@@ -35,7 +35,7 @@ header {
             background-color: transparent;
             padding: 0;
             border: none;
-            margin: auto auto 15px auto;
+            margin: auto;
             cursor: pointer;
             outline: none;
         }
