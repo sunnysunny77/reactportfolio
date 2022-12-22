@@ -35,7 +35,6 @@ function scrollAnimation() {
                 tempImg0.classList.remove("vis1");
                 tempImg0.classList.add("vis0");
                 tempImg0.classList.add("ani2");
-                tempImg0.focus();
             }
         }
 
