@@ -73,7 +73,6 @@
   .template-img-0 {
     width: calc(70% - 10px);
     padding: 22% 0;
-    height: auto;
   }
 }
 @media only screen and (max-width: 720px) and (orientation: portrait) {
@@ -168,6 +167,7 @@ header {
     flex-direction: column;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    padding-bottom: 10px;
   }
 }
 header > span {
@@ -244,7 +244,7 @@ nav ul .button {
     border: 1px solid rgba(238, 238, 229, 0.948);
     color: #caffd5;
     font-size: smaller;
-    border-radius: 5px;
+    border-radius: 25px;
   }
 }
 nav ul .button .label {
@@ -298,8 +298,8 @@ main::after {
 }
 @media only screen and (max-width: 1024px) {
   .main-logo {
-    margin-left: 7.5%;
-    width: 92.5%;
+    margin: 6%;
+    width: fit-content;
   }
 }
 .main-logo #my-svg {
@@ -328,8 +328,7 @@ main::after {
 }
 @media only screen and (max-width: 1024px) {
   .main-logo h2 {
-    font-size: x-large;
-    text-shadow: none;
+    display: none;
   }
 }
 .main-logo .main-logo-span {

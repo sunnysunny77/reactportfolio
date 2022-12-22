@@ -30,8 +30,8 @@ main {
     margin: 9% auto 3% 55.5%;
     width: 44.5%;
     @include ten_24 {
-        margin-left: 7.5%;
-        width: 92.5%;
+        margin: 6%;
+        width: fit-content;
     }
     #my-svg {
         display: inline-block;
@@ -54,8 +54,7 @@ main {
         color: $heading2;
         font-size: 1.8em;
         @include ten_24 {
-            font-size: x-large;
-            text-shadow: none;
+            display: none;
         }
     }
     .main-logo-span {
