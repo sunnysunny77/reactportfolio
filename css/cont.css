@@ -1,4 +1,4 @@
-@import url("../node_modules/overlayscrollbars/styles/overlayscrollbars.css");
+@import url("../node_modules/overlayscrollbars/css/OverlayScrollbars.css");
 /* GLOBAL */
 html {
   -webkit-text-size-adjust: 100%;
