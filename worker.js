@@ -1,4 +1,5 @@
 self.addEventListener("install", (event) => {
+  self.skipWaiting();
   event.waitUntil(
     caches
       .open("v1")
@@ -81,14 +82,27 @@ self.addEventListener("install", (event) => {
   );
 });
 
-addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
+  // Let the browser do its default thing
+  // for non-GET requests.
+  if (event.request.method !== "GET") return;
 
-  event.respondWith((async () => {
+  // Prevent the default, and handle the request ourselves.
+  event.respondWith(
+    (async () => {
+      // Try to get the response from a cache.
+      const cache = await caches.open("v1");
+      const cachedResponse = await cache.match(event.request);
 
-    const fetchedResponse = await fetch(event.request);
+      if (cachedResponse) {
+        // If we found a match in the cache, return it, but also
+        // update the entry in the cache in the background.
+        event.waitUntil(cache.add(event.request));
+        return cachedResponse;
+      }
 
-    if (fetchedResponse) return fetchedResponse 
-
-    return caches.match(event.request);
-  })());
+      // If we didn't find a match in the cache, use the network.
+      return fetch(event.request);
+    })()
+  );
 });
