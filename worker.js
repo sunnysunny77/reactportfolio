@@ -5,10 +5,9 @@ self.addEventListener("install", (event) => {
       .then((cache) =>
         cache.addAll([
           "/",
-          '/index/',
-          '/about/',
-          '/contact/',
-          '/skills/',
+          '/about.html',
+          '/contact.html',
+          '/skills.html',
           '/css/about.css',
           '/css/cont.css',
           '/css/home.css',
