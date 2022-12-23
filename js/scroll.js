@@ -30,8 +30,9 @@ function scrollAnimation() {
 
         if (document.querySelector(".template-img-0")) {
             const tempImg0 = document.querySelector(".template-img-0");
+            const style = window.getComputedStyle(tempImg0).getPropertyValue("visibility");
 
-            if (scroll_pos > getPosition(tempImg0)) {
+            if (scroll_pos > getPosition(tempImg0) && style === "hidden") {
                 tempImg0.classList.remove("vis1");
                 tempImg0.classList.add("vis0");
                 tempImg0.classList.add("ani2");
@@ -51,7 +52,7 @@ function scrollAnimation() {
             const s51 = document.getElementById("s51");
             const style = window.getComputedStyle(s4).getPropertyValue("visibility");
 
-            if (scroll_pos > getPosition(document.getElementById("s4")) && style === "hidden") {
+            if (scroll_pos > getPosition(s4) && style === "hidden") {
                 s4.classList.remove("vis1");
                 s4.classList.add("vis0");
                 s4.classList.add("ani2");
