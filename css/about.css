@@ -1,4 +1,4 @@
-@import url("../node_modules/overlayscrollbars/css/OverlayScrollbars.css");
+@import url("../node_modules/overlayscrollbars/styles/overlayscrollbars.css");
 /* GLOBAL */
 html {
   -webkit-text-size-adjust: 100%;
@@ -180,11 +180,6 @@ main {
   flex-direction: column;
   padding-bottom: 27.5%;
 }
-@media only screen and (max-width: 480px) {
-  main {
-    padding-bottom: 34%;
-  }
-}
 main::after {
   content: "";
   background-image: url(../images/template/paper-fibers.png);
@@ -268,7 +263,7 @@ main::after {
 @media only screen and (max-width: 1024px) {
   .template-img-cont {
     float: none;
-    margin: auto auto 5% auto;
+    margin: auto;
     width: 168px;
     border: none;
     padding: 0;
@@ -331,7 +326,7 @@ main::after {
 @media only screen and (max-width: 1024px) {
   .template-div {
     position: relative;
-    margin: 12.5% auto;
+    margin: 33% auto;
   }
 }
 

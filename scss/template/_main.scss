@@ -5,9 +5,6 @@ main {
     display: flex;
     flex-direction: column;
     padding-bottom: 27.5%;
-    @include four_80 {
-        padding-bottom: 34%;
-    }
     &::after {
         content: "";
         background-image: url(../images/template/paper-fibers.png);
@@ -79,7 +76,7 @@ main {
     float: left;
     @include ten_24 {
         float: none;
-        margin: auto auto 5% auto;
+        margin: auto;
         width: 168px;
         border: none;
         padding: 0;
@@ -136,6 +133,6 @@ main {
     height: 109px;
     @include ten_24 {
         position: relative;
-        margin: 12.5% auto;
+        margin: 33% auto;
     }
 }
