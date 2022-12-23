@@ -81,14 +81,14 @@ self.addEventListener("install", (event) => {
   );
 });
 
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    (async function () {
-      try {
-        return await fetch(event.request);
-      } catch (err) {
-        return caches.match(event.request);
-      }
-    })(),
-  );
+addEventListener('fetch', (event) => {
+
+  event.respondWith((async () => {
+
+    const fetchedResponse = await fetch(event.request);
+
+    if (fetchedResponse) return fetchedResponse 
+
+    return caches.match(event.request);
+  })());
 });
