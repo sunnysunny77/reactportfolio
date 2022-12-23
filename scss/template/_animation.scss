@@ -8,8 +8,6 @@
   visibility: hidden;
 }
 
-
-
 header > span,
 header > span + span {
   animation: slideIn 1.5s ease-in-out;
@@ -28,121 +26,139 @@ main::after {
   animation: scale0 1.5s ease-in;
 }
 
-
-@include nine_92 () {
-    .ani {
-      animation: scale1 0.5s;
-    }
-    .ani1 {
-      animation: slideInOp 0.75s, slideIn0 0.75s;
-    }
-    .ani2 {
-      animation: fadeInBack 1.5s ease-in;
-    }
-    .ani3 {
-      animation: scale2 1.5s ease-in-out;
-    }
-    .ani4 {
-      animation: fadeInBack 1.5s ease-in;
-      animation: scale0 1.5s ease-in;
-    }
+@include nine_92() {
+  .ani {
+    animation: scale1 0.5s;
   }
-  
-  @keyframes fadeInBack {
-    0% {
-      opacity: 0;
+  .ani1 {
+    animation: slideInOp 0.75s, slideIn0 0.75s;
+  }
+  .ani2 {
+    animation: fadeInBack 1.5s ease-in;
+  }
+  .ani3 {
+    animation: scale2 1.5s ease-in-out;
+  }
+  .ani4 {
+    animation: fadeInBack 1.5s ease-in;
+    animation: scale0 1.5s ease-in;
+  }
+  .ani5 {
+    &.template-img-0 b,
+    &.template-img-0 b {
+      color: $c2;
+      background-color: unset;
     }
-    25% {
-      opacity: 0.25;
-    }
-    37.5% {
-      opacity: 0.357;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    75% {
+    &.template-img-0 p,
+    &.template-img-0 p {
+      background-color: $c3;
       opacity: 0.75;
-    }
-    87.5% {
-      opacity: 0.875;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes slideIn {
-    0% {
-      top: -75px;
-      transform: scale(0.5);
-    }
-    100% {
-      top: 0;
+      top: 8%;
+      right: 8%;
+      bottom: 8%;
+      left: 8%;
+      span {
+        opacity: 1;
+
+      }
     }
   }
-  
-  @keyframes slideIn0 {
-    0% {
-      margin-top: -75px;
-    }
-    100% {
-      margin-top: 0;
-    }
+}
+
+@keyframes fadeInBack {
+  0% {
+    opacity: 0;
   }
-  
-  @keyframes slideInOp {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  25% {
+    opacity: 0.25;
   }
-  
-  @keyframes scale0 {
-    0% {
-      transform: scale(0.85);
-    }
-    100% {
-      transform: scale(1);
-    }
+  37.5% {
+    opacity: 0.357;
   }
-  
-  @keyframes scale1 {
-    0% {
-      background-color: $c2;
-      border-radius: 10px;
-      transform: scale(0.85);
-    }
-    100% {
-      transform: scale(1);
-      border-radius: 5px;
-      background-color: transparent;
-    }
+  50% {
+    opacity: 0.5;
   }
-  
-  @keyframes scale2 {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(0.85);
-    }
-    100% {
-      transform: scale(1);
-    }
+  75% {
+    opacity: 0.75;
   }
-  
-  @keyframes fadeInOpacity {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  87.5% {
+    opacity: 0.875;
   }
-  
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    top: -75px;
+    transform: scale(0.5);
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes slideIn0 {
+  0% {
+    margin-top: -75px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes slideInOp {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale0 {
+  0% {
+    transform: scale(0.85);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scale1 {
+  0% {
+    background-color: $c2;
+    border-radius: 10px;
+    transform: scale(0.85);
+  }
+  100% {
+    transform: scale(1);
+    border-radius: 5px;
+    background-color: transparent;
+  }
+}
+
+@keyframes scale2 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.85);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

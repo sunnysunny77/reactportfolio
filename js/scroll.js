@@ -35,6 +35,12 @@ function scrollAnimation() {
                 tempImg0.classList.remove("vis1");
                 tempImg0.classList.add("vis0");
                 tempImg0.classList.add("ani2");
+                setTimeout(function () {
+                    tempImg0.classList.add("ani5");
+                    setTimeout(function () {
+                        tempImg0.classList.remove("ani5");
+                    }, 4000);
+                }, 1500);
             }
         }
 
@@ -44,7 +50,7 @@ function scrollAnimation() {
             const s5 = document.getElementById("s5");
             const s51 = document.getElementById("s51");
             const style = window.getComputedStyle(s4).getPropertyValue("visibility");
-              
+
             if (scroll_pos > getPosition(document.getElementById("s4")) && style === "hidden") {
                 s4.classList.remove("vis1");
                 s4.classList.add("vis0");
@@ -117,7 +123,7 @@ function check() {
             ob0ul.classList.add("ani2");
             s5.classList.remove("vis1");
             s5.classList.add("vis0");
-            s5.classList.add("ani2"); 
+            s5.classList.add("ani2");
             s51.classList.add("ani0");
             setTimeout(function () {
                 s51.classList.remove("ani0");

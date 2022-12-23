@@ -25,6 +25,6 @@ $tempBoarder: rgba($main, 0.4);
 $Acolor: $c6;
 $aHover: $c4;
 
-
-@import "./partials/breakpoints";
-@import "./partials/mixins";
+@import "partials/breakpoints";
+@import "partials/mixins";
+@import "template/template";
