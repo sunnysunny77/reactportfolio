@@ -1,1 +1,0 @@
-eventListner(document.body, "touchstart", ()=>{}, false);
