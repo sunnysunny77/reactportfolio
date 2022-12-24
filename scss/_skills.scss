@@ -43,9 +43,8 @@ $imgSkills: (
   background-repeat: no-repeat;
 }
 
-.template-div ~ div {
+#skills-template-img-0 {
   background-image: url(../images/skills/skillsimg.jpg);
-  @include image-0();
 }
 
 a[target="git"] {

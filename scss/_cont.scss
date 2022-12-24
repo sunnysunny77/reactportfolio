@@ -6,9 +6,8 @@
   background-repeat: no-repeat;
 }
 
-.template-div ~ div {
+#contact-template-img-0 {
   background-image: url(../images/contact/contimg.jpg);
-  @include image-0();
 }
 
 #overlay  {

@@ -59,6 +59,7 @@ self.addEventListener("install", (event) => {
           '/images/template/textonly.png',
           '/images/template/wave.svg',
           '/images/template/svg.svg',
+          '/images/template/logo-main-underline.png',
           '/js/auto.js',
           '/js/cache.js',
           '/js/forms.js',
@@ -66,6 +67,7 @@ self.addEventListener("install", (event) => {
           '/js/scripts.js',
           '/js/scroll.js',
           '/js/sites.js',
+          '/js/sw.js',
           '/js/template.js',
           '/js/utilities.js',
           '/manifest.json',
@@ -78,26 +80,18 @@ self.addEventListener("install", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
-  // Let the browser do its default thing
-  // for non-GET requests.
+
   if (event.request.method !== "GET") return;
 
-  // Prevent the default, and handle the request ourselves.
-  event.respondWith(
-    (async () => {
-      // Try to get the response from a cache.
-      const cache = await caches.open("v1");
-      const cachedResponse = await cache.match(event.request);
+  event.respondWith(caches.open("v1").then((cache) => {
 
-      if (cachedResponse) {
-        // If we found a match in the cache, return it, but also
-        // update the entry in the cache in the background.
-        event.waitUntil(cache.add(event.request));
-        return cachedResponse;
-      }
+    return fetch(event.request).then((fetchedResponse) => {
+      cache.put(event.request, fetchedResponse.clone());
 
-      // If we didn't find a match in the cache, use the network.
-      return fetch(event.request);
-    })()
-  );
+      return fetchedResponse;
+    }).catch(() => {
+
+      return cache.match(event.request);
+    });
+  }));
 });
