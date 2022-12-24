@@ -555,7 +555,7 @@ footer h2 {
     background-image: url(../images/home/equal.png);
     height: 60px;
     width: 60px;
-    margin: 8.7% auto;
+    margin: 12.5% auto;
     opacity: 0.65;
   }
 }
@@ -846,32 +846,32 @@ footer h2 {
   }
 }
 
-.contact.template-p-cont div.template-p {
+#overlay {
   text-align: initial;
 }
-.contact.template-p-cont div.template-p form fieldset {
+#overlay form fieldset {
   border: none;
   padding: 0;
   margin: 0;
 }
-.contact.template-p-cont div.template-p form fieldset legend {
+#overlay form fieldset legend {
   padding: 0;
   margin: 0 0 0 5%;
 }
-.contact.template-p-cont div.template-p form fieldset ul {
+#overlay form fieldset ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
-.contact.template-p-cont div.template-p form fieldset ul li {
+#overlay form fieldset ul li {
   padding-bottom: 35px;
   margin: 0 10% 0 10%;
   width: 80%;
 }
-.contact.template-p-cont div.template-p form fieldset label {
+#overlay form fieldset label {
   color: #ff7f26;
 }
-.contact.template-p-cont div.template-p form fieldset textarea {
+#overlay form fieldset textarea {
   width: 100%;
   resize: none;
   font: inherit;
@@ -888,16 +888,16 @@ footer h2 {
   scrollbar-color: #ff7f26 rgba(74, 83, 84, 0.1);
   scrollbar-width: thin;
 }
-.contact.template-p-cont div.template-p form fieldset textarea::-webkit-scrollbar {
+#overlay form fieldset textarea::-webkit-scrollbar {
   width: 5px;
 }
-.contact.template-p-cont div.template-p form fieldset textarea::-webkit-scrollbar-track {
+#overlay form fieldset textarea::-webkit-scrollbar-track {
   background: rgba(74, 83, 84, 0.1);
 }
-.contact.template-p-cont div.template-p form fieldset textarea::-webkit-scrollbar-thumb {
+#overlay form fieldset textarea::-webkit-scrollbar-thumb {
   background: #ff7f26;
 }
-.contact.template-p-cont div.template-p form input {
+#overlay form input {
   width: 100%;
   font-style: inherit;
   padding: 0;
@@ -909,13 +909,13 @@ footer h2 {
   color: #2E86AB;
   outline: none;
 }
-.contact.template-p-cont div.template-p form #sent {
+#overlay form #sent {
   text-align: center;
   height: 23px;
   display: none;
   margin: 0 auto;
 }
-.contact.template-p-cont div.template-p form #sub {
+#overlay form #sub {
   width: auto;
   display: block;
   margin: auto;
@@ -923,10 +923,10 @@ footer h2 {
   color: #24b14d;
   border-radius: 10px;
 }
-.contact.template-p-cont div.template-p form .red {
+#overlay form .red {
   border-color: #D81159;
 }
-.contact.template-p-cont div.template-p form .msg {
+#overlay form .msg {
   color: #D81159;
   font-size: smaller;
   padding-left: 2.5px;
