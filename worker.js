@@ -86,7 +86,7 @@ self.addEventListener("fetch", (event) => {
   event.respondWith(caches.open("v1").then((cache) => {
 
     return fetch(event.request).then((fetchedResponse) => {
-      cache.put(event.request, fetchedResponse.clone());
+      cache.add(event.request);
 
       return fetchedResponse;
     }).catch(() => {
