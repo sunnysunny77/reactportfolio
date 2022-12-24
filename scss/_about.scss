@@ -1,4 +1,4 @@
-.about.template-img {
+#about-template-img {
   background-image: url(../images/about/about.png);
   background-position: center;
   height: 100%;
@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
 }
 
-.about.template-img-0 {
+.template-div ~ div {
   background-image: url(../images/about/aboutimg.jpg);
   @include image-0();
 }

@@ -538,7 +538,7 @@ footer h2 {
   background-image: url("../images/home/login.jpg");
 }
 
-.home.template-img {
+#home-template-img {
   background-image: url(../images/home/home.png);
   background-position: center;
   height: 100%;
@@ -561,7 +561,7 @@ footer h2 {
 }
 
 @media only screen and (max-width: 1024px) {
-  .home.template-div {
+  #home-template-div {
     display: none;
   }
 }
@@ -758,7 +758,7 @@ footer h2 {
   display: block;
 }
 
-.contact.template-img {
+#contact-template-img {
   background-image: url(../images/contact/contact.png);
   background-position: center;
   height: 100%;
@@ -766,7 +766,7 @@ footer h2 {
   background-repeat: no-repeat;
 }
 
-.contact.template-img-0 {
+.template-div ~ div {
   background-image: url(../images/contact/contimg.jpg);
   background-color: rgba(106, 203, 215, 0.25);
   background-blend-mode: screen;
@@ -781,7 +781,7 @@ footer h2 {
   position: relative;
   padding: 25% 0;
 }
-.contact.template-img-0 p {
+.template-div ~ div p {
   display: flex;
   border-radius: 25px;
   flex-direction: column;
@@ -795,17 +795,17 @@ footer h2 {
   transition: background-color 1s linear, opacity 1s linear, top 1s linear, right 1s linear, bottom 1s linear, left 1s linear;
 }
 @media only screen and (max-width: 720px) and (orientation: portrait) {
-  .contact.template-img-0 p {
+  .template-div ~ div p {
     border-radius: 10px;
   }
 }
-.contact.template-img-0 p span {
+.template-div ~ div p span {
   margin: 5% auto auto 5%;
   opacity: 0;
   transition: opacity 1s linear;
   width: 200px;
 }
-.contact.template-img-0 p b {
+.template-div ~ div p b {
   margin: auto auto 5% 5%;
   color: #2E86AB;
   background-color: rgba(238, 238, 229, 0.948);
@@ -813,11 +813,11 @@ footer h2 {
   border-radius: 5px;
   width: fit-content;
 }
-.contact.template-img-0:hover b, .contact.template-img-0:focus b {
+.template-div ~ div:hover b, .template-div ~ div:focus b {
   color: rgba(238, 238, 229, 0.948);
   background-color: unset;
 }
-.contact.template-img-0:hover p, .contact.template-img-0:focus p {
+.template-div ~ div:hover p, .template-div ~ div:focus p {
   background-color: #2E86AB;
   opacity: 0.75;
   top: 8%;
@@ -825,17 +825,17 @@ footer h2 {
   bottom: 8%;
   left: 8%;
 }
-.contact.template-img-0:hover p span, .contact.template-img-0:focus p span {
+.template-div ~ div:hover p span, .template-div ~ div:focus p span {
   opacity: 1;
 }
 @media only screen and (max-width: 1024px) {
-  .contact.template-img-0 {
+  .template-div ~ div {
     width: calc(70% - 10px);
     padding: 22% 0;
   }
 }
 @media only screen and (max-width: 720px) and (orientation: portrait) {
-  .contact.template-img-0 {
+  .template-div ~ div {
     border-radius: 0;
     width: 100%;
     padding: 31% 0;
@@ -932,7 +932,7 @@ footer h2 {
   padding-left: 2.5px;
 }
 
-.about.template-img {
+#about-template-img {
   background-image: url(../images/about/about.png);
   background-position: center;
   height: 100%;
@@ -940,7 +940,7 @@ footer h2 {
   background-repeat: no-repeat;
 }
 
-.about.template-img-0 {
+.template-div ~ div {
   background-image: url(../images/about/aboutimg.jpg);
   background-color: rgba(106, 203, 215, 0.25);
   background-blend-mode: screen;
@@ -955,7 +955,7 @@ footer h2 {
   position: relative;
   padding: 25% 0;
 }
-.about.template-img-0 p {
+.template-div ~ div p {
   display: flex;
   border-radius: 25px;
   flex-direction: column;
@@ -969,17 +969,17 @@ footer h2 {
   transition: background-color 1s linear, opacity 1s linear, top 1s linear, right 1s linear, bottom 1s linear, left 1s linear;
 }
 @media only screen and (max-width: 720px) and (orientation: portrait) {
-  .about.template-img-0 p {
+  .template-div ~ div p {
     border-radius: 10px;
   }
 }
-.about.template-img-0 p span {
+.template-div ~ div p span {
   margin: 5% auto auto 5%;
   opacity: 0;
   transition: opacity 1s linear;
   width: 200px;
 }
-.about.template-img-0 p b {
+.template-div ~ div p b {
   margin: auto auto 5% 5%;
   color: #2E86AB;
   background-color: rgba(238, 238, 229, 0.948);
@@ -987,11 +987,11 @@ footer h2 {
   border-radius: 5px;
   width: fit-content;
 }
-.about.template-img-0:hover b, .about.template-img-0:focus b {
+.template-div ~ div:hover b, .template-div ~ div:focus b {
   color: rgba(238, 238, 229, 0.948);
   background-color: unset;
 }
-.about.template-img-0:hover p, .about.template-img-0:focus p {
+.template-div ~ div:hover p, .template-div ~ div:focus p {
   background-color: #2E86AB;
   opacity: 0.75;
   top: 8%;
@@ -999,17 +999,17 @@ footer h2 {
   bottom: 8%;
   left: 8%;
 }
-.about.template-img-0:hover p span, .about.template-img-0:focus p span {
+.template-div ~ div:hover p span, .template-div ~ div:focus p span {
   opacity: 1;
 }
 @media only screen and (max-width: 1024px) {
-  .about.template-img-0 {
+  .template-div ~ div {
     width: calc(70% - 10px);
     padding: 22% 0;
   }
 }
 @media only screen and (max-width: 720px) and (orientation: portrait) {
-  .about.template-img-0 {
+  .template-div ~ div {
     border-radius: 0;
     width: 100%;
     padding: 31% 0;
@@ -1240,7 +1240,7 @@ footer h2 {
   background-position: center;
 }
 
-.skills.template-img {
+#skills-template-img {
   background-image: url(../images/skills/skills.png);
   background-position: center;
   height: 100%;
@@ -1248,7 +1248,7 @@ footer h2 {
   background-repeat: no-repeat;
 }
 
-.skills.template-img-0 {
+.template-div ~ div {
   background-image: url(../images/skills/skillsimg.jpg);
   background-color: rgba(106, 203, 215, 0.25);
   background-blend-mode: screen;
@@ -1263,7 +1263,7 @@ footer h2 {
   position: relative;
   padding: 25% 0;
 }
-.skills.template-img-0 p {
+.template-div ~ div p {
   display: flex;
   border-radius: 25px;
   flex-direction: column;
@@ -1277,17 +1277,17 @@ footer h2 {
   transition: background-color 1s linear, opacity 1s linear, top 1s linear, right 1s linear, bottom 1s linear, left 1s linear;
 }
 @media only screen and (max-width: 720px) and (orientation: portrait) {
-  .skills.template-img-0 p {
+  .template-div ~ div p {
     border-radius: 10px;
   }
 }
-.skills.template-img-0 p span {
+.template-div ~ div p span {
   margin: 5% auto auto 5%;
   opacity: 0;
   transition: opacity 1s linear;
   width: 200px;
 }
-.skills.template-img-0 p b {
+.template-div ~ div p b {
   margin: auto auto 5% 5%;
   color: #2E86AB;
   background-color: rgba(238, 238, 229, 0.948);
@@ -1295,11 +1295,11 @@ footer h2 {
   border-radius: 5px;
   width: fit-content;
 }
-.skills.template-img-0:hover b, .skills.template-img-0:focus b {
+.template-div ~ div:hover b, .template-div ~ div:focus b {
   color: rgba(238, 238, 229, 0.948);
   background-color: unset;
 }
-.skills.template-img-0:hover p, .skills.template-img-0:focus p {
+.template-div ~ div:hover p, .template-div ~ div:focus p {
   background-color: #2E86AB;
   opacity: 0.75;
   top: 8%;
@@ -1307,17 +1307,17 @@ footer h2 {
   bottom: 8%;
   left: 8%;
 }
-.skills.template-img-0:hover p span, .skills.template-img-0:focus p span {
+.template-div ~ div:hover p span, .template-div ~ div:focus p span {
   opacity: 1;
 }
 @media only screen and (max-width: 1024px) {
-  .skills.template-img-0 {
+  .template-div ~ div {
     width: calc(70% - 10px);
     padding: 22% 0;
   }
 }
 @media only screen and (max-width: 720px) and (orientation: portrait) {
-  .skills.template-img-0 {
+  .template-div ~ div {
     border-radius: 0;
     width: 100%;
     padding: 31% 0;
