@@ -325,8 +325,12 @@ main::after {
 }
 @media only screen and (max-width: 1024px) {
   .template-div {
-    position: relative;
-    margin: 33% auto;
+    margin: 12.5% auto;
+  }
+}
+@media only screen and (max-width: 720px) and (orientation: portrait) {
+  .template-div {
+    margin: 27.5% auto;
   }
 }
 

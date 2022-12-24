@@ -132,7 +132,9 @@ main {
     width: 90.021%;
     height: 109px;
     @include ten_24 {
-        position: relative;
-        margin: 33% auto;
+        margin: 12.5% auto;
+    }
+    @include  seven_20_portrait { 
+        margin: 27.5% auto;
     }
 }
