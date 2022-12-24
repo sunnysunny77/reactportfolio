@@ -1,5 +1,3 @@
-@import "variables";
-
 $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.jpg", "../images/home/pff.jpg",
   "../images/home/acc.jpg", "../images/home/stick.jpg", "../images/home/candid.jpg", "../images/home/port.jpg",
   "../images/home/login.jpg";
@@ -10,7 +8,7 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
   }
 }
 
-.template-img {
+.home.template-img {
   background-image: url(../images/home/home.png);
   background-position: center;
   height: 100%;
@@ -31,7 +29,7 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
 }
 
 @include ten_24 {
-  div.template-div {
+  .home.template-div {
     display: none;
   }
 }

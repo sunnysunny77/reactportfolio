@@ -2,7 +2,6 @@ $font: Tahoma, sans-serif;
 $main: #6acbd7;
 $mainbg: mintcream;
 
-
 $c1: #EEFFED;
 $c2:rgba(238, 238, 229, 0.948);
 $c3: #2E86AB;
@@ -24,7 +23,3 @@ $tempBoarder: rgba($main, 0.4);
 
 $Acolor: $c6;
 $aHover: $c4;
-
-@import "partials/breakpoints";
-@import "partials/mixins";
-@import "template/template";

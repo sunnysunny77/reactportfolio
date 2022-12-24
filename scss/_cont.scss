@@ -1,6 +1,4 @@
-@import "variables";
-
-.template-img {
+.cont.template-img {
   background-image: url(../images/contact/contact.png);
   background-position: center;
   height: 100%;
@@ -8,12 +6,12 @@
   background-repeat: no-repeat;
 }
 
-.template-img-0 {
+.cont.template-img-0 {
   background-image: url(../images/contact/contimg.jpg);
   @include image-0();
 }
 
-.template-p-cont div.template-p {
+.cont div.template-p {
   text-align: initial;
   form {
     fieldset {

@@ -1,5 +1,3 @@
-@import "variables";
-
 $imgSkills: (
     "sass",
     "htmlcssjs",
@@ -37,7 +35,7 @@ $imgSkills: (
     }
 }
 
-.template-img {
+.skills.template-img {
   background-image: url(../images/skills/skills.png);
   background-position: center;
   height: 100%;
@@ -45,7 +43,7 @@ $imgSkills: (
   background-repeat: no-repeat;
 }
 
-.template-img-0 {
+.skills.template-img-0 {
   background-image: url(../images/skills/skillsimg.jpg);
   @include image-0();
 }
