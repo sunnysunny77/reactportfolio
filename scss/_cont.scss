@@ -1,4 +1,4 @@
-.cont.template-img {
+.contact.template-img {
   background-image: url(../images/contact/contact.png);
   background-position: center;
   height: 100%;
@@ -6,12 +6,12 @@
   background-repeat: no-repeat;
 }
 
-.cont.template-img-0 {
+.contact.template-img-0 {
   background-image: url(../images/contact/contimg.jpg);
   @include image-0();
 }
 
-.cont div.template-p {
+.contact.template-p-cont div.template-p  {
   text-align: initial;
   form {
     fieldset {

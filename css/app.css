@@ -758,7 +758,7 @@ footer h2 {
   display: block;
 }
 
-.cont.template-img {
+.contact.template-img {
   background-image: url(../images/contact/contact.png);
   background-position: center;
   height: 100%;
@@ -766,7 +766,7 @@ footer h2 {
   background-repeat: no-repeat;
 }
 
-.cont.template-img-0 {
+.contact.template-img-0 {
   background-image: url(../images/contact/contimg.jpg);
   background-color: rgba(106, 203, 215, 0.25);
   background-blend-mode: screen;
@@ -781,7 +781,7 @@ footer h2 {
   position: relative;
   padding: 25% 0;
 }
-.cont.template-img-0 p {
+.contact.template-img-0 p {
   display: flex;
   border-radius: 25px;
   flex-direction: column;
@@ -795,17 +795,17 @@ footer h2 {
   transition: background-color 1s linear, opacity 1s linear, top 1s linear, right 1s linear, bottom 1s linear, left 1s linear;
 }
 @media only screen and (max-width: 720px) and (orientation: portrait) {
-  .cont.template-img-0 p {
+  .contact.template-img-0 p {
     border-radius: 10px;
   }
 }
-.cont.template-img-0 p span {
+.contact.template-img-0 p span {
   margin: 5% auto auto 5%;
   opacity: 0;
   transition: opacity 1s linear;
   width: 200px;
 }
-.cont.template-img-0 p b {
+.contact.template-img-0 p b {
   margin: auto auto 5% 5%;
   color: #2E86AB;
   background-color: rgba(238, 238, 229, 0.948);
@@ -813,11 +813,11 @@ footer h2 {
   border-radius: 5px;
   width: fit-content;
 }
-.cont.template-img-0:hover b, .cont.template-img-0:focus b {
+.contact.template-img-0:hover b, .contact.template-img-0:focus b {
   color: rgba(238, 238, 229, 0.948);
   background-color: unset;
 }
-.cont.template-img-0:hover p, .cont.template-img-0:focus p {
+.contact.template-img-0:hover p, .contact.template-img-0:focus p {
   background-color: #2E86AB;
   opacity: 0.75;
   top: 8%;
@@ -825,17 +825,17 @@ footer h2 {
   bottom: 8%;
   left: 8%;
 }
-.cont.template-img-0:hover p span, .cont.template-img-0:focus p span {
+.contact.template-img-0:hover p span, .contact.template-img-0:focus p span {
   opacity: 1;
 }
 @media only screen and (max-width: 1024px) {
-  .cont.template-img-0 {
+  .contact.template-img-0 {
     width: calc(70% - 10px);
     padding: 22% 0;
   }
 }
 @media only screen and (max-width: 720px) and (orientation: portrait) {
-  .cont.template-img-0 {
+  .contact.template-img-0 {
     border-radius: 0;
     width: 100%;
     padding: 31% 0;
@@ -846,32 +846,32 @@ footer h2 {
   }
 }
 
-.cont div.template-p {
+.contact.template-p-cont div.template-p {
   text-align: initial;
 }
-.cont div.template-p form fieldset {
+.contact.template-p-cont div.template-p form fieldset {
   border: none;
   padding: 0;
   margin: 0;
 }
-.cont div.template-p form fieldset legend {
+.contact.template-p-cont div.template-p form fieldset legend {
   padding: 0;
   margin: 0 0 0 5%;
 }
-.cont div.template-p form fieldset ul {
+.contact.template-p-cont div.template-p form fieldset ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
-.cont div.template-p form fieldset ul li {
+.contact.template-p-cont div.template-p form fieldset ul li {
   padding-bottom: 35px;
   margin: 0 10% 0 10%;
   width: 80%;
 }
-.cont div.template-p form fieldset label {
+.contact.template-p-cont div.template-p form fieldset label {
   color: #ff7f26;
 }
-.cont div.template-p form fieldset textarea {
+.contact.template-p-cont div.template-p form fieldset textarea {
   width: 100%;
   resize: none;
   font: inherit;
@@ -888,16 +888,16 @@ footer h2 {
   scrollbar-color: #ff7f26 rgba(74, 83, 84, 0.1);
   scrollbar-width: thin;
 }
-.cont div.template-p form fieldset textarea::-webkit-scrollbar {
+.contact.template-p-cont div.template-p form fieldset textarea::-webkit-scrollbar {
   width: 5px;
 }
-.cont div.template-p form fieldset textarea::-webkit-scrollbar-track {
+.contact.template-p-cont div.template-p form fieldset textarea::-webkit-scrollbar-track {
   background: rgba(74, 83, 84, 0.1);
 }
-.cont div.template-p form fieldset textarea::-webkit-scrollbar-thumb {
+.contact.template-p-cont div.template-p form fieldset textarea::-webkit-scrollbar-thumb {
   background: #ff7f26;
 }
-.cont div.template-p form input {
+.contact.template-p-cont div.template-p form input {
   width: 100%;
   font-style: inherit;
   padding: 0;
@@ -909,13 +909,13 @@ footer h2 {
   color: #2E86AB;
   outline: none;
 }
-.cont div.template-p form #sent {
+.contact.template-p-cont div.template-p form #sent {
   text-align: center;
   height: 23px;
   display: none;
   margin: 0 auto;
 }
-.cont div.template-p form #sub {
+.contact.template-p-cont div.template-p form #sub {
   width: auto;
   display: block;
   margin: auto;
@@ -923,10 +923,10 @@ footer h2 {
   color: #24b14d;
   border-radius: 10px;
 }
-.cont div.template-p form .red {
+.contact.template-p-cont div.template-p form .red {
   border-color: #D81159;
 }
-.cont div.template-p form .msg {
+.contact.template-p-cont div.template-p form .msg {
   color: #D81159;
   font-size: smaller;
   padding-left: 2.5px;
