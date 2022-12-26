@@ -7,7 +7,11 @@ html {
 body {
   font-family: Tahoma, sans-serif;
   background-color: mintcream;
-  overflow: auto;
+}
+@media only screen and (max-width: 1024px) {
+  body {
+    margin: auto;
+  }
 }
 
 .outer {
@@ -38,7 +42,8 @@ footer ul li a:focus {
   max-height: 30px;
 }
 
-.os-theme-dark > .os-scrollbar > .os-scrollbar-track, .os-theme-light > .os-scrollbar > .os-scrollbar-track {
+.os-theme-dark > .os-scrollbar > .os-scrollbar-track,
+.os-theme-light > .os-scrollbar > .os-scrollbar-track {
   background: rgba(74, 83, 84, 0.1);
 }
 
@@ -54,7 +59,7 @@ h3 {
   }
 }
 h3::before {
-  border-top: 7.5px solid rgba(202, 255, 213, 0.4);
+  border-top: 7.5px solid rgba(173, 250, 189, 0.4);
   position: absolute;
   content: "";
   top: -10px;
@@ -152,16 +157,22 @@ nav ul .button {
   nav ul .button {
     min-width: 140px;
     width: 31%;
-    margin: 1%;
-    border: 1px solid rgba(238, 238, 229, 0.948);
-    color: #caffd5;
+    margin: 1% 4%;
     font-size: smaller;
     border-radius: 25px;
+    background-color: rgba(238, 238, 229, 0.948);
+    background-image: url(../images/template/natural-paper.png);
+    color: black;
   }
 }
 nav ul .button .label {
   display: inline-block;
   padding: 10px;
+}
+@media only screen and (max-width: 1024px) {
+  nav ul .button .label {
+    padding: 5px;
+  }
 }
 nav ul .button h1 {
   font-size: inherit;
@@ -466,13 +477,14 @@ footer ul {
   }
 }
 footer ul li a {
-  color: #caffd5;
+  color: #adfabd;
   margin: 0.75%;
   text-decoration: none;
   padding: 4px 10px;
 }
 @media only screen and (max-width: 1024px) {
   footer ul li a {
+    color: rgba(238, 238, 229, 0.948);
     margin: 0;
     padding: 4px 0px;
     font-size: smaller;
@@ -480,6 +492,7 @@ footer ul li a {
 }
 footer ul .sm {
   padding-right: 1%;
+  opacity: 0.5;
 }
 @media only screen and (max-width: 1024px) {
   footer ul .sm {
@@ -488,7 +501,7 @@ footer ul .sm {
 }
 footer h2 {
   font-size: small;
-  color: #caffd5;
+  color: #adfabd;
   font-style: oblique;
   opacity: 0.6;
   display: inline;
@@ -518,7 +531,7 @@ footer h2 {
     display: block;
     transition: left 0.225s, right 0.225s, width 0.225s, height 0.225s;
     transition-delay: 0.3s;
-    background: #caffd5;
+    background: #adfabd;
   }
   .button .icon::before {
     top: 0;
@@ -537,7 +550,7 @@ footer h2 {
     display: block;
     width: 1px;
     transition: left 0.225s, right 0.225s, width 0.225s, height 0.225s;
-    background: #caffd5;
+    background: #adfabd;
   }
   .button .icon span:before {
     left: 0;
@@ -851,6 +864,11 @@ footer h2 {
 
 #overlay {
   text-align: initial;
+}
+@media only screen and (max-width: 1024px) {
+  #overlay {
+    width: calc(90% - 16px);
+  }
 }
 #overlay form fieldset {
   border: none;

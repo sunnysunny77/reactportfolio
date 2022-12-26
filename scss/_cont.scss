@@ -12,6 +12,9 @@
 
 #overlay  {
   text-align: initial;
+  @include ten_24 {
+    width: calc(90% - 16px);
+  }
   form {
     fieldset {
       border: none;

@@ -49,6 +49,7 @@ footer {
             text-decoration: none;
             padding: 4px 10px;
             @include ten_24 {
+                color: $c2;
                 margin: 0;
                 padding: 4px 0px;
                 font-size: smaller;
@@ -56,8 +57,10 @@ footer {
         }
         .sm {
             padding-right: 1%;
+            opacity: 0.5;
             @include ten_24 {
                 display: block;
+
             }
         }
     }

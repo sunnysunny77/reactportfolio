@@ -9,7 +9,9 @@ html {
 body {
   font-family: $font;
   background-color: $mainbg;
-  overflow: auto;
+  @include ten_24 {
+    margin: auto;
+  }
 }
 
 .outer {
@@ -40,7 +42,8 @@ footer ul li a:focus {
   max-height: 30px;
 }
 
-.os-theme-dark > .os-scrollbar > .os-scrollbar-track, .os-theme-light > .os-scrollbar > .os-scrollbar-track {
+.os-theme-dark > .os-scrollbar > .os-scrollbar-track,
+.os-theme-light > .os-scrollbar > .os-scrollbar-track {
   background: $c11;
 }
 
@@ -50,17 +53,17 @@ h3 {
   font-size: 1.4em;
   position: relative;
   @include ten_24 {
-      font-size: large;
+    font-size: large;
   }
   &::before {
-      border-top: 7.5px solid $headingBoarder;
-      position: absolute;
-      content: "";
-      top: -10px;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      clip: rect(auto, 10px, auto, auto);
+    border-top: 7.5px solid $headingBoarder;
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    clip: rect(auto, 10px, auto, auto);
   }
 }
 
