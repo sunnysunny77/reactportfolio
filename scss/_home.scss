@@ -60,24 +60,6 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
     @include ten_23_landscape {
       height: 75px;
     }
-    #close {
-      float: right;
-      margin: 5.5% 6.5% 0 0;
-      padding: 2.5px 5px;
-      font-size: x-small;
-      color: $c5;
-      border: 1px solid $c5;
-      border-radius: 100px;
-      opacity: 0.15;
-      @include ten_24 {
-        float: none;
-        position: absolute;
-        z-index: 99;
-        right: 25px;
-        top: 15px;
-        margin: 0;
-      }
-    }
     #ob0 {
       height: 60%;
       margin: 13% 0;

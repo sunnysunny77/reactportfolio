@@ -94,11 +94,10 @@ header > span {
   height: 75px;
   margin-left: 10%;
   background-image: url(../images/template/textonly.png);
-  position: relative;
 }
 @media only screen and (max-width: 1024px) {
   header > span {
-    margin: auto;
+    margin-left: 2.5%;
   }
 }
 header button {
@@ -688,26 +687,6 @@ footer h2 {
     height: 75px;
   }
 }
-#site #s4 #close {
-  float: right;
-  margin: 5.5% 6.5% 0 0;
-  padding: 2.5px 5px;
-  font-size: x-small;
-  color: black;
-  border: 1px solid black;
-  border-radius: 100px;
-  opacity: 0.15;
-}
-@media only screen and (max-width: 1024px) {
-  #site #s4 #close {
-    float: none;
-    position: absolute;
-    z-index: 99;
-    right: 25px;
-    top: 15px;
-    margin: 0;
-  }
-}
 #site #s4 #ob0 {
   height: 60%;
   margin: 13% 0;
@@ -1231,7 +1210,7 @@ a[target=git]:hover, a[target=git]:focus {
 
 header > span,
 header > span + span {
-  animation: slideIn 1.5s ease-in-out;
+  animation: fadeInOpacity 1.5s ease-in-out;
 }
 
 main::after {
@@ -1303,15 +1282,6 @@ main::after {
     opacity: 1;
   }
 }
-@keyframes slideIn {
-  0% {
-    top: -75px;
-    transform: scale(0.5);
-  }
-  100% {
-    top: 0;
-  }
-}
 @keyframes slideIn0 {
   0% {
     margin-top: -75px;
@@ -1364,7 +1334,7 @@ main::after {
 }
 @keyframes fadeInOpacity {
   0% {
-    opacity: 0;
+    opacity: 0.1;
   }
   100% {
     opacity: 1;

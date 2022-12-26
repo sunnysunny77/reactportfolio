@@ -7,9 +7,6 @@ function overlayInit() {
             className: "os-theme-dark os-theme-dark-edgy",
             callbacks: {
                 onScroll: cache,
-                onInitialized: eventListner(document.getElementById("close"),"click",function(){
-                    close(isnt);
-                },false)
             },
         });
        

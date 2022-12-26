@@ -10,7 +10,7 @@
 
 header > span,
 header > span + span {
-  animation: slideIn 1.5s ease-in-out;
+  animation: fadeInOpacity 1.5s ease-in-out;
 }
 
 main::after {
@@ -59,7 +59,6 @@ main::after {
       left: 8%;
       span {
         opacity: 1;
-
       }
     }
   }
@@ -86,16 +85,6 @@ main::after {
   }
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    top: -75px;
-    transform: scale(0.5);
-  }
-  100% {
-    top: 0;
   }
 }
 
@@ -156,7 +145,7 @@ main::after {
 
 @keyframes fadeInOpacity {
   0% {
-    opacity: 0;
+    opacity: 0.1;
   }
   100% {
     opacity: 1;

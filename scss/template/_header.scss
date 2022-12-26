@@ -21,9 +21,8 @@ header {
         height: 75px;
         margin-left: 10%;
         background-image: url(../images/template/textonly.png);
-        position: relative;
         @include ten_24 {
-            margin: auto;
+            margin-left: 2.5%;
         }
     }
     button {

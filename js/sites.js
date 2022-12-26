@@ -10,20 +10,6 @@ for (let i = 1; i <= img.length; i++) {
     preloadImage(url.slice(start,end - 1));
 }
 
-function close(isnt) {
-    for (let x = 1; x < pictureID.length; x++) {
-        const obj = document.getElementById(pictureID[x]);
-        obj.style.display = "none";
-    }
-    const globe = document.getElementById(pictureID[0]);
-    globe.style.display = "block";
-    globe.classList.add("ani0");
-    setTimeout(function () {
-        globe.classList.remove("ani0");
-    }, 1500);
-    isnt.scroll({ y: 0 });
-}
-
 function pictureDisplay(item) {
     for (let x = 0; x < pictureID.length; x++) {
         const obj = document.getElementById(pictureID[x]);
