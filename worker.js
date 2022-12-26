@@ -92,7 +92,7 @@ self.addEventListener("fetch", (event) => {
       if (cachedResponse) {
         // If we found a match in the cache, return it, but also
         // update the entry in the cache in the background.
-        event.waitUntil(cache.add(event.request).catch(()=> {return}));
+        event.waitUntil(cache.add(event.request).catch(()=> {console.log(`${event.request.destination} offline`)}));
         return cachedResponse;
       }
       // If we didn't find a match in the cache, use the network.
