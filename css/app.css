@@ -84,6 +84,7 @@ header {
     flex-direction: column;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    border-bottom: 4px solid mintcream;
     padding-bottom: 10px;
   }
 }
@@ -441,6 +442,7 @@ footer {
 @media only screen and (max-width: 1024px) {
   footer {
     height: 125px;
+    border-top: 4px solid mintcream;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
@@ -741,13 +743,15 @@ footer h2 {
 @media only screen and (max-width: 1024px) {
   #site #s4 #ob0 #ob0ul li img {
     margin: 5% 10%;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
   }
 }
 @media only screen and (max-width: 1023px) and (orientation: landscape) {
   #site #s4 #ob0 #ob0ul li img {
     margin: 1.5% 10%;
+    width: 40px;
+    height: 40px;
   }
 }
 #site #s4 #ob0 #ob0ul ol li {

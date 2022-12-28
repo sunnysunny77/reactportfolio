@@ -1,7 +1,8 @@
+const click = document.getElementsByClassName("click")[0];
+
 function toggle() {
 
   const menu0 = document.getElementsByClassName("menu0")[0];
-  const click = document.getElementsByClassName("click")[0];
 
   if (menu0.classList.contains("ani1")) {
 
@@ -30,7 +31,7 @@ function vivus() {
 }
 
 eventListner(window, "scroll", cache, null);
-eventListner(document.getElementsByClassName("click")[0], "click", toggle, false);
+eventListner(click, "click", toggle, false);
 
 window.onload = function () {
   script();

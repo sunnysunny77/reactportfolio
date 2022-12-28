@@ -103,11 +103,13 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
           margin: 10% 15%;
           @include ten_24 {
             margin: 5% 10%;
-            width: 40px;
-            height: 40px;
+            width: 60px;
+            height: 60px;
           }
           @include ten_23_landscape {
             margin: 1.5% 10%;
+            width: 40px;
+            height: 40px;
           }      
         }
         ol li {

@@ -12,6 +12,7 @@ header {
         flex-direction: column;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
+        border-bottom: 4px solid $mainbg;
         padding-bottom: 10px;
     }
     > span {

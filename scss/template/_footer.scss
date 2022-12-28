@@ -12,6 +12,7 @@ footer {
     position: relative;
     @include ten_24 {
         height: 125px;
+        border-top: 4px solid $mainbg;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
     }
