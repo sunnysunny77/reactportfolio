@@ -255,7 +255,9 @@ main::after {
 }
 @media only screen and (max-width: 1024px) {
   .main-logo h2 {
-    display: none;
+    height: 0;
+    width: 0;
+    overflow: hidden;
   }
 }
 .main-logo .main-logo-span {

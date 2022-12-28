@@ -51,7 +51,9 @@ main {
         color: $heading2;
         font-size: 1.8em;
         @include ten_24 {
-            display: none;
+            height: 0;
+            width: 0;
+            overflow: hidden;
         }
     }
     .main-logo-span {
