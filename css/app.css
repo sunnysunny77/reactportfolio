@@ -119,7 +119,8 @@ header button {
 }
 @media only screen and (max-width: 1024px) {
   header .disp {
-    display: none;
+    height: 0;
+    overflow: hidden;
   }
 }
 
@@ -132,6 +133,7 @@ nav {
 @media only screen and (max-width: 1024px) {
   nav {
     width: 100%;
+    height: 8vh;
   }
 }
 nav ul {
@@ -154,7 +156,7 @@ nav ul .button {
 }
 @media only screen and (max-width: 1024px) {
   nav ul .button {
-    min-width: 140px;
+    min-width: 90px;
     width: 31%;
     margin: 1% 4%;
     font-size: smaller;
@@ -1231,7 +1233,7 @@ main::after {
     animation: scale1 0.5s;
   }
   .ani1 {
-    animation: slideInOp 0.75s, slideIn0 0.75s;
+    animation: slideInOp0 0.75s, slideIn0 0.75s;
   }
   .ani2 {
     animation: fadeInBack 1.5s ease-in;
@@ -1257,6 +1259,12 @@ main::after {
   }
   .ani5.template-img-0 p span, .ani5.template-img-0 p span {
     opacity: 1;
+  }
+  .ani6 {
+    animation: slideInOp1 0.75s, slideIn1 0.75s;
+  }
+  .ani7 {
+    animation: scale3 0.5s;
   }
 }
 @keyframes fadeInBack {
@@ -1284,13 +1292,21 @@ main::after {
 }
 @keyframes slideIn0 {
   0% {
-    margin-top: -75px;
+    height: 0;
   }
   100% {
-    margin-top: 0;
+    height: 8vh;
   }
 }
-@keyframes slideInOp {
+@keyframes slideIn1 {
+  0% {
+    height: 8vh;
+  }
+  100% {
+    height: 0;
+  }
+}
+@keyframes slideInOp0 {
   0% {
     opacity: 0;
   }
@@ -1299,6 +1315,14 @@ main::after {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes slideInOp1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @keyframes scale0 {
@@ -1330,6 +1354,18 @@ main::after {
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes scale3 {
+  0% {
+    background-color: rgba(238, 238, 229, 0.948);
+    border-radius: 10px;
+    transform: scale(0.85);
+  }
+  100% {
+    transform: scale(1);
+    border-radius: 5px;
+    background-color: transparent;
   }
 }
 @keyframes fadeInOpacity {

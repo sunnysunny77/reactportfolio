@@ -31,7 +31,7 @@ main::after {
     animation: scale1 0.5s;
   }
   .ani1 {
-    animation: slideInOp 0.75s, slideIn0 0.75s;
+    animation: slideInOp0 0.75s, slideIn0 0.75s;
   }
   .ani2 {
     animation: fadeInBack 1.5s ease-in;
@@ -62,6 +62,12 @@ main::after {
       }
     }
   }
+  .ani6 {
+    animation: slideInOp1 0.75s, slideIn1 0.75s;
+  }
+  .ani7 {
+    animation: scale3 0.5s;
+  }
 }
 
 @keyframes fadeInBack {
@@ -90,14 +96,25 @@ main::after {
 
 @keyframes slideIn0 {
   0% {
-    margin-top: -75px;
+    height: 0;
   }
   100% {
-    margin-top: 0;
+    height: 8vh;
   }
 }
 
-@keyframes slideInOp {
+@keyframes slideIn1 {
+  0% {
+   
+    height: 8vh;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+
+@keyframes slideInOp0 {
   0% {
     opacity: 0;
   }
@@ -106,6 +123,16 @@ main::after {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes slideInOp1 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
 
@@ -140,6 +167,19 @@ main::after {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes scale3 {
+  0% {
+    background-color: $c2;
+    border-radius: 10px;
+    transform: scale(0.85);
+  }
+  100% {
+    transform: scale(1);
+    border-radius: 5px;
+    background-color: transparent;
   }
 }
 

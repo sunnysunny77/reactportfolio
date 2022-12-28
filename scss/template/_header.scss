@@ -42,7 +42,8 @@ header {
     }
     .disp {
         @include ten_24 {
-            display: none;
+            height: 0;
+            overflow: hidden;
         }
     }
 }
@@ -54,6 +55,7 @@ nav {
     width: calc(95% - 260px);
     @include ten_24 {
         width: 100%;
+        height: 8vh;
     }
     ul {
         padding: 2% 0 0 0;
@@ -70,7 +72,7 @@ nav {
             display: inline-block;
             color: $c2;
             @include ten_24 {
-                min-width: 140px;
+                min-width: 90px;
                 width: 31%;
                 margin: 1% 4%;
                 font-size: smaller;
