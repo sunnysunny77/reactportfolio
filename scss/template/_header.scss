@@ -80,10 +80,10 @@ nav {
             display: inline-block;
             color: $c2;
             @include ten_24 {
-                min-width: 90px;
+                min-width: 97px;
                 width: 31%;
-                margin: 5px 4%;
-                font-size: smaller;
+                margin: 8px 4%;
+                font-size: small;
                 border-radius: 25px;
                 background-color: $c2;
                 background-image: url(../images/template/natural-paper.png);

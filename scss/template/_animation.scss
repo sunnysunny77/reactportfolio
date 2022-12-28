@@ -104,13 +104,13 @@ main::after {
     height: 0;
   }
   100% {
-    height: 72px;
+    height: 84px;
   }
 }
 
 @keyframes slideIn1 {
   0% {
-    height: 72px;
+    height: 84px;
   }
   100% {
     height: 0;
@@ -121,7 +121,7 @@ main::after {
   0% {
     opacity: 0;
   }
-  50% {
+  30% {
     opacity: 0;
   }
   100% {
