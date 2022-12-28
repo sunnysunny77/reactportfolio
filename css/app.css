@@ -392,7 +392,7 @@ main::after {
   margin: 5% auto auto 5%;
   opacity: 0;
   transition: opacity 1s linear;
-  width: 200px;
+  max-width: 180px;
 }
 .template-img-0 p b {
   margin: auto auto 5% 5%;
