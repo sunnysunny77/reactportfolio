@@ -13,7 +13,8 @@ header {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         border-bottom: 4px solid $mainbg;
-        padding-bottom: 10px;
+        padding: 5px 0;
+        z-index: 999;
     }
     > span {
         display: block;
@@ -24,6 +25,11 @@ header {
         background-image: url(../images/template/textonly.png);
         @include ten_24 {
             margin-left: 2.5%;
+            height: 40px;
+            background-position: center left;
+            position: absolute;
+            background-size: 70%;
+            background-repeat: no-repeat;
         }
     }
     button {
