@@ -101,17 +101,18 @@ header > span {
   }
 }
 header button {
-  display: none;
+  height: 0;
+  width: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
 }
 @media only screen and (max-width: 1024px) {
   header button {
-    display: block;
     background-image: url(../images/template/menu.png);
     width: 40px;
     height: 40px;
     background-color: transparent;
-    padding: 0;
-    border: none;
     margin: auto;
     cursor: pointer;
     outline: none;
@@ -120,6 +121,7 @@ header button {
 @media only screen and (max-width: 1024px) {
   header .disp {
     height: 0;
+    width: 0;
     overflow: hidden;
   }
 }
@@ -133,7 +135,6 @@ nav {
 @media only screen and (max-width: 1024px) {
   nav {
     width: 100%;
-    height: 8vh;
   }
 }
 nav ul {
@@ -158,7 +159,7 @@ nav ul .button {
   nav ul .button {
     min-width: 90px;
     width: 31%;
-    margin: 1% 4%;
+    margin: 5px 4%;
     font-size: smaller;
     border-radius: 25px;
     background-color: rgba(238, 238, 229, 0.948);
@@ -1228,45 +1229,51 @@ main::after {
   animation: scale0 1.5s ease-in;
 }
 
-@media only screen and (max-width: 992px) {
-  .ani {
-    animation: scale1 0.5s;
-  }
-  .ani1 {
-    animation: slideInOp0 0.75s, slideIn0 0.75s;
-  }
-  .ani2 {
-    animation: fadeInBack 1.5s ease-in;
-  }
-  .ani3 {
-    animation: scale2 1.5s ease-in-out;
-  }
-  .ani4 {
-    animation: fadeInBack 1.5s ease-in;
-    animation: scale0 1.5s ease-in;
-  }
-  .ani5.template-img-0 b, .ani5.template-img-0 b {
-    color: rgba(238, 238, 229, 0.948);
-    background-color: unset;
-  }
-  .ani5.template-img-0 p, .ani5.template-img-0 p {
-    background-color: #2E86AB;
-    opacity: 0.75;
-    top: 8%;
-    right: 8%;
-    bottom: 8%;
-    left: 8%;
-  }
-  .ani5.template-img-0 p span, .ani5.template-img-0 p span {
-    opacity: 1;
-  }
-  .ani6 {
-    animation: slideInOp1 0.75s, slideIn1 0.75s;
-  }
-  .ani7 {
-    animation: scale3 0.5s;
-  }
+.ani {
+  animation: scale1 0.5s;
 }
+
+.ani1 {
+  animation: slideInOp0 0.75s, slideIn0 0.75s;
+}
+
+.ani2 {
+  animation: fadeInBack 1.5s ease-in;
+}
+
+.ani3 {
+  animation: scale2 1.5s ease-in-out;
+}
+
+.ani4 {
+  animation: fadeInBack 1.5s ease-in;
+  animation: scale0 1.5s ease-in;
+}
+
+.ani5.template-img-0 b, .ani5.template-img-0 b {
+  color: rgba(238, 238, 229, 0.948);
+  background-color: unset;
+}
+.ani5.template-img-0 p, .ani5.template-img-0 p {
+  background-color: #2E86AB;
+  opacity: 0.75;
+  top: 8%;
+  right: 8%;
+  bottom: 8%;
+  left: 8%;
+}
+.ani5.template-img-0 p span, .ani5.template-img-0 p span {
+  opacity: 1;
+}
+
+.ani6 {
+  animation: slideInOp1 0.75s, slideIn1 0.75s;
+}
+
+.ani7 {
+  animation: scale3 0.5s;
+}
+
 @keyframes fadeInBack {
   0% {
     opacity: 0;
@@ -1295,12 +1302,12 @@ main::after {
     height: 0;
   }
   100% {
-    height: 8vh;
+    height: 72px;
   }
 }
 @keyframes slideIn1 {
   0% {
-    height: 8vh;
+    height: 72px;
   }
   100% {
     height: 0;

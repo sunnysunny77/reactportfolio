@@ -30,7 +30,7 @@ function vivus() {
 }
 
 eventListner(window, "scroll", cache, null);
-eventListner(document.querySelector("header"), "click", toggle, false);
+eventListner(document.getElementsByClassName("click")[0], "click", toggle, false);
 
 window.onload = function () {
   script();
