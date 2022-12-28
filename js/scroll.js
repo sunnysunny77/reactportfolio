@@ -6,7 +6,7 @@ function scrollAnimation() {
 
         const imgCont = document.querySelector(".template-img-cont");
 
-        if (scroll_pos > getPosition(imgCont) && imgCont.contains("vis1")) {
+        if (scroll_pos > getPosition(imgCont) && imgCont.classList.contains("vis1")) {
             imgCont.classList.remove("vis1");
             imgCont.classList.add("vis0");
             imgCont.classList.add("ani4");
@@ -14,7 +14,7 @@ function scrollAnimation() {
 
         const cont = document.querySelector(".cont");
 
-        if (scroll_pos > getPosition(cont) && cont.contains("vis1")) {
+        if (scroll_pos > getPosition(cont) && cont.classList.contains("vis1")) {
             cont.classList.remove("vis1");
             cont.classList.add("vis0");
             cont.classList.add("ani2");
@@ -31,7 +31,7 @@ function scrollAnimation() {
         if (document.querySelector(".template-img-0")) {
             const tempImg0 = document.querySelector(".template-img-0");
 
-            if (scroll_pos > getPosition(tempImg0) && tempImg0.contains("vis1")) {
+            if (scroll_pos > getPosition(tempImg0) && tempImg0.classList.contains("vis1")) {
                 tempImg0.classList.remove("vis1");
                 tempImg0.classList.add("vis0");
                 tempImg0.classList.add("ani2");
@@ -50,7 +50,7 @@ function scrollAnimation() {
             const s5 = document.getElementById("s5");
             const s51 = document.getElementById("s51");
 
-            if (scroll_pos > getPosition(s4) && s4.contains("vis1")) {
+            if (scroll_pos > getPosition(s4) && s4.classList.contains("vis1")) {
                 s4.classList.remove("vis1");
                 s4.classList.add("vis0");
                 s4.classList.add("ani2");
