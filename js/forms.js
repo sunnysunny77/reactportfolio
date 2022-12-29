@@ -85,7 +85,7 @@ function validation(event) {
     if (error) {
         const sub = this.children[2];
         sub.classList.add("red");
-        sub.value = "Validation Error ↑";
+        sub.value = "Validation Error ⇡";
         setTimeout(function () {
             sub.value = "Send";
             sub.classList.remove("red");
