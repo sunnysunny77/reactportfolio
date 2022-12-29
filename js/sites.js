@@ -1,6 +1,6 @@
 let pictureID = [];
 
-let img = document.querySelectorAll(".sitesImg");
+const img = document.querySelectorAll(".sitesImg");
 for (let i = 1; i <= img.length; i++) {
     let id = "s5" + i;
     pictureID.push(id)
