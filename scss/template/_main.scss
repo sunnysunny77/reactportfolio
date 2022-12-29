@@ -96,8 +96,8 @@ main {
     width: calc(992px - 46.026%);
     float: right;
     margin: 0 calc(987px - 95%) 0 0;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 25px;
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;
     @include ten_24 {
@@ -136,7 +136,7 @@ main {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: 7.5% auto;
+    margin: 9.5% auto 7.5% auto;
     width: 90.021%;
     height: 109px;
     @include ten_24 {
