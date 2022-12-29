@@ -38,7 +38,7 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
 #site {
   position: relative;
   #s4 {
-    height: 349px;
+    height: 350px;
     width: calc(992px - 46.026%);
     margin: auto auto auto calc(992px - 95%);
     float: left;
@@ -134,8 +134,8 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
     width: calc(992px - 73.991%);
     height: 250px;
     float: right;
-    padding: 5%;
-    margin-right: calc(992px - 95%);
+    padding: 50px;
+    margin-right: calc(992px - 95.1%);
     position: relative;
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;
