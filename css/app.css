@@ -211,6 +211,7 @@ main::after {
   z-index: -999;
   background-color: #6acbd7;
   background-blend-mode: color;
+  background-attachment: fixed;
 }
 @media only screen and (max-width: 1024px) {
   main::after {
