@@ -78,7 +78,7 @@ nav {
             width: 17%;
             cursor: pointer;
             display: inline-block;
-            color: $c2;
+            color: $Acolor;
             @include ten_24 {
                 min-width: 97px;
                 width: 31%;
@@ -86,6 +86,7 @@ nav {
                 font-size: small;
                 border-radius: 25px;
                 background-color: $c2;
+                background-blend-mode: darken;
                 background-image: url(../images/template/natural-paper.png);
                 color: $c5;
             }

@@ -5,7 +5,7 @@ $mainbg: snow;
 $c1: #EEFFED;
 $c2:rgba(245, 252, 252, 0.75);
 $c3: #2E86AB;
-$c4: #ff7f26;
+$c4: #ff8e40;
 $c5: black;
 $c6:#adfabd;
 $c7: #D81159;
@@ -14,12 +14,12 @@ $c9: #4f4f4fe7;
 $c10: #4A5354;
 $c11: rgba($c10,0.1);
 
-$heading2: $c4;
+$heading2: #f5fcfc;
 $heading3: rgba($c4, 0.9);
 $heading4: $c8;
 
-$headingBoarder:rgba($c6, 0.4);
+$headingBoarder:  rgba($c6, 0.4);
 $tempBoarder: rgba($main, 0.4);
 
-$Acolor: $c6;
-$aHover: $c4;
+$Acolor: $heading2;
+$aHover:  $main;
