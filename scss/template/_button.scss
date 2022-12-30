@@ -68,7 +68,7 @@
         transform: skew(-40deg, 0deg);
         &::before,
         &::after {
-          transition-delay: 0.75s;
+          transition-delay: 0.55s;
           width: 25%;
         }
         &::before {
@@ -80,7 +80,7 @@
         span:before,
         span:after {
           height: 50%;
-          transition-delay: 1s;
+          transition-delay: 0.755s;
         }
       }
       .icon2 {
