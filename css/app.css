@@ -40,12 +40,12 @@ footer ul li a:focus {
 footer ul li a:hover,
 .button:focus,
 footer ul li a:focus {
-    color: #ff8e40;
+    color: #F07F31;
   }
 }
 
 .os-theme-dark.os-theme-dark-edgy > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
-  background: #ff8e40;
+  background: #F07F31;
   min-height: 30px;
   max-height: 30px;
 }
@@ -57,7 +57,7 @@ footer ul li a:focus {
 
 h3 {
   margin-left: 5%;
-  color: rgba(255, 142, 64, 0.9);
+  color: #F07F31;
   font-size: 1.4em;
   position: relative;
 }
@@ -334,7 +334,7 @@ main::after {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     margin: auto;
-    border-top: 3px solid #ff8e40;
+    border-top: 3px solid #F07F31;
     position: relative;
   }
 }
@@ -862,7 +862,7 @@ footer h2 {
   }
 }
 #site #s5 a:hover, #site #s5 a:focus {
-  color: #ff8e40;
+  color: #F07F31;
   text-decoration: none;
 }
 #site #s5 #s51 {
@@ -905,7 +905,7 @@ footer h2 {
   width: 80%;
 }
 #overlay form fieldset label {
-  color: #ff8e40;
+  color: #F07F31;
 }
 #overlay form fieldset textarea {
   width: 100%;
@@ -920,7 +920,7 @@ footer h2 {
   outline: none;
   overflow-y: auto;
   overflow-x: hidden;
-  scrollbar-color: #ff8e40 rgba(74, 83, 84, 0.1);
+  scrollbar-color: #F07F31 rgba(74, 83, 84, 0.1);
   scrollbar-width: thin;
 }
 #overlay form fieldset textarea::-webkit-scrollbar {
@@ -930,7 +930,7 @@ footer h2 {
   background: rgba(74, 83, 84, 0.1);
 }
 #overlay form fieldset textarea::-webkit-scrollbar-thumb {
-  background: #ff8e40;
+  background: #F07F31;
 }
 #overlay form input {
   width: 100%;
