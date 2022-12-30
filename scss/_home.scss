@@ -10,10 +10,6 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
 
 #home-template-img {
   background-image: url(../images/home/home.png);
-  background-position: center;
-  height: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 #home-div {
@@ -40,12 +36,13 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
   #s4 {
     height: 350px;
     width: calc(992px - 46.026%);
-    margin: auto auto auto calc(992px - 95%);
+    margin: auto auto auto calc(992px - 94.97%);
     float: left;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;
+    background-blend-mode: darken;
     @include ten_24 {
       position: relative;
       float: none;
@@ -139,6 +136,7 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
     position: relative;
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;
+    background-blend-mode: darken;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     @include ten_24 {

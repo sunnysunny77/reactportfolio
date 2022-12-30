@@ -73,10 +73,11 @@ main {
 .template-img-cont {
     width: calc(992px - 73.991%);
     height: 260px;
-    margin-left: calc(992px - 94.6%);
+    margin-left: calc(992px - 94.56%);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     background-image: url(../images/template/natural-paper.png);
+    background-blend-mode: darken;
     background-color: $c2;
     padding: 50px;
     float: left;
@@ -90,6 +91,12 @@ main {
         background-image: none;
         background-color: unset;
     }
+    .template-img{
+        background-position: center;
+        height: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
 }
 
 .template-p-cont {
@@ -101,6 +108,7 @@ main {
     border-bottom-right-radius: 25px;
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;
+    background-blend-mode: darken;
     @include ten_24 {
         width: 100%;
         height: 160px;

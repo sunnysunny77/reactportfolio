@@ -6,7 +6,6 @@ html {
 
 body {
   font-family: Tahoma, sans-serif;
-  background-color: mintcream;
 }
 @media only screen and (max-width: 1024px) {
   body {
@@ -73,7 +72,7 @@ h3::before {
 header {
   background-image: url(../images/template/handmade-paper.png);
   background-color: #4A5354;
-  border-bottom: 8px solid mintcream;
+  border-bottom: 8px solid rgb(245, 252, 252);
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-blend-mode: multiply;
@@ -84,7 +83,7 @@ header {
     flex-direction: column;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    border-bottom: 4px solid mintcream;
+    border-bottom: 4px solid rgb(245, 252, 252);
     padding: 5px 0;
     z-index: 999;
   }
@@ -160,7 +159,7 @@ nav ul .button {
   width: 17%;
   cursor: pointer;
   display: inline-block;
-  color: rgba(238, 238, 229, 0.948);
+  color: rgba(245, 252, 252, 0.8);
 }
 @media only screen and (max-width: 1024px) {
   nav ul .button {
@@ -169,7 +168,7 @@ nav ul .button {
     margin: 8px 4%;
     font-size: small;
     border-radius: 25px;
-    background-color: rgba(238, 238, 229, 0.948);
+    background-color: rgba(245, 252, 252, 0.8);
     background-image: url(../images/template/natural-paper.png);
     color: black;
   }
@@ -278,11 +277,12 @@ main::after {
 .template-img-cont {
   width: calc(992px - 73.991%);
   height: 260px;
-  margin-left: calc(992px - 94.6%);
+  margin-left: calc(992px - 94.56%);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   background-image: url(../images/template/natural-paper.png);
-  background-color: rgba(238, 238, 229, 0.948);
+  background-blend-mode: darken;
+  background-color: rgba(245, 252, 252, 0.8);
   padding: 50px;
   float: left;
 }
@@ -298,6 +298,12 @@ main::after {
     background-color: unset;
   }
 }
+.template-img-cont .template-img {
+  background-position: center;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
 .template-p-cont {
   height: 360px;
@@ -307,7 +313,8 @@ main::after {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 25px;
   background-image: url(../images/template/natural-paper.png);
-  background-color: rgba(238, 238, 229, 0.948);
+  background-color: rgba(245, 252, 252, 0.8);
+  background-blend-mode: darken;
 }
 @media only screen and (max-width: 1024px) {
   .template-p-cont {
@@ -366,7 +373,7 @@ main::after {
 .template-img-0 {
   background-color: rgba(106, 203, 215, 0.25);
   background-blend-mode: screen;
-  border: 5px solid rgba(238, 238, 229, 0.948);
+  border: 5px solid rgba(245, 252, 252, 0.8);
   background-repeat: no-repeat;
   background-position: center;
   height: fit-content;
@@ -382,7 +389,7 @@ main::after {
   border-radius: 25px;
   flex-direction: column;
   justify-content: end;
-  color: rgba(238, 238, 229, 0.948);
+  color: rgba(245, 252, 252, 0.8);
   position: absolute;
   top: 0;
   right: 2%;
@@ -404,13 +411,13 @@ main::after {
 .template-img-0 p b {
   margin: auto auto 5% 5%;
   color: #2E86AB;
-  background-color: rgba(238, 238, 229, 0.948);
+  background-color: rgba(245, 252, 252, 0.8);
   padding: 1% 2%;
   border-radius: 5px;
   width: fit-content;
 }
 .template-img-0:hover b, .template-img-0:focus b {
-  color: rgba(238, 238, 229, 0.948);
+  color: rgba(245, 252, 252, 0.8);
   background-color: unset;
 }
 .template-img-0:hover p, .template-img-0:focus p {
@@ -435,7 +442,7 @@ main::after {
     border-radius: 0;
     width: 100%;
     padding: 31% 0;
-    border-top: 3px solid rgba(238, 238, 229, 0.948);
+    border-top: 3px solid rgba(245, 252, 252, 0.8);
     border-right: unset;
     border-bottom: unset;
     border-left: unset;
@@ -447,7 +454,7 @@ footer {
   height: 190px;
   background-image: url(../images/template/wave.svg);
   background-size: 100%;
-  border-top: 8px solid mintcream;
+  border-top: 8px solid rgb(245, 252, 252);
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   background-repeat: no-repeat;
@@ -457,7 +464,7 @@ footer {
 @media only screen and (max-width: 1024px) {
   footer {
     height: 125px;
-    border-top: 4px solid mintcream;
+    border-top: 4px solid rgb(245, 252, 252);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
@@ -503,7 +510,7 @@ footer ul li a {
 }
 @media only screen and (max-width: 1024px) {
   footer ul li a {
-    color: rgba(238, 238, 229, 0.948);
+    color: rgba(245, 252, 252, 0.8);
     margin: 0;
     padding: 4px 0px;
     font-size: smaller;
@@ -651,10 +658,6 @@ footer h2 {
 
 #home-template-img {
   background-image: url(../images/home/home.png);
-  background-position: center;
-  height: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 #home-div {
@@ -682,12 +685,13 @@ footer h2 {
 #site #s4 {
   height: 350px;
   width: calc(992px - 46.026%);
-  margin: auto auto auto calc(992px - 95%);
+  margin: auto auto auto calc(992px - 94.97%);
   float: left;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
   background-image: url(../images/template/natural-paper.png);
-  background-color: rgba(238, 238, 229, 0.948);
+  background-color: rgba(245, 252, 252, 0.8);
+  background-blend-mode: darken;
 }
 @media only screen and (max-width: 1024px) {
   #site #s4 {
@@ -790,7 +794,8 @@ footer h2 {
   margin-right: calc(992px - 95.1%);
   position: relative;
   background-image: url(../images/template/natural-paper.png);
-  background-color: rgba(238, 238, 229, 0.948);
+  background-color: rgba(245, 252, 252, 0.8);
+  background-blend-mode: darken;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
 }
@@ -852,10 +857,6 @@ footer h2 {
 
 #contact-template-img {
   background-image: url(../images/contact/contact.png);
-  background-position: center;
-  height: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 #contact-template-img-0 {
@@ -900,7 +901,7 @@ footer h2 {
   margin: 5px 0 0 0;
   font-size: inherit;
   background-image: url(../images/template/natural-paper.png);
-  background-color: rgba(238, 238, 229, 0.948);
+  background-color: rgba(245, 252, 252, 0.8);
   border: 1px solid #2E86AB;
   color: #2E86AB;
   outline: none;
@@ -925,7 +926,7 @@ footer h2 {
   margin: 5px 0 0 0;
   font: inherit;
   background-image: url(../images/template/natural-paper.png);
-  background-color: rgba(238, 238, 229, 0.948);
+  background-color: rgba(245, 252, 252, 0.8);
   border: 1px solid #2E86AB;
   color: #2E86AB;
   outline: none;
@@ -955,10 +956,6 @@ footer h2 {
 
 #about-template-img {
   background-image: url(../images/about/about.png);
-  background-position: center;
-  height: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 #about-template-img-0 {
@@ -1187,10 +1184,6 @@ footer h2 {
 
 #skills-template-img {
   background-image: url(../images/skills/skills.png);
-  background-position: center;
-  height: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 #skills-template-img-0 {
@@ -1269,7 +1262,7 @@ main::after {
 }
 
 .ani5.template-img-0 b, .ani5.template-img-0 b {
-  color: rgba(238, 238, 229, 0.948);
+  color: rgba(245, 252, 252, 0.8);
   background-color: unset;
 }
 .ani5.template-img-0 p, .ani5.template-img-0 p {
@@ -1355,7 +1348,7 @@ main::after {
 }
 @keyframes scale2 {
   0% {
-    background-color: rgba(238, 238, 229, 0.948);
+    background-color: rgba(245, 252, 252, 0.8);
     border-radius: 100%;
     transform: scale(0.85);
   }
@@ -1367,7 +1360,7 @@ main::after {
 }
 @keyframes scale3 {
   0% {
-    background-color: rgba(238, 238, 229, 0.948);
+    background-color: rgba(245, 252, 252, 0.8);
     border-radius: 100%;
     transform: scale(0.85);
   }
