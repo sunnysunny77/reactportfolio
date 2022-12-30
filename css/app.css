@@ -6,6 +6,7 @@ html {
 
 body {
   font-family: Tahoma, sans-serif;
+  background-color: snow;
 }
 @media only screen and (max-width: 1024px) {
   body {
@@ -72,7 +73,7 @@ h3::before {
 header {
   background-image: url(../images/template/handmade-paper.png);
   background-color: #4A5354;
-  border-bottom: 8px solid rgb(245, 252, 252);
+  border-bottom: 8px solid snow;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-blend-mode: multiply;
@@ -83,7 +84,7 @@ header {
     flex-direction: column;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    border-bottom: 4px solid rgb(245, 252, 252);
+    border-bottom: 4px solid snow;
     padding: 5px 0;
     z-index: 999;
   }
@@ -159,7 +160,7 @@ nav ul .button {
   width: 17%;
   cursor: pointer;
   display: inline-block;
-  color: rgba(245, 252, 252, 0.8);
+  color: rgba(245, 252, 252, 0.75);
 }
 @media only screen and (max-width: 1024px) {
   nav ul .button {
@@ -168,7 +169,7 @@ nav ul .button {
     margin: 8px 4%;
     font-size: small;
     border-radius: 25px;
-    background-color: rgba(245, 252, 252, 0.8);
+    background-color: rgba(245, 252, 252, 0.75);
     background-image: url(../images/template/natural-paper.png);
     color: black;
   }
@@ -282,7 +283,7 @@ main::after {
   border-bottom-left-radius: 5px;
   background-image: url(../images/template/natural-paper.png);
   background-blend-mode: darken;
-  background-color: rgba(245, 252, 252, 0.8);
+  background-color: rgba(245, 252, 252, 0.75);
   padding: 50px;
   float: left;
 }
@@ -313,7 +314,7 @@ main::after {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 25px;
   background-image: url(../images/template/natural-paper.png);
-  background-color: rgba(245, 252, 252, 0.8);
+  background-color: rgba(245, 252, 252, 0.75);
   background-blend-mode: darken;
 }
 @media only screen and (max-width: 1024px) {
@@ -373,7 +374,7 @@ main::after {
 .template-img-0 {
   background-color: rgba(106, 203, 215, 0.25);
   background-blend-mode: screen;
-  border: 5px solid rgba(245, 252, 252, 0.8);
+  border: 5px solid rgba(245, 252, 252, 0.75);
   background-repeat: no-repeat;
   background-position: center;
   height: fit-content;
@@ -389,7 +390,7 @@ main::after {
   border-radius: 25px;
   flex-direction: column;
   justify-content: end;
-  color: rgba(245, 252, 252, 0.8);
+  color: rgba(245, 252, 252, 0.75);
   position: absolute;
   top: 0;
   right: 2%;
@@ -411,13 +412,13 @@ main::after {
 .template-img-0 p b {
   margin: auto auto 5% 5%;
   color: #2E86AB;
-  background-color: rgba(245, 252, 252, 0.8);
+  background-color: rgba(245, 252, 252, 0.75);
   padding: 1% 2%;
   border-radius: 5px;
   width: fit-content;
 }
 .template-img-0:hover b, .template-img-0:focus b {
-  color: rgba(245, 252, 252, 0.8);
+  color: rgba(245, 252, 252, 0.75);
   background-color: unset;
 }
 .template-img-0:hover p, .template-img-0:focus p {
@@ -442,7 +443,7 @@ main::after {
     border-radius: 0;
     width: 100%;
     padding: 31% 0;
-    border-top: 3px solid rgba(245, 252, 252, 0.8);
+    border-top: 3px solid rgba(245, 252, 252, 0.75);
     border-right: unset;
     border-bottom: unset;
     border-left: unset;
@@ -454,7 +455,7 @@ footer {
   height: 190px;
   background-image: url(../images/template/wave.svg);
   background-size: 100%;
-  border-top: 8px solid rgb(245, 252, 252);
+  border-top: 8px solid snow;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   background-repeat: no-repeat;
@@ -464,7 +465,7 @@ footer {
 @media only screen and (max-width: 1024px) {
   footer {
     height: 125px;
-    border-top: 4px solid rgb(245, 252, 252);
+    border-top: 4px solid snow;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
@@ -510,7 +511,7 @@ footer ul li a {
 }
 @media only screen and (max-width: 1024px) {
   footer ul li a {
-    color: rgba(245, 252, 252, 0.8);
+    color: rgba(245, 252, 252, 0.75);
     margin: 0;
     padding: 4px 0px;
     font-size: smaller;
@@ -690,7 +691,7 @@ footer h2 {
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
   background-image: url(../images/template/natural-paper.png);
-  background-color: rgba(245, 252, 252, 0.8);
+  background-color: rgba(245, 252, 252, 0.75);
   background-blend-mode: darken;
 }
 @media only screen and (max-width: 1024px) {
@@ -794,7 +795,7 @@ footer h2 {
   margin-right: calc(992px - 95.1%);
   position: relative;
   background-image: url(../images/template/natural-paper.png);
-  background-color: rgba(245, 252, 252, 0.8);
+  background-color: rgba(245, 252, 252, 0.75);
   background-blend-mode: darken;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -900,8 +901,7 @@ footer h2 {
   padding: 0;
   margin: 5px 0 0 0;
   font-size: inherit;
-  background-image: url(../images/template/natural-paper.png);
-  background-color: rgba(245, 252, 252, 0.8);
+  background-color: transparent;
   border: 1px solid #2E86AB;
   color: #2E86AB;
   outline: none;
@@ -925,8 +925,7 @@ footer h2 {
   padding: 0;
   margin: 5px 0 0 0;
   font: inherit;
-  background-image: url(../images/template/natural-paper.png);
-  background-color: rgba(245, 252, 252, 0.8);
+  background-color: transparent;
   border: 1px solid #2E86AB;
   color: #2E86AB;
   outline: none;
@@ -1262,7 +1261,7 @@ main::after {
 }
 
 .ani5.template-img-0 b, .ani5.template-img-0 b {
-  color: rgba(245, 252, 252, 0.8);
+  color: rgba(245, 252, 252, 0.75);
   background-color: unset;
 }
 .ani5.template-img-0 p, .ani5.template-img-0 p {
@@ -1348,7 +1347,7 @@ main::after {
 }
 @keyframes scale2 {
   0% {
-    background-color: rgba(245, 252, 252, 0.8);
+    background-color: rgba(245, 252, 252, 0.75);
     border-radius: 100%;
     transform: scale(0.85);
   }
@@ -1360,7 +1359,7 @@ main::after {
 }
 @keyframes scale3 {
   0% {
-    background-color: rgba(245, 252, 252, 0.8);
+    background-color: rgba(245, 252, 252, 0.75);
     border-radius: 100%;
     transform: scale(0.85);
   }

@@ -8,6 +8,7 @@ html {
 
 body {
   font-family: $font;
+  background-color: $mainbg;
   @include ten_24 {
     margin: auto;
   }
