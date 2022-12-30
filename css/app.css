@@ -285,9 +285,9 @@ main::after {
 }
 
 .template-img-cont {
-  width: calc(992px - 73.991%);
+  width: calc(992px - 73.544%);
   height: 260px;
-  margin-left: calc(992px - 94.56%);
+  margin-left: calc(992px - 95%);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   background-image: url(../images/template/natural-paper.png);
@@ -318,7 +318,7 @@ main::after {
 
 .template-p-cont {
   height: 360px;
-  width: calc(992px - 46.026%);
+  width: calc(992px - 46.03%);
   float: right;
   margin: 0 calc(987px - 95%) 0 0;
   border-top-right-radius: 5px;
@@ -608,25 +608,26 @@ footer h2 {
     transform: skew(-40deg, 0deg);
     transition-delay: 0.45s;
   }
-  .button:hover .icon {
+  .button:hover .icon, .button:focus .icon {
     transform: skew(-40deg, 0deg);
   }
-  .button:hover .icon::before, .button:hover .icon::after {
-    transition-delay: 0s;
+  .button:hover .icon::before, .button:hover .icon::after, .button:focus .icon::before, .button:focus .icon::after {
+    transition-delay: 0.75s;
     width: 25%;
   }
-  .button:hover .icon::before {
+  .button:hover .icon::before, .button:focus .icon::before {
     left: 0;
   }
-  .button:hover .icon::after {
+  .button:hover .icon::after, .button:focus .icon::after {
     right: 0;
   }
   .button:hover .icon span:before,
-.button:hover .icon span:after {
+.button:hover .icon span:after, .button:focus .icon span:before,
+.button:focus .icon span:after {
     height: 50%;
-    transition-delay: 0.45s;
+    transition-delay: 1s;
   }
-  .button:hover .icon2 {
+  .button:hover .icon2, .button:focus .icon2 {
     transform: skew(-40deg, 0deg);
     transition-delay: 0s;
   }
@@ -696,8 +697,8 @@ footer h2 {
 }
 #site #s4 {
   height: 350px;
-  width: calc(992px - 46.026%);
-  margin: auto auto auto calc(992px - 94.96%);
+  width: calc(992px - 46.03%);
+  margin: auto auto auto calc(992px - 95%);
   float: left;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
@@ -800,11 +801,11 @@ footer h2 {
   text-decoration: underline;
 }
 #site #s5 {
-  width: calc(992px - 73.991%);
+  width: calc(992px - 73.544%);
   height: 250px;
   float: right;
   padding: 50px;
-  margin-right: calc(992px - 95.1%);
+  margin-right: calc(987px - 95%);
   position: relative;
   background-image: url(../images/template/natural-paper.png);
   background-color: rgba(245, 252, 252, 0.75);

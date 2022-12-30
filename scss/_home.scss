@@ -36,8 +36,8 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
   position: relative;
   #s4 {
     height: 350px;
-    width: calc(992px - 46.026%);
-    margin: auto auto auto calc(992px - 94.96%);
+    width: calc(992px - 46.03%);
+    margin: auto auto auto calc(992px - 95%);
     float: left;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
@@ -130,11 +130,11 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
   }
 
   #s5 {
-    width: calc(992px - 73.991%);
+    width: calc(992px - 73.544%);
     height: 250px;
     float: right;
     padding: 50px;
-    margin-right: calc(992px - 95.1%);
+    margin-right: calc(987px - 95%);
     position: relative;
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;

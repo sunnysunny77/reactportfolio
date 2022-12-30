@@ -62,12 +62,13 @@
       transform: skew(-40deg, 0deg);
       transition-delay: 0.45s;
     }
-    &:hover {
+    &:hover,
+    &:focus {
       .icon {
         transform: skew(-40deg, 0deg);
         &::before,
         &::after {
-          transition-delay: 0s;
+          transition-delay: 0.75s;
           width: 25%;
         }
         &::before {
@@ -79,7 +80,7 @@
         span:before,
         span:after {
           height: 50%;
-          transition-delay: 0.45s;
+          transition-delay: 1s;
         }
       }
       .icon2 {
