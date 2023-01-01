@@ -816,10 +816,10 @@ footer h2 {
 @media only screen and (max-width: 1024px) {
   #site #s5 {
     float: none;
+    margin: auto;
     padding: 10%;
     width: 75%;
-    height: auto;
-    margin: auto;
+    height: 100%;
     border-top-right-radius: 0;
     border-bottom-left-radius: 25px;
     border-top: 3px solid rgba(74, 83, 84, 0.1);
@@ -827,26 +827,29 @@ footer h2 {
 }
 @media only screen and (max-width: 1023px) and (orientation: landscape) {
   #site #s5 {
-    padding: 2%;
-    width: 91%;
+    padding: 25px;
+    width: calc(95% - 50px);
   }
 }
 #site #s5 span {
-  background-size: 100% 100%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   height: 100%;
 }
 @media only screen and (max-width: 1024px) {
   #site #s5 span {
-    background-size: 50%;
-    padding: 25%;
+    padding: 20%;
   }
 }
 @media only screen and (max-width: 1023px) and (orientation: landscape) {
   #site #s5 span {
-    background-size: 25%;
-    padding: 12.5%;
+    padding: 10%;
+  }
+}
+@media only screen and (max-width: 720px) and (orientation: portrait) {
+  #site #s5 span {
+    padding: 35.7%;
   }
 }
 #site #s5 a {
@@ -858,7 +861,8 @@ footer h2 {
 }
 @media only screen and (max-width: 1024px) {
   #site #s5 a {
-    font-size: smaller;
+    font-size: small;
+    top: 2.5%;
   }
 }
 #site #s5 a:hover, #site #s5 a:focus {

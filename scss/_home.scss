@@ -109,7 +109,7 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
             margin: 1.5% 10%;
             width: 40px;
             height: 40px;
-          }      
+          }
         }
         ol li {
           padding-top: 20px;
@@ -143,30 +143,31 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
     border-bottom-right-radius: 25px;
     @include ten_24 {
       float: none;
+      margin: auto;
       padding: 10%;
       width: 75%;
-      height: auto;
-      margin: auto;
+      height: 100%;
       border-top-right-radius: 0;
       border-bottom-left-radius: 25px;
       border-top: 3px solid $c11;
     }
     @include ten_23_landscape {
-      padding: 2%;
-      width: 91%;
+      padding: 25px;
+      width: calc(95% - 50px);
     }
     span {
-      background-size: 100% 100%;
+      background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
       height: 100%;
       @include ten_24 {
-        background-size: 50%;
-        padding: 25%;
+        padding: 20%;
       }
       @include ten_23_landscape {
-        background-size: 25%;
-        padding: 12.5%;
+        padding: 10%;
+      }
+      @include seven_20_portrait {
+        padding: 35.7%;
       }
     }
     a {
@@ -176,7 +177,8 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
       color: $c5;
       font-size: large;
       @include ten_24 {
-        font-size: smaller;
+        font-size: small;
+        top: 2.5%;
       }
       &:hover,
       &:focus {
