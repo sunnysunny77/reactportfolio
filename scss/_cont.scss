@@ -8,17 +8,24 @@
 
 #overlay  {
   text-align: initial;
+  margin: 10% 0;
+  height: 71%;
   @include ten_24 {
     width: calc(90% - 16px);
+    height: calc(100% - 40px);
+    margin: 10px auto;
   }
   form {
     fieldset {
       border: none;
       padding: 0;
       margin: 0;
+      @include ten_24 {
+        padding: 0 5%;
+    }
       legend {
         padding: 0;
-        margin: 0 0 0 5%;
+        margin: 0;
       }
       ul {
         padding: 0;
@@ -26,12 +33,22 @@
         list-style-type: none;
         li {
           padding-bottom: 35px;
-          margin: 0 10% 0 10%;
-          width: 80%;
+          margin: auto;
+          width: 100%;
+          &:nth-child(1), &:nth-child(2) {
+            width: 49.3%;
+            display: inline-block;
+            @include four_80 {
+              width: 100%;
+
+            }
+          }
         }
       }
       label {
         color: $c4;
+        height: 36px;
+        display: block;
       }
       textarea {
         width: 100%;
@@ -91,6 +108,7 @@
       color: $c7;
       font-size: smaller;
       padding-left: 2.5px;
+      display: block;
     }
   }
 }

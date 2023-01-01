@@ -879,10 +879,14 @@ footer h2 {
 
 #overlay {
   text-align: initial;
+  margin: 10% 0;
+  height: 71%;
 }
 @media only screen and (max-width: 1024px) {
   #overlay {
     width: calc(90% - 16px);
+    height: calc(100% - 40px);
+    margin: 10px auto;
   }
 }
 #overlay form fieldset {
@@ -890,9 +894,14 @@ footer h2 {
   padding: 0;
   margin: 0;
 }
+@media only screen and (max-width: 1024px) {
+  #overlay form fieldset {
+    padding: 0 5%;
+  }
+}
 #overlay form fieldset legend {
   padding: 0;
-  margin: 0 0 0 5%;
+  margin: 0;
 }
 #overlay form fieldset ul {
   padding: 0;
@@ -901,11 +910,22 @@ footer h2 {
 }
 #overlay form fieldset ul li {
   padding-bottom: 35px;
-  margin: 0 10% 0 10%;
-  width: 80%;
+  margin: auto;
+  width: 100%;
+}
+#overlay form fieldset ul li:nth-child(1), #overlay form fieldset ul li:nth-child(2) {
+  width: 49.3%;
+  display: inline-block;
+}
+@media only screen and (max-width: 480px) {
+  #overlay form fieldset ul li:nth-child(1), #overlay form fieldset ul li:nth-child(2) {
+    width: 100%;
+  }
 }
 #overlay form fieldset label {
   color: #F07F31;
+  height: 36px;
+  display: block;
 }
 #overlay form fieldset textarea {
   width: 100%;
@@ -964,6 +984,7 @@ footer h2 {
   color: #D81159;
   font-size: smaller;
   padding-left: 2.5px;
+  display: block;
 }
 
 #about-template-img {
