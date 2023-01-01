@@ -219,8 +219,8 @@ main {
       }
     }
     @include ten_24 {
-      width: calc(70% - 10px);
-      padding: 22% 0;
+      width: calc(65% - 10px);
+      padding: 20% 0;
     }
     @include seven_20_portrait {
       border-radius: 0;

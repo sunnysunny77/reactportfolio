@@ -38,7 +38,7 @@
           &:nth-child(1), &:nth-child(2) {
             width: 49.3%;
             display: inline-block;
-            @include four_80 {
+            @include ten_24 {
               width: 100%;
 
             }
@@ -59,6 +59,7 @@
         font-size: inherit;
         background-color: transparent;
         border: 1px solid $c3;
+        border-bottom-right-radius: 5px;
         color: $c3;
         outline: none;
         overflow-y: auto;
@@ -74,18 +75,25 @@
         &::-webkit-scrollbar-thumb {
           background: $c4;
         }
+        @include ten_24 {
+          border-bottom-right-radius: unset;
+        }
       }
     }
     input {
       width: 100%;
       font-style: inherit;
-      padding: 0;
+      padding: 0 0 2px 1px;
       margin: 5px 0 0 0;
+      border-bottom-right-radius: 5px;
       font: inherit;
       background-color: transparent;
       border: 1px solid $c3;
       color: $c3;
       outline: none;
+      @include ten_24 {
+        border-bottom-right-radius: unset;
+      }
     }
     #sent {
       text-align: center;

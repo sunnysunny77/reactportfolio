@@ -444,8 +444,8 @@ main::after {
 }
 @media only screen and (max-width: 1024px) {
   .template-img-0 {
-    width: calc(70% - 10px);
-    padding: 22% 0;
+    width: calc(65% - 10px);
+    padding: 20% 0;
   }
 }
 @media only screen and (max-width: 720px) and (orientation: portrait) {
@@ -921,7 +921,7 @@ footer h2 {
   width: 49.3%;
   display: inline-block;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1024px) {
   #overlay form fieldset ul li:nth-child(1), #overlay form fieldset ul li:nth-child(2) {
     width: 100%;
   }
@@ -940,6 +940,7 @@ footer h2 {
   font-size: inherit;
   background-color: transparent;
   border: 1px solid #2E86AB;
+  border-bottom-right-radius: 5px;
   color: #2E86AB;
   outline: none;
   overflow-y: auto;
@@ -956,16 +957,27 @@ footer h2 {
 #overlay form fieldset textarea::-webkit-scrollbar-thumb {
   background: #F07F31;
 }
+@media only screen and (max-width: 1024px) {
+  #overlay form fieldset textarea {
+    border-bottom-right-radius: unset;
+  }
+}
 #overlay form input {
   width: 100%;
   font-style: inherit;
-  padding: 0;
+  padding: 0 0 2px 1px;
   margin: 5px 0 0 0;
+  border-bottom-right-radius: 5px;
   font: inherit;
   background-color: transparent;
   border: 1px solid #2E86AB;
   color: #2E86AB;
   outline: none;
+}
+@media only screen and (max-width: 1024px) {
+  #overlay form input {
+    border-bottom-right-radius: unset;
+  }
 }
 #overlay form #sent {
   text-align: center;
