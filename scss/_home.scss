@@ -113,15 +113,16 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
         }
         ol li {
           padding-top: 20px;
-          h4 a {
-            margin: 2% 0;
-            padding: 0;
-            color: $heading4;
-            text-decoration: none;
-            font-size: x-large;
-            &:hover,
-            &:focus {
-              text-decoration: underline;
+          h4 {
+            margin: 5% 0;
+            a {
+              color: $heading4;
+              text-decoration: none;
+              font-size: x-large;
+              &:hover,
+              &:focus {
+                text-decoration: underline;
+              }
             }
           }
         }

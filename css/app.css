@@ -790,9 +790,10 @@ footer h2 {
 #site #s4 #ob0 #ob0ul ol li {
   padding-top: 20px;
 }
+#site #s4 #ob0 #ob0ul ol li h4 {
+  margin: 5% 0;
+}
 #site #s4 #ob0 #ob0ul ol li h4 a {
-  margin: 2% 0;
-  padding: 0;
   color: #24b14d;
   text-decoration: none;
   font-size: x-large;
