@@ -287,7 +287,7 @@ main::after {
 .template-img-cont {
   width: calc(992px - 74.798%);
   height: 250px;
-  margin-left: calc(992px - 95.14%);
+  margin-left: calc(992px - 95.143%);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   background-image: url(../images/template/natural-paper.png);
@@ -320,7 +320,7 @@ main::after {
   height: 350px;
   width: calc(992px - 45%);
   float: right;
-  margin: 0 calc(992px - 95.14%) 0 0;
+  margin: 0 calc(992px - 95.143%) 0 0;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 25px;
   background-image: url(../images/template/natural-paper.png);
@@ -698,7 +698,7 @@ footer h2 {
 #site #s4 {
   height: 350px;
   width: calc(992px - 45%);
-  margin: auto auto auto calc(992px - 95.14%);
+  margin: auto auto auto calc(992px - 95.143%);
   float: left;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
@@ -806,7 +806,7 @@ footer h2 {
   height: 250px;
   float: right;
   padding: 50px;
-  margin-right: calc(992px - 95.14%);
+  margin-right: calc(992px - 95.143%);
   position: relative;
   background-image: url(../images/template/natural-paper.png);
   background-color: rgba(245, 252, 252, 0.75);
