@@ -104,18 +104,17 @@ main {
     height: 350px;
     width: 542px;
     float: left;
-    margin: 0  50px 0 0;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 25px;
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;
     background-blend-mode: darken;
     @include ten_24 {
+        float: none;
         width: 100%;
         height: 160px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        margin: auto;
         border-top: 3px solid $c4;
         position: relative;
     }
