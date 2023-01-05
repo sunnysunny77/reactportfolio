@@ -319,7 +319,7 @@ main::after {
 .template-p-cont {
   height: 350px;
   width: 542px;
-  float: right;
+  float: left;
   margin: 0 50px 0 0;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 25px;
@@ -804,7 +804,7 @@ footer h2 {
 #site #s5 {
   width: 250px;
   height: 250px;
-  float: right;
+  float: left;
   padding: 50px;
   margin-right: 50px;
   position: relative;
