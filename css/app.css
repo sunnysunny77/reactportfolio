@@ -285,9 +285,9 @@ main::after {
 }
 
 .template-img-cont {
-  width: calc(992px - 74.798%);
+  width: 250px;
   height: 250px;
-  margin-left: calc(992px - 95.143%);
+  margin-left: 50px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   background-image: url(../images/template/natural-paper.png);
@@ -318,9 +318,9 @@ main::after {
 
 .template-p-cont {
   height: 350px;
-  width: calc(992px - 45%);
+  width: 542px;
   float: right;
-  margin: 0 calc(992px - 95.143%) 0 0;
+  margin: 0 50px 0 0;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 25px;
   background-image: url(../images/template/natural-paper.png);
@@ -697,8 +697,8 @@ footer h2 {
 }
 #site #s4 {
   height: 350px;
-  width: calc(992px - 45%);
-  margin: auto auto auto calc(992px - 95.143%);
+  width: 542px;
+  margin: auto auto auto 50px;
   float: left;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
@@ -725,7 +725,7 @@ footer h2 {
 }
 #site #s4 #ob0 {
   height: 60%;
-  margin: 12.25% 0;
+  margin-top: 12.25%;
   color: #4193bc;
   text-align: left;
   font-size: large;
@@ -802,11 +802,11 @@ footer h2 {
   text-decoration: underline;
 }
 #site #s5 {
-  width: calc(992px - 74.798%);
+  width: 250px;
   height: 250px;
   float: right;
   padding: 50px;
-  margin-right: calc(992px - 95.143%);
+  margin-right: 50px;
   position: relative;
   background-image: url(../images/template/natural-paper.png);
   background-color: rgba(245, 252, 252, 0.75);
@@ -884,7 +884,7 @@ footer h2 {
 
 #overlay {
   text-align: initial;
-  margin: 10% 0;
+  margin: 9.5% 0;
   height: 71%;
 }
 @media only screen and (max-width: 1024px) {

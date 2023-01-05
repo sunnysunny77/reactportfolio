@@ -36,8 +36,8 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
   position: relative;
   #s4 {
     height: 350px;
-    width: calc(992px - 45%);
-    margin: auto auto auto calc(992px - 95.143%);
+    width: 542px;
+    margin: auto auto auto 50px;
     float: left;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
@@ -59,7 +59,7 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
     }
     #ob0 {
       height: 60%;
-      margin: 12.25% 0;
+      margin-top: 12.25%;
       color: #4193bc;
       text-align: left;
       font-size: large;
@@ -131,11 +131,11 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
   }
 
   #s5 {
-    width: calc(992px - 74.798%);
+    width: 250px;
     height: 250px;
     float: right;
     padding: 50px;
-    margin-right: calc(992px - 95.143%);
+    margin-right: 50px;
     position: relative;
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;
