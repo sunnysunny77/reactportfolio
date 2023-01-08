@@ -9,8 +9,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      transition: transform 0.225s;
-      transition-delay: 0.15s;
+      transition: transform 0.15s;
+      transition-delay: 0.225s;
       transform: skew(10deg, 0deg);
       &::before,
       &::after {
@@ -19,8 +19,8 @@
         content: "";
         position: absolute;
         display: block;
-        transition: left 0.225s, right 0.225s, width 0.225s, height 0.225s;
-        transition-delay: 0.3s;
+        transition: left 0.15s, right 0.15s, width 0.15s, height 0.15s;
+        transition-delay: 0.225s;
         background: $Acolor;
       }
       &::before {
@@ -39,7 +39,7 @@
         position: absolute;
         display: block;
         width: 1px;
-        transition: left 0.225s, right 0.225s, width 0.225s, height 0.225s;
+        transition: left 0.15s, right 0.15s, width 0.15s, height 0.15s;
         background: $Acolor;
       }
       span:before {
@@ -58,7 +58,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      transition: transform 0.225s;
+      transition: transform 0.15s;
       transform: skew(-40deg, 0deg);
       transition-delay: 0.45s;
     }
@@ -68,8 +68,8 @@
         transform: skew(-40deg, 0deg);
         &::before,
         &::after {
-          transition-delay: 0.55s;
           width: 25%;
+          transition-delay: 0.225s;
         }
         &::before {
           left: 0;
@@ -80,7 +80,7 @@
         span:before,
         span:after {
           height: 50%;
-          transition-delay: 0.755s;
+          transition-delay: 0.45s;
         }
       }
       .icon2 {

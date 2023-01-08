@@ -555,8 +555,8 @@ footer h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: transform 0.225s;
-    transition-delay: 0.15s;
+    transition: transform 0.15s;
+    transition-delay: 0.225s;
     transform: skew(10deg, 0deg);
   }
   .button .icon::before, .button .icon::after {
@@ -565,8 +565,8 @@ footer h2 {
     content: "";
     position: absolute;
     display: block;
-    transition: left 0.225s, right 0.225s, width 0.225s, height 0.225s;
-    transition-delay: 0.3s;
+    transition: left 0.15s, right 0.15s, width 0.15s, height 0.15s;
+    transition-delay: 0.225s;
     background: #f5fcfc;
   }
   .button .icon::before {
@@ -585,7 +585,7 @@ footer h2 {
     position: absolute;
     display: block;
     width: 1px;
-    transition: left 0.225s, right 0.225s, width 0.225s, height 0.225s;
+    transition: left 0.15s, right 0.15s, width 0.15s, height 0.15s;
     background: #f5fcfc;
   }
   .button .icon span:before {
@@ -603,7 +603,7 @@ footer h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: transform 0.225s;
+    transition: transform 0.15s;
     transform: skew(-40deg, 0deg);
     transition-delay: 0.45s;
   }
@@ -611,8 +611,8 @@ footer h2 {
     transform: skew(-40deg, 0deg);
   }
   .button:hover .icon::before, .button:hover .icon::after, .button:focus .icon::before, .button:focus .icon::after {
-    transition-delay: 0.55s;
     width: 25%;
+    transition-delay: 0.225s;
   }
   .button:hover .icon::before, .button:focus .icon::before {
     left: 0;
@@ -624,7 +624,7 @@ footer h2 {
 .button:hover .icon span:after, .button:focus .icon span:before,
 .button:focus .icon span:after {
     height: 50%;
-    transition-delay: 0.755s;
+    transition-delay: 0.45s;
   }
   .button:hover .icon2, .button:focus .icon2 {
     transform: skew(-40deg, 0deg);
