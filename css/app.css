@@ -710,16 +710,17 @@ footer h2 {
     position: relative;
     float: none;
     width: 95%;
-    height: 120px;
+    height: 140px;
     margin: auto;
-    padding: 25px 0;
-    border-top-right-radius: 25px;
+    padding: 10px 0;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
     border-bottom-left-radius: 0;
   }
 }
 @media only screen and (max-width: 1023px) and (orientation: landscape) {
   #site #s4 {
-    height: 75px;
+    height: 120px;
   }
 }
 #site #s4 #ob0 {
@@ -774,16 +775,9 @@ footer h2 {
 }
 @media only screen and (max-width: 1024px) {
   #site #s4 #ob0 #ob0ul li img {
-    margin: 5% 10%;
-    width: 60px;
-    height: 60px;
-  }
-}
-@media only screen and (max-width: 1023px) and (orientation: landscape) {
-  #site #s4 #ob0 #ob0ul li img {
-    margin: 1.5% 10%;
-    width: 40px;
-    height: 40px;
+    margin: 30px 10%;
+    width: 55px;
+    height: 55px;
   }
 }
 #site #s4 #ob0 #ob0ul ol li {

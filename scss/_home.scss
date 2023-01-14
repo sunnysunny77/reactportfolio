@@ -48,14 +48,15 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
       position: relative;
       float: none;
       width: 95%;
-      height: 120px;
+      height: 140px;
       margin: auto;
-      padding: 25px 0;
-      border-top-right-radius: 25px;
+      padding: 10px 0;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
       border-bottom-left-radius: 0;
     }
     @include ten_23_landscape {
-      height: 75px;
+      height: 120px;
     }
     #ob0 {
       height: 60%;
@@ -101,15 +102,11 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
           margin: 10% 15%;
           opacity: 0.7;
           @include ten_24 {
-            margin: 5% 10%;
-            width: 60px;
-            height: 60px;
+            margin: 30px 10%;
+            width: 55px;
+            height: 55px;
           }
-          @include ten_23_landscape {
-            margin: 1.5% 10%;
-            width: 40px;
-            height: 40px;
-          }
+     
         }
         ol li {
           padding-top: 20px;
