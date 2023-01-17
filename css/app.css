@@ -313,7 +313,7 @@ main::after {
   height: 100%;
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .template-p-cont {
