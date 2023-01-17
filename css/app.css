@@ -313,7 +313,7 @@ main::after {
   height: 100%;
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.9;
+  opacity: 0.875;
 }
 
 .template-p-cont {
@@ -681,7 +681,7 @@ footer h2 {
     height: 60px;
     width: 60px;
     margin: 12.5% auto;
-    opacity: 0.85;
+    opacity: 0.875;
   }
 }
 
