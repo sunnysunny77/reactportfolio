@@ -11,8 +11,7 @@ function send(formData, sent, sub) {
         };
         req.send(formData);
     });
-    myPromise.then(
-        function (value) {
+    myPromise.then((value) => {
             sent.innerHTML = value;
             sub.style.display = "none";
             sent.style.display = "block";
@@ -21,8 +20,8 @@ function send(formData, sent, sub) {
                 sent.innerHTML = "";
                 sub.style.display = "block";
             }, 5000);
-        },
-        function (error) {
+        },    
+    ).catch((error) => {
             sent.innerHTML = error;
             sub.style.display = "none";
             sent.style.display = "block";
@@ -32,7 +31,7 @@ function send(formData, sent, sub) {
                 sub.style.display = "block";
             }, 5000);
         }
-    );
+    )
 }
 
 function reply(bool, obj, msg) {
