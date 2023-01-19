@@ -186,5 +186,20 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
     #s51 {
       display: block;
     }
+    #close {
+      outline: none;
+      background: transparent;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      border: 1px solid;
+      opacity: 0.15;
+      border-radius: 100%;
+      padding: 2.5px 5px;
+      @include ten_24 {
+        top: unset;
+        bottom: 16px;
+      }
+    }
   }
 }

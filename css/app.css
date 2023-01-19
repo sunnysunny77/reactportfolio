@@ -865,6 +865,23 @@ footer h2 {
 #site #s5 #s51 {
   display: block;
 }
+#site #s5 #close {
+  outline: none;
+  background: transparent;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: 1px solid;
+  opacity: 0.15;
+  border-radius: 100%;
+  padding: 2.5px 5px;
+}
+@media only screen and (max-width: 1024px) {
+  #site #s5 #close {
+    top: unset;
+    bottom: 16px;
+  }
+}
 
 #contact-template-img {
   background-image: url(../images/contact/contact.png);
