@@ -75,9 +75,6 @@
         &::-webkit-scrollbar-thumb {
           background: $c4;
         }
-        @include ten_24 {
-          border-bottom-right-radius: unset;
-        }
       }
     }
     input {
@@ -91,9 +88,6 @@
       border: 1px solid $c3;
       color: $c3;
       outline: none;
-      @include ten_24 {
-        border-bottom-right-radius: unset;
-      }
     }
     #sent {
       text-align: center;

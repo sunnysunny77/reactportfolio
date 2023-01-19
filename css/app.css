@@ -967,11 +967,6 @@ footer h2 {
 #overlay form fieldset textarea::-webkit-scrollbar-thumb {
   background: #F07F31;
 }
-@media only screen and (max-width: 1024px) {
-  #overlay form fieldset textarea {
-    border-bottom-right-radius: unset;
-  }
-}
 #overlay form input {
   width: 100%;
   font-style: inherit;
@@ -983,11 +978,6 @@ footer h2 {
   border: 1px solid #2E86AB;
   color: #2E86AB;
   outline: none;
-}
-@media only screen and (max-width: 1024px) {
-  #overlay form input {
-    border-bottom-right-radius: unset;
-  }
 }
 #overlay form #sent {
   text-align: center;
