@@ -903,6 +903,14 @@ footer h2 {
     margin: 10px auto;
   }
 }
+#overlay form .os-host-textarea {
+  font: inherit;
+  margin: 5px 0 0 0;
+  font-size: inherit;
+  border: 1px solid #2E86AB;
+  border-bottom-right-radius: 5px;
+  color: #2E86AB;
+}
 #overlay form fieldset {
   border: none;
   padding: 0;
@@ -940,32 +948,6 @@ footer h2 {
   color: #F07F31;
   height: 36px;
   display: block;
-}
-#overlay form fieldset textarea {
-  width: 100%;
-  resize: none;
-  font: inherit;
-  padding: 0;
-  margin: 5px 0 0 0;
-  font-size: inherit;
-  background-color: transparent;
-  border: 1px solid #2E86AB;
-  border-bottom-right-radius: 5px;
-  color: #2E86AB;
-  outline: none;
-  overflow-y: auto;
-  overflow-x: hidden;
-  scrollbar-color: #F07F31 rgba(74, 83, 84, 0.1);
-  scrollbar-width: thin;
-}
-#overlay form fieldset textarea::-webkit-scrollbar {
-  width: 5px;
-}
-#overlay form fieldset textarea::-webkit-scrollbar-track {
-  background: rgba(74, 83, 84, 0.1);
-}
-#overlay form fieldset textarea::-webkit-scrollbar-thumb {
-  background: #F07F31;
 }
 #overlay form input {
   width: 100%;

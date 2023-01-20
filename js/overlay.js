@@ -11,4 +11,7 @@ function overlayInit() {
     OverlayScrollbars(document.getElementById("overlay"), {
         className: "os-theme-dark os-theme-dark-edgy",
     });
+    OverlayScrollbars(document.getElementById("message"), {
+        className: "os-theme-dark os-theme-dark-edgy",
+    });
 }
