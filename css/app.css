@@ -644,30 +644,34 @@ footer h2 {
 }
 
 #s54 {
-  background-image: url("../images/home/pff.jpg");
+  background-image: url("../images/home/science.jpg");
 }
 
 #s55 {
-  background-image: url("../images/home/stick.jpg");
+  background-image: url("../images/home/pff.jpg");
 }
 
 #s56 {
-  background-image: url("../images/home/candid.jpg");
+  background-image: url("../images/home/stick.jpg");
 }
 
 #s57 {
-  background-image: url("../images/home/port.jpg");
+  background-image: url("../images/home/candid.jpg");
 }
 
 #s58 {
-  background-image: url("../images/home/login.jpg");
+  background-image: url("../images/home/port.jpg");
 }
 
 #s59 {
-  background-image: url("../images/home/dave.jpg");
+  background-image: url("../images/home/login.jpg");
 }
 
 #s510 {
+  background-image: url("../images/home/dave.jpg");
+}
+
+#s511 {
   background-image: url("../images/home/news.jpg");
 }
 
