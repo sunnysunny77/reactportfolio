@@ -40,36 +40,46 @@ footer {
         width: 47.5%;
         padding: 0;
         margin: 12% 9.4% 5% 44%;
+        letter-spacing: 0.75px;
         @include ten_24 {
             margin: 63px auto 24px auto;
             width: 100%;
         }
-        li a {
-            color: $Acolor;
-            margin: 0.75%;
-            text-decoration: none;
-            padding: 4px 10px;
-            @include ten_24 {
-                color: $c2;
-                margin: 0;
-                padding: 4px 0px;
-                font-size: smaller;
+        li {
+            display: inline;
+            a {
+                color: $Acolor;
+                margin: 0.75%;
+                text-decoration: none;
+                padding: 4px 10px;
+                @include ten_24 {
+                    color: $c2;
+                    margin: 0;
+                    padding: 4px 0px;
+                    font-size: smaller;
+                }
+                &:hover,
+                &:focus {
+                    color: $aHover;
+                    @include ten_24 {
+                        color: $c4;
+                    }
+                }
             }
         }
-        .sm {
+        li.sm {
             padding-right: 1%;
             opacity: 0.5;
             @include ten_24 {
                 display: block;
-
+            }
+            h2 {
+                font-size: small;
+                color: $Acolor;
+                font-style: oblique;
+                opacity: 0.6;
+                display: inline;
             }
         }
-    }
-    h2 {
-        font-size: small;
-        color: $Acolor;
-        font-style: oblique;
-        opacity: 0.6;
-        display: inline;
     }
 }

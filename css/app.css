@@ -19,31 +19,6 @@ body {
   margin: auto;
 }
 
-nav ul,
-footer ul {
-  letter-spacing: 0.75px;
-}
-
-nav ul li,
-footer ul li {
-  display: inline;
-}
-
-.button:hover,
-footer ul li a:hover,
-.button:focus,
-footer ul li a:focus {
-  color: #6acbd7;
-}
-@media only screen and (max-width: 1024px) {
-  .button:hover,
-footer ul li a:hover,
-.button:focus,
-footer ul li a:focus {
-    color: #F07F31;
-  }
-}
-
 .os-theme-dark.os-theme-dark-edgy > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
   background: #F07F31;
   min-height: 30px;
@@ -86,6 +61,7 @@ header {
   border-top-right-radius: 25px;
   background-blend-mode: multiply;
   display: flex;
+  justify-content: space-between;
 }
 @media only screen and (max-width: 1024px) {
   header {
@@ -93,26 +69,25 @@ header {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom: 4px solid snow;
-    padding: 5px 0;
-    z-index: 999;
   }
 }
-header > span {
-  display: block;
-  margin: auto;
+header > div {
   width: 123px;
   height: 75px;
-  margin-left: 10%;
+  padding: 0 10%;
   background-image: url(../images/template/textonly.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 @media only screen and (max-width: 1024px) {
-  header > span {
+  header > div {
     margin-left: 2.5%;
-    height: 40px;
+    padding: 0;
+    height: 50px;
     background-position: center left;
     position: absolute;
     background-size: 70%;
-    background-repeat: no-repeat;
+    z-index: 0;
   }
 }
 header button {
@@ -128,9 +103,11 @@ header button {
     width: 40px;
     height: 40px;
     background-color: transparent;
-    margin: auto;
     cursor: pointer;
     outline: none;
+    position: relative;
+    z-index: 1;
+    margin: 5px auto;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -140,66 +117,73 @@ header button {
     overflow: hidden;
   }
 }
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: calc(95% - 260px);
+header nav {
+  width: 100%;
 }
-@media only screen and (max-width: 1024px) {
-  nav {
-    width: 100%;
-  }
-}
-nav ul {
-  padding: 2% 0 0 0;
-  margin: 0;
-  width: 85%;
-  text-align: center;
-}
-@media only screen and (max-width: 1024px) {
-  nav ul {
-    width: 100%;
-    padding: 0;
-  }
-}
-nav ul .button {
-  width: 17%;
-  cursor: pointer;
-  display: inline-block;
-  color: #f5fcfc;
-}
-@media only screen and (max-width: 1024px) {
-  nav ul .button {
-    min-width: 97px;
-    width: 31%;
-    margin: 8px 4%;
-    font-size: small;
-    border-radius: 25px;
-    background-color: rgba(245, 252, 252, 0.9);
-    background-blend-mode: darken;
-    background-image: url(../images/template/natural-paper.png);
-    color: black;
-  }
-}
-nav ul .button .label {
-  display: inline-block;
-  padding: 10px;
-}
-@media only screen and (max-width: 1024px) {
-  nav ul .button .label {
-    padding: 5px;
-  }
-}
-nav ul .button h1 {
-  font-size: inherit;
+header nav ul {
   margin: 0;
   padding: 0;
-  font-weight: 500;
+  letter-spacing: 0.75px;
+  display: flex;
+  flex-wrap: wrap;
 }
-nav a {
+header nav ul li {
+  list-style-type: none;
+  width: 25%;
+}
+@media only screen and (max-width: 1024px) {
+  header nav ul li {
+    width: 50%;
+  }
+}
+header nav ul li a {
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
   text-decoration: none;
+  box-sizing: border-box;
+  height: 75px;
+  color: #f5fcfc;
+  border-left: 4px solid #f5fcfc;
+  position: relative;
+}
+@media only screen and (max-width: 1024px) {
+  header nav ul li a {
+    border-top: 1px solid #f5fcfc;
+    border-right: 1px solid #f5fcfc;
+    border-left: 1px solid #f5fcfc;
+  }
+}
+header nav ul li a:hover::after, header nav ul li a:focus::after {
+  width: 100%;
+}
+header nav ul li a:hover, header nav ul li a:focus {
+  color: #6acbd7;
+}
+@media only screen and (max-width: 1024px) {
+  header nav ul li a:hover, header nav ul li a:focus {
+    color: #F07F31;
+  }
+}
+header nav ul li a span {
+  align-self: flex-end;
+}
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  top: 95%;
+  right: 0;
+  bottom: 2.5%;
+  left: 0;
+  background-color: #6acbd7;
+  width: 0;
+  transition: width 1s;
+  z-index: 999;
+}
+@media only screen and (max-width: 1024px) {
+  header nav ul li a::after {
+    background-color: #F07F31;
+  }
 }
 
 /* MAIN */
@@ -505,12 +489,16 @@ footer ul {
   width: 47.5%;
   padding: 0;
   margin: 12% 9.4% 5% 44%;
+  letter-spacing: 0.75px;
 }
 @media only screen and (max-width: 1024px) {
   footer ul {
     margin: 63px auto 24px auto;
     width: 100%;
   }
+}
+footer ul li {
+  display: inline;
 }
 footer ul li a {
   color: #f5fcfc;
@@ -526,16 +514,24 @@ footer ul li a {
     font-size: smaller;
   }
 }
-footer ul .sm {
+footer ul li a:hover, footer ul li a:focus {
+  color: #6acbd7;
+}
+@media only screen and (max-width: 1024px) {
+  footer ul li a:hover, footer ul li a:focus {
+    color: #F07F31;
+  }
+}
+footer ul li.sm {
   padding-right: 1%;
   opacity: 0.5;
 }
 @media only screen and (max-width: 1024px) {
-  footer ul .sm {
+  footer ul li.sm {
     display: block;
   }
 }
-footer h2 {
+footer ul li.sm h2 {
   font-size: small;
   color: #f5fcfc;
   font-style: oblique;
@@ -543,94 +539,6 @@ footer h2 {
   display: inline;
 }
 
-@media only screen and (min-width: 1024px) {
-  .button {
-    -webkit-transform: translateZ(0px);
-    transform: translateZ(0px);
-  }
-  .button .icon {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.15s;
-    transition-delay: 0.225s;
-    transform: skew(10deg, 0deg);
-  }
-  .button .icon::before, .button .icon::after {
-    height: 1px;
-    width: 0;
-    content: "";
-    position: absolute;
-    display: block;
-    transition: left 0.15s, right 0.15s, width 0.15s, height 0.15s;
-    transition-delay: 0.225s;
-    background: #f5fcfc;
-  }
-  .button .icon::before {
-    top: 0;
-    left: calc(50% - 30px);
-  }
-  .button .icon::after {
-    bottom: 0;
-    right: calc(50% - 30px);
-  }
-  .button .icon span:before,
-.button .icon span:after {
-    height: 0;
-    transition-delay: 0s;
-    content: "";
-    position: absolute;
-    display: block;
-    width: 1px;
-    transition: left 0.15s, right 0.15s, width 0.15s, height 0.15s;
-    background: #f5fcfc;
-  }
-  .button .icon span:before {
-    left: 0;
-    top: 0;
-  }
-  .button .icon span:after {
-    right: 0;
-    bottom: 0;
-  }
-  .button .icon2 {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.15s;
-    transform: skew(-40deg, 0deg);
-    transition-delay: 0.45s;
-  }
-  .button:hover .icon, .button:focus .icon {
-    transform: skew(-40deg, 0deg);
-  }
-  .button:hover .icon::before, .button:hover .icon::after, .button:focus .icon::before, .button:focus .icon::after {
-    width: 25%;
-    transition-delay: 0.225s;
-  }
-  .button:hover .icon::before, .button:focus .icon::before {
-    left: 0;
-  }
-  .button:hover .icon::after, .button:focus .icon::after {
-    right: 0;
-  }
-  .button:hover .icon span:before,
-.button:hover .icon span:after, .button:focus .icon span:before,
-.button:focus .icon span:after {
-    height: 50%;
-    transition-delay: 0.45s;
-  }
-  .button:hover .icon2, .button:focus .icon2 {
-    transform: skew(-40deg, 0deg);
-    transition-delay: 0s;
-  }
-}
 #s51 {
   background-image: url("../images/home/global.png");
 }
@@ -1364,13 +1272,13 @@ main::after {
     opacity: 0;
   }
   100% {
-    height: 84px;
+    height: 150px;
     opacity: 1;
   }
 }
 @keyframes slideIn2 {
   0% {
-    height: 84px;
+    height: 150px;
     opacity: 0;
   }
   100% {

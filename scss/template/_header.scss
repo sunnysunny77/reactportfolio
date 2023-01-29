@@ -8,28 +8,28 @@ header {
     border-top-right-radius: 25px;
     background-blend-mode: multiply;
     display: flex;
+    justify-content: space-between;
     @include ten_24 {
         flex-direction: column;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         border-bottom: 4px solid $mainbg;
-        padding: 5px 0;
-        z-index: 999;
     }
-    > span {
-        display: block;
-        margin: auto;
+    > div {
         width: 123px;
         height: 75px;
-        margin-left: 10%;
+        padding: 0 10%;
         background-image: url(../images/template/textonly.svg);
+        background-position: center;
+        background-repeat: no-repeat;
         @include ten_24 {
             margin-left: 2.5%;
-            height: 40px;
+            padding: 0;
+            height: 50px;
             background-position: center left;
             position: absolute;
             background-size: 70%;
-            background-repeat: no-repeat;
+            z-index: 0;
         }
     }
     button {
@@ -43,9 +43,11 @@ header {
             width: 40px;
             height: 40px;
             background-color: transparent;
-            margin: auto;
             cursor: pointer;
             outline: none;
+            position: relative;
+            z-index: 1;
+            margin: 5px auto;
         }
     }
     .disp {
@@ -55,57 +57,66 @@ header {
             overflow: hidden;
         }
     }
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: calc(95% - 260px);
-    @include ten_24 {
+    nav {
         width: 100%;
-    }
-    ul {
-        padding: 2% 0 0 0;
-        margin: 0;
-        width: 85%;
-        text-align: center;
-        @include ten_24 {
-            width: 100%;
+        ul {
+            margin: 0;
             padding: 0;
-        }
-        .button {
-            width: 17%;
-            cursor: pointer;
-            display: inline-block;
-            color: $Acolor;
-            @include ten_24 {
-                min-width: 97px;
-                width: 31%;
-                margin: 8px 4%;
-                font-size: small;
-                border-radius: 25px;
-                background-color: rgba($heading2,0.9);
-                background-blend-mode: darken;
-                background-image: url(../images/template/natural-paper.png);
-                color: $c5;
-            }
-            .label {
-                display: inline-block;
-                padding: 10px;
+            letter-spacing: 0.75px;
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                list-style-type: none;
+                width: 25%;
                 @include ten_24 {
-                    padding: 5px;
+                    width: 50%;
+                }
+                a {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 5%;
+                    text-decoration: none;
+                    box-sizing: border-box;
+                    height: 75px;
+                    color: $Acolor;
+                    border-left: 4px solid $Acolor;
+                    position: relative;
+                    @include ten_24 {
+                        border-top: 1px solid $Acolor;
+                        border-right: 1px solid $Acolor;
+                        border-left: 1px solid $Acolor;
+                    }
+                    &:hover::after ,
+                    &:focus::after  {
+                        width: 100%;
+                    }
+                    &:hover,
+                    &:focus {
+                        color: $aHover;
+                        @include ten_24 {
+                            color: $c4;
+                        }
+                    }
+                    span {
+                        align-self: flex-end;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 95%;
+                        right: 0;
+                        bottom: 2.5%;
+                        left: 0;
+                        background-color: $aHover;
+                        @include ten_24 {
+                            background-color: $c4;
+                        }
+                        width: 0;
+                        transition: width  1s;
+                        z-index: 999;
+                    }
                 }
             }
-            h1 {
-                font-size: inherit;
-                margin: 0;
-                padding: 0;
-                font-weight: 500;
-            }
         }
-    }
-    a {
-        text-decoration: none;
     }
 }

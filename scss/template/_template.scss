@@ -19,26 +19,6 @@ body {
   margin: auto;
 }
 
-nav ul,
-footer ul {
-  letter-spacing: 0.75px;
-}
-
-nav ul li,
-footer ul li {
-  display: inline;
-}
-
-.button:hover,
-footer ul li a:hover,
-.button:focus,
-footer ul li a:focus {
-  color: $aHover;
-  @include ten_24 {
-    color: $c4;
-  }
-}
-
 .os-theme-dark.os-theme-dark-edgy > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
   background: $c4;
   min-height: 30px;
@@ -73,4 +53,3 @@ h3 {
 @import "header";
 @import "main";
 @import "footer";
-@import "button";
