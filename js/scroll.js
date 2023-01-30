@@ -7,6 +7,7 @@ const s4 = document.getElementById("s4");
 const s5 = document.getElementById("s5");
 const s51 = document.getElementById("s51");
 const ob0ul = document.getElementById("ob0ul");
+let stopbool = true;
 
 function scrollAnimation() {
 
@@ -60,8 +61,11 @@ function scrollAnimation() {
         }
         
     } else {
-  
-        if (tempImg0 && scroll_pos > getPosition(tempImg0)) {
+
+        if (tempImg0 && stopbool && scroll_pos > getPosition(tempImg0)) {
+
+            stopbool = false;
+
             setTimeout(function () {
                 tempImg0.classList.add("ani5");
                 setTimeout(function () {
