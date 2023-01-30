@@ -267,6 +267,7 @@ main::after {
   width: 205px;
   bottom: 45px;
   left: 100px;
+  opacity: 0.75;
   background-image: url(../images/template/logo-main-underline.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -361,6 +362,7 @@ main::after {
   margin: 9.5% auto 7.5% auto;
   width: 60%;
   height: 109px;
+  opacity: 0.75;
 }
 @media only screen and (max-width: 1024px) {
   .template-div {
