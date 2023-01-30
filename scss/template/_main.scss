@@ -59,11 +59,13 @@ main {
     }
     .main-logo-span {
         position: absolute;
-        height: 9px;
+        height: 14px;
         width: 205px;
         bottom: 45px;
         left: 100px;
         background-image: url(../images/template/logo-main-underline.png);
+        background-size: contain;
+        background-repeat: no-repeat;
         @include ten_24 {
             display: none;
         }
@@ -146,7 +148,7 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     margin: 9.5% auto 7.5% auto;
-    width: 90.021%;
+    width: 60%;
     height: 109px;
     @include ten_24 {
         margin: 12.5% auto;

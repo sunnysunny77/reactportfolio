@@ -15,21 +15,25 @@ header {
         border-top-right-radius: 0;
         border-bottom: 4px solid $mainbg;
     }
-    > div {
-        width: 123px;
-        height: 75px;
+    > a {
         padding: 0 10%;
-        background-image: url(../images/template/textonly.svg);
-        background-position: center;
-        background-repeat: no-repeat;
         @include ten_24 {
-            margin-left: 2.5%;
             padding: 0;
-            height: 50px;
-            background-position: center left;
-            position: absolute;
-            background-size: 70%;
-            z-index: 0;
+        }
+        div {
+            width: 123px;
+            height: 75px;
+            background-image: url(../images/template/textonly.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            @include ten_24 {
+                margin-left: 2.5%;
+                height: 50px;
+                background-position: center left;
+                position: absolute;
+                background-size: 70%;
+                z-index: 0;
+            }
         }
     }
     button {
@@ -86,8 +90,8 @@ header {
                         border-right: 1px solid $Acolor;
                         border-left: 1px solid $Acolor;
                     }
-                    &:hover::after ,
-                    &:focus::after  {
+                    &:hover::after,
+                    &:focus::after {
                         width: 100%;
                     }
                     &:hover,
@@ -112,7 +116,7 @@ header {
                             background-color: $c4;
                         }
                         width: 0;
-                        transition: width  1s;
+                        transition: width 1s;
                         z-index: 999;
                     }
                 }

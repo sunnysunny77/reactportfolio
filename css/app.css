@@ -71,18 +71,24 @@ header {
     border-bottom: 4px solid snow;
   }
 }
-header > div {
+header > a {
+  padding: 0 10%;
+}
+@media only screen and (max-width: 1024px) {
+  header > a {
+    padding: 0;
+  }
+}
+header > a div {
   width: 123px;
   height: 75px;
-  padding: 0 10%;
   background-image: url(../images/template/textonly.svg);
   background-position: center;
   background-repeat: no-repeat;
 }
 @media only screen and (max-width: 1024px) {
-  header > div {
+  header > a div {
     margin-left: 2.5%;
-    padding: 0;
     height: 50px;
     background-position: center left;
     position: absolute;
@@ -256,11 +262,13 @@ main::after {
 }
 .main-logo .main-logo-span {
   position: absolute;
-  height: 9px;
+  height: 14px;
   width: 205px;
   bottom: 45px;
   left: 100px;
   background-image: url(../images/template/logo-main-underline.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 @media only screen and (max-width: 1024px) {
   .main-logo .main-logo-span {
@@ -350,7 +358,7 @@ main::after {
   background-repeat: no-repeat;
   background-position: center;
   margin: 9.5% auto 7.5% auto;
-  width: 90.021%;
+  width: 60%;
   height: 109px;
 }
 @media only screen and (max-width: 1024px) {
