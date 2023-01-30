@@ -10,9 +10,9 @@ const ob0ul = document.getElementById("ob0ul");
 
 function scrollAnimation() {
 
-    if (window.screen.width <= 992) {
+    let scroll_pos = window.scrollY + window.innerHeight
 
-        let scroll_pos = window.scrollY + window.innerHeight
+    if (window.screen.width <= 992) {
 
         if (scroll_pos > getPosition(imgCont) && imgCont.classList.contains("vis1")) {
             imgCont.classList.remove("vis1");
@@ -26,42 +26,48 @@ function scrollAnimation() {
             cont.classList.add("ani2");
         }
 
-        if (homeD) {
-            if (scroll_pos > getPosition(homeD)) {
-                homeD.classList.add("ani3");
-            }
+        
+        if (homeD && scroll_pos > getPosition(homeD)) {
+            homeD.classList.add("ani3");
+        }
+    
+        if (tempImg0 && scroll_pos > getPosition(tempImg0) && tempImg0.classList.contains("vis1")) {
+            tempImg0.classList.remove("vis1");
+            tempImg0.classList.add("vis0");
+            tempImg0.classList.add("ani2");
+            setTimeout(function () {
+                tempImg0.classList.add("ani5");
+                setTimeout(function () {
+                    tempImg0.classList.remove("ani5");
+                }, 4000);
+            }, 1500);
         }
 
-        if (tempImg0) {
-            if (scroll_pos > getPosition(tempImg0) && tempImg0.classList.contains("vis1")) {
-                tempImg0.classList.remove("vis1");
-                tempImg0.classList.add("vis0");
-                tempImg0.classList.add("ani2");
-                setTimeout(function () {
-                    tempImg0.classList.add("ani5");
-                    setTimeout(function () {
-                        tempImg0.classList.remove("ani5");
-                    }, 4000);
-                }, 1500);
-            }
+        if (s4 && scroll_pos > getPosition(s4) && s4.classList.contains("vis1")) {
+            s4.classList.remove("vis1");
+            s4.classList.add("vis0");
+            s4.classList.add("ani2");
+            ob0ul.classList.remove("vis1");
+            ob0ul.classList.add("vis0");
+            ob0ul.classList.add("ani2");
+            s5.classList.remove("vis1");
+            s5.classList.add("vis0");
+            s5.classList.add("ani2");
+            s51.classList.add("ani0");
+            setTimeout(function () {
+                s51.classList.remove("ani0");
+            }, 1500);
         }
-
-        if (s4) {
-            if (scroll_pos > getPosition(s4) && s4.classList.contains("vis1")) {
-                s4.classList.remove("vis1");
-                s4.classList.add("vis0");
-                s4.classList.add("ani2");
-                ob0ul.classList.remove("vis1");
-                ob0ul.classList.add("vis0");
-                ob0ul.classList.add("ani2");
-                s5.classList.remove("vis1");
-                s5.classList.add("vis0");
-                s5.classList.add("ani2");
-                s51.classList.add("ani0");
+        
+    } else {
+  
+        if (tempImg0 && scroll_pos > getPosition(tempImg0)) {
+            setTimeout(function () {
+                tempImg0.classList.add("ani5");
                 setTimeout(function () {
-                    s51.classList.remove("ani0");
-                }, 1500);
-            }
+                    tempImg0.classList.remove("ani5");
+                }, 4000);
+            }, 1500);
         }
     }
 }
@@ -116,13 +122,5 @@ function check() {
                 s51.classList.remove("ani0");
             }, 1500);
         }
-
-    } else {
-        if (s51) {
-            s51.classList.add("ani0");
-            setTimeout(function () {
-                s51.classList.remove("ani0");
-            }, 1500);
-        }
-    }
+    } 
 }
