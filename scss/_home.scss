@@ -12,24 +12,6 @@ $img: "../images/home/global.png", "../images/home/bus.jpg", "../images/home/wp.
   background-image: url(../images/home/home.png);
 }
 
-#home-div {
-  display: none;
-  @include ten_24 {
-    display: block;
-    background-image: url(../images/home/equal.png);
-    height: 60px;
-    width: 60px;
-    margin: 12.5% auto;
-    opacity: 0.875;
-  }
-}
-
-@include ten_24 {
-  #home-template-div {
-    display: none;
-  }
-}
-
 /* Scroll */
 
 #site {

@@ -364,12 +364,21 @@ main::after {
 }
 @media only screen and (max-width: 1024px) {
   .template-div {
-    margin: 12.5% auto;
+    display: none;
   }
 }
-@media only screen and (max-width: 720px) and (orientation: portrait) {
-  .template-div {
-    margin: 27.5% auto;
+
+.template-div-mobile {
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  .template-div-mobile {
+    display: block;
+    background-image: url(../images/home/equal.png);
+    height: 60px;
+    width: 60px;
+    margin: 12.5% auto;
+    opacity: 0.875;
   }
 }
 
@@ -596,25 +605,6 @@ footer ul li.sm h2 {
   background-image: url(../images/home/home.png);
 }
 
-#home-div {
-  display: none;
-}
-@media only screen and (max-width: 1024px) {
-  #home-div {
-    display: block;
-    background-image: url(../images/home/equal.png);
-    height: 60px;
-    width: 60px;
-    margin: 12.5% auto;
-    opacity: 0.875;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  #home-template-div {
-    display: none;
-  }
-}
 /* Scroll */
 #site {
   position: relative;
