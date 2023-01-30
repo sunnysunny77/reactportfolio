@@ -1178,8 +1178,7 @@ a[target=git]:hover, a[target=git]:focus {
   visibility: hidden;
 }
 
-header > span,
-header > span + span {
+header > a div {
   animation: fadeInOpacity 1.5s ease-in-out;
 }
 
