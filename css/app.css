@@ -184,6 +184,7 @@ header nav ul li a::after {
   background-color: #6acbd7;
   width: 0;
   transition: width 1s;
+  transition-delay: 250ms;
   z-index: 999;
 }
 @media only screen and (max-width: 1024px) {

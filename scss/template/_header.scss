@@ -117,6 +117,7 @@ header {
                         }
                         width: 0;
                         transition: width 1s;
+                        transition-delay: 250ms;
                         z-index: 999;
                     }
                 }
