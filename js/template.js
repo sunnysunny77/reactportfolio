@@ -23,7 +23,7 @@ function vivus() {
   new Vivus(
     "my-svg",
     {
-      duration: 800,
+      duration: 200,
       file: "images/template/svg.svg",
     },
     null
