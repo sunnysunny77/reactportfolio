@@ -1,6 +1,6 @@
-$img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/home/bus.jpg", "../images/home/wp.jpg",
-  "../images/home/science.jpg", "../images/home/stick.jpg", "../images/home/candid.jpg", "../images/home/port.jpg",
-  "../images/home/login.jpg", "../images/home/dave.jpg", "../images/home/news.jpg";
+$img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/home/bus.jpg", "../images/home/port.jpg",
+  "../images/home/candid.jpg", "../images/home/stick.jpg", "../images/home/news.jpg", "../images/home/wp.jpg",
+  "../images/home/science.jpg", "../images/home/dave.jpg", "../images/home/login.jpg";
 
 @for $i from 1 through length($img) {
   #s5#{$i} {
