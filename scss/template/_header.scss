@@ -72,6 +72,7 @@ header {
             li {
                 list-style-type: none;
                 width: 25%;
+             
                 @include ten_24 {
                     width: 50%;
                 }
@@ -85,15 +86,7 @@ header {
                     color: $Acolor;
                     border-left: 4px solid $Acolor;
                     position: relative;
-                    @include ten_24 {
-                        border-top: 1px solid $Acolor;
-                        &:nth-child(odd) {
-                            border-left: 1px solid $Acolor;
-                        }
-                        &:nth-child(even) {
-                            border-left: none;
-                        }
-                    }
+                    border-top: 1px solid $Acolor;
                     &:hover::after,
                     &:focus::after {
                         width: 100%;
@@ -123,6 +116,16 @@ header {
                         transition: width 1s;
                         transition-delay: 250ms;
                         z-index: 999;
+                    }
+                }
+                &:nth-child(even) a {
+                    @include ten_24 {
+                        border-left: 1px solid $Acolor;
+                    }
+                }
+                &:nth-child(odd) a {
+                    @include ten_24 {
+                        border-left: none;
                     }
                 }
             }
