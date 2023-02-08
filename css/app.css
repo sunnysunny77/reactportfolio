@@ -156,8 +156,12 @@ header nav ul li a {
 @media only screen and (max-width: 1024px) {
   header nav ul li a {
     border-top: 1px solid #f5fcfc;
-    border-right: 1px solid #f5fcfc;
+  }
+  header nav ul li a:nth-child(odd) {
     border-left: 1px solid #f5fcfc;
+  }
+  header nav ul li a:nth-child(even) {
+    border-left: none;
   }
 }
 header nav ul li a:hover::after, header nav ul li a:focus::after {
@@ -1268,7 +1272,7 @@ main::after {
     height: 0;
     opacity: 0;
   }
-  60% {
+  85% {
     opacity: 0;
   }
   100% {

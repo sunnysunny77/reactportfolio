@@ -87,8 +87,12 @@ header {
                     position: relative;
                     @include ten_24 {
                         border-top: 1px solid $Acolor;
-                        border-right: 1px solid $Acolor;
-                        border-left: 1px solid $Acolor;
+                        &:nth-child(odd) {
+                            border-left: 1px solid $Acolor;
+                        }
+                        &:nth-child(even) {
+                            border-left: none;
+                        }
                     }
                     &:hover::after,
                     &:focus::after {
