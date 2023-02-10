@@ -1,4 +1,10 @@
-$font: Tahoma, sans-serif;
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(./Poppins-Regular.ttf);
+    font-display: swap;
+}
+
+$font: Poppins-Regular;
 $main: #6acbd7;
 $mainbg: snow;
 

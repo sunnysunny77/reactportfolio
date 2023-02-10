@@ -1,11 +1,16 @@
 @import url("../node_modules/overlayscrollbars/css/OverlayScrollbars.css");
+@font-face {
+  font-family: Poppins-Regular;
+  src: url(./Poppins-Regular.ttf);
+  font-display: swap;
+}
 /* GLOBAL */
 html {
   -webkit-text-size-adjust: 100%;
 }
 
 body {
-  font-family: Tahoma, sans-serif;
+  font-family: Poppins-Regular;
   background-color: snow;
 }
 @media only screen and (max-width: 1024px) {
