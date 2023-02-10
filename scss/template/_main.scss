@@ -50,6 +50,7 @@ main {
         text-shadow: 0 0 2.5px $c1;
         display: inline;
         color: $heading2;
+        font-family: Verdana, sans-serif;
         font-size: 1.8em;
         @include ten_24 {
             height: 0;
