@@ -855,6 +855,7 @@ footer ul li.sm h2 {
 #overlay form fieldset ul li {
   margin: auto;
   width: 100%;
+  padding-bottom: 50px;
 }
 #overlay form fieldset ul li:nth-child(1), #overlay form fieldset ul li:nth-child(2) {
   width: 49.3%;
@@ -867,7 +868,7 @@ footer ul li.sm h2 {
 }
 #overlay form fieldset label {
   color: #F07F31;
-  height: 36px;
+  height: 50px;
   display: block;
 }
 #overlay form input {

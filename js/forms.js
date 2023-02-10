@@ -53,10 +53,10 @@ function validation(event) {
     const formData = new FormData(this);
     const entries = formData.entries();
     const data = Object.fromEntries(entries);
-    const name = this.children[0].children[1].children[0].children[2];
-    const phone = this.children[0].children[1].children[1].children[2];
-    const email = this.children[0].children[1].children[2].children[2];
-    const message = this.children[0].children[1].children[3].children[2];
+    const name = this.children[0].children[1].children[0].children[1];
+    const phone = this.children[0].children[1].children[1].children[1];
+    const email = this.children[0].children[1].children[2].children[1];
+    const message = this.children[0].children[1].children[3].children[1];
     if (/^[A-Z \.\-']{2,40}$/i.test(data.name)) {
         reply(false, name, null);
     } else {
