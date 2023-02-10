@@ -385,7 +385,7 @@ main::after {
 @media only screen and (max-width: 1024px) {
   .template-div-mobile {
     display: block;
-    background-image: url(../images/home/equal.png);
+    background-image: url(../images/template/equal.png);
     height: 60px;
     width: 60px;
     margin: 12.5% auto;
