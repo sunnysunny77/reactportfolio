@@ -20,13 +20,8 @@ function toggle() {
 }
 
 function vivus() {
-  new Vivus(
-    "my-svg",
-    {
-      duration: 100,
-    },
-    null
-  );
+  
+ new Vivus("my-svg");
 }
 
 eventListner(window, "scroll", cache, null);

@@ -13,7 +13,7 @@ async function pageScroll () {
     if (count === line || count === 0) {
 
         bool = !bool 
-        await sleep(6000);       
+        await sleep(5000);       
     } 
 
     if (bool === true) {
