@@ -33,14 +33,18 @@ main {
     }
     #my-svg {
         display: inline-block;
-    }
-    #my-svg,
-    span svg {
+        overflow: visible; 
+        opacity: 0.75; 
         width: 90px;
         height: 90px;
         @include ten_24 {
             width: 55px;
             height: 55px;
+        }
+        path {
+            fill: none;
+            stroke: $c1; 
+            stroke-width: 2;
         }
     }
     h2 {

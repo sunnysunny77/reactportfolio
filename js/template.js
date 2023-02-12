@@ -24,7 +24,6 @@ function vivus() {
     "my-svg",
     {
       duration: 200,
-      file: "images/template/svg.svg",
     },
     null
   );
