@@ -242,14 +242,7 @@ main::after {
   display: inline-block;
   overflow: visible;
   opacity: 0.75;
-  width: 90px;
-  height: 90px;
-}
-@media only screen and (max-width: 1024px) {
-  .main-logo #my-svg {
-    width: 55px;
-    height: 55px;
-  }
+  width: 20.39%;
 }
 .main-logo #my-svg path {
   fill: none;
