@@ -62,7 +62,7 @@ function scrollAnimation() {
         
     } else {
 
-        if (tempImg0 && stopbool && scroll_pos > getPosition(tempImg0)) {
+        if (tempImg0 && stopbool && scroll_pos > getPosition(tempImg0) + tempImg0.offsetHeight) {
 
             stopbool = false;
 
