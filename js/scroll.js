@@ -27,15 +27,21 @@ function scrollAnimation() {
             cont.classList.add("ani2");
         }
 
-        
+
         if (homeD && scroll_pos > getPosition(homeD)) {
             homeD.classList.add("ani3");
         }
-    
-        if (tempImg0 && scroll_pos > getPosition(tempImg0) + tempImg0.offsetHeight && tempImg0.classList.contains("vis1")) {
+
+        if (tempImg0 && scroll_pos > getPosition(tempImg0) && tempImg0.classList.contains("vis1")) {
             tempImg0.classList.remove("vis1");
             tempImg0.classList.add("vis0");
             tempImg0.classList.add("ani2");
+        }
+
+        if (tempImg0 && stopbool && scroll_pos > getPosition(tempImg0) + tempImg0.offsetHeight) {
+
+            stopbool = false;
+
             setTimeout(function () {
                 tempImg0.classList.add("ani5");
                 setTimeout(function () {
@@ -59,7 +65,7 @@ function scrollAnimation() {
                 s51.classList.remove("ani0");
             }, 1500);
         }
-        
+
     } else {
 
         if (tempImg0 && stopbool && scroll_pos > getPosition(tempImg0) + tempImg0.offsetHeight) {
@@ -126,5 +132,5 @@ function check() {
                 s51.classList.remove("ani0");
             }, 1500);
         }
-    } 
+    }
 }
