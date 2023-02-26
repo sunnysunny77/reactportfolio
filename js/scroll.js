@@ -32,7 +32,7 @@ function scrollAnimation() {
             homeD.classList.add("ani3");
         }
     
-        if (tempImg0 && scroll_pos > getPosition(tempImg0) && tempImg0.classList.contains("vis1")) {
+        if (tempImg0 && scroll_pos > getPosition(tempImg0) + tempImg0.offsetHeight && tempImg0.classList.contains("vis1")) {
             tempImg0.classList.remove("vis1");
             tempImg0.classList.add("vis0");
             tempImg0.classList.add("ani2");
