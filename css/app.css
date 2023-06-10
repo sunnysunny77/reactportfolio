@@ -10,7 +10,7 @@ html {
 
 body {
   font-family: Poppins-Regular;
-  background-color: snow;
+  background-color: #F8F8FF;
 }
 @media only screen and (max-width: 1024px) {
   body {
@@ -60,7 +60,7 @@ h3::before {
 header {
   background-image: url(../images/template/handmade-paper.png);
   background-color: #4A5354;
-  border-bottom: 8px solid snow;
+  border-bottom: 8px solid #F8F8FF;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-blend-mode: multiply;
@@ -72,7 +72,7 @@ header {
     flex-direction: column;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    border-bottom: 4px solid snow;
+    border-bottom: 4px solid #F8F8FF;
   }
 }
 header > a {
@@ -162,7 +162,7 @@ header nav ul li a:hover::after, header nav ul li a:focus::after {
   width: 100%;
 }
 header nav ul li a:hover, header nav ul li a:focus {
-  color: #6acbd7;
+  color: #94b8b8;
 }
 @media only screen and (max-width: 1024px) {
   header nav ul li a:hover, header nav ul li a:focus {
@@ -179,7 +179,7 @@ header nav ul li a::after {
   right: 0;
   bottom: 2.5%;
   left: 0;
-  background-color: #6acbd7;
+  background-color: #94b8b8;
   width: 0;
   transition: width 1s;
   transition-delay: 250ms;
@@ -217,14 +217,9 @@ main::after {
   right: 0;
   position: absolute;
   z-index: -999;
-  background-color: #6acbd7;
-  background-blend-mode: color;
+  background-color: #94b8b8;
+  background-blend-mode: darken;
   background-attachment: fixed;
-}
-@media only screen and (max-width: 1024px) {
-  main::after {
-    background-image: url(../images/template/handmade-paper.png);
-  }
 }
 
 .main-logo {
@@ -390,7 +385,7 @@ main::after {
 }
 
 .template-img-0 {
-  background-color: rgba(106, 203, 215, 0.25);
+  background-color: rgba(148, 184, 184, 0.25);
   background-blend-mode: screen;
   border: 5px solid rgba(245, 252, 252, 0.75);
   background-repeat: no-repeat;
@@ -473,7 +468,7 @@ footer {
   height: 190px;
   background-image: url(../images/template/wave.svg);
   background-size: 100%;
-  border-top: 8px solid snow;
+  border-top: 8px solid #F8F8FF;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   background-repeat: no-repeat;
@@ -483,7 +478,7 @@ footer {
 @media only screen and (max-width: 1024px) {
   footer {
     height: 125px;
-    border-top: 4px solid snow;
+    border-top: 4px solid #F8F8FF;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
@@ -540,7 +535,7 @@ footer ul li a {
   }
 }
 footer ul li a:hover, footer ul li a:focus {
-  color: #6acbd7;
+  color: #94b8b8;
 }
 @media only screen and (max-width: 1024px) {
   footer ul li a:hover, footer ul li a:focus {
@@ -573,34 +568,38 @@ footer ul li.sm h2 {
 }
 
 #s53 {
-  background-image: url("../images/home/bus.jpg");
+  background-image: url("../images/home/fas.jpg");
 }
 
 #s54 {
-  background-image: url("../images/home/port.jpg");
+  background-image: url("../images/home/bus.jpg");
 }
 
 #s55 {
-  background-image: url("../images/home/candid.jpg");
+  background-image: url("../images/home/port.jpg");
 }
 
 #s56 {
-  background-image: url("../images/home/stick.jpg");
+  background-image: url("../images/home/candid.jpg");
 }
 
 #s57 {
-  background-image: url("../images/home/news.jpg");
+  background-image: url("../images/home/stick.jpg");
 }
 
 #s58 {
-  background-image: url("../images/home/wp.jpg");
+  background-image: url("../images/home/news.jpg");
 }
 
 #s59 {
-  background-image: url("../images/home/dave.jpg");
+  background-image: url("../images/home/wp.jpg");
 }
 
 #s510 {
+  background-image: url("../images/home/dave.jpg");
+}
+
+#s511 {
   background-image: url("../images/home/login.jpg");
 }
 
@@ -1146,7 +1145,7 @@ a[target=git] {
   float: left;
 }
 a[target=git]:hover, a[target=git]:focus {
-  color: #6acbd7;
+  color: #94b8b8;
 }
 
 .img {
