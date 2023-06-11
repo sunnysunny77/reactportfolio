@@ -218,7 +218,7 @@ main::after {
   position: absolute;
   z-index: -999;
   background-color: #94b8b8;
-  background-blend-mode: darken;
+  background-blend-mode: color;
   background-attachment: fixed;
 }
 

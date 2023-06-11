@@ -15,7 +15,7 @@ main {
         position: absolute;
         z-index: -999;
         background-color: $main;
-        background-blend-mode: darken;
+        background-blend-mode: color;
         background-attachment: fixed;
     }
 }
