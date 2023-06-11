@@ -19,6 +19,7 @@ self.addEventListener("install", (event) => {
           '/images/home/global.png',
           '/images/home/next.png',
           '/images/home/wp.jpg',
+          '/images/home/fas.jpg',
           '/images/home/stick.jpg',
           '/images/home/port.jpg',
           '/images/home/news.jpg',
