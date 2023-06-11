@@ -56,7 +56,6 @@ self.addEventListener("install", (event) => {
           '/images/template/handmade-paper.png',
           '/images/template/menu.png',
           '/images/template/natural-paper.png',
-          '/images/template/paper-fibers.png',
           '/images/template/textonly.svg',
           '/images/template/wave.svg',
           '/images/template/logo-main-underline.png',
