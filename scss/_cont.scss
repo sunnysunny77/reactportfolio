@@ -34,6 +34,7 @@
       legend {
         padding: 0;
         margin: 0;
+        color: $c4;
       }
       ul {
         padding: 0;
@@ -54,7 +55,6 @@
         }
       }
       label {
-        color: $c4;
         height: 50px;
         display: block;
       }
@@ -70,6 +70,9 @@
       border: 1px solid $c3;
       color: $c3;
       outline: none;
+      &::placeholder {
+        color: $c4;
+      }
     }
     #sent {
       text-align: center;
@@ -124,12 +127,16 @@
       border: none;
       top: 7.5%;
       color: $c2;
-      font-size: 20px;
+      background-size: contain;
+      width: 20px;
+      height: 20px;
     }
     .open-left {
+      background-image: url(../images/contact/left.png);
       left: 2%;
     }
     .open-right {
+      background-image: url(../images/contact/right.png);
       right: 2%;
     }
     .image-fill-right {

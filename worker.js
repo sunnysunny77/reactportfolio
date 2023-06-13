@@ -16,6 +16,8 @@ self.addEventListener("install", (event) => {
           '/images/contact/contact.png',
           '/images/contact/contimg.jpg',
           '/images/contact/telephone.png',
+          '/images/contact/left.png',
+          '/images/contact/right.png',
           '/images/contact/mail.png',
           '/images/contact/linkedin.png',
           '/images/home/home.png',

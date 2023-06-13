@@ -853,6 +853,7 @@ footer ul li.sm h2 {
 #overlay form fieldset legend {
   padding: 0;
   margin: 0;
+  color: #F07F31;
 }
 #overlay form fieldset ul {
   padding: 0;
@@ -874,7 +875,6 @@ footer ul li.sm h2 {
   }
 }
 #overlay form fieldset label {
-  color: #F07F31;
   height: 50px;
   display: block;
 }
@@ -889,6 +889,9 @@ footer ul li.sm h2 {
   border: 1px solid #2E86AB;
   color: #2E86AB;
   outline: none;
+}
+#overlay form input::placeholder {
+  color: #F07F31;
 }
 #overlay form #sent {
   text-align: center;
@@ -942,12 +945,16 @@ footer ul li.sm h2 {
   border: none;
   top: 7.5%;
   color: rgba(245, 252, 252, 0.75);
-  font-size: 20px;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
 }
 .circle-progress .slider .open-left {
+  background-image: url(../images/contact/left.png);
   left: 2%;
 }
 .circle-progress .slider .open-right {
+  background-image: url(../images/contact/right.png);
   right: 2%;
 }
 .circle-progress .slider .image-fill-right {
