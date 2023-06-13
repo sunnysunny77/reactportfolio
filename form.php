@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!$mail) {
       $res = print_r(error_get_last()['message']);
     } else {
-      $res = "Thanks, sent to &#128231;";
+      $res = "Thanks, sent to mail!;";
     }
 }
 ?>

@@ -128,8 +128,13 @@
       top: 7.5%;
       color: $c2;
       background-size: contain;
+      background-repeat: no-repeat;
       width: 20px;
       height: 20px;
+      &:hover, 
+      &:focus {
+        opacity: 0.5;
+      }
     }
     .open-left {
       background-image: url(../images/contact/left.png);

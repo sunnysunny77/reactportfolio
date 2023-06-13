@@ -440,7 +440,7 @@ main::after {
 }
 .template-img-0:hover .circle-progress, .template-img-0:focus .circle-progress, .template-img-0:hover p, .template-img-0:focus p {
   background-color: #2E86AB;
-  opacity: 0.75;
+  opacity: 0.95;
   top: 8%;
   right: 8%;
   bottom: 8%;
@@ -946,8 +946,12 @@ footer ul li.sm h2 {
   top: 7.5%;
   color: rgba(245, 252, 252, 0.75);
   background-size: contain;
+  background-repeat: no-repeat;
   width: 20px;
   height: 20px;
+}
+.circle-progress .slider .button-next:hover, .circle-progress .slider .button-next:focus {
+  opacity: 0.5;
 }
 .circle-progress .slider .open-left {
   background-image: url(../images/contact/left.png);
@@ -1374,7 +1378,7 @@ main::after {
 }
 .ani5.template-img-0 .circle-progress, .ani5.template-img-0 p {
   background-color: #2E86AB;
-  opacity: 0.75;
+  opacity: 0.95;
   top: 8%;
   right: 8%;
   bottom: 8%;
