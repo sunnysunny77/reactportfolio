@@ -950,7 +950,7 @@ footer ul li.sm h2 {
   width: 20px;
   height: 20px;
 }
-.circle-progress .slider .button-next:hover, .circle-progress .slider .button-next:focus {
+.circle-progress .slider .button-next:hover {
   opacity: 0.5;
 }
 .circle-progress .slider .open-left {
