@@ -16,6 +16,24 @@ main::after {
   animation: fadeInBack 0.75s ease-in-out;
 }
 
+.template-img-0 .circle-progress .opacity {
+  animation: opacity 1.5s;
+}
+
+.template-img-0 .circle-progress .left {
+  @include ten_24_min {
+  animation: leftcompact 0.75s;
+  animation-fill-mode: forwards;
+  }
+}
+
+.template-img-0 .circle-progress .right {
+  @include ten_24_min {
+  animation: rightcompact 0.75s;
+  animation-fill-mode: forwards;
+  }
+}
+
 .an {
   opacity: 1;
   animation: fadeInOpacity 0.75s ease-in;
@@ -47,12 +65,11 @@ main::after {
 }
 
 .ani5 {
-  &.template-img-0 b,
   &.template-img-0 b {
     color: $c2;
     background-color: unset;
   }
-  &.template-img-0 p,
+  &.template-img-0 .circle-progress,
   &.template-img-0 p {
     background-color: $c3;
     opacity: 0.75;
@@ -60,7 +77,9 @@ main::after {
     right: 8%;
     bottom: 8%;
     left: 8%;
-    span {
+    span,
+    .slider,
+    .percentage {
       opacity: 1;
     }
   }
@@ -178,3 +197,43 @@ main::after {
   }
 }
 
+@keyframes rightcompact {
+  0% {
+    z-index: 1;
+    opacity: 1;
+    left: 0;
+  }
+  100% {
+    z-index: 1;
+    opacity: 1;
+    left: calc(100% - 150px);
+  }
+}
+
+@keyframes leftcompact {
+  0% {
+    z-index: 1;
+    opacity: 1;
+    right: 0;
+  }
+  100% {
+    z-index: 1;
+    opacity: 1;
+    right: calc(100% - 150px);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    z-index: 1;
+    opacity: 1;
+  }
+  50% {
+    z-index: 1;
+    opacity: 0;
+  }
+  100% {
+    z-index: 1;
+    opacity: 1;
+  }
+}

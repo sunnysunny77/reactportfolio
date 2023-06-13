@@ -398,7 +398,8 @@ main::after {
   position: relative;
   padding: 25% 0;
 }
-.template-img-0 p {
+.template-img-0 p,
+.template-img-0 .circle-progress {
   display: flex;
   border-radius: 25px;
   flex-direction: column;
@@ -412,17 +413,20 @@ main::after {
   transition: background-color 1s linear, opacity 1s linear, top 1s linear, right 1s linear, bottom 1s linear, left 1s linear;
 }
 @media only screen and (max-width: 720px) and (orientation: portrait) {
-  .template-img-0 p {
+  .template-img-0 p,
+.template-img-0 .circle-progress {
     border-radius: 10px;
   }
 }
-.template-img-0 p span {
+.template-img-0 p span,
+.template-img-0 .circle-progress span {
   margin: 5% auto auto 5%;
   opacity: 0;
   transition: opacity 1s linear;
   max-width: 180px;
 }
-.template-img-0 p b {
+.template-img-0 p b,
+.template-img-0 .circle-progress b {
   margin: auto auto 5% 5%;
   color: #2E86AB;
   background-color: rgba(245, 252, 252, 0.75);
@@ -434,7 +438,7 @@ main::after {
   color: rgba(245, 252, 252, 0.75);
   background-color: unset;
 }
-.template-img-0:hover p, .template-img-0:focus p {
+.template-img-0:hover .circle-progress, .template-img-0:focus .circle-progress, .template-img-0:hover p, .template-img-0:focus p {
   background-color: #2E86AB;
   opacity: 0.75;
   top: 8%;
@@ -442,7 +446,15 @@ main::after {
   bottom: 8%;
   left: 8%;
 }
-.template-img-0:hover p span, .template-img-0:focus p span {
+.template-img-0:hover .circle-progress span,
+.template-img-0:hover .circle-progress .slider,
+.template-img-0:hover .circle-progress .percentage, .template-img-0:focus .circle-progress span,
+.template-img-0:focus .circle-progress .slider,
+.template-img-0:focus .circle-progress .percentage, .template-img-0:hover p span,
+.template-img-0:hover p .slider,
+.template-img-0:hover p .percentage, .template-img-0:focus p span,
+.template-img-0:focus p .slider,
+.template-img-0:focus p .percentage {
   opacity: 1;
 }
 @media only screen and (max-width: 1024px) {
@@ -902,6 +914,129 @@ footer ul li.sm h2 {
   display: block;
 }
 
+@media only screen and (max-width: 720px) and (orientation: portrait) {
+  .circle-progress {
+    border-radius: 10px;
+  }
+}
+.circle-progress .slider {
+  height: 100%;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: opacity 1s linear;
+  opacity: 0;
+}
+.circle-progress .slider img {
+  border-radius: 100%;
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+}
+.circle-progress .slider .button-next {
+  position: absolute;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  top: 7.5%;
+  color: rgba(245, 252, 252, 0.75);
+  font-size: 20px;
+}
+.circle-progress .slider .open-left {
+  left: 2%;
+}
+.circle-progress .slider .open-right {
+  right: 2%;
+}
+.circle-progress .slider .image-fill-right {
+  z-index: 0;
+  position: relative;
+  margin: auto 12.5% auto 12.5%;
+  width: 25%;
+  height: initial;
+}
+@media only screen and (min-width: 1024px) {
+  .circle-progress .slider .image-fill-right {
+    position: absolute;
+    margin: initial;
+    z-index: -1;
+    opacity: 0;
+    width: initial;
+  }
+}
+.circle-progress .slider .image-1 {
+  z-index: 0;
+  position: relative;
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  .circle-progress .slider .image-1 {
+    display: block;
+  }
+}
+.circle-progress .slider .image-fill-left {
+  right: 0;
+  z-index: -1;
+  opacity: 0;
+  position: absolute;
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  .circle-progress .slider .image-fill-left {
+    display: block;
+  }
+}
+.circle-progress .slider .image-2 {
+  right: 0;
+  z-index: 0;
+  position: absolute;
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  .circle-progress .slider .image-2 {
+    display: block;
+  }
+}
+.circle-progress .slider .inner {
+  margin: auto;
+  width: 50%;
+}
+@media only screen and (min-width: 1024px) {
+  .circle-progress .slider .inner {
+    width: 100%;
+    margin: auto auto auto 2%;
+  }
+}
+.circle-progress .slider .inner a {
+  color: #EEFFED;
+  text-decoration: none;
+}
+.circle-progress .slider .inner a:hover, .circle-progress .slider .inner a:focus {
+  color: #94b8b8;
+  text-decoration: underline solid;
+}
+.circle-progress .slider .static-count {
+  display: none;
+}
+
+.percentage {
+  height: 2px;
+  position: relative;
+  width: 90%;
+  margin: 2% auto;
+  transition: opacity 1s linear;
+  opacity: 0;
+  background-color: #F07F31;
+}
+.percentage .percentage-change {
+  position: absolute;
+  height: 2px;
+  left: 0;
+  background-color: #EEFFED;
+}
+
 #about-template-img {
   background-image: url(../images/about/about.png);
 }
@@ -1178,6 +1313,24 @@ main::after {
   animation: fadeInBack 0.75s ease-in-out;
 }
 
+.template-img-0 .circle-progress .opacity {
+  animation: opacity 1.5s;
+}
+
+@media only screen and (min-width: 1024px) {
+  .template-img-0 .circle-progress .left {
+    animation: leftcompact 0.75s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .template-img-0 .circle-progress .right {
+    animation: rightcompact 0.75s;
+    animation-fill-mode: forwards;
+  }
+}
+
 .an {
   opacity: 1;
   animation: fadeInOpacity 0.75s ease-in;
@@ -1208,11 +1361,11 @@ main::after {
   animation: scale1 1.5s ease-in;
 }
 
-.ani5.template-img-0 b, .ani5.template-img-0 b {
+.ani5.template-img-0 b {
   color: rgba(245, 252, 252, 0.75);
   background-color: unset;
 }
-.ani5.template-img-0 p, .ani5.template-img-0 p {
+.ani5.template-img-0 .circle-progress, .ani5.template-img-0 p {
   background-color: #2E86AB;
   opacity: 0.75;
   top: 8%;
@@ -1220,7 +1373,11 @@ main::after {
   bottom: 8%;
   left: 8%;
 }
-.ani5.template-img-0 p span, .ani5.template-img-0 p span {
+.ani5.template-img-0 .circle-progress span,
+.ani5.template-img-0 .circle-progress .slider,
+.ani5.template-img-0 .circle-progress .percentage, .ani5.template-img-0 p span,
+.ani5.template-img-0 p .slider,
+.ani5.template-img-0 p .percentage {
   opacity: 1;
 }
 
@@ -1326,6 +1483,44 @@ main::after {
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes rightcompact {
+  0% {
+    z-index: 1;
+    opacity: 1;
+    left: 0;
+  }
+  100% {
+    z-index: 1;
+    opacity: 1;
+    left: calc(100% - 150px);
+  }
+}
+@keyframes leftcompact {
+  0% {
+    z-index: 1;
+    opacity: 1;
+    right: 0;
+  }
+  100% {
+    z-index: 1;
+    opacity: 1;
+    right: calc(100% - 150px);
+  }
+}
+@keyframes opacity {
+  0% {
+    z-index: 1;
+    opacity: 1;
+  }
+  50% {
+    z-index: 1;
+    opacity: 0;
+  }
+  100% {
+    z-index: 1;
+    opacity: 1;
   }
 }
 

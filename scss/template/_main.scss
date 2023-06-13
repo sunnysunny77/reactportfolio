@@ -179,7 +179,8 @@ main {
     border-radius: 25px;
     position: relative;
     padding: 25% 0;
-    p {
+    p,
+    .circle-progress {
         display: flex;
         border-radius: 25px;
         flex-direction: column;
@@ -215,6 +216,8 @@ main {
         color: $c2;
         background-color: unset;
     }
+    &:hover .circle-progress,
+    &:focus .circle-progress,
     &:hover p,
     &:focus p {
         background-color: $c3;
@@ -223,7 +226,9 @@ main {
         right: 8%;
         bottom: 8%;
         left: 8%;
-        span {
+        span,
+        .slider,
+        .percentage {
             opacity: 1;
         }
     }

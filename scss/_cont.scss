@@ -16,7 +16,7 @@
     margin: 10px auto;
   }
   form {
-    .os-host-textarea  {
+    .os-host-textarea {
       font: inherit;
       margin: 5px 0 0 0;
       font-size: inherit;
@@ -94,5 +94,119 @@
       padding-left: 2.5px;
       display: block;
     }
+  }
+}
+
+.circle-progress {
+
+  @include seven_20_portrait {
+    border-radius: 10px;
+  }
+  .slider {
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: opacity 1s linear;
+    opacity: 0;
+    img {
+      border-radius: 100%;
+      object-fit: cover;
+      width: 150px;
+      height: 150px;
+    }
+    .button-next {
+      position: absolute;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      top: 7.5%;
+      color: $c2;
+      font-size: 20px;
+    }
+    .open-left {
+      left: 2%;
+    }
+    .open-right {
+      right: 2%;
+    }
+    .image-fill-right {
+      z-index: 0;
+      position: relative;
+      margin: auto 12.5% auto 12.5%;
+      width: 25%;
+      height: initial;
+      @include ten_24_min {
+        position: absolute;
+        margin: initial;
+        z-index: -1;
+        opacity: 0;
+        width: initial;
+      }
+    }
+    .image-1 {
+      z-index: 0;
+      position: relative;
+      display: none;
+      @include ten_24_min {
+        display: block;
+      }
+    }
+    .image-fill-left {
+      right: 0;
+      z-index: -1;
+      opacity: 0;
+      position: absolute;
+      display: none;
+      @include ten_24_min {
+        display: block;
+      }
+    }
+    .image-2 {
+      right: 0;
+      z-index: 0;
+      position: absolute;
+      display: none;
+      @include ten_24_min {
+        display: block;
+      }
+    }
+    .inner {
+      margin: auto;
+      width: 50%;
+      @include ten_24_min {
+        width: 100%;
+        margin: auto auto auto 2%;
+      }
+      a {
+        color: $c1;
+        text-decoration: none;
+        &:hover,
+        &:focus {
+          color: $aHover;
+          text-decoration: underline solid;
+        }
+      }
+    }
+    .static-count {
+      display: none;
+    }
+  }
+}
+.percentage {
+  height: 2px;
+  position: relative;
+  width: 90%;
+  margin: 2% auto;
+  transition: opacity 1s linear;
+  opacity: 0;
+  background-color: $c4;
+  .percentage-change {
+    position: absolute;
+    height: 2px;
+    left: 0;
+    background-color: $c1;
   }
 }
