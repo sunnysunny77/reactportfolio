@@ -950,8 +950,10 @@ footer ul li.sm h2 {
   width: 20px;
   height: 20px;
 }
-.circle-progress .slider .button-next:hover {
-  opacity: 0.5;
+@media only screen and (min-width: 1024px) {
+  .circle-progress .slider .button-next:hover {
+    opacity: 0.5;
+  }
 }
 .circle-progress .slider .open-left {
   background-image: url(../images/contact/left.png);

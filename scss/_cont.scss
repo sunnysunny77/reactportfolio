@@ -132,7 +132,9 @@
       width: 20px;
       height: 20px;
       &:hover {
+        @include ten_24_min {
         opacity: 0.5;
+        }
       }
     }
     .open-left {
