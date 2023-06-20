@@ -57,7 +57,7 @@ function validation(event) {
   const phone = this.children[0].children[1].children[1].children[1];
   const email = this.children[0].children[1].children[2].children[1];
   const message = this.children[0].children[1].children[3].children[1];
-  if (/^[ '.a-z\-]{2,40}$/i.test(data.name)) {
+  if (/^[ '.a-z-]{2,40}$/i.test(data.name)) {
     reply(false, name, null);
   } else {
     reply(true, name, "Enter your name");
