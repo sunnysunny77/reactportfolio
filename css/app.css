@@ -920,11 +920,10 @@ footer ul li.sm h2 {
   transition: opacity 1s linear;
   opacity: 0;
 }
-.circle-progress .slider img {
+.circle-progress .slider .a {
   border-radius: 100%;
-  object-fit: cover;
-  width: 150px;
-  height: 150px;
+  background-size: cover;
+  padding: 75px 75px;
 }
 .circle-progress .slider .button-next {
   position: absolute;
@@ -955,7 +954,7 @@ footer ul li.sm h2 {
   z-index: 0;
   position: relative;
   margin: auto 12.5% auto 12.5%;
-  width: 25%;
+  padding: 15%;
   height: initial;
 }
 @media only screen and (min-width: 1024px) {
@@ -964,7 +963,7 @@ footer ul li.sm h2 {
     margin: initial;
     z-index: -1;
     opacity: 0;
-    width: initial;
+    padding: 75px 75px;
   }
 }
 .circle-progress .slider .image-1 {

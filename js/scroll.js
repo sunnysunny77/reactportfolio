@@ -76,7 +76,7 @@ function scrollAnimation() {
         tempImg0.classList.add("ani5");
         setTimeout(function() {
           tempImg0.classList.remove("ani5");
-        }, 4000);
+        }, 10_000);
       }, 1500);
     }
   }

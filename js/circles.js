@@ -31,7 +31,7 @@ function progress(i, percent) {
   const id = setInterval(frame, 20);
 }
 
-const iteration = (i, arraySrc, arrayAlt ,arrayText, staticCount) => {
+const iteration = (i, arraySrc, arrayHref ,arrayText, staticCount) => {
 
   inner[i].classList.add("opacity");
   openRight[i].disabled = true;
@@ -55,16 +55,16 @@ const iteration = (i, arraySrc, arrayAlt ,arrayText, staticCount) => {
 
     if (counter[i] + 1 === staticCount.length) {
 
-      image1[i].src = arraySrc[counter[i]];
-      image2[i].src = arraySrc[0];
+      image1[i].style.backgroundImage = `url(${  arraySrc[counter[i]]  }`;
+      image2[i].style.backgroundImage = `url(${  arraySrc[0]  }`;
 
-      image1[i].alt = arrayAlt[counter[i]];
-      image2[i].alt = arrayAlt[0];
+      image1[i].href = arrayHref[counter[i]];
+      image2[i].href = arrayHref[0];
 
-      imageFillLeft[i].src = arraySrc[0];
-      imageFillLeft[i].alt = arrayAlt[0];
-      imageFillRight[i].src = arraySrc[counter[i]];
-      imageFillRight[i].alt = arrayAlt[counter[i]];
+      imageFillLeft[i].style.backgroundImage = `url(${  arraySrc[0]  }`;
+      imageFillLeft[i].href = arrayHref[0];
+      imageFillRight[i].style.backgroundImage = `url(${  arraySrc[counter[i]]  }`;
+      imageFillRight[i].href = arrayHref[counter[i]];
       inner[i].innerHTML = arrayText[counter[i]];
 
       return;
@@ -72,31 +72,31 @@ const iteration = (i, arraySrc, arrayAlt ,arrayText, staticCount) => {
 
     if (counter[i] + 2 === staticCount.length) {
 
-      image1[i].src = arraySrc[counter[i]];
-      image2[i].src = arraySrc[counter[i] + 1];
+      image1[i].style.backgroundImage = `url(${  arraySrc[counter[i]]  }`;
+      image2[i].style.backgroundImage = `url(${  arraySrc[counter[i] + 1]  }`;
 
-      image1[i].alt = arrayAlt[counter[i]];
-      image2[i].alt = arrayAlt[counter[i] + 1];
+      image1[i].href = arrayHref[counter[i]];
+      image2[i].href = arrayHref[counter[i] + 1];
 
-      imageFillLeft[i].src = arraySrc[counter[i] + 1];
-      imageFillLeft[i].alt = arrayAlt[counter[i] + 1];
-      imageFillRight[i].src = arraySrc[counter[i]];
-      imageFillRight[i].alt = arrayAlt[counter[i]];
+      imageFillLeft[i].style.backgroundImage = `url(${  arraySrc[counter[i] + 1]  }`;
+      imageFillLeft[i].href = arrayHref[counter[i] + 1];
+      imageFillRight[i].style.backgroundImage = `url(${  arraySrc[counter[i]]  }`;
+      imageFillRight[i].href = arrayHref[counter[i]];
       inner[i].innerHTML = arrayText[counter[i]];
 
       return;
     }
 
-    image1[i].src = arraySrc[counter[i]];
-    image2[i].src = arraySrc[counter[i] + 1];
+    image1[i].style.backgroundImage = `url(${  arraySrc[counter[i]]  }`;
+    image2[i].style.backgroundImage = `url(${  arraySrc[counter[i] + 1]  }`;
 
-    image1[i].alt = arrayAlt[counter[i]];
-    image2[i].alt = arrayAlt[counter[i] + 1];
+    image1[i].href = arrayHref[counter[i]];
+    image2[i].href = arrayHref[counter[i] + 1];
 
-    imageFillLeft[i].src = arraySrc[counter[i] + 1];
-    imageFillLeft[i].alt = arrayAlt[counter[i] + 1];
-    imageFillRight[i].src = arraySrc[counter[i]];
-    imageFillRight[i].alt = arrayAlt[counter[i]];
+    imageFillLeft[i].style.backgroundImage = `url(${  arraySrc[counter[i] + 1]  }`;
+    imageFillLeft[i].href = arrayHref[counter[i] + 1];
+    imageFillRight[i].style.backgroundImage = `url(${  arraySrc[counter[i]]  }`;
+    imageFillRight[i].href = arrayHref[counter[i]];
     inner[i].innerHTML = arrayText[counter[i]];
   }, 750);
 };
@@ -104,14 +104,14 @@ const iteration = (i, arraySrc, arrayAlt ,arrayText, staticCount) => {
 for (const [i, item] of [...sliderCount].entries()) {
 
   let arraySrc = [];
-  let arrayAlt = [];
+  let arrayHref = [];
   let arrayText = [];
 
   const staticCount = item.querySelectorAll(".static-count");
 
   for (const item of staticCount) {
     arraySrc.push(item.children[0].src);
-    arrayAlt.push(item.children[0].alt);
+    arrayHref.push(item.children[1].children[0].href);
     arrayText.push(item.children[1].innerHTML);
   }
 
@@ -122,7 +122,7 @@ for (const [i, item] of [...sliderCount].entries()) {
 
     if (counter[i] === - 1) {counter[i] = staticCount.length - 1;}
 
-    iteration(i, arraySrc, arrayAlt ,arrayText, staticCount);
+    iteration(i, arraySrc, arrayHref ,arrayText, staticCount);
 
     image1[i].classList.add("opacity");
     imageFillRight[i].classList.add("right");
@@ -135,22 +135,22 @@ for (const [i, item] of [...sliderCount].entries()) {
 
     if (counter[i] === staticCount.length) {counter[i] = 0;}
 
-    iteration(i, arraySrc, arrayAlt ,arrayText, staticCount, width[i]);
+    iteration(i, arraySrc, arrayHref ,arrayText, staticCount, width[i]);
 
     image2[i].classList.add("opacity");
     imageFillLeft[i].classList.add("left");
   }, null);
 
-  image1[i].src = arraySrc[0];
-  image2[i].src = arraySrc[1];
+  image1[i].style.backgroundImage = `url(${  arraySrc[0]  }`;
+  image2[i].style.backgroundImage = `url(${  arraySrc[1]  }`;
 
-  image1[i].alt = arrayAlt[0];
-  image2[i].alt = arrayAlt[1];
+  image1[i].href = arrayHref[0];
+  image2[i].href = arrayHref[1];
 
-  imageFillLeft[i].src = arraySrc[1];
-  imageFillLeft[i].alt = arrayAlt[1];
-  imageFillRight[i].src = arraySrc[0];
-  imageFillRight[i].alt = arrayAlt[0];
+  imageFillLeft[i].style.backgroundImage = `url(${  arraySrc[1]  }`;
+  imageFillLeft[i].href = arrayHref[1];
+  imageFillRight[i].style.backgroundImage = `url(${  arraySrc[0]  }`;
+  imageFillRight[i].href = arrayHref[0];
   inner[i].innerHTML = arrayText[0];
 
   width.push(percentageCalc(counter, staticCount));
