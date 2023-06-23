@@ -3,17 +3,21 @@
 header {
     background-image: url(../images/template/handmade-paper.png);
     background-color: $c10;
-    border-bottom: 8px solid $mainbg;
+    border-bottom: 4px solid $mainbg;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     background-blend-mode: multiply;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: center;
     @include ten_24 {
         flex-direction: column;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         border-bottom: 4px solid $mainbg;
+        justify-content: space-between;
+        align-items: initial;
     }
     > a {
         padding: 0 10%;
@@ -27,12 +31,7 @@ header {
             background-position: center;
             background-repeat: no-repeat;
             @include ten_24 {
-                margin-left: 2.5%;
-                height: 50px;
-                background-position: center left;
-                position: absolute;
-                background-size: 70%;
-                z-index: 0;
+               display: none;
             }
         }
     }
@@ -62,7 +61,10 @@ header {
         }
     }
     nav {
-        width: 100%;
+        width: 67%;
+        @include ten_24 {
+            width: 100%;
+        }
         ul {
             margin: 0;
             padding: 0;
@@ -72,7 +74,6 @@ header {
             li {
                 list-style-type: none;
                 width: 25%;
-             
                 @include ten_24 {
                     width: 50%;
                 }
@@ -127,6 +128,46 @@ header {
                     @include ten_24 {
                         border-left: none;
                     }
+                }
+            }
+        }
+        .heading {
+            background-image: url(../images/template/handmade-paper.png);
+            background-color: $c10;
+            border-top: 4px solid $mainbg;
+            border-left: 4px solid $mainbg;
+            background-blend-mode: multiply;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            padding: 13px;
+            @include ten_24 {
+                border-top: 1px solid $mainbg;
+                border-left: none;
+                justify-content: start;
+                flex-direction: row-reverse;
+            }
+            a {
+                color: $Acolor;
+                text-decoration: none;
+                padding: 1% 2%;
+                &:hover,
+                &:focus {
+                    color: $aHover;
+                    @include ten_24 {
+                        color: $c4;
+                    }
+                }
+            }
+            #my-svg {
+                overflow: visible;
+                opacity: 0.75;
+                width: 32px;
+                display: inline-block;
+                path {
+                    fill: none;
+                    stroke: $c1;
+                    stroke-width: 2;
                 }
             }
         }

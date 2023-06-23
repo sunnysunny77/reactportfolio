@@ -15,6 +15,9 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
 
 #site {
   position: relative;
+  @include ten_24 {
+    margin-bottom: 6%;
+  }
   #s4 {
     height: 350px;
     width: 542px;

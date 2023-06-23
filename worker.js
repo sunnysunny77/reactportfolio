@@ -61,7 +61,6 @@ self.addEventListener("install", (event) => {
           '/images/template/natural-paper.png',
           '/images/template/textonly.svg',
           '/images/template/wave.svg',
-          '/images/template/logo-main-underline.png',
           '/images/template/equal.png',
           '/js/auto.js',
           '/js/circles.js',

@@ -56,16 +56,22 @@ h3::before {
   clip: rect(auto, 10px, auto, auto);
 }
 
+a {
+  transition: color 0.2s ease;
+}
+
 /* HEADER */
 header {
   background-image: url(../images/template/handmade-paper.png);
   background-color: #4A5354;
-  border-bottom: 8px solid #F8F8FF;
+  border-bottom: 4px solid #F8F8FF;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-blend-mode: multiply;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: center;
 }
 @media only screen and (max-width: 1024px) {
   header {
@@ -73,6 +79,8 @@ header {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom: 4px solid #F8F8FF;
+    justify-content: space-between;
+    align-items: initial;
   }
 }
 header > a {
@@ -92,12 +100,7 @@ header > a div {
 }
 @media only screen and (max-width: 1024px) {
   header > a div {
-    margin-left: 2.5%;
-    height: 50px;
-    background-position: center left;
-    position: absolute;
-    background-size: 70%;
-    z-index: 0;
+    display: none;
   }
 }
 header button {
@@ -128,7 +131,12 @@ header button {
   }
 }
 header nav {
-  width: 100%;
+  width: 67%;
+}
+@media only screen and (max-width: 1024px) {
+  header nav {
+    width: 100%;
+  }
 }
 header nav ul {
   margin: 0;
@@ -200,13 +208,61 @@ header nav ul li a::after {
     border-left: none;
   }
 }
+header nav .heading {
+  background-image: url(../images/template/handmade-paper.png);
+  background-color: #4A5354;
+  border-top: 4px solid #F8F8FF;
+  border-left: 4px solid #F8F8FF;
+  background-blend-mode: multiply;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 13px;
+}
+@media only screen and (max-width: 1024px) {
+  header nav .heading {
+    border-top: 1px solid #F8F8FF;
+    border-left: none;
+    justify-content: start;
+    flex-direction: row-reverse;
+  }
+}
+header nav .heading a {
+  color: #f5fcfc;
+  text-decoration: none;
+  padding: 1% 2%;
+}
+header nav .heading a:hover, header nav .heading a:focus {
+  color: #94b8b8;
+}
+@media only screen and (max-width: 1024px) {
+  header nav .heading a:hover, header nav .heading a:focus {
+    color: #F07F31;
+  }
+}
+header nav .heading #my-svg {
+  overflow: visible;
+  opacity: 0.75;
+  width: 32px;
+  display: inline-block;
+}
+header nav .heading #my-svg path {
+  fill: none;
+  stroke: #EEFFED;
+  stroke-width: 2;
+}
 
 /* MAIN */
 main {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-bottom: 27.5%;
+  padding: 12% 0;
+}
+@media only screen and (max-width: 1024px) {
+  main {
+    padding: 6% 0 0 0;
+  }
 }
 main::after {
   content: "";
@@ -220,62 +276,6 @@ main::after {
   background-color: #94b8b8;
   background-blend-mode: color;
   background-attachment: fixed;
-}
-
-.main-logo {
-  position: relative;
-  margin: 9% auto 3% 55.5%;
-  width: 44.5%;
-}
-@media only screen and (max-width: 1024px) {
-  .main-logo {
-    margin: 6%;
-    width: fit-content;
-  }
-}
-.main-logo #my-svg {
-  display: inline-block;
-  overflow: visible;
-  opacity: 0.75;
-  width: 20.39%;
-}
-.main-logo #my-svg path {
-  fill: none;
-  stroke: #EEFFED;
-  stroke-width: 2;
-}
-.main-logo h2 {
-  font-style: oblique;
-  margin: auto auto auto 2.5%;
-  position: absolute;
-  text-shadow: 0 0 2.5px #EEFFED;
-  display: inline;
-  color: #f5fcfc;
-  font-family: Verdana, sans-serif;
-  font-size: 1.6em;
-}
-@media only screen and (max-width: 1024px) {
-  .main-logo h2 {
-    height: 0;
-    width: 0;
-    overflow: hidden;
-  }
-}
-.main-logo .main-logo-span {
-  position: absolute;
-  height: 14px;
-  width: 205px;
-  bottom: 45px;
-  left: 100px;
-  opacity: 0.75;
-  background-image: url(../images/template/logo-main-underline.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-@media only screen and (max-width: 1024px) {
-  .main-logo .main-logo-span {
-    display: none;
-  }
 }
 
 .template-img-cont {
@@ -359,7 +359,7 @@ main::after {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  margin: 15% auto;
+  margin: 12% auto;
   width: 60%;
   height: 109px;
   opacity: 0.5;
@@ -480,7 +480,7 @@ footer {
   height: 190px;
   background-image: url(../images/template/wave.svg);
   background-size: 100%;
-  border-top: 8px solid #F8F8FF;
+  border-top: 4px solid #F8F8FF;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   background-repeat: no-repeat;
@@ -610,6 +610,11 @@ footer ul li.sm h2 {
 /* Scroll */
 #site {
   position: relative;
+}
+@media only screen and (max-width: 1024px) {
+  #site {
+    margin-bottom: 6%;
+  }
 }
 #site #s4 {
   height: 350px;
@@ -1429,13 +1434,13 @@ main::after {
     opacity: 0;
   }
   100% {
-    height: 150px;
+    height: 209px;
     opacity: 1;
   }
 }
 @keyframes slideIn2 {
   0% {
-    height: 150px;
+    height: 209px;
     opacity: 0;
   }
   100% {

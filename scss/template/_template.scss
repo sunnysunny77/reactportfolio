@@ -50,6 +50,10 @@ h3 {
   }
 }
 
+a {
+  transition: color 0.2s ease;
+}
+
 @import "header";
 @import "main";
 @import "footer";

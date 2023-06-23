@@ -1,13 +1,21 @@
 const click = document.querySelectorAll(".click")[0];
 
+function vivus() {
+
+  new Vivus("my-svg");
+}
+
 function toggle() {
 
   const menu0 = document.querySelectorAll(".menu0")[0];
+
+  vivus();
 
   if (menu0.classList.contains("ani1")) {
 
     menu0.classList.add("ani6");
     click.classList.add("ani7");
+
   } else if (menu0.classList.contains("ani6")) {
 
     menu0.classList.remove("ani6");
@@ -17,11 +25,6 @@ function toggle() {
   click.classList.toggle("ani");
   menu0.classList.toggle("disp");
   menu0.classList.toggle("ani1");
-}
-
-function vivus() {
-
-  new Vivus("my-svg");
 }
 
 eventListner(window, "scroll", cache, null);
