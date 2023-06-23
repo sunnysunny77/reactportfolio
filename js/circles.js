@@ -56,15 +56,17 @@ const iteration = (i, arraySrc, arrayHref ,arrayText, staticCount) => {
     if (counter[i] + 1 === staticCount.length) {
 
       image1[i].style.backgroundImage = `url(${  arraySrc[counter[i]]  }`;
+      image1[i].href = arrayHref[counter[i]][0];
+      image1[i].setAttribute("aria-label", arrayHref[counter[i]][1]);
       image2[i].style.backgroundImage = `url(${  arraySrc[0]  }`;
-
-      image1[i].href = arrayHref[counter[i]];
-      image2[i].href = arrayHref[0];
-
+      image2[i].href = arrayHref[0][0];
+      image2[i].setAttribute("aria-label", arrayHref[0][1]);
       imageFillLeft[i].style.backgroundImage = `url(${  arraySrc[0]  }`;
-      imageFillLeft[i].href = arrayHref[0];
+      imageFillLeft[i].href = arrayHref[0][0];
+      imageFillLeft[i].setAttribute("aria-label", arrayHref[0][1]);
       imageFillRight[i].style.backgroundImage = `url(${  arraySrc[counter[i]]  }`;
-      imageFillRight[i].href = arrayHref[counter[i]];
+      imageFillRight[i].href = arrayHref[counter[i]][0];
+      imageFillRight[i].setAttribute("aria-label", arrayHref[counter[i]][1]);
       inner[i].innerHTML = arrayText[counter[i]];
 
       return;
@@ -73,30 +75,34 @@ const iteration = (i, arraySrc, arrayHref ,arrayText, staticCount) => {
     if (counter[i] + 2 === staticCount.length) {
 
       image1[i].style.backgroundImage = `url(${  arraySrc[counter[i]]  }`;
+      image1[i].href = arrayHref[counter[i]][0];
+      image1[i].setAttribute("aria-label", arrayHref[counter[i]][1]);
       image2[i].style.backgroundImage = `url(${  arraySrc[counter[i] + 1]  }`;
-
-      image1[i].href = arrayHref[counter[i]];
-      image2[i].href = arrayHref[counter[i] + 1];
-
+      image2[i].href = arrayHref[counter[i] + 1][0];
+      image2[i].setAttribute("aria-label", arrayHref[counter[i] + 1][1]);
       imageFillLeft[i].style.backgroundImage = `url(${  arraySrc[counter[i] + 1]  }`;
-      imageFillLeft[i].href = arrayHref[counter[i] + 1];
+      imageFillLeft[i].href = arrayHref[counter[i] + 1][0];
+      imageFillLeft[i].setAttribute("aria-label", arrayHref[counter[i] + 1][1]);
       imageFillRight[i].style.backgroundImage = `url(${  arraySrc[counter[i]]  }`;
-      imageFillRight[i].href = arrayHref[counter[i]];
+      imageFillRight[i].href = arrayHref[counter[i]][0];
+      imageFillRight[i].setAttribute("aria-label", arrayHref[counter[i]][1]);
       inner[i].innerHTML = arrayText[counter[i]];
 
       return;
     }
 
     image1[i].style.backgroundImage = `url(${  arraySrc[counter[i]]  }`;
+    image1[i].href = arrayHref[counter[i]][0];
+    image1[i].setAttribute("aria-label", arrayHref[counter[i]][1]);
     image2[i].style.backgroundImage = `url(${  arraySrc[counter[i] + 1]  }`;
-
-    image1[i].href = arrayHref[counter[i]];
-    image2[i].href = arrayHref[counter[i] + 1];
-
+    image2[i].href = arrayHref[counter[i] + 1][0];
+    image2[i].setAttribute("aria-label", arrayHref[counter[i] + 1][1]);
     imageFillLeft[i].style.backgroundImage = `url(${  arraySrc[counter[i] + 1]  }`;
-    imageFillLeft[i].href = arrayHref[counter[i] + 1];
+    imageFillLeft[i].href = arrayHref[counter[i] + 1][0];
+    imageFillLeft[i].setAttribute("aria-label", arrayHref[counter[i] + 1][1]);
     imageFillRight[i].style.backgroundImage = `url(${  arraySrc[counter[i]]  }`;
-    imageFillRight[i].href = arrayHref[counter[i]];
+    imageFillRight[i].href = arrayHref[counter[i]][0];
+    imageFillRight[i].setAttribute("aria-label", arrayHref[counter[i]][1]);
     inner[i].innerHTML = arrayText[counter[i]];
   }, 750);
 };
@@ -111,7 +117,7 @@ for (const [i, item] of [...sliderCount].entries()) {
 
   for (const item of staticCount) {
     arraySrc.push(item.children[0].src);
-    arrayHref.push(item.children[1].children[0].href);
+    arrayHref.push([item.children[1].children[0].href, item.children[1].children[0].innerHTML]);
     arrayText.push(item.children[1].innerHTML);
   }
 
@@ -142,15 +148,17 @@ for (const [i, item] of [...sliderCount].entries()) {
   }, null);
 
   image1[i].style.backgroundImage = `url(${  arraySrc[0]  }`;
+  image1[i].href = arrayHref[0][0];
+  image1[i].setAttribute("aria-label", arrayHref[0][1]);
   image2[i].style.backgroundImage = `url(${  arraySrc[1]  }`;
-
-  image1[i].href = arrayHref[0];
-  image2[i].href = arrayHref[1];
-
+  image2[i].href = arrayHref[1][0];
+  image2[i].setAttribute("aria-label", arrayHref[1][1]);
   imageFillLeft[i].style.backgroundImage = `url(${  arraySrc[1]  }`;
-  imageFillLeft[i].href = arrayHref[1];
+  imageFillLeft[i].href = arrayHref[1][0];
+  imageFillLeft[i].setAttribute("aria-label", arrayHref[1][1]);
   imageFillRight[i].style.backgroundImage = `url(${  arraySrc[0]  }`;
-  imageFillRight[i].href = arrayHref[0];
+  imageFillRight[i].href = arrayHref[0][0];
+  imageFillRight[i].setAttribute("aria-label", arrayHref[0][1]);
   inner[i].innerHTML = arrayText[0];
 
   width.push(percentageCalc(counter, staticCount));
