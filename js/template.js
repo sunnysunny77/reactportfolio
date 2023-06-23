@@ -9,12 +9,11 @@ function toggle() {
 
   const menu0 = document.querySelectorAll(".menu0")[0];
 
-  vivus();
-
   if (menu0.classList.contains("ani1")) {
 
     menu0.classList.add("ani6");
     click.classList.add("ani7");
+    vivus();
 
   } else if (menu0.classList.contains("ani6")) {
 
