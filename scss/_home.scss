@@ -77,7 +77,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
           li ol {
             padding-left: 20px;
           }
-          li ol li h4 a {
+          li ol li h3 a {
             font-size: initial;
           }
         }
@@ -93,7 +93,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
         }
         ol li {
           padding-top: 20px;
-          h4 {
+          h3 {
             margin: 5% 0;
             a {
               color: $heading4;
