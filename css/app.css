@@ -461,6 +461,7 @@ main::after {
   .template-img-0 {
     width: calc(65% - 10px);
     padding: 20% 0;
+    margin-bottom: 6%;
   }
 }
 @media only screen and (max-width: 720px) and (orientation: portrait) {
@@ -472,6 +473,7 @@ main::after {
     border-right: unset;
     border-bottom: unset;
     border-left: unset;
+    margin-bottom: unset;
   }
 }
 

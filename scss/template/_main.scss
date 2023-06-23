@@ -188,6 +188,7 @@ main {
     @include ten_24 {
         width: calc(65% - 10px);
         padding: 20% 0;
+        margin-bottom: 6%;
     }
     @include seven_20_portrait {
         border-radius: 0;
@@ -197,5 +198,6 @@ main {
         border-right: unset;
         border-bottom: unset;
         border-left: unset;
+        margin-bottom: unset;
     }
 }
