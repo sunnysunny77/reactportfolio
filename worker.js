@@ -8,6 +8,7 @@ self.addEventListener("install", (event) => {
           '/about.html',
           '/contact.html',
           '/skills.html',
+          '/css/all.min.css',
           '/css/app.css',
           '/css/Poppins-Regular.ttf',
           '/favicon.ico',

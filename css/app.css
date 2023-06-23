@@ -34,18 +34,18 @@ body {
   background: rgba(74, 83, 84, 0.1);
 }
 
-h3 {
+h2 {
   margin-left: 5%;
   color: #F07F31;
   font-size: 1.4em;
   position: relative;
 }
 @media only screen and (max-width: 1024px) {
-  h3 {
+  h2 {
     font-size: large;
   }
 }
-h3::before {
+h2::before {
   border-top: 7.5px solid rgba(173, 250, 189, 0.4);
   position: absolute;
   content: "";
