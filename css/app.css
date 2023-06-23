@@ -223,7 +223,7 @@ header nav .heading {
   header nav .heading {
     border-top: 1px solid #F8F8FF;
     border-left: none;
-    justify-content: start;
+    justify-content: end;
     flex-direction: row-reverse;
   }
 }

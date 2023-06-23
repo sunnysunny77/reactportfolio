@@ -144,7 +144,7 @@ header {
             @include ten_24 {
                 border-top: 1px solid $mainbg;
                 border-left: none;
-                justify-content: start;
+                justify-content: end;
                 flex-direction: row-reverse;
             }
             a {
