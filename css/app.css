@@ -1134,6 +1134,16 @@ footer ul li.sm h3 {
   background-position: center;
 }
 
+#skills-xd {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/xd.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 #skills-oop {
   width: 70px;
   height: 50px;
