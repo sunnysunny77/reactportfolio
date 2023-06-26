@@ -46,14 +46,24 @@ h2 {
   }
 }
 h2::before {
-  border-top: 7.5px solid rgba(173, 250, 189, 0.4);
   position: absolute;
   content: "";
-  top: -10px;
-  left: 0;
+  top: calc(50% - 3.25px);
+  left: -15px;
   bottom: 0;
   right: 0;
+  animation: blink 1.75s infinite ease-out;
   clip: rect(auto, 10px, auto, auto);
+}
+@keyframes blink {
+  from {
+    opacity: 1;
+    border-top: 7.5px solid #adfabd;
+  }
+  to {
+    opacity: 0;
+    border-top: 7.5px solid #EEFFED;
+  }
 }
 
 a {
@@ -361,7 +371,7 @@ main::after {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  margin: 12% auto;
+  margin: 10% auto;
   width: 60%;
   height: 109px;
   opacity: 0.5;
