@@ -38,8 +38,10 @@ h2 {
   @include ten_24 {
     font-size: large;
   }
+  @include four_80 {
+    margin-left: 25px;
+  }
   &::before {
- 
     position: absolute;
     content: "";
     top: calc(50% - 3.25px);
