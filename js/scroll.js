@@ -77,7 +77,7 @@ function scrollAnimation() {
         setTimeout(function() {
           tempImg0.classList.remove("ani5");
         }, 10_000);
-      }, 1500);
+      }, 750);
     }
   }
 }
