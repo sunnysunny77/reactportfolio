@@ -15,7 +15,7 @@ body {
 }
 
 .outer {
-  max-width: 992px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -31,12 +31,14 @@ body {
 }
 
 h2 {
-  margin-left: 5%;
+  width: 100%;
+  margin-left: 10%;
   color: $heading3;
   font-size: 1.4em;
   position: relative;
   @include ten_24 {
     font-size: large;
+    margin-left: 5%;
   }
   @include four_80 {
     margin-left: 25px;

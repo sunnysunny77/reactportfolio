@@ -21,12 +21,16 @@ main {
         background-blend-mode: color;
         background-attachment: fixed;
     }
+    > section {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 
 .template-img-cont {
     width: 250px;
     height: 250px;
-    margin-left: 50px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     background-image: url(../images/template/natural-paper.png);
@@ -55,7 +59,7 @@ main {
 
 .template-p-cont {
     height: 350px;
-    width: 542px;
+    width: calc(80% - 350px);
     float: left;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 25px;
@@ -126,7 +130,7 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     height: fit-content;
-    width: 80.041%;
+    width: 80%;
     margin: auto;
     background-size: cover;
     border-radius: 25px;

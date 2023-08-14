@@ -20,8 +20,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
   }
   #s4 {
     height: 350px;
-    width: 542px;
-    margin: auto auto auto 50px;
+    width: calc(80% - 350px);
     float: left;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
@@ -51,9 +50,8 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       word-wrap: break-word;
       position: absolute;
       top: 0;
-      right: 5%;
+      width: 80%;
       bottom: 0;
-      left: 5%;
       z-index: 1;
       @include ten_24 {
         position: inherit;
@@ -62,9 +60,8 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
         margin: auto;
         font-size: initial;
         top: unset;
-        right: unset;
+        width: initial;
         bottom: unset;
-        left: unset;
       }
       #ob0ul {
         margin: 0;

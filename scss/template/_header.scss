@@ -20,10 +20,7 @@ header {
         align-items: initial;
     }
     > a {
-        padding: 0 10%;
-        @include ten_24 {
-            padding: 0;
-        }
+        margin: auto;
         div {
             width: 123px;
             height: 75px;
