@@ -922,7 +922,7 @@ footer ul li.sm h3 {
 }
 #overlay form .msg {
   color: #D81159;
-  font-size: smaller;
+  font-size: 0.825rem;
   padding-left: 2.5px;
   display: block;
 }
