@@ -5,9 +5,11 @@ footer {
     background-image: url(../images/template/wave.svg);
     background-size: 100%;
     border-top: 4px solid $mainbg;
+    background-color: $c10;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     background-repeat: no-repeat;
+    background-blend-mode: multiply;
     display: flex;
     position: relative;
     @include ten_24 {
@@ -19,13 +21,11 @@ footer {
     &::after {
         content: "";
         background-image: url(../images/template/handmade-paper.png);
-        background-color: $c9;
-        background-blend-mode: multiply;
-        opacity: 1;
         top: 0;
         left: 0;
         bottom: 0;
         right: 0;
+        background-color: $c9;
         position: absolute;
         z-index: -999;
         border-bottom-left-radius: 25px;

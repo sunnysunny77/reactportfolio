@@ -9,6 +9,8 @@ html {
 body {
   font-family: $font;
   background-color: $mainbg;
+  background-image: url(../images/template/natural-paper.png);
+  background-blend-mode: darken;
   @include ten_24 {
     margin: auto;
   }

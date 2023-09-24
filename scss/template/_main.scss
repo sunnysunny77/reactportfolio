@@ -18,7 +18,7 @@ main {
         position: absolute;
         z-index: -999;
         background-color: $main;
-        background-blend-mode: color;
+        background-blend-mode: color-burn;
         background-attachment: fixed;
     }
     > section {
@@ -34,7 +34,7 @@ main {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     background-image: url(../images/template/natural-paper.png);
-    background-blend-mode: darken;
+    background-blend-mode: multiply;
     background-color: $c2;
     padding: 50px;
     float: left;
@@ -65,7 +65,7 @@ main {
     border-bottom-right-radius: 25px;
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;
-    background-blend-mode: darken;
+    background-blend-mode: multiply;
     @include ten_24 {
         float: none;
         width: 100%;

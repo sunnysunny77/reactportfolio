@@ -84,9 +84,9 @@ header {
                     box-sizing: border-box;
                     height: 75px;
                     color: $Acolor;
-                    border-left: 4px solid $Acolor;
+                    border-left: 4px solid $mainbg;
                     position: relative;
-                    border-top: 1px solid $Acolor;
+                    border-top: 1px solid $mainbg;
                     &:hover::after,
                     &:focus::after {
                         width: 100%;
@@ -94,9 +94,6 @@ header {
                     &:hover,
                     &:focus {
                         color: $aHover;
-                        @include ten_24 {
-                            color: $c4;
-                        }
                     }
                     span {
                         align-self: flex-end;
@@ -120,7 +117,7 @@ header {
                 }
                 &:nth-child(even) a {
                     @include ten_24 {
-                        border-left: 1px solid $Acolor;
+                        border-left: 1px solid $mainbg;
                     }
                 }
                 &:nth-child(odd) a {

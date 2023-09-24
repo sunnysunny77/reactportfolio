@@ -5,18 +5,18 @@
 
 $font: Poppins-Regular;
 $main: #94b8b8;
-$mainbg: #F8F8FF;
+$mainbg: white;
 
 $c1: #EEFFED;
-$c2:rgba(245, 252, 252, 0.75);
+$c2:rgb(245, 252, 252);
 $c3: #2E86AB;
 $c4: #F07F31;
 $c5: black;
 $c6:#adfabd;
 $c7: #D81159;
 $c8: #24b14d;
-$c9: #4f4f4fe7;
-$c10: #4A5354;
+$c9: slategrey;
+$c10: darkslategrey;
 $c11: rgba($c10,0.1);
 
 $heading2: #f5fcfc;
@@ -26,4 +26,4 @@ $heading4: $c8;
 $tempBoarder: rgba($main, 0.4);
 
 $Acolor: $heading2;
-$aHover:  $main;
+$aHover:  #F07F31;

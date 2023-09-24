@@ -26,7 +26,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
     border-bottom-left-radius: 25px;
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;
-    background-blend-mode: darken;
+    background-blend-mode: multiply;
     @include ten_24 {
       position: relative;
       float: none;
@@ -115,7 +115,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
     position: relative;
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;
-    background-blend-mode: darken;
+    background-blend-mode: multiply;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     @include ten_24 {
