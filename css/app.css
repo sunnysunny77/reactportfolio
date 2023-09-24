@@ -1254,6 +1254,16 @@ footer ul li.sm h3 {
   background-position: center;
 }
 
+#skills-cakephp {
+  width: 70px;
+  height: 50px;
+  background-image: url("../images/skills/cakephp.png");
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 #skills-cloud {
   width: 70px;
   height: 50px;
@@ -1305,8 +1315,9 @@ footer ul li.sm h3 {
 a[target=git] {
   color: #2E86AB;
   position: sticky;
-  top: 10px;
+  top: 0;
   float: left;
+  font-size: 0.8em;
 }
 a[target=git]:hover, a[target=git]:focus {
   color: #F07F31;

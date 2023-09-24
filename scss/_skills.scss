@@ -18,6 +18,7 @@ $imgSkills: (
     "ubuntu",
     "silverstripe",
     "wordpress",
+    "cakephp",
     "cloud",
     "sql",
     "mongo",
@@ -47,8 +48,9 @@ $imgSkills: (
 a[target="git"] {
   color: $c3;
   position: sticky;
-  top: 10px;
+  top: 0;
   float: left;
+  font-size: 0.8em;
   &:hover,
   &:focus {
     color: $aHover;
