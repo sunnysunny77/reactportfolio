@@ -1,5 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 import { toggle } from '../js/template.js';
+
 function Layout() {
     return (
         <>
