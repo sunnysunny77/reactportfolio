@@ -11,7 +11,7 @@ function Skills() {
     vivus();
   }, []);
   return (
-    <main>
+    <>
       <section >
         <h2>Skills</h2>
 
@@ -204,7 +204,7 @@ function Skills() {
           <b>Learning ..</b>
         </p>
       </div>
-    </main>
+    </>
   );
 }
 

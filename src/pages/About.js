@@ -11,7 +11,7 @@ function About() {
     vivus();
   }, []);
   return (
-    <main>
+    <>
       <section>
         <h2>About</h2>
 
@@ -118,7 +118,7 @@ function About() {
           <b>Coffe ..</b>
         </p>
       </div>
-    </main>
+    </>
   );
 }
 

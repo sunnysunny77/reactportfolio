@@ -5,7 +5,6 @@ import Next from "../images/home/next.png";
 
 function Home() {
 
-  
   useEffect(() => {
 
     init();
@@ -15,7 +14,7 @@ function Home() {
     vivus();
   }, []);
   return (
-    <main>
+    <>
       <section >
         <h2>Home</h2>
 
@@ -263,7 +262,7 @@ function Home() {
           <button aria-label="close" id="close">X</button>
         </div>
       </section>
-    </main>
+    </>
   );
 }
 

@@ -6,7 +6,7 @@ function Layout() {
         <>
             <header>
 
-                <a href="./"><div role="img" aria-label="logo"></div></a>
+                <a href="./"><div id="load" role="img" aria-label="logo"></div></a>
 
                 <button onClick={toggle} aria-label="Menu" className="click"></button>
 
@@ -42,8 +42,14 @@ function Layout() {
                 </nav>
 
             </header>
+            
+            <main>
+
+            <div className="after"></div>
 
             <Outlet />
+
+            </main>
 
             <footer>
 

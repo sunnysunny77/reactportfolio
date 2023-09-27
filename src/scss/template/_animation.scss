@@ -8,7 +8,11 @@
   visibility: hidden;
 }
 
-main::after {
+.load-animation {
+  animation: fadeInOpacity 0.75s ease-in-out;
+}
+
+.main-animation {
   animation: fadeInBack 0.75s ease-in-out;
 }
 
