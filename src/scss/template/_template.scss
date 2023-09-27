@@ -1,0 +1,81 @@
+@import url("../../node_modules/overlayscrollbars/css/OverlayScrollbars.css");
+
+/* GLOBAL */
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: $font;
+  background-color: $mainbg;
+  background-image: url(../../images/template/natural-paper.png);
+  background-blend-mode: darken;
+  @include ten_24 {
+    margin: auto;
+  }
+}
+
+.outer {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.os-theme-dark.os-theme-dark-edgy > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
+  background: $c4;
+  min-height: 30px;
+  max-height: 30px;
+}
+
+.os-theme-dark > .os-scrollbar > .os-scrollbar-track,
+.os-theme-light > .os-scrollbar > .os-scrollbar-track {
+  background: $c11;
+}
+
+h2 {
+  width: 100%;
+  margin-left: 10%;
+  color: $heading3;
+  font-size: 1.4em;
+  position: relative;
+  @include ten_24 {
+    font-size: large;
+    margin-left: 5%;
+  }
+  @include four_80 {
+    margin-left: 25px;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    top: calc(50% - 3.25px);
+    left: -15px;
+    bottom: 0;
+    right: 0;
+    animation: blink 1.75s infinite ease-out;
+    clip: rect(auto, 10px, auto, auto);
+    @keyframes blink {
+      from {
+        opacity: 1;
+        border-top: 7.5px solid $c6;
+      }
+    
+      to {
+        opacity: 0;
+        border-top: 7.5px solid $c1;
+      }
+    }
+  }
+}
+
+a {
+  transition: color 0.2s ease;
+}
+
+@import "header";
+@import "main";
+@import "footer";
