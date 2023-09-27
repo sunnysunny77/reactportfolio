@@ -42,11 +42,7 @@ function Layout() {
 
             </header>
 
-            <main>
-
-                <Outlet />
-
-            </main>
+            <Outlet />
 
             <footer>
 

@@ -8,10 +8,6 @@
   visibility: hidden;
 }
 
-header > a div {
-  animation: fadeInOpacity 1.5s ease-in-out;
-}
-
 main::after {
   animation: fadeInBack 0.75s ease-in-out;
 }

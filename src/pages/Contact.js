@@ -16,7 +16,7 @@ function Contact() {
     circleInit()
   });
   return (
-    <>
+    <main>
       <section >
         <h2>Contact</h2>
 
@@ -121,7 +121,7 @@ function Contact() {
           <b>Get in touch ..</b>
         </div>
       </div>
-    </>
+    </main>
   );
 }
 
