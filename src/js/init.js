@@ -14,6 +14,9 @@ export const init = () => {
   const logo = document.querySelector("#logo");
   const after = document.querySelector(".after");
 
+  let stopbool = true;
+  let cached = null;
+
   if (after && !after.classList.contains("main-animation")) {
 
     after.classList.add("main-animation");
@@ -83,9 +86,6 @@ export const init = () => {
 
   eventListner(window, "scroll", function () {
 
-    let stopbool = true;
-    let cached = null;
-    
     if (!cached) {
       setTimeout(function () {
   
