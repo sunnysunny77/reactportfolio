@@ -46,11 +46,7 @@ $imgSkills: (
 }
 
 a[target="git"] {
-  color: $c3;
-  position: sticky;
-  top: 0;
-  float: left;
-  font-size: 0.8em;
+  color: $c2;
   &:hover,
   &:focus {
     color: $aHover;

@@ -152,10 +152,10 @@ main {
         @include seven_20_portrait {
             border-radius: 10px;
         }
-        span {
+        span, a[target="git"] {
             margin: 5% auto auto 5%;
             opacity: 0;
-            transition: opacity 1s linear;
+            transition: color 0.2s ease, opacity 1s linear;
             max-width: 180px;
         }
         b {
@@ -183,6 +183,7 @@ main {
         bottom: 8%;
         left: 8%;
         span,
+        a[target="git"],
         .slider,
         .percentage {
             opacity: 1;

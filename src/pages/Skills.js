@@ -24,9 +24,6 @@ function Skills() {
           <div id="auto-skills" className="template-p">
             <p className="vis0 cont">
 
-              <a target="git" href="https://github.com/sunnysunny77">
-                Git <i className="far fa-heart"></i>
-              </a>
               &bull; HTML - JavaScript - CSS - SASS
               <br />
               <span
@@ -53,7 +50,6 @@ function Skills() {
                 className="img last-img"
                 role="img"
                 aria-label="Foundation"></span>
-
               <br />
               &bull; Create React App - Angular
               <br />
@@ -67,7 +63,6 @@ function Skills() {
                 className="img last-img"
                 role="img"
                 aria-label="Angular"></span>
-
               <br />
               &bull; Ux - Photoshop - Xd
               <br />
@@ -135,7 +130,6 @@ function Skills() {
                 className="img last-img"
                 role="img"
                 aria-label="Ubuntu"></span>
-
               <br />
               &bull; SilverStripe - Wordpress - Cake PHP
               <br />
@@ -199,10 +193,12 @@ function Skills() {
 
       <div role="img" aria-label="glowing keyboard" id="skills-template-img-0" className="template-img-0 vis0">
         <p>
-          <span>
-            I am always ready to learn new skills
-          </span>
-          <b>Learning ..</b>
+        
+            <a target="git" href="https://github.com/sunnysunny77">
+                Git <i className="far fa-heart"></i>
+            </a>
+      
+          <b>GitHub ..</b>
         </p>
       </div>
     </>
