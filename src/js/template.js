@@ -1,5 +1,10 @@
 import Vivus from "vivus";
 
+export const top = () => {
+
+  window.scrollTo(0,0)
+}
+
 export const vivus = () => {
 
   new Vivus("my-svg");

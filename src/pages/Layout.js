@@ -1,5 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
-import { toggle } from '../js/template.js';
+import { toggle, top } from '../js/template.js';
 
 function Layout() {
     return (
@@ -57,10 +57,10 @@ function Layout() {
                     <li className="sm">
                         <h3>D.C</h3>
                     </li>
-                    <li><Link to="/skills"> SKILLS </Link></li>
-                    <li><Link to="/about"> ABOUT </Link></li>
-                    <li><Link to="/contact"> CONTACT </Link></li>
-                    <li><Link to="/"> HOME </Link></li>
+                    <li><Link onClick={top} to="/skills"> SKILLS </Link></li>
+                    <li><Link onClick={top} to="/about"> ABOUT </Link></li>
+                    <li><Link onClick={top} to="/contact"> CONTACT </Link></li>
+                    <li><Link onClick={top} to="/"> HOME </Link></li>
                 </ul>
 
             </footer>
