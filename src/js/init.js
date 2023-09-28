@@ -85,10 +85,9 @@ export const init = () => {
   }
 
   eventListner(window, "scroll", function () {
-
+    
     if (!cached) {
       setTimeout(function () {
-  
         let scroll_pos = window.scrollY + window.innerHeight;
   
         if (window.screen.width <= 992) {
