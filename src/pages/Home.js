@@ -1,6 +1,8 @@
-import { picture, sitesOverlay, init, vivus } from '../js/template.js';
+import { vivus } from '../js/template.js';
+import { picture, sitesOverlay } from '../js/overlay.js';
+import { init } from '../js/init.js';
 import { pageScroll } from '../js/auto.js';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Next from "../images/home/next.png";
 
 function Home() {
@@ -8,7 +10,7 @@ function Home() {
   useEffect(() => {
 
     init();
-    pageScroll(document.querySelectorAll(".auto-home")[0]);
+    pageScroll(document.querySelector("#auto-home"));
     picture();
     sitesOverlay();
     vivus();
@@ -28,7 +30,7 @@ function Home() {
         </div>
 
         <div className="template-p-cont">
-          <div className="template-p auto-home">
+          <div id="auto-home" className="template-p">
             <p className="vis0 cont">
               As a web designer when writing code
               <br />

@@ -1,5 +1,6 @@
-import React, { useEffect} from 'react';
-import { init, vivus } from '../js/template.js';
+import { useEffect } from 'react';
+import { vivus } from '../js/template.js';
+import { init } from '../js/init.js';
 import { pageScroll } from '../js/auto.js';
 
 function About() {
@@ -7,7 +8,7 @@ function About() {
   useEffect(() => {
 
     init();
-    pageScroll(document.querySelectorAll(".auto-about")[0]);
+    pageScroll(document.querySelector("#auto-about"));
     vivus();
   }, []);
   return (
@@ -20,7 +21,7 @@ function About() {
         </div>
 
         <div className="template-p-cont">
-          <div className="template-p auto-about">
+          <div id="auto-about" className="template-p">
             <p className="vis0 cont">
               Sports
               <br />

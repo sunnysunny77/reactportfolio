@@ -1,6 +1,3 @@
-
-
-
 const sleep = (milliseconds) => {
 
     return new Promise(resolve => setTimeout(resolve, milliseconds));
@@ -11,7 +8,6 @@ export const pageScroll = async (start, a, b, c) => {
     let count = start ? 0 : a;
     let bool = start ? null : b;
     let page = start ? start : c;
-
 
     const line = page.scrollHeight - page.clientHeight;
 
@@ -32,5 +28,4 @@ export const pageScroll = async (start, a, b, c) => {
     }
     count++;
     return pageScroll(false, count, bool, page)
-
 }

@@ -1,5 +1,7 @@
-import React, { useEffect } from 'react';
-import { fromOverlay, init, vivus } from '../js/template.js';
+import { useEffect } from 'react';
+import { vivus } from '../js/template.js';
+import { fromOverlay } from '../js/overlay.js';
+import { init } from '../js/init.js';
 import { validation } from '../js/forms.js';
 import { circleInit } from '../js/circles.js';
 import linkedin from '../images/contact/linkedin.png';

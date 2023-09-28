@@ -87,7 +87,7 @@ const iteration = (i, arraySrc, arrayHref, arrayText, staticCount, inner, image1
     image1[i].innerHTML = '<span class="hidden">' + arrayHref[counter[i]][1] + '</span>';
     image2[i].style.backgroundImage = `url(${arraySrc[counter[i] + 1]}`;
     image2[i].href = arrayHref[counter[i] + 1][0];
-    image2[i].innerHTML = '<span class="hidden">' + arrayHref[counter[i] + 1][1] + '</span>'; 
+    image2[i].innerHTML = '<span class="hidden">' + arrayHref[counter[i] + 1][1] + '</span>';
     imageFillLeft[i].href = arrayHref[counter[i] + 1][0];
     imageFillLeft[i].innerHTML = '<span class="hidden">' + arrayHref[counter[i] + 1][1] + '</span>';
     imageFillRight[i].style.backgroundImage = `url(${arraySrc[counter[i]]}`;
@@ -155,13 +155,13 @@ export const circleInit = () => {
     image1[i].innerHTML = '<span class="hidden">' + arrayHref[0][1] + '</span>';
     image2[i].style.backgroundImage = `url(${arraySrc[1]}`;
     image2[i].href = arrayHref[1][0];
-    image2[i].innerHTML = '<span class="hidden">' +  arrayHref[1][1] + '</span>';
+    image2[i].innerHTML = '<span class="hidden">' + arrayHref[1][1] + '</span>';
     imageFillLeft[i].style.backgroundImage = `url(${arraySrc[1]}`;
     imageFillLeft[i].href = arrayHref[1][0];
-    imageFillLeft[i].innerHTML = '<span class="hidden">' +  arrayHref[1][1] + '</span>';
+    imageFillLeft[i].innerHTML = '<span class="hidden">' + arrayHref[1][1] + '</span>';
     imageFillRight[i].style.backgroundImage = `url(${arraySrc[0]}`;
     imageFillRight[i].href = arrayHref[0][0];
-    imageFillRight[i].innerHTML = '<span class="hidden">' +  arrayHref[0][1] + '</span>';
+    imageFillRight[i].innerHTML = '<span class="hidden">' + arrayHref[0][1] + '</span>';
     inner[i].innerHTML = arrayText[0];
 
     width.push(percentageCalc(counter, staticCount));
