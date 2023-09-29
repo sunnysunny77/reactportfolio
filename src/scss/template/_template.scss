@@ -22,7 +22,10 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .os-theme-dark.os-theme-dark-edgy > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
