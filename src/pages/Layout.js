@@ -4,6 +4,7 @@ import { toggle, top } from '../js/template.js';
 function Layout() {
     return (
         <>
+            <a className="hidden" href="#skip">skip navigation</a>
             <header>
 
                 <a href="./">
@@ -46,7 +47,7 @@ function Layout() {
 
             </header>
             
-            <main>
+            <main id="skip">
 
             <div className="after"></div>
 
