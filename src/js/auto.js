@@ -3,29 +3,21 @@ const sleep = (milliseconds) => {
     return new Promise(resolve => setTimeout(resolve, milliseconds));
 }
 
-export const pageScroll = async (start, a, b, c) => {
+export const pageScroll = async (obj, x, y) => {
 
-    let count = start ? 0 : a;
-    let bool = start ? null : b;
-    let page = start ? start : c;
-
-    const line = page.scrollHeight - page.clientHeight;
-
+    let bool = y ?? null;
+    let count = x ?? 0;
     await sleep(45);
-    page.scrollTo(0, count);
+    obj.scrollTo(0, count);
 
-    if (count === 0) {
-        bool = null;
-        await sleep(4955);
-    }
-    if (count === line) {
-        bool = false;
+    if (count === 0 || count === obj.scrollHeight - obj.clientHeight) {
+        bool = !bool;
         await sleep(4955);
     }
     if (bool === false) {
         count--;
-        return pageScroll(false, count, bool, page)
+        return pageScroll(obj, count, bool)
     }
     count++;
-    return pageScroll(false, count, bool, page)
+    return pageScroll(obj, count, bool)
 }
