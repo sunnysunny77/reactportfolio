@@ -7,7 +7,7 @@ import Skills from "./pages/Skills";
 import './scss/app.scss';
 import './css/all.min.css';
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <Routes>

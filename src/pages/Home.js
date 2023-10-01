@@ -3,7 +3,7 @@ import { pageScroll } from '../js/auto.js';
 import { useEffect } from 'react';
 import Next from "../images/home/next.png";
 
-function Home() {
+const Home = () => {
 
   useEffect(() => {
 
@@ -13,19 +13,16 @@ function Home() {
   }, []);
   return (
     <>
-
       <section >
         <h2>Home</h2>
-
         <div className="template-img-cont vis0">
           <div
             role="img"
             aria-label="house icon"
             id="home-template-img"
-            className="template-img"
-          ></div>
+            className="template-img">
+          </div>
         </div>
-
         <div className="template-p-cont">
           <div className="template-p">
             <p className="vis0 cont">
@@ -71,19 +68,15 @@ function Home() {
           </div>
         </div>
       </section>
-
       <div role="img" aria-label="divider" className="template-div-mobile"></div>
-
       <div
         role="img"
         aria-label="divider"
-        className="template-div"
-      ></div>
-
+        className="template-div">
+      </div>
       <section id="site">
         <h2>Sites</h2>
-
-        <div id="s4" className="vis0">
+        <div id="s4">
           <div id="ob0">
             <ul id="ob0ul" className="vis0">
               <li>
@@ -220,9 +213,8 @@ function Home() {
             </ul>
           </div>
         </div>
-
-        <div id="s5" className="vis0">
-          <span id="s51" role="img" className="sitesImg" aria-label="site default"></span>
+        <div id="s5">
+          <span id="s51" role="img" className="sitesImg vis0" aria-label="site default"></span>
           <span role="img" className="sitesImg" aria-label="site 1" id="s52" style={{ display: "none" }}>
             <a target="furniture" href="https://furniture.sunnyhome.site/">
               furniture.sunnyhome
@@ -261,7 +253,6 @@ function Home() {
           <button aria-label="close" id="close">X</button>
         </div>
       </section>
-
     </>
   );
 }

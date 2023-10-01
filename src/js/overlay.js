@@ -16,7 +16,8 @@ export const picture = () => {
     }
 }
 
-function pictureDisplay(item) {
+const pictureDisplay = (item) => {
+    
     for (const [x, element] of pictureID.entries()) {
         const obj = document.getElementById(element);
         if (obj.id === item) {
@@ -24,12 +25,12 @@ function pictureDisplay(item) {
                 obj.style.display = "block";
                 if (x === 0) {
                     obj.classList.add("ani0");
-                    setTimeout(function () {
+                    setTimeout(() => {
                         obj.classList.remove("ani0");
                     }, 1500);
                 } else {
                     obj.classList.add("an");
-                    setTimeout(function () {
+                    setTimeout(() => {
                         obj.classList.remove("an");
                     }, 750);
                 }
@@ -57,10 +58,10 @@ export const sitesOverlay = (event) => {
     let instance = OverlayScrollbars(document.querySelector("#ob0"), {
         className: "os-theme-dark os-theme-dark-edgy",
         callbacks: {
-            onScroll: function (event) {
+            onScroll: (event) => {
 
                 if (!cached) {
-                    setTimeout(function () {
+                    setTimeout(() => {
 
                         let preview = document.querySelectorAll(".scrollPreview");
                         let ranges = [...preview].map(item => item.offsetTop);
@@ -86,7 +87,7 @@ export const sitesOverlay = (event) => {
                 }
                 cached = true;
             },
-            onInitialized: eventListner(document.querySelector("#close"), "click", function () {
+            onInitialized: eventListner(document.querySelector("#close"), "click", () => {
                 instance.scroll({ y: "0%" }, 2500);
             }, false)
         }

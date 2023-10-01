@@ -5,12 +5,12 @@ export const start = () => {
   const after = document.querySelector("#after");
   const logo = document.querySelector("#logo");
   logo.classList.add("logo");
-  setTimeout(function () {
+  setTimeout(() => {
     logo.classList.remove("logo");
   }
   ,300);
   after.classList.add("after");
-  setTimeout(function () {
+  setTimeout(() => {
     after.classList.remove("after");
   }
   ,300);

@@ -1,8 +1,8 @@
 export const send = (formData, sent, sub) => {
-  let promise = new Promise(function (resolve, reject) {
+  let promise = new Promise((resolve, reject) => {
     let req = new XMLHttpRequest();
     req.open("POST", "form.php", true);
-    req.addEventListener("load", function () {
+    req.addEventListener("load", () => {
       if (req.status === 200) {
         resolve(req.responseText);
       } else {
@@ -15,7 +15,7 @@ export const send = (formData, sent, sub) => {
     sent.innerHTML = value;
     sub.style.display = "none";
     sent.style.display = "block";
-    setTimeout(function () {
+    setTimeout(() => {
       sent.style.display = "none";
       sent.innerHTML = "";
       sub.style.display = "block";
@@ -25,7 +25,7 @@ export const send = (formData, sent, sub) => {
     sent.innerHTML = error;
     sub.style.display = "none";
     sent.style.display = "block";
-    setTimeout(function () {
+    setTimeout(() => {
       sent.style.display = "none";
       sent.innerHTML = "";
       sub.style.display = "block";

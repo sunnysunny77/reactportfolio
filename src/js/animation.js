@@ -1,21 +1,20 @@
-import { getPosition, eventListner } from '../js/utilities.js';
+import { getPosition, eventListner } from './utilities.js';
 
-export const init = () => {
+export const animation = () => {
 
   const all = document.querySelectorAll(".vis0");
   const imgCont = document.querySelector(".template-img-cont");
   const cont = document.querySelector(".cont");
-  const homeD =  document.querySelector("#home-div");
+  const templateDiv =  document.querySelector(".template-div-mobile");
   const tempImg0 = document.querySelector(".template-img-0");
   const s4 = document.querySelector("#s4");
-  const s5 = document.querySelector("#s5");
   const s51 = document.querySelector("#s51");
   const ob0ul = document.querySelector("#ob0ul");
 
   let stopbool = true;
   let cached = null;
 
-  if (window.screen.width <= 992 && !/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(navigator.userAgent)) {
+  if (window.screen.width <= 1024 && window.screen.height <= 1024) {
 
     for (const element of all) {
       element.classList.remove("vis0");
@@ -49,29 +48,25 @@ export const init = () => {
       s4 &&
       getPosition(s4) < line
     ) {
-      s4.classList.remove("vis1");
-      s4.classList.add("vis0");
-      s4.classList.add("ani2");
       ob0ul.classList.remove("vis1");
       ob0ul.classList.add("vis0");
       ob0ul.classList.add("ani2");
-      s5.classList.remove("vis1");
-      s5.classList.add("vis0");
-      s5.classList.add("ani2");
+      s51.classList.remove("vis1");
+      s51.classList.add("vis0");
       s51.classList.add("ani0");
-      setTimeout(function () {
+      setTimeout(() => {
         s51.classList.remove("ani0");
       }, 1500);
     }
   }
 
-  eventListner(window, "scroll", function () {
+  eventListner(window, "scroll", () => {
     
     if (!cached) {
-      setTimeout(function () {
+      setTimeout(() => {
         let scroll_pos = window.scrollY + window.innerHeight;
   
-        if (window.screen.width <= 992) {
+        if (window.screen.width <= 1024) {
   
           if (scroll_pos > getPosition(imgCont) && imgCont.classList.contains("vis1")) {
             imgCont.classList.remove("vis1");
@@ -85,8 +80,8 @@ export const init = () => {
             cont.classList.add("ani2");
           }
   
-          if (homeD && scroll_pos > getPosition(homeD)) {
-            homeD.classList.add("ani3");
+          if (scroll_pos > getPosition(templateDiv)) {
+            templateDiv.classList.add("ani3");
           }
   
           if (tempImg0 && scroll_pos > getPosition(tempImg0) && tempImg0.classList.contains("vis1")) {
@@ -99,26 +94,22 @@ export const init = () => {
   
             stopbool = false;
   
-            setTimeout(function () {
+            setTimeout(() => {
               tempImg0.classList.add("ani5");
-              setTimeout(function () {
+              setTimeout(() => {
                 tempImg0.classList.remove("ani5");
               }, 4000);
             }, 1500);
           }
   
-          if (s4 && scroll_pos > getPosition(s4) && s4.classList.contains("vis1")) {
-            s4.classList.remove("vis1");
-            s4.classList.add("vis0");
-            s4.classList.add("ani2");
+          if (s4 && scroll_pos > getPosition(s4) && ob0ul.classList.contains("vis1")) {
             ob0ul.classList.remove("vis1");
             ob0ul.classList.add("vis0");
             ob0ul.classList.add("ani2");
-            s5.classList.remove("vis1");
-            s5.classList.add("vis0");
-            s5.classList.add("ani2");
+            s51.classList.remove("vis1");
+            s51.classList.add("vis0");
             s51.classList.add("ani0");
-            setTimeout(function () {
+            setTimeout(() => {
               s51.classList.remove("ani0");
             }, 1500);
           }
@@ -128,9 +119,9 @@ export const init = () => {
           if (tempImg0 && stopbool && scroll_pos > getPosition(tempImg0) + tempImg0.offsetHeight) {
   
             stopbool = false;
-            setTimeout(function () {
+            setTimeout(() => {
               tempImg0.classList.add("ani5");
-              setTimeout(function () {
+              setTimeout(() => {
                 tempImg0.classList.remove("ani5");
               }, 10_000);
             }, 750);

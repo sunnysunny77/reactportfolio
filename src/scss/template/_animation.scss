@@ -35,12 +35,11 @@
 }
 
 .an {
-  opacity: 1;
   animation: fadeInOpacity 0.75s ease-in;
 }
 
 .ani0 {
-  animation: scale1 1.5s ease-in;
+  animation: scale1 1.5s ease-in, fadeInOpacity 0.75s ease-in;
 }
 
 .ani {

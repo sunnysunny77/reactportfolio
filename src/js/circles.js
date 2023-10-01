@@ -2,11 +2,11 @@ import { eventListner } from '../js/utilities.js';
 
 let width = [];
 
-function percentageCalc(counter, staticCount) {
+const percentageCalc = (counter, staticCount) => {
   return (counter + 1) / staticCount.length * 100 / 1;
 }
 
-function progress(i, percent, percentage) {
+const progress = (i, percent, percentage) => {
 
   const frame = () => {
 
@@ -124,7 +124,7 @@ export const circleInit = () => {
       arrayText.push(item.children[1].innerHTML);
     }
 
-    eventListner(openLeft[i], "click", function (event) {
+    eventListner(openLeft[i], "click", (event) => {
 
       event.preventDefault();
       counter[i]--;
@@ -137,7 +137,7 @@ export const circleInit = () => {
       imageFillRight[i].classList.add("right");
     }, null);
 
-    eventListner(openRight[i], "click", function (event) {
+    eventListner(openRight[i], "click", (event) => {
 
       event.preventDefault();
       counter[i]++;

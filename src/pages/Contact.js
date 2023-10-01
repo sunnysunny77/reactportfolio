@@ -6,7 +6,7 @@ import linkedin from '../images/contact/linkedin.png';
 import telephone from '../images/contact/telephone.png';
 import mail from '../images/contact/mail.png';
 
-function Contact() {
+const Contact = () => {
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -14,38 +14,50 @@ function Contact() {
   const [message, setMessage] = useState("");
 
   const validation = (event) => {
+
     let error;
+
     const formData = new FormData();
     formData.append("name", name);
     formData.append("phone", phone);
     formData.append("email", email);
     formData.append("message", message);
+
     const nameObj = event.target.name;
     const phoneObj = event.target.phone;
     const emailObj = event.target.email;
     const messageObj = event.target.children[0].children[1].children[3].children[1];
     const sub = event.target.children[2];
+
     if (/^[ '.a-z-]{2,40}$/i.test(name)) {
+
       reply(false, nameObj, null);
     } else {
+
       reply(true, nameObj, "Enter your name");
       error = true;
     }
     if (/^\+?\d{3,15}$/.test(phone)) {
+
       reply(false, phoneObj, null);
     } else {
+
       reply(true, phoneObj, "+###############");
       error = true;
     }
     if (/^[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}$/.test(email)) {
+
       reply(false, emailObj, null);
     } else {
+
       reply(true, emailObj, "Enter your email");
       error = true;
     }
     if (/[\dA-Za-z]/.test(message)) {
+
       reply(false, messageObj, null);
     } else {
+
       reply(true, messageObj, "Enter your message");
       error = true;
     }
@@ -53,11 +65,12 @@ function Contact() {
 
       sub.classList.add("red");
       sub.value = "Validation Error ⇡";
-      setTimeout(function () {
+      setTimeout(() => {
         sub.value = "Send";
         sub.classList.remove("red");
       }, 5000);
     } else {
+
       send(formData, event.target.children[1], sub);
       setName("");
       setPhone("");
@@ -74,25 +87,21 @@ function Contact() {
   }, []);
   return (
     <>
-
       <section >
         <h2>Contact</h2>
-
         <div className="template-img-cont vis0">
           <div
             role="img"
             aria-label="phone icon"
             id="contact-template-img"
-            className="template-img"
-          ></div>
+            className="template-img">
+          </div>
         </div>
-
         <div className="template-p-cont">
           <div id="overlay" className="template-p">
             <form onSubmit={validation} id="contact-form" className="vis0 cont">
               <fieldset>
                 <legend>Email Us:</legend>
-
                 <ul>
                   <li>
                     <label htmlFor="name">Names:</label>
@@ -141,25 +150,18 @@ function Contact() {
                   </li>
                 </ul>
               </fieldset>
-
               <p id="sent"></p>
-
               <input type="submit" value="Send" id="sub" />
-
               <br />
             </form>
           </div>
         </div>
       </section>
-
       <div role="img" aria-label="divider" className="template-div-mobile"></div>
-
       <div role="img" aria-label="divider" className="template-div"></div>
-
       <div role="img" aria-label="email notifications" id="contact-template-img-0" className="template-img-0 vis0">
         <div className="circle-progress">
           <div className="slider slider-count">
-
             <button aria-label="open-left" className="button-next open-left"></button>
             <a href="mailto:shlooby07@gmail.com" rel="noreferrer" target="_blank" className="a image-1"><span className='hidden'>Mail me</span></a>
             <a href="mailto:shlooby07@gmail.com" rel="noreferrer" target="_blank" className="a image-fill-right"><span className='hidden'>Mail me</span></a>
@@ -167,7 +169,6 @@ function Contact() {
             <a href="tel:0434-984-983" rel="noreferrer" target="_blank" className="a image-2"><span className='hidden'>Phone me</span></a>
             <a href="tel:0434-984-983" rel="noreferrer" target="_blank" className="a image-fill-left"><span className='hidden'>Phone me</span></a>
             <button aria-label="open-right" className="button-next open-right"></button>
-
             <div className="static-count">
               <img src={mail} alt="mail" />
               <div>
@@ -186,13 +187,11 @@ function Contact() {
                 <a href="https://www.linkedin.com/in/daniel-costello-579b10259/">LinkedIn</a>
               </div>
             </div>
-
           </div>
           <div className="percentage"><div className="percentage-change"></div></div>
           <b>Get in touch ..</b>
         </div>
       </div>
-
     </>
   );
 }

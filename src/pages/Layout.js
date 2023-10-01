@@ -1,47 +1,40 @@
-import { Outlet, Link, useNavigate  } from "react-router-dom";
-import { toggle, top, start, vivus  } from '../js/template.js';
+import { Outlet, Link, useNavigate } from "react-router-dom";
+import { toggle, top, start, vivus } from '../js/template.js';
 import { useEffect } from 'react';
-import { init } from '../js/init.js';
+import { animation } from '../js/animation.js';
 
-function Layout() {
+const Layout = () => {
 
     const navigate = useNavigate();
 
     useEffect(() => {
-    
+
         start();
-        init();
+        animation();
         vivus();
-    },[navigate]);
+    }, [navigate]);
     return (
         <>
             <a className="hidden" href="#main">skip navigation</a>
             <header>
-
                 <Link to="/">
                     <span className="hidden">logo</span>
                     <div id="logo" role="img"></div>
                 </Link>
-
-                <button onClick={toggle} className="click"><span className="hidden">Menu</span></button>
-
+                <button onClick={toggle} className="click">
+                    <span className="hidden">Menu</span>
+                </button>
                 <nav className="disp menu0">
-
                     <ul>
                         <li><Link to="/skills">Skills<span>01</span></Link></li>
                         <li><Link to="/about">About<span>02</span></Link></li>
                         <li><Link to="/contact">Contact<span>03</span></Link></li>
                         <li><Link to="/">Home<span>04</span></Link></li>
                     </ul>
-
                     <div className="heading">
-
                         <a href="tel:0434-984-983" className="fas fa-phone-square-alt"><span className="hidden">tel</span></a>
-
                         <a href="mailto:shlooby07@gmail.com" className="fas fa-envelope"><span className="hidden">mail</span></a>
-
                         <a href="https://www.linkedin.com/in/daniel-costello-579b10259/" className="fab fa-linkedin"><span className="hidden">linkedin</span></a>
-
                         <svg id="my-svg" role="img" aria-label="globe" viewBox="0 0 90 90" xmlnsXlink="http://www.w3.org/2000/svg" xmlnsbx="https://boxy-svg.com">
                             <path d="M 41.551 89.821 C 28.598 88.803 16.708 82.216 8.897 71.729 C 6.402 68.37 6.467 68.543 6.922 65.813 C 7.617 61.718 8.983 57.146 10.524 53.7 L 11.219 52.14 L 11.913 52.487 C 12.282 52.682 13.15 52.877 13.844 52.899 L 15.124 52.964 L 16.057 54.546 C 21.568 63.949 31.071 71.121 42.137 74.22 C 44.806 74.979 48.538 75.65 51.076 75.868 L 52.791 76.019 L 53.16 76.843 C 53.659 77.904 54.441 78.641 55.764 79.247 C 56.675 79.659 57.175 79.745 59.019 79.724 C 60.45 79.702 61.514 79.573 62.143 79.335 C 62.664 79.139 63.162 78.988 63.25 78.988 C 63.337 78.988 63.683 79.508 64.009 80.136 C 64.356 80.743 65.051 81.913 65.571 82.736 C 66.092 83.538 66.504 84.275 66.504 84.383 C 66.504 84.687 61.753 86.81 59.062 87.677 C 55.634 88.803 51.837 89.562 48.148 89.822 C 44.871 90.06 44.61 90.06 41.551 89.821 Z" bxorigin="-0.111585 -1.377165" />
                             <path d="M 69.541 81.956 C 68.63 80.547 66.72 77.124 66.72 76.929 C 66.742 76.821 67.154 76.257 67.653 75.693 C 68.521 74.719 68.717 74.632 71.233 73.895 C 74.466 72.985 78.09 71.576 80.78 70.233 C 81.887 69.691 82.776 69.301 82.776 69.409 C 82.776 69.496 81.974 70.645 80.998 71.944 C 78.308 75.541 73.556 80.091 70.409 82.085 C 69.888 82.433 69.845 82.411 69.541 81.956 Z" bxorigin="-4.155456 -5.36528" />
@@ -51,23 +44,14 @@ function Layout() {
                             <path d="M 16.469 35.629 C 16.1 35.391 15.211 35.131 14.516 35.044 L 13.236 34.893 L 12.954 32.509 C 12.585 29.411 12.738 19.79 13.214 16.475 C 13.822 12.141 13.583 12.661 15.905 10.711 C 26.624 1.762 40.315 -1.813 53.637 0.874 C 55.72 1.307 59.69 2.369 59.929 2.585 C 59.951 2.607 59.604 3.625 59.126 4.839 C 58.258 7.027 56.739 12.011 56.739 12.596 C 56.739 12.813 56.435 12.9 55.611 12.9 C 51.467 12.921 47.951 15.651 47.669 19.118 C 47.582 20.158 47.518 20.288 46.996 20.397 C 34.997 23.213 25.69 27.893 18.855 34.567 C 18.009 35.412 17.271 36.084 17.228 36.062 C 17.185 36.062 16.838 35.868 16.469 35.629 Z" bxorigin="-0.270203 -0.000008" />
                             <path d="M 82.82 21.35 C 81.105 20.657 73.012 19.313 69.216 19.075 C 65.744 18.858 65.701 18.858 65.18 17.839 C 64.594 16.669 62.902 15.001 61.709 14.416 C 61.188 14.155 60.732 13.918 60.71 13.896 C 60.559 13.766 63.206 4.904 63.618 4.189 C 63.726 3.993 65.57 4.903 68.088 6.377 C 72.058 8.717 76.224 12.249 79.088 15.672 C 80.954 17.883 83.666 21.609 83.384 21.544 C 83.34 21.545 83.102 21.459 82.82 21.35 Z" bxorigin="-2.67411 -0.239471" />
                         </svg>
-
                     </div>
-
                 </nav>
-
             </header>
-
             <main id="main">
-
                 <div id="after"></div>
-
                 <Outlet />
-
             </main>
-
             <footer>
-
                 <ul>
                     <li className="sm">
                         <h3>D.C</h3>
@@ -77,7 +61,6 @@ function Layout() {
                     <li><Link onClick={top} to="/contact"> CONTACT </Link></li>
                     <li><Link onClick={top} to="/"> HOME </Link></li>
                 </ul>
-
             </footer>
         </>
     )

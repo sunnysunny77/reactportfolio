@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { pageScroll } from '../js/auto.js';
 
-function About() {
+const About = () => {
 
   useEffect(() => {
 
@@ -9,14 +9,11 @@ function About() {
   }, []);
   return (
     <>
-
       <section>
         <h2>About</h2>
-
         <div className="template-img-cont vis0">
           <div role="img" aria-label="information icon" id="about-template-img" className="template-img"></div>
         </div>
-
         <div className="template-p-cont">
           <div className="template-p">
             <p className="vis0 cont">
@@ -103,11 +100,8 @@ function About() {
           </div>
         </div>
       </section>
-
       <div role="img" aria-label="divider" className="template-div-mobile"></div>
-
       <div role="img" aria-label="divider" className="template-div"></div>
-
       <div role="img" aria-label="coffe mug" id="about-template-img-0" className="template-img-0 vis0">
         <p>
           <span>
@@ -116,7 +110,6 @@ function About() {
           <b>Coffe ..</b>
         </p>
       </div>
-
     </>
   );
 }
