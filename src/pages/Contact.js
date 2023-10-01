@@ -25,7 +25,7 @@ function Contact() {
     const emailObj = event.target.email;
     const messageObj = event.target.children[0].children[1].children[3].children[1];
     const sub = event.target.children[2];
-    if (/^[ '.a-z-]{2,40}$/i.test(event.target.name.value)) {
+    if (/^[ '.a-z-]{2,40}$/i.test(name)) {
       reply(false, nameObj, null);
     } else {
       reply(true, nameObj, "Enter your name");
