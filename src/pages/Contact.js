@@ -59,7 +59,10 @@ function Contact() {
       }, 5000);
     } else {
       send(formData, event.target.children[1], sub);
-      event.target.reset();
+      setName("");
+      setPhone("");
+      setEmail("");
+      setMessage("");
     }
     event.preventDefault();
   }
@@ -71,7 +74,7 @@ function Contact() {
   }, []);
   return (
     <>
-    
+
       <section >
         <h2>Contact</h2>
 
