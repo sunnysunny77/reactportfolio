@@ -5,6 +5,7 @@ const sleep = (milliseconds) => {
 
 export const pageScroll = async (obj, x, y) => {
 
+    obj = obj ?? document.querySelector(".template-p");
     let bool = y ?? null;
     let count = x ?? 0;
     await sleep(45);

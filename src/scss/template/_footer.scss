@@ -60,9 +60,6 @@ footer {
                 }
                 &:hover {
                     color: $aHover;
-                    @include ten_24 {
-                        color: $c4;
-                    }
                 }
             }
         }

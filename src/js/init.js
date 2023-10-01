@@ -11,19 +11,9 @@ export const init = () => {
   const s5 = document.querySelector("#s5");
   const s51 = document.querySelector("#s51");
   const ob0ul = document.querySelector("#ob0ul");
-  const logo = document.querySelector("#logo");
-  const after = document.querySelector(".after");
 
   let stopbool = true;
   let cached = null;
-
-  if (after && !after.classList.contains("main-animation")) {
-
-    after.classList.add("main-animation");
-    setTimeout(function () {
-      after.classList.remove("main-animation");
-    }, 300);
-  }
 
   if (window.screen.width <= 992 && !/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(navigator.userAgent)) {
 
@@ -72,15 +62,6 @@ export const init = () => {
       setTimeout(function () {
         s51.classList.remove("ani0");
       }, 1500);
-    }
-  } else {
-
-    if (logo && !logo.classList.contains("logo-animation")) {
-
-      logo.classList.add("logo-animation");
-      setTimeout(function () {
-        logo.classList.remove("logo-animation");
-      }, 300);
     }
   }
 

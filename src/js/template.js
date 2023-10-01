@@ -1,5 +1,21 @@
 import Vivus from "vivus";
 
+export const start = () => {
+
+  const after = document.querySelector("#after");
+  const logo = document.querySelector("#logo");
+  logo.classList.add("logo");
+  setTimeout(function () {
+    logo.classList.remove("logo");
+  }
+  ,300);
+  after.classList.add("after");
+  setTimeout(function () {
+    after.classList.remove("after");
+  }
+  ,300);
+}
+
 export const top = () => {
 
   window.scrollTo(0,0)

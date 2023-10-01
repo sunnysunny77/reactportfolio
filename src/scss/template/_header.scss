@@ -106,9 +106,6 @@ header {
                         bottom: 2.5%;
                         left: 0;
                         background-color: $aHover;
-                        @include ten_24 {
-                            background-color: $c4;
-                        }
                         width: 0;
                         transition: width 1s;
                         transition-delay: 250ms;

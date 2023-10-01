@@ -44,9 +44,15 @@
           margin: auto;
           width: 100%;
           padding-bottom: 50px;
+          &:nth-child(1) {
+            padding-right: 2%;
+            @include ten_24 {
+              padding-right: initial;
+            }
+          }
           &:nth-child(1),
           &:nth-child(2) {
-            width: 49.3%;
+            width: 49%;
             display: inline-block;
             @include ten_24 {
               width: 100%;

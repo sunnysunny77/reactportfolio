@@ -1,18 +1,15 @@
-import { useEffect} from 'react';
-import { vivus } from '../js/template.js';
-import { init } from '../js/init.js';
+import { useEffect } from 'react';
 import { pageScroll } from '../js/auto.js';
 
 function Skills() {
 
   useEffect(() => {
 
-    init();
-    pageScroll(document.querySelector("#auto-skills"));
-    vivus();
+    pageScroll();
   }, []);
   return (
     <>
+
       <section >
         <h2>Skills</h2>
 
@@ -21,7 +18,7 @@ function Skills() {
         </div>
 
         <div className="template-p-cont">
-          <div id="auto-skills" className="template-p">
+          <div className="template-p">
             <p className="vis0 cont">
 
               &bull; HTML - JavaScript - CSS - SASS
@@ -193,14 +190,15 @@ function Skills() {
 
       <div role="img" aria-label="glowing keyboard" id="skills-template-img-0" className="template-img-0 vis0">
         <p>
-        
-            <a target="git" href="https://github.com/sunnysunny77">
-                Git <i className="far fa-heart"></i>
-            </a>
-      
+
+          <a target="git" href="https://github.com/sunnysunny77">
+            Git <i className="far fa-heart"></i>
+          </a>
+
           <b>GitHub ..</b>
         </p>
       </div>
+
     </>
   );
 }

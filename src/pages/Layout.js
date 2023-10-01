@@ -1,26 +1,37 @@
-import { Outlet, Link } from "react-router-dom";
-import { toggle, top } from '../js/template.js';
+import { Outlet, Link, useNavigate  } from "react-router-dom";
+import { toggle, top, start, vivus  } from '../js/template.js';
+import { useEffect } from 'react';
+import { init } from '../js/init.js';
 
 function Layout() {
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+    
+        start();
+        init();
+        vivus();
+    },[navigate]);
     return (
         <>
-            <a className="hidden" href="#skip">skip navigation</a>
+            <a className="hidden" href="#main">skip navigation</a>
             <header>
 
-                <a href="./">
+                <Link to="/">
                     <span className="hidden">logo</span>
                     <div id="logo" role="img"></div>
-                </a>
+                </Link>
 
-                <button onClick={toggle} aria-label="Menu" className="click"></button>
+                <button onClick={toggle} className="click"><span className="hidden">Menu</span></button>
 
                 <nav className="disp menu0">
 
                     <ul>
-                        <li><Link className="p-2" to="/skills">Skills<span>01</span></Link></li>
-                        <li><Link className="p-2" to="/about">About<span>02</span></Link></li>
-                        <li><Link className="p-2" to="/contact">Contact<span>03</span></Link></li>
-                        <li><Link className="p-2" to="/">Home<span>04</span></Link></li>
+                        <li><Link to="/skills">Skills<span>01</span></Link></li>
+                        <li><Link to="/about">About<span>02</span></Link></li>
+                        <li><Link to="/contact">Contact<span>03</span></Link></li>
+                        <li><Link to="/">Home<span>04</span></Link></li>
                     </ul>
 
                     <div className="heading">
@@ -46,12 +57,12 @@ function Layout() {
                 </nav>
 
             </header>
-            
-            <main id="skip">
 
-            <div className="after"></div>
+            <main id="main">
 
-            <Outlet />
+                <div id="after"></div>
+
+                <Outlet />
 
             </main>
 

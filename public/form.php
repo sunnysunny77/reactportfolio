@@ -2,7 +2,6 @@
 <html>
 <body>
 <?php
-$res;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_REQUEST["name"];
     $phone = $_REQUEST["phone"];

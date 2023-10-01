@@ -1,18 +1,15 @@
 import { useEffect } from 'react';
-import { vivus } from '../js/template.js';
-import { init } from '../js/init.js';
 import { pageScroll } from '../js/auto.js';
 
 function About() {
 
   useEffect(() => {
 
-    init();
-    pageScroll(document.querySelector("#auto-about"));
-    vivus();
+    pageScroll();
   }, []);
   return (
     <>
+
       <section>
         <h2>About</h2>
 
@@ -21,7 +18,7 @@ function About() {
         </div>
 
         <div className="template-p-cont">
-          <div id="auto-about" className="template-p">
+          <div className="template-p">
             <p className="vis0 cont">
               Sports
               <br />
@@ -119,6 +116,7 @@ function About() {
           <b>Coffe ..</b>
         </p>
       </div>
+
     </>
   );
 }

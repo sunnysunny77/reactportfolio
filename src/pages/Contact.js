@@ -1,24 +1,77 @@
-import { useEffect } from 'react';
-import { vivus } from '../js/template.js';
+import { useEffect, useState } from 'react';
 import { fromOverlay } from '../js/overlay.js';
-import { init } from '../js/init.js';
-import { validation } from '../js/forms.js';
 import { circleInit } from '../js/circles.js';
+import { reply, send } from '../js/forms.js';
 import linkedin from '../images/contact/linkedin.png';
 import telephone from '../images/contact/telephone.png';
 import mail from '../images/contact/mail.png';
 
 function Contact() {
 
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const validation = (event) => {
+    let error;
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("phone", phone);
+    formData.append("email", email);
+    formData.append("message", message);
+    const nameObj = event.target.name;
+    const phoneObj = event.target.phone;
+    const emailObj = event.target.email;
+    const messageObj = event.target.children[0].children[1].children[3].children[1];
+    const sub = event.target.children[2];
+    if (/^[ '.a-z-]{2,40}$/i.test(event.target.name.value)) {
+      reply(false, nameObj, null);
+    } else {
+      reply(true, nameObj, "Enter your name");
+      error = true;
+    }
+    if (/^\+?\d{3,15}$/.test(phone)) {
+      reply(false, phoneObj, null);
+    } else {
+      reply(true, phoneObj, "+###############");
+      error = true;
+    }
+    if (/^[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}$/.test(email)) {
+      reply(false, emailObj, null);
+    } else {
+      reply(true, emailObj, "Enter your email");
+      error = true;
+    }
+    if (/[\dA-Za-z]/.test(message)) {
+      reply(false, messageObj, null);
+    } else {
+      reply(true, messageObj, "Enter your message");
+      error = true;
+    }
+    if (error) {
+
+      sub.classList.add("red");
+      sub.value = "Validation Error ⇡";
+      setTimeout(function () {
+        sub.value = "Send";
+        sub.classList.remove("red");
+      }, 5000);
+    } else {
+      send(formData, event.target.children[1], sub);
+      event.target.reset();
+    }
+    event.preventDefault();
+  }
+
   useEffect(() => {
 
-    init();
     fromOverlay();
-    vivus();
-    circleInit()
-  });
+    circleInit();
+  }, []);
   return (
     <>
+    
       <section >
         <h2>Contact</h2>
 
@@ -41,6 +94,8 @@ function Contact() {
                   <li>
                     <label htmlFor="name">Names:</label>
                     <input
+                      onChange={(e) => { setName(e.target.value) }}
+                      value={name}
                       type="text"
                       name="name"
                       id="name"
@@ -49,11 +104,20 @@ function Contact() {
                   </li>
                   <li>
                     <label htmlFor="phone">Phone:</label>
-                    <input type="tel" name="phone" id="phone" placeholder="&nbsp;#" />
+                    <input
+                      onChange={(e) => { setPhone(e.target.value) }}
+                      value={phone}
+                      type="tel"
+                      name="phone"
+                      id="phone"
+                      placeholder="&nbsp;#"
+                    />
                   </li>
                   <li>
                     <label htmlFor="email">Email:</label>
                     <input
+                      onChange={(e) => { setEmail(e.target.value) }}
+                      value={email}
                       type="email"
                       name="email"
                       id="email"
@@ -63,6 +127,8 @@ function Contact() {
                   <li>
                     <label htmlFor="message">Message:</label>
                     <textarea
+                      onChange={(e) => { setMessage(e.target.value) }}
+                      value={message}
                       name="message"
                       id="message"
                       maxLength="1000"
@@ -123,6 +189,7 @@ function Contact() {
           <b>Get in touch ..</b>
         </div>
       </div>
+
     </>
   );
 }
