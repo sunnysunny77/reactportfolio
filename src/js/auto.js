@@ -3,12 +3,9 @@ import { useEffect, useState } from 'react';
 const PageScroll = (props) => {
 
     const [count, setCount] = useState(0);
-    const [bool, setBool] = useState(null);
+    const [bool, setBool] = useState(false);
 
     useEffect(() => {
-
-        const obj = props.children.ref.current;
-        const line = obj.scrollHeight - obj.clientHeight;
 
         const sleep = (milliseconds) => {
 
@@ -17,8 +14,10 @@ const PageScroll = (props) => {
 
         const page = async () => {
 
-            await sleep(30);
+            const obj = props.children.ref.current;
+            const line = obj.scrollHeight - obj.clientHeight;
 
+            await sleep(30);
             if (count === 0 || count === line) {
                 await sleep(4970);
                 if (count === 0) {
@@ -28,15 +27,13 @@ const PageScroll = (props) => {
                     setBool(true);
                 }
             }
-
-            if (bool === false) {
+            if (bool === false && count < line) {
                 setCount(count + 1);
-                obj.scrollBy(0, 1);
-                return
             }
-
-            setCount(count - 1);
-            obj.scrollBy(0, -1);
+            if (bool === true && count > 0) {
+                setCount(count - 1);
+            }
+            obj.scroll(0, count);
         }
 
         page();
