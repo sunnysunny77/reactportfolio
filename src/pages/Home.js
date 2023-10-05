@@ -1,13 +1,14 @@
 import { picture, sitesOverlay } from '../js/overlay.js';
-import { pageScroll } from '../js/auto.js';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import PageScroll from '../js/auto.js';
 import Next from "../images/home/next.png";
 
 const Home = () => {
 
+  const ref = useRef(null);
+
   useEffect(() => {
 
-    pageScroll();
     picture();
     sitesOverlay();
   }, []);
@@ -24,48 +25,50 @@ const Home = () => {
           </div>
         </div>
         <div className="template-p-cont">
-          <div className="template-p">
-            <p className="vis0 cont">
-              As a web designer when writing code
-              <br />
-              I stick to core objective outcomes.
-              <br />
-              <i className="fas fa-bullseye"></i>
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              The code requirements are:
-              <br />
-              <br />
-              &bull; Secure &amp; Bug Free
-              <br />
-              <i className="fas fa-lock"></i> &nbsp; <i className="fas fa-bug"></i>
-              <br />
-              <br />
-              <br />
-              &bull; Semantic &amp; Recyclable &amp; Responsive
-              <br />
-              <i className="fas fa-tasks"></i> &nbsp; <i className="fas fa-recycle"></i> &nbsp; <i className="fas fa-compress-alt"></i>
-              <br />
-              <br />
-              <br />
-              &bull; Balanced Composition
-              <br />
-              <i className="fas fa-divide"></i>
-              <br />
-              <br />
-              <br />
-              &bull; Try get it right... Try try again
-              <br />
-              <i className="fas fa-check-circle"></i>
-              <br />
-              <br />
-              <br />
-              <br />
-            </p>
-          </div>
+          <PageScroll>
+            <div ref={ref} className="template-p">
+              <p className="vis0 cont">
+                As a web designer when writing code
+                <br />
+                I stick to core objective outcomes.
+                <br />
+                <i className="fas fa-bullseye"></i>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                The code requirements are:
+                <br />
+                <br />
+                &bull; Secure &amp; Bug Free
+                <br />
+                <i className="fas fa-lock"></i> &nbsp; <i className="fas fa-bug"></i>
+                <br />
+                <br />
+                <br />
+                &bull; Semantic &amp; Recyclable &amp; Responsive
+                <br />
+                <i className="fas fa-tasks"></i> &nbsp; <i className="fas fa-recycle"></i> &nbsp; <i className="fas fa-compress-alt"></i>
+                <br />
+                <br />
+                <br />
+                &bull; Balanced Composition
+                <br />
+                <i className="fas fa-divide"></i>
+                <br />
+                <br />
+                <br />
+                &bull; Try get it right... Try try again
+                <br />
+                <i className="fas fa-check-circle"></i>
+                <br />
+                <br />
+                <br />
+                <br />
+              </p>
+            </div>
+          </PageScroll>
         </div>
       </section>
       <div role="img" aria-label="divider" className="template-div-mobile"></div>
@@ -253,6 +256,7 @@ const Home = () => {
           <button aria-label="close" id="close">X</button>
         </div>
       </section>
+
     </>
   );
 }
