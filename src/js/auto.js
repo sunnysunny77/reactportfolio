@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 
-const sleep = (milliseconds) => {
-
-    return new Promise(resolve => setTimeout(resolve, milliseconds));
-}
-
 const PageScroll = (props) => {
 
     const [count, setCount] = useState(0);
-    const [bool, setBool] = useState(null);
+    const [bool, setBool] = useState(true);
+
+    const sleep = (milliseconds) => {
+
+        return new Promise(resolve => setTimeout(resolve, milliseconds));
+    }
 
     useEffect(() => {
 
@@ -17,23 +17,25 @@ const PageScroll = (props) => {
 
         const page = async () => {
 
-            obj.scrollTo(0, count);
-            await sleep(45);
+            await sleep(30);
 
             if (count === 0) {
+                await sleep(4970);
                 setBool(true);
-                await sleep(4955);
             }
 
             if (count === line) {
+                await sleep(4970);
                 setBool(false);
-                await sleep(4955);
             }
 
             if (bool === false) {
-                return setCount(count - 1);
+                obj.scrollBy(0,-1);
+                setCount(count - 1);
+                return
             }
 
+            obj.scrollBy(0,1);
             setCount(count + 1);
         }
 
