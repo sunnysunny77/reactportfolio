@@ -19,7 +19,7 @@ const Layout = () => {
             <header>
                 <Link to="/">
                     <span className="hidden">logo</span>
-                    <div id="logo" role="img"></div>
+                    <div className="logo" id="logo" role="img"></div>
                 </Link>
                 <button onClick={toggle} className="click">
                     <span className="hidden">Menu</span>
@@ -48,7 +48,7 @@ const Layout = () => {
                 </nav>
             </header>
             <main id="main">
-                <div id="after"></div>
+                <div className="after" id="after"></div>
                 <Outlet />
             </main>
             <footer>

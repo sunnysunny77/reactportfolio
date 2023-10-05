@@ -4,16 +4,16 @@ export const start = () => {
 
   const after = document.querySelector("#after");
   const logo = document.querySelector("#logo");
-  logo.classList.add("logo");
+  logo.style.animationName = "none";
   setTimeout(() => {
-    logo.classList.remove("logo");
+    logo.style.animationName = "";
   }
-  ,300);
-  after.classList.add("after");
+  ,0);
+  after.style.animationName = "none";
   setTimeout(() => {
-    after.classList.remove("after");
+    after.style.animationName = "";
   }
-  ,300);
+  ,0);
 }
 
 export const top = () => {
