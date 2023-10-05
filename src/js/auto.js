@@ -17,26 +17,26 @@ const PageScroll = (props) => {
 
         const page = async () => {
 
-            if (count === 0) {
-                await sleep(4970);
-                setBool(true);
-            }
+            await sleep(30);
 
-            if (count === line) {
+            if (count === 0 || count === line) {
                 await sleep(4970);
-                setBool(false);
+                if (count === 0) {
+                    setBool(false);
+                }
+                if (count === line) {
+                    setBool(true);
+                }
             }
 
             if (bool === false) {
-                await sleep(30);
-                setCount(count - 1);
-                obj.scrollBy(0,-1);
+                setCount(count + 1);
+                obj.scrollBy(0, 1);
                 return
             }
 
-            await sleep(30);
-            setCount(count + 1);
-            obj.scrollBy(0,1);
+            setCount(count - 1);
+            obj.scrollBy(0, -1);
         }
 
         page();
