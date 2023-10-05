@@ -18,22 +18,12 @@ const PageScroll = (props) => {
             const line = obj.scrollHeight - obj.clientHeight;
 
             await sleep(30);
-            if (count === 0 || count === line) {
-                await sleep(4970);
-                if (count === 0) {
-                    setBool(false);
-                }
-                if (count === line) {
-                    setBool(true);
-                }
-            }
-            if (bool === false && count < line) {
-                setCount(count + 1);
-            }
-            if (bool === true && count > 0) {
-                setCount(count - 1);
-            }
             obj.scroll(0, count);
+            if (count === 0 || count === line) await sleep(4970);
+            if (count === 0) setBool(false);
+            if (count === line) setBool(true);
+            if (bool === false) setCount(count + 1);
+            if (bool === true) setCount(count - 1);
         }
 
         page();
