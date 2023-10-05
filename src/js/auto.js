@@ -5,15 +5,15 @@ const PageScroll = (props) => {
     const [count, setCount] = useState(0);
     const [bool, setBool] = useState(null);
 
-    const sleep = (milliseconds) => {
-
-        return new Promise(resolve => setTimeout(resolve, milliseconds));
-    }
-
     useEffect(() => {
 
         const obj = props.children.ref.current;
         const line = obj.scrollHeight - obj.clientHeight;
+
+        const sleep = (milliseconds) => {
+
+            return new Promise(resolve => setTimeout(resolve, milliseconds));
+        }
 
         const page = async () => {
 
