@@ -55,15 +55,10 @@
 }
 
 .ani3 {
-  animation: scale4 1.5s ease-in-out;
-}
-
-.ani4 {
-  animation: fadeInBack 1.5s ease-in;
   animation: scale1 1.5s ease-in;
 }
 
-.ani5 {
+.ani4 {
   &.template-img-0 b {
     color: $c2;
     background-color: unset;
@@ -85,11 +80,11 @@
   }
 }
 
-.ani6 {
+.ani5 {
   animation: slideIn2 0.75s;
 }
 
-.ani7 {
+.ani6 {
   animation: scale3 0.5s;
 }
 
@@ -181,18 +176,6 @@
   100% {
     background-color: transparent;
     border-radius: 100%;
-    transform: scale(1);
-  }
-}
-
-@keyframes scale4 {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.85);
-  }
-  100% {
     transform: scale(1);
   }
 }

@@ -30,18 +30,15 @@ export const vivus = () => {
 export const toggle = (event) => {
 
   const menu0 = document.querySelectorAll(".menu0")[0];
-  const imgCont = document.querySelector(".template-img-cont");
-  const cont = document.querySelector(".cont");
-  const line = window.innerHeight;
   
   if (menu0.classList.contains("ani1")) {
 
-    menu0.classList.add("ani6");
-    event.target.classList.add("ani7");
-  } else if (menu0.classList.contains("ani6")) {
+    menu0.classList.add("ani5");
+    event.target.classList.add("ani6");
+  } else if (menu0.classList.contains("ani5")) {
 
-    menu0.classList.remove("ani6");
-    event.target.classList.remove("ani7");
+    menu0.classList.remove("ani5");
+    event.target.classList.remove("ani6");
   }
 
   event.target.classList.toggle("ani");
@@ -50,17 +47,5 @@ export const toggle = (event) => {
 
   if (!menu0.classList.contains("disp")) {
     vivus();
-  } else {
-    if (getPosition(imgCont) - menu0.scrollHeight  < line && imgCont.classList.contains("vis1")) {
-      imgCont.classList.remove("vis1");
-      imgCont.classList.add("vis0");
-      imgCont.classList.add("ani4");
-    }
-  
-    if (getPosition(cont) - menu0.scrollHeight  < line && cont.classList.contains("vis1")) {
-      cont.classList.remove("vis1");
-      cont.classList.add("vis0");
-      cont.classList.add("ani2");
-    }
-  }
+  } 
 }

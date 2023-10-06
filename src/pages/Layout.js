@@ -26,9 +26,9 @@ const Layout = () => {
                 </button>
                 <nav className="disp menu0">
                     <ul>
-                        <li><Link to="/skills">Skills<span>01</span></Link></li>
-                        <li><Link to="/about">About<span>02</span></Link></li>
-                        <li><Link to="/contact">Contact<span>03</span></Link></li>
+                        <li><Link to="/contact">Contact<span>01</span></Link></li>
+                        <li><Link to="/skills">Skills<span>02</span></Link></li>
+                        <li><Link to="/sites">Sites<span>03</span></Link></li>
                         <li><Link to="/">Home<span>04</span></Link></li>
                     </ul>
                     <div className="heading">
@@ -56,9 +56,9 @@ const Layout = () => {
                     <li className="sm">
                         <h3>D.C</h3>
                     </li>
-                    <li><Link onClick={top} to="/skills"> SKILLS </Link></li>
-                    <li><Link onClick={top} to="/about"> ABOUT </Link></li>
                     <li><Link onClick={top} to="/contact"> CONTACT </Link></li>
+                    <li><Link onClick={top} to="/skills"> SKILLS </Link></li>
+                    <li><Link onClick={top} to="/sites"> SITES </Link></li>
                     <li><Link onClick={top} to="/"> HOME </Link></li>
                 </ul>
             </footer>

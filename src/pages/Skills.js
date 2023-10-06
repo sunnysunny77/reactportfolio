@@ -199,8 +199,6 @@ const Skills = () => {
           </PageScroll>
         </div>
       </section>
-      <div role="img" aria-label="divider" className="template-div-mobile"></div>
-      <div role="img" aria-label="divider" className="template-div"></div>
       <div role="img" aria-label="glowing keyboard" id="skills-template-img-0" className="template-img-0 vis0">
         <p>
           <a target="git" href="https://github.com/sunnysunny77">

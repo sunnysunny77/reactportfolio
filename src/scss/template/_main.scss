@@ -4,9 +4,11 @@ main {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 12% 0;
+    justify-content: space-between;
+    min-height: calc(100vh - 401px);
+    padding: 50px 0 0 0;
     @include ten_24 {
-        padding: 6% 0 0 0;
+        min-height: calc(100vh - 114px);
     }
     #after {
         background-image: url(../../images/template/handmade-paper.png);
@@ -39,7 +41,7 @@ main {
     float: left;
     @include ten_24 {
         float: none;
-        margin: 82px auto;
+        margin: auto;
         width: 168px;
         height: 168px;
         border-top-left-radius: unset;
@@ -69,7 +71,7 @@ main {
     @include ten_24 {
         float: none;
         width: 100%;
-        height: 160px;
+        height: 444px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         border-top: 3px solid $c4;
@@ -101,37 +103,28 @@ main {
     background-image: url(../../images/template/div1.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
-    margin: 10% auto;
+    background-position: bottom;
     width: 60%;
-    height: 109px;
+    margin: auto auto 3% auto;
+    padding:  3% 0;
     opacity: 0.5;
     @include ten_24 {
-        display: none;
-    }
-}
-
-.template-div-mobile {
-    display: none;
-    @include ten_24 {
-        display: block;
-        background-image: url(../../images/template/equal.png);
-        height: 60px;
-        width: 60px;
-        margin: 12.5% auto;
-        opacity: 0.875;
+        margin: 6% auto;
     }
 }
 
 .template-img-0 {
     background-color: rgba($main, 0.25);
     background-blend-mode: screen;
-    border: 5px solid $c2;
+    border: 3px solid $c2;
     background-repeat: no-repeat;
     background-position: center;
     height: fit-content;
     width: 80%;
-    margin: auto;
+    margin: 10% auto 6% auto;
+    @include seven_20_portrait {
+        margin: auto;
+    }
     background-size: cover;
     border-radius: 25px;
     position: relative;

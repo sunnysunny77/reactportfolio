@@ -157,8 +157,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-      <div role="img" aria-label="divider" className="template-div-mobile"></div>
-      <div role="img" aria-label="divider" className="template-div"></div>
       <div role="img" aria-label="email notifications" id="contact-template-img-0" className="template-img-0 vis0">
         <div className="circle-progress">
           <div className="slider slider-count">
