@@ -5,9 +5,10 @@ main {
     display: flex;
     flex-direction: column;
     min-height: calc(100vh - 286px);
-    justify-content: space-between;
+    justify-content: center;
     @include ten_24 {
         min-height: calc(100vh - 192px);
+        justify-content: space-between;
     }
     #after {
         background-image: url(../../images/template/handmade-paper.png);
@@ -25,6 +26,12 @@ main {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+    }
+}
+
+.full {
+    @include ten_24_min {
+        margin-top: 5%;
     }
 }
 
