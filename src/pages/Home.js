@@ -32,6 +32,7 @@ const Home = () => {
                 <br />
                 <br />
                 <br />
+                <br />
                 Hobbies
                 <br />
                 <i className="fas fa-dice-six"></i>
@@ -40,6 +41,7 @@ const Home = () => {
                 &bull; Music Reading Games Pets Camping
                 <br />
                 Fitness Socializing Study
+                <br />
                 <br />
                 <br />
                 <br />
@@ -72,6 +74,7 @@ const Home = () => {
                 <br />
                 <br />
                 <br />
+                <br />
                 Experience
                 <br />
                 <i className="fas fa-mountain"></i>
@@ -97,6 +100,7 @@ const Home = () => {
                 forklifts and C class
                 <br />
                 vehicles and managing stores.
+                <br />
                 <br />
                 <br />
                 <br />

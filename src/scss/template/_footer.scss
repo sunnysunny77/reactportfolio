@@ -1,7 +1,7 @@
 /* FOOTER */
 
 footer {
-    height: 190px;
+    height: 125px;
     background-image: url(../../images/template/wave.svg);
     background-size: 100%;
     border-top: 4px solid $mainbg;
@@ -13,7 +13,6 @@ footer {
     display: flex;
     position: relative;
     @include ten_24 {
-        height: 125px;
         border-top: 4px solid $mainbg;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
@@ -39,7 +38,7 @@ footer {
         text-align: center;
         width: 47.5%;
         padding: 0;
-        margin: 12% 9.4% 5% 44%;
+        margin: 7% 3.4% 5% 50%;
         letter-spacing: 0.75px;
         @include ten_24 {
             margin: 63px auto 24px auto;
