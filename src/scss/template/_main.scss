@@ -78,6 +78,7 @@ main {
         border-top: 3px solid $c4;
         position: relative;
     }
+    
     p.cont {
         margin: unset;
     }
@@ -124,9 +125,6 @@ main {
     height: fit-content;
     width: 80%;
     margin: 10% auto 6% auto;
-    @include seven_20_portrait {
-        margin: auto;
-    }
     background-size: cover;
     border-radius: 25px;
     position: relative;
@@ -198,6 +196,6 @@ main {
         border-right: unset;
         border-bottom: unset;
         border-left: unset;
-        margin-bottom: unset;
+        margin: auto auto 0 auto;
     }
 }

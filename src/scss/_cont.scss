@@ -6,6 +6,15 @@
   background-image: url(../images/contact/contimg.jpg);
 }
 
+#port {
+  @include ten_24 {
+    height: 160px;
+  }
+  @include seven_20_portrait {
+    height: 444px;
+  }
+}
+
 #overlay {
   text-align: initial;
   margin: 9% 0;
