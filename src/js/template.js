@@ -1,5 +1,4 @@
 import Vivus from "vivus";
-import { getPosition } from './utilities.js';
 
 export const start = () => {
 
