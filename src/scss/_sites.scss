@@ -21,6 +21,9 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
 
 #site {
   position: relative;
+  @include ten_24 {
+    padding-bottom: 50px;
+  }
   #s4 {
     height: 350px;
     width: calc(80% - 350px);
