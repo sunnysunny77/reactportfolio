@@ -9,6 +9,7 @@ main {
     padding: 50px 0 0 0;
     @include ten_24 {
         min-height: calc(100vh - 114px);
+        padding: 0;
     }
     #after {
         background-image: url(../../images/template/handmade-paper.png);
@@ -42,8 +43,8 @@ main {
     @include ten_24 {
         float: none;
         margin: auto;
-        width: 168px;
-        height: 168px;
+        width: 150px;
+        height: 150px;
         border-top-left-radius: unset;
         border-bottom-left-radius: unset;
         padding: 0;
@@ -109,7 +110,8 @@ main {
     padding:  3% 0;
     opacity: 0.5;
     @include ten_24 {
-        margin: 6% auto;
+        margin: 12% auto;
+        padding:  6% 0;
     }
 }
 

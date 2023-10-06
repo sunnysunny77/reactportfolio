@@ -9,13 +9,13 @@ const Skills = () => {
     <>
       <section >
         <h2>Skills</h2>
-        <div className="template-img-cont vis0">
+        <div className="template-img-cont">
           <div role="img" aria-label="light bulb icon" id="skills-template-img" className="template-img"></div>
         </div>
         <div className="template-p-cont">
           <PageScroll>
             <div ref={ref} className="template-p">
-              <p className="vis0 cont">
+              <p className="cont">
                 &bull; HTML - JavaScript - CSS - SASS
                 <br />
                 <span

@@ -89,7 +89,7 @@ const Contact = () => {
     <>
       <section >
         <h2>Contact</h2>
-        <div className="template-img-cont vis0">
+        <div className="template-img-cont">
           <div
             role="img"
             aria-label="phone icon"
@@ -99,7 +99,7 @@ const Contact = () => {
         </div>
         <div className="template-p-cont">
           <div id="overlay" className="template-p">
-            <form onSubmit={validation} id="contact-form" className="vis0 cont">
+            <form onSubmit={validation} id="contact-form" className="cont">
               <fieldset>
                 <legend>Email Us:</legend>
                 <ul>

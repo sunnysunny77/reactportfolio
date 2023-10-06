@@ -16,7 +16,6 @@ const PageScroll = (props) => {
 
             const obj = props.children.ref.current;
             const line = obj.scrollHeight - obj.clientHeight;
-
             await sleep(30);
             obj.scroll(0, count);
             if (count === 0 || count === line) await sleep(4970);

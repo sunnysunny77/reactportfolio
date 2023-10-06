@@ -14,7 +14,7 @@ const Sites = () => {
     <>
       <section id="site">
         <h2>Sites</h2>
-        <div id="site-img" className="template-img-cont vis0">
+        <div id="site-img" className="template-img-cont">
           <div
             role="img"
             aria-label="info icon"
@@ -24,7 +24,7 @@ const Sites = () => {
         </div>
         <div id="s4">
           <div id="ob0">
-            <ul id="ob0ul" className="vis0">
+            <ul id="ob0ul">
               <li>
                 Scroll preview
                 <img alt="scroll down" width="100" height="100" src={Next} />
@@ -160,7 +160,7 @@ const Sites = () => {
           </div>
         </div>
         <div id="s5">
-          <span id="s51" role="img" className="sitesImg vis0" aria-label="site default"></span>
+          <span id="s51" role="img" className="sitesImg" aria-label="site default"></span>
           <span role="img" className="sitesImg" aria-label="site 1" id="s52" style={{ display: "none" }}>
             <a target="furniture" href="https://furniture.sunnyhome.site/">
               furniture.sunnyhome

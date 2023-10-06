@@ -10,7 +10,7 @@ const Home = () => {
     <>
       <section >
         <h2>Home</h2>
-        <div className="template-img-cont vis0">
+        <div className="template-img-cont">
           <div
             role="img"
             aria-label="house icon"
@@ -21,7 +21,7 @@ const Home = () => {
         <div className="template-p-cont">
           <PageScroll>
             <div ref={ref} className="template-p">
-              <p className="vis0 cont">
+              <p className="cont">
               Sports
                 <br />
                 <i className="fas fa-sun"></i>
