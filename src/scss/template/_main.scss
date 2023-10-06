@@ -39,8 +39,9 @@ main {
     float: left;
     @include ten_24 {
         float: none;
-        margin: auto;
+        margin: 82px auto;
         width: 168px;
+        height: 168px;
         border-top-left-radius: unset;
         border-bottom-left-radius: unset;
         padding: 0;
