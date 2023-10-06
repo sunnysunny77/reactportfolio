@@ -7,7 +7,7 @@ main {
     min-height: calc(100vh - 336px);
     padding: 50px 0 0 0;
     @include ten_24 {
-        min-height: calc(100vh - 193px);;
+        min-height: calc(100vh - 192px);;
         padding: 0;
     }
     #after {
