@@ -18,7 +18,7 @@ const Home = () => {
             className="template-img">
           </div>
         </div>
-        <div className="template-p-cont">
+        <div id="full-height" className="template-p-cont">
           <PageScroll>
             <div ref={ref} className="template-p">
               <p className="cont">
@@ -30,9 +30,6 @@ const Home = () => {
                 &bull; Sailing Windsurfing Swimming Motorsport Fishing
                 <br />
                 <br />
-                <br />
-                <br />
-                <br />
                 Hobbies
                 <br />
                 <i className="fas fa-dice-six"></i>
@@ -41,9 +38,6 @@ const Home = () => {
                 &bull; Music Reading Games Pets Camping
                 <br />
                 Fitness Socializing Study
-                <br />
-                <br />
-                <br />
                 <br />
                 <br />
                 Certifications
@@ -70,9 +64,6 @@ const Home = () => {
                 ICT50220-AC26 Diploma of Information Technology (Front End Web Development)
                 <br />
                 2022
-                <br />
-                <br />
-                <br />
                 <br />
                 <br />
                 Experience
@@ -102,9 +93,6 @@ const Home = () => {
                 vehicles and managing stores.
                 <br />
                 <br />
-                <br />
-                <br />
-                <br />
                 Objective outcomes.
                 <br />
                 <i className="fas fa-bullseye"></i>
@@ -128,8 +116,6 @@ const Home = () => {
                 &bull; Try get it right... Try try again
                 <br />
                 <i className="fas fa-check-circle"></i>
-                <br />
-                <br />
                 <br />
                 <br />
               </p>

@@ -8,7 +8,7 @@ const Skills = () => {
   return (
     <>
       <section >
-        <h2 className="full">Skills</h2>
+        <h2 className="template-heading">Skills</h2>
         <div className="template-img-cont">
           <div role="img" aria-label="light bulb icon" id="skills-template-img" className="template-img"></div>
         </div>
