@@ -7,8 +7,8 @@ main {
     min-height: calc(100vh - 286px);
     justify-content: center;
     @include ten_24 {
-        min-height: calc(100vh - 192px);
         justify-content: space-between;
+        min-height: calc(100vh - 192px);
     }
     #after {
         background-image: url(../../images/template/handmade-paper.png);
@@ -47,7 +47,7 @@ main {
     float: left;
     @include ten_24 {
         float: none;
-        margin: auto;
+        margin: 50px auto;
         width: 150px;
         height: 150px;
         border-top-left-radius: unset;
@@ -77,13 +77,15 @@ main {
     @include ten_24 {
         float: none;
         width: 100%;
-        height: 300px;
+        height: 50vh;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         border-top: 3px solid $c4;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
-
     p.cont {
         margin: unset;
     }
@@ -98,10 +100,10 @@ main {
         overflow: hidden;
         @include ten_24 {
             text-align: center;
-            height: calc(100% - 40px);
-            margin: 10px auto;
-            padding: 10px 5% 10px 5%;
-            font-size: initial;
+            font-size: medium;
+            margin: initial;
+            padding: 0 10px;
+            height: 150px;
         }
     }
 }
@@ -209,6 +211,6 @@ main {
         border-right: unset;
         border-bottom: unset;
         border-left: unset;
-        margin: auto auto 0 auto;
+        margin: auto;
     }
 }

@@ -97,7 +97,7 @@ const Contact = () => {
             className="template-img">
           </div>
         </div>
-        <div id="port" className="template-p-cont">
+        <div className="template-p-cont">
           <div id="overlay" className="template-p">
             <form onSubmit={validation} id="contact-form" className="cont">
               <fieldset>

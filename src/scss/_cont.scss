@@ -6,24 +6,19 @@
   background-image: url(../images/contact/contimg.jpg);
 }
 
-#port {
-  @include ten_24 {
-    height: 160px;
-  }
-  @include seven_20_portrait {
-    height: 300px;
-  }
-}
+
 
 #overlay {
   text-align: initial;
   margin: 9% 0;
   height: 72%;
   @include ten_24 {
-    width: calc(90% - 16px);
-    height: calc(100% - 40px);
-    margin: 10px auto;
+    width: 90%;
+    height: 140px;
+    margin: auto;
+    padding: 0 10px;
   }
+
   form {
     .os-host-textarea {
       font: inherit;

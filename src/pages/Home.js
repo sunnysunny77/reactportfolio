@@ -18,7 +18,7 @@ const Home = () => {
             className="template-img">
           </div>
         </div>
-        <div id="full-height" className="template-p-cont">
+        <div className="template-p-cont">
           <PageScroll>
             <div ref={ref} className="template-p">
               <p className="cont">
@@ -30,6 +30,7 @@ const Home = () => {
                 &bull; Sailing Windsurfing Swimming Motorsport Fishing
                 <br />
                 <br />
+                <br />
                 Hobbies
                 <br />
                 <i className="fas fa-dice-six"></i>
@@ -38,6 +39,7 @@ const Home = () => {
                 &bull; Music Reading Games Pets Camping
                 <br />
                 Fitness Socializing Study
+                <br />
                 <br />
                 <br />
                 Certifications
@@ -66,6 +68,7 @@ const Home = () => {
                 2022
                 <br />
                 <br />
+                <br />
                 Experience
                 <br />
                 <i className="fas fa-mountain"></i>
@@ -91,6 +94,7 @@ const Home = () => {
                 forklifts and C class
                 <br />
                 vehicles and managing stores.
+                <br />
                 <br />
                 <br />
                 Objective outcomes.
