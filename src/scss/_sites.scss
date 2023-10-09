@@ -21,12 +21,18 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
 
 #site {
   position: relative;
+  h2 {
+    margin-top: 0;
+    @include ten_24 {
+      margin-top: 25px;
+    } 
+  }
   #s4 {
     height: 350px;
     width: calc(80% - 350px);
     float: left;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;
     background-blend-mode: multiply;

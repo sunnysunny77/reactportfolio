@@ -17,23 +17,16 @@ export const picture = () => {
 }
 
 const pictureDisplay = (item) => {
-    
-    for (const [x, element] of pictureID.entries()) {
+
+    for (const element of pictureID.entries()) {
         const obj = document.getElementById(element);
         if (obj.id === item) {
             if (window.getComputedStyle(obj).getPropertyValue("display") === "none") {
                 obj.style.display = "block";
-                if (x === 0) {
-                    obj.classList.add("ani0");
-                    setTimeout(() => {
-                        obj.classList.remove("ani0");
-                    }, 1500);
-                } else {
-                    obj.classList.add("an");
-                    setTimeout(() => {
-                        obj.classList.remove("an");
-                    }, 750);
-                }
+                obj.classList.add("an");
+                setTimeout(() => {
+                    obj.classList.remove("an");
+                }, 750);
             }
         } else {
             obj.style.display = "none";

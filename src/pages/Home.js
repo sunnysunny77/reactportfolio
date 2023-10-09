@@ -8,20 +8,20 @@ const Home = () => {
 
   return (
     <>
-      <section >
+      <section id="home">
         <h2>Home</h2>
         <div className="template-img-cont">
           <div
             role="img"
             aria-label="house icon"
             id="home-template-img"
-            className="template-img">
+            className="template-img ani3">
           </div>
         </div>
         <div className="template-p-cont">
           <PageScroll>
-            <div ref={ref} className="template-p">
-              <p className="cont">
+            <div ref={ref} className="template-p ani2">
+              <p>
               Sports
                 <br />
                 <i className="fas fa-sun"></i>

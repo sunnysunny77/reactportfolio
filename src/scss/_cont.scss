@@ -2,12 +2,6 @@
   background-image: url(../images/contact/contact.png);
 }
 
-#contact-template-img-0 {
-  background-image: url(../images/contact/contimg.jpg);
-}
-
-
-
 #overlay {
   text-align: initial;
   margin: 9% 0;
@@ -81,7 +75,7 @@
       color: $c3;
       outline: none;
       &::placeholder {
-        color: $c4;
+        color: $c3;
       }
     }
     #sent {

@@ -1,3 +1,10 @@
 #home-template-img {
   background-image: url(../images/home/home.png);
 }
+
+#home h2 {
+  margin-top: 0;
+  @include ten_24 {
+    margin-top: 25px;
+  } 
+}

@@ -87,19 +87,19 @@ const Contact = () => {
   }, []);
   return (
     <>
-      <section >
-        <h2 className="template-heading">Contact</h2>
+      <section>
+        <h2>Contact</h2>
         <div className="template-img-cont">
           <div
             role="img"
             aria-label="phone icon"
             id="contact-template-img"
-            className="template-img">
+            className="template-img ani3">
           </div>
         </div>
         <div className="template-p-cont">
-          <div id="overlay" className="template-p">
-            <form onSubmit={validation} id="contact-form" className="cont">
+          <div id="overlay" className="template-p ani2">
+            <form onSubmit={validation} id="contact-form">
               <fieldset>
                 <legend>Email Us:</legend>
                 <ul>
@@ -157,7 +157,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
-      <div role="img" aria-label="email notifications" id="contact-template-img-0" className="template-img-0 vis0">
+      <div role="img" aria-label="email notifications" id="contact-template-img-0" className="template-img-0">
         <div className="circle-progress">
           <div className="slider slider-count">
             <button aria-label="open-left" className="button-next open-left"></button>

@@ -7,15 +7,15 @@ const Skills = () => {
 
   return (
     <>
-      <section >
-        <h2 className="template-heading">Skills</h2>
+      <section>
+        <h2>Skills</h2>
         <div className="template-img-cont">
-          <div role="img" aria-label="light bulb icon" id="skills-template-img" className="template-img"></div>
+          <div role="img" aria-label="light bulb icon" id="skills-template-img" className="template-img ani3"></div>
         </div>
         <div className="template-p-cont">
           <PageScroll>
-            <div ref={ref} className="template-p">
-              <p className="cont">
+            <div ref={ref} className="template-p ani2">
+              <p>
                 &bull; HTML - JavaScript - CSS - SASS
                 <br />
                 <span
@@ -199,7 +199,7 @@ const Skills = () => {
           </PageScroll>
         </div>
       </section>
-      <div role="img" aria-label="glowing keyboard" id="skills-template-img-0" className="template-img-0 vis0">
+      <div role="img" aria-label="glowing keyboard" id="skills-template-img-0" className="template-img-0">
         <p>
           <a target="git" href="https://github.com/sunnysunny77">
             Git <i className="far fa-heart"></i>
