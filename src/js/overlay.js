@@ -18,7 +18,8 @@ export const picture = () => {
 
 const pictureDisplay = (item) => {
 
-    for (const element of pictureID.entries()) {
+    pictureID.forEach( (element) => {
+        
         const obj = document.getElementById(element);
         if (obj.id === item) {
             if (window.getComputedStyle(obj).getPropertyValue("display") === "none") {
@@ -31,7 +32,7 @@ const pictureDisplay = (item) => {
         } else {
             obj.style.display = "none";
         }
-    }
+    })
 }
 
 export const fromOverlay = (event) => {
