@@ -22,7 +22,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
 #site {
   position: relative;
   h2 {
-    margin-top: 5px;
+    margin-top: 15px;
     @include ten_24 {
       margin-top: 25px;
     } 

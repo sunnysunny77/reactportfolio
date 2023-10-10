@@ -1,4 +1,4 @@
-import { Outlet, Link, useNavigate } from "react-router-dom";
+import { Outlet, NavLink, Link, useNavigate } from "react-router-dom";
 import { toggle, top, start, vivus } from '../js/template.js';
 import { useEffect } from 'react';
 import { animation } from '../js/animation.js';
@@ -26,10 +26,10 @@ const Layout = () => {
                 </button>
                 <nav className="disp menu0">
                     <ul>
-                        <li><Link to="/contact">Contact<span>01</span></Link></li>
-                        <li><Link to="/skills">Skills<span>02</span></Link></li>
-                        <li><Link to="/sites">Sites<span>03</span></Link></li>
-                        <li><Link to="/">Home<span>04</span></Link></li>
+                        <li><NavLink to="/contact">Contact<span>01</span></NavLink></li>
+                        <li><NavLink to="/skills">Skills<span>02</span></NavLink></li>
+                        <li><NavLink to="/sites">Sites<span>03</span></NavLink></li>
+                        <li><NavLink to="/">Home<span>04</span></NavLink></li>
                     </ul>
                     <div className="heading">
                         <a href="tel:0434-984-983" className="fas fa-phone-square-alt"><span className="hidden">tel</span></a>

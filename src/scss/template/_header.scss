@@ -12,32 +12,25 @@ header {
     justify-content: flex-end;
     align-items: center;
     @include ten_24 {
-        flex-direction: column;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         border-bottom: 4px solid $mainbg;
-        justify-content: space-between;
-        align-items: initial;
     }
     > a {
         margin: auto;
+        @include ten_24 {
+            display: none;
+        }
         div {
             width: 123px;
             height: 75px;
             background-image: url(../../images/template/textonly.svg);
             background-position: center;
             background-repeat: no-repeat;
-            @include ten_24 {
-               display: none;
-            }
         }
     }
     button {
-        height: 0;
-        width: 0;
-        padding: 0;
-        border: none;
-        overflow: hidden;
+        display: none;
         @include ten_24 {
             background-image: url(../../images/template/menu.png);
             width: 50px;
@@ -45,6 +38,8 @@ header {
             background-color: transparent;
             background-position: center;
             background-repeat: no-repeat;
+            display: block;
+            border: none;
             cursor: pointer;
             outline: none;
             position: relative;
@@ -52,17 +47,16 @@ header {
             margin: 5px auto;
         }
     }
-    .disp {
-        @include ten_24 {
-            height: 0;
-            width: 0;
-            overflow: hidden;
-        }
-    }
     nav {
         width: 67%;
         @include ten_24 {
+            transition: height;
             width: 100%;
+            height: 209px;
+            overflow: hidden;
+            &.disp {
+                height: 0;
+            }
         }
         ul {
             margin: 0;
@@ -79,7 +73,7 @@ header {
                 a {
                     display: flex;
                     justify-content: space-between;
-                    padding: 5%;
+                    padding: 10px;
                     text-decoration: none;
                     box-sizing: border-box;
                     height: 75px;
@@ -88,14 +82,22 @@ header {
                     position: relative;
                     transition: color 1s;
                     transition-delay: 250ms;
+                    @include ten_24_min {
+                        &:hover::after {
+                            width: 100%;
+                        }
+                        &:hover {
+                            color: $aHover;
+                        }
+                    }
                     @include ten_24 {
                         border-top: 1px solid $mainbg;
-                    }
-                    &:hover::after {
-                        width: 100%;
-                    }
-                    &:hover {
-                        color: $aHover;
+                        &.active {
+                            color: $Acolor;
+                            span {
+                                color: $aHover;
+                            }
+                        }
                     }
                     span {
                         align-self: flex-end;
@@ -145,7 +147,7 @@ header {
             a {
                 color: $Acolor;
                 text-decoration: none;
-                padding: 1% 2%;
+                padding: 10px;
                 &:hover,
                 &:focus {
                     color: $aHover;
