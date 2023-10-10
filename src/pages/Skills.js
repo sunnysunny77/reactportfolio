@@ -26,7 +26,7 @@ const Skills = () => {
                 </span>
                 <span
                   id="skills-htmlcssjs"
-                  className="img last-img"
+                  className="img"
                   role="img"
                   aria-label="HTML JS CSS">
                 </span>
@@ -41,7 +41,7 @@ const Skills = () => {
                 </span>
                 <span
                   id="skills-foundation"
-                  className="img last-img"
+                  className="img"
                   role="img"
                   aria-label="Foundation">
                 </span>
@@ -56,7 +56,7 @@ const Skills = () => {
                 </span>
                 <span
                   id="skills-angular"
-                  className="img last-img"
+                  className="img"
                   role="img"
                   aria-label="Angular">
                 </span>
@@ -77,7 +77,7 @@ const Skills = () => {
                 </span>
                 <span
                   id="skills-xd"
-                  className="img  last-img"
+                  className="img "
                   role="img"
                   aria-label="Xd">
                 </span>
@@ -92,7 +92,7 @@ const Skills = () => {
                 </span>
                 <span
                   id="skills-mvc"
-                  className="img last-img"
+                  className="img"
                   role="img"
                   aria-label="MVC">
                 </span>
@@ -113,7 +113,7 @@ const Skills = () => {
                 </span>
                 <span
                   id="skills-xml"
-                  className="img last-img"
+                  className="img"
                   role="img"
                   aria-label="xml">
                 </span>
@@ -134,7 +134,7 @@ const Skills = () => {
                 </span>
                 <span
                   id="skills-ubuntu"
-                  className="img last-img"
+                  className="img"
                   role="img"
                   aria-label="Ubuntu">
                 </span>
@@ -155,7 +155,7 @@ const Skills = () => {
                 </span>
                 <span
                   id="skills-cakephp"
-                  className="img last-img"
+                  className="img"
                   role="img"
                   aria-label="Cake PHP">
                 </span>
@@ -164,7 +164,7 @@ const Skills = () => {
                 <br />
                 <span
                   id="skills-cloud"
-                  className="img last-img"
+                  className="img"
                   role="img"
                   aria-label="Cloud Hosting">
                 </span>
@@ -179,7 +179,7 @@ const Skills = () => {
                 </span>
                 <span
                   id="skills-mongo"
-                  className="img last-img"
+                  className="img"
                   role="img"
                   aria-label="MongoDB">
                 </span>
@@ -188,7 +188,7 @@ const Skills = () => {
                 <br />
                 <span
                   id="skills-git"
-                  className="img last-img"
+                  className="img"
                   role="img"
                   aria-label="Github">
                 </span>
