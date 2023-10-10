@@ -2,7 +2,7 @@ import Vivus from "vivus";
 
 export const start = () => {
 
-  if (window.innerWidth > 1024 && window.innerHeight > 1024) {
+  if (window.innerWidth > 1024 ) {
 
     const after = document.querySelector("#after");
     const logo = document.querySelector("#logo");
@@ -15,10 +15,8 @@ export const start = () => {
     setTimeout(() => {
       after.style.animationName = "";
     }, 0);
-  }
-
-  if (window.innerWidth <= 1024 && window.innerHeight <= 1024) {
-
+  } else {
+    
     const menu0 = document.querySelector(".menu0");
 
     if (!menu0.classList.contains("disp")) {
