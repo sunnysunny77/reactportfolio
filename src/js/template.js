@@ -2,18 +2,19 @@ import Vivus from "vivus";
 
 export const start = () => {
 
+  const after = document.querySelector("#after");
+  after.style.animationName = "none";
+  setTimeout(() => {
+    after.style.animationName = "";
+  }, 0);
+
   if (window.innerWidth > 1024 ) {
 
-    const after = document.querySelector("#after");
     const logo = document.querySelector("#logo");
 
     logo.style.animationName = "none";
     setTimeout(() => {
       logo.style.animationName = "";
-    }, 0);
-    after.style.animationName = "none";
-    setTimeout(() => {
-      after.style.animationName = "";
     }, 0);
   } else {
     
