@@ -4,7 +4,7 @@ main {
     position: relative;
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 286px);
+    min-height: calc(100vh - 290px);
     justify-content: center;
     @include ten_24 {
         justify-content: space-between;
