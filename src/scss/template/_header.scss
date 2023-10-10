@@ -86,9 +86,11 @@ header {
                     color: $Acolor;
                     border-left: 4px solid $mainbg;
                     position: relative;
-                    border-top: 1px solid $mainbg;
                     transition: color 1s;
                     transition-delay: 250ms;
+                    @include ten_24 {
+                        border-top: 1px solid $mainbg;
+                    }
                     &:hover::after {
                         width: 100%;
                     }
@@ -147,9 +149,6 @@ header {
                 &:hover,
                 &:focus {
                     color: $aHover;
-                    @include ten_24 {
-                        color: $c4;
-                    }
                 }
             }
             #my-svg {

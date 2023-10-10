@@ -4,21 +4,28 @@ export const start = () => {
 
   const after = document.querySelector("#after");
   const logo = document.querySelector("#logo");
+  const menu0 = document.querySelector(".menu0");
+  const button = document.querySelector(".click");
   logo.style.animationName = "none";
   setTimeout(() => {
     logo.style.animationName = "";
-  }
-  ,0);
+  }, 0);
   after.style.animationName = "none";
   setTimeout(() => {
     after.style.animationName = "";
+  }, 0);
+  if (!menu0.classList.contains("disp")) {
+    menu0.classList.remove("ani1");
+    menu0.classList.add("disp");
+    menu0.classList.add("ani5");
+    button.classList.remove("ani");
+    button.classList.add("ani6");
   }
-  ,0);
 }
 
 export const top = () => {
 
-  window.scrollTo(0,0)
+  window.scrollTo(0, 0)
 }
 
 export const vivus = () => {
@@ -28,8 +35,8 @@ export const vivus = () => {
 
 export const toggle = (event) => {
 
-  const menu0 = document.querySelectorAll(".menu0")[0];
-  
+  const menu0 = document.querySelector(".menu0");
+
   if (menu0.classList.contains("ani1")) {
 
     menu0.classList.add("ani5");
@@ -46,5 +53,5 @@ export const toggle = (event) => {
 
   if (!menu0.classList.contains("disp")) {
     vivus();
-  } 
+  }
 }
