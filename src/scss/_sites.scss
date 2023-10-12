@@ -48,9 +48,6 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       border-bottom-left-radius: 0;
       border-top: 3px solid $c4;
     }
-    @include ten_23_landscape {
-      height: 120px;
-    }
     #ob0 {
       height: 60%;
       margin-top: 124px;
@@ -130,31 +127,19 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
     @include ten_24 {
       float: none;
       margin: auto;
-      padding: 10%;
-      width: 75%;
-      height: 100%;
+      width: 95%;
+      height: 50vh;
       border-top-right-radius: 0;
       border-bottom-left-radius: 25px;
       border-top: 3px solid $c11;
-    }
-    @include ten_23_landscape {
-      padding: 25px;
-      width: calc(95% - 50px);
+      padding: 6vh;
+      box-sizing: border-box;
     }
     span {
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
       height: 100%;
-      @include ten_24 {
-        padding: 20%;
-      }
-      @include ten_23_landscape {
-        padding: 10%;
-      }
-      @include seven_20_portrait {
-        padding: 35.7%;
-      }
     }
     a {
       position: absolute;
