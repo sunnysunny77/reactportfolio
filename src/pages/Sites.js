@@ -14,8 +14,9 @@ import login from "../images/home/login.jpg";
 
 const Sites = () => {
 
-  const arr = [global, furniture, fas, dave, bus, candid, stick, login];
   useEffect(() => {
+
+    const arr = [global, furniture, fas, dave, bus, candid, stick, login];
 
     picture();
     arr.forEach((img)=>{

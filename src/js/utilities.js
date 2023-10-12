@@ -1,7 +1,6 @@
 export const preloadImage = (url) => {
   var img = new Image();
   img.src = url;
-  console.log(url)
 }
 
 export const getPosition = (element) => {
