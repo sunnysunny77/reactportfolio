@@ -141,10 +141,10 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       background-position: center;
       height: 100%;
       @include ten_24 {
-        padding: 50% 0;
+        padding: 14vh 0;
       }
-      @include ten_23_landscape {
-        padding: 10% 0;
+      @include seven_20_portrait  {
+        padding: 33% 0;
       }
     }
     a {
@@ -178,8 +178,8 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       padding: 2.5px 5px;
       @include ten_24 {
         top: unset;
-        right: 12px;
-        bottom: 12px;
+        right: 10px;
+        bottom: 10px;
       }
     }
   }
