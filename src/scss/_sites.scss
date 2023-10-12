@@ -40,9 +40,9 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       position: relative;
       float: none;
       width: 95%;
-      height: 140px;
+      height: 120px;
       margin: auto;
-      padding: 10px 0;
+      padding: 5px 0;
       border-top-right-radius: 0px;
       border-top-left-radius: 0px;
       border-bottom-left-radius: 0;
@@ -89,7 +89,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
           display: block;
           margin: 10% 15%;
           @include ten_24 {
-            margin: 30px 10%;
+            margin: 15px 10%;
             width: 55px;
             height: 55px;
           }
@@ -141,10 +141,10 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       background-position: center;
       height: 100%;
       @include ten_24 {
-        padding: 14vh 0;
+        padding: 17vh 0;
       }
-      @include seven_20_portrait  {
-        padding: 33% 0;
+      @include four_80_portrait {
+        padding: 100% 0 0 0;
       }
     }
     a {
