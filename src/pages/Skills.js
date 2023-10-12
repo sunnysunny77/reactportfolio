@@ -8,7 +8,7 @@ const Skills = () => {
 
   useEffect(() => {
 
-    preloadImage("images/template/tempimg.jpg");
+    preloadImage("static/media/tempimg.jpg");
   }, []);
   return (
     <>

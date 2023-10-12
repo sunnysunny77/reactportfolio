@@ -10,7 +10,7 @@ export const picture = () => {
         let id = `s5${i}`;
         pictureID.push(id);
         let url = window.getComputedStyle(document.getElementById(id)).getPropertyValue("background-image");
-        let start = url.indexOf("images");
+        let start = url.indexOf("static");
         let end = url.indexOf("'");
         preloadImage(url.slice(start, end - 1));
     }
