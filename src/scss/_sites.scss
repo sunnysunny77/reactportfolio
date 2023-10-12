@@ -25,7 +25,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
     margin-top: 15px;
     @include ten_24 {
       margin-top: 25px;
-    } 
+    }
   }
   #s4 {
     height: 350px;
@@ -140,7 +140,12 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       background-repeat: no-repeat;
       background-position: center;
       height: 100%;
-      padding: 50% 0;
+      @include ten_24 {
+        padding: 50% 0;
+      }
+      @include ten_23_landscape {
+        padding: 10% 0;
+      }
     }
     a {
       position: absolute;
@@ -173,7 +178,8 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       padding: 2.5px 5px;
       @include ten_24 {
         top: unset;
-        bottom: 16px;
+        right: 12px;
+        bottom: 12px;
       }
     }
   }
