@@ -132,7 +132,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       border-top-right-radius: 0;
       border-bottom-left-radius: 25px;
       border-top: 3px solid $c11;
-      padding: 6vh;
+      padding: 35px 0px;
       box-sizing: border-box;
     }
     span {
@@ -149,7 +149,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       font-size: large;
       @include ten_24 {
         font-size: small;
-        top: 2.5%;
+        top: 7.5px;
       }
       &:hover,
       &:focus {
