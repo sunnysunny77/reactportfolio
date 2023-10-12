@@ -1,5 +1,5 @@
 import OverlayScrollbars from "overlayscrollbars";
-import { preloadImage, eventListner } from '../js/utilities.js';
+import { eventListner } from '../js/utilities.js';
 
 let pictureID = [];
 
@@ -9,10 +9,6 @@ export const picture = () => {
     for (let i = 1; i <= img.length; i++) {
         let id = `s5${i}`;
         pictureID.push(id);
-        let url = window.getComputedStyle(document.getElementById(id)).getPropertyValue("background-image");
-        let start = url.indexOf("static");
-        let end = url.indexOf("'");
-        preloadImage(url.slice(start, end - 1));
     }
 }
 

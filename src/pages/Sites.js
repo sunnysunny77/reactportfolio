@@ -1,13 +1,26 @@
 
 import Next from "../images/home/next.png";
 import { picture, sitesOverlay } from '../js/overlay.js';
+import { preloadImage } from '../js/utilities.js';
 import { useEffect } from 'react';
+import global from "../images/home/global.png";
+import furniture from "../images/home/furniture.jpg";
+import fas from "../images/home/fas.jpg";
+import dave from "../images/home/dave.jpg";
+import bus from "../images/home/bus.jpg";
+import candid from "../images/home/candid.jpg";
+import stick from "../images/home/stick.jpg";
+import login from "../images/home/login.jpg";
 
 const Sites = () => {
 
+  const arr = [global, furniture, fas, dave, bus, candid, stick, login];
   useEffect(() => {
 
     picture();
+    arr.forEach((img)=>{
+      preloadImage(img);
+    });
     sitesOverlay();
   }, []);
   return (
