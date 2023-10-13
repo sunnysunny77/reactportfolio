@@ -1,16 +1,10 @@
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import PageScroll from '../js/auto.js';
-import { preloadImage } from '../js/utilities.js';
-import tempimg from '../images/template/tempimg.jpg';
 
 const Skills = () => {
 
   let ref = useRef(null);
 
-  useEffect(() => {
-
-    preloadImage(tempimg);
-  }, []);
   return (
     <>
       <section>

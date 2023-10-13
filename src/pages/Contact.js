@@ -5,8 +5,6 @@ import { reply, send } from '../js/forms.js';
 import linkedin from '../images/contact/linkedin.png';
 import telephone from '../images/contact/telephone.png';
 import mail from '../images/contact/mail.png';
-import tempimg from '../images/template/tempimg.jpg';
-import { preloadImage } from '../js/utilities.js';
 
 const Contact = () => {
 
@@ -84,7 +82,6 @@ const Contact = () => {
 
   useEffect(() => {
 
-    preloadImage(tempimg);
     fromOverlay();
     circleInit();
   }, []);
