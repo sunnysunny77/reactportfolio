@@ -10,7 +10,12 @@ const Skills = () => {
       <section>
         <h2>Skills</h2>
         <div className="template-img-cont">
-          <div role="img" aria-label="light bulb icon" id="skills-template-img" className="template-img ani3"></div>
+          <div
+            role="img"
+            aria-label="info icon"
+            id="skills-template-img"
+            className="template-img ani3">
+          </div>
         </div>
         <div className="template-p-cont">
           <PageScroll>

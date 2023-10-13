@@ -17,7 +17,7 @@ const Sites = () => {
         <div id="site-img" className="template-img-cont">
           <div
             role="img"
-            aria-label="info icon"
+            aria-label="light bulb icon"
             id="sites-template-img"
             className="template-img ani3">
           </div>
