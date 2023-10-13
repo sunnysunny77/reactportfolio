@@ -41,6 +41,7 @@ body {
 }
 
 h2 {
+  height: 34px;
   width: 100%;
   margin-top: 5%;
   margin-left: 10%;
@@ -49,6 +50,7 @@ h2 {
   font-size: 1.4em;
   position: relative;
   @include ten_24 {
+    height: 27px;
     font-size: large;
     margin-top: 25px;
     margin-left: 5%;
