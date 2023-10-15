@@ -83,7 +83,9 @@ const Home = () => {
                 <br />
                 Technical University of Munich
                 <br />
-                Make Your Own App 2020
+                Make Your Own App
+                <br />
+                2020
                 <br />
                 <br />
                 &bull; Certificate 4
