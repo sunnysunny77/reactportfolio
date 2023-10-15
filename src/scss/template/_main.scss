@@ -26,10 +26,6 @@ main {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        padding: 25px 0;
-        @include ten_24 {
-            padding: 25px 0 0 0;
-        }
     }
 }
 
@@ -105,7 +101,7 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    margin: 0 auto 25px auto;
+    margin: 25px auto;
     padding: 13px 0;
     opacity: 0.5;
     @include ten_24 {
@@ -124,7 +120,7 @@ main {
     background-position: top;
     height: fit-content;
     width: 80%;
-    margin: 25px auto;
+    margin: 6% auto;
     background-size: cover;
     border-top-right-radius: 25px;
     border-top-left-radius: 5px;

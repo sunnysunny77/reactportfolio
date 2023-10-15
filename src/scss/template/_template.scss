@@ -43,17 +43,22 @@ body {
 h2 {
   height: 34px;
   width: 100%;
-  margin: auto auto 25px 10%;
+  margin: 25px auto 25px 10%;
   color: $heading3;
   font-size: 1.4em;
   position: relative;
+  @include ten_24_min {
+    &.heading {
+      margin-top: 50px;
+    }
+  }
   @include ten_24 {
     height: 27px;
     font-size: large;
-    margin: auto auto 25px 5%;
+    margin: 25px auto 25px 5%;
   }
   @include four_80 {
-    margin: auto auto 25px 25px;
+    margin: 25px auto 25px 25px;
   }
   &::before {
     position: absolute;

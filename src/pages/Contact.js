@@ -89,7 +89,7 @@ const Contact = () => {
   return (
     <>
       <section>
-        <h2>Contact</h2>
+        <h2 className="heading">Contact</h2>
         <div className="template-img-cont">
           <div
             role="img"
