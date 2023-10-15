@@ -43,20 +43,18 @@ body {
 h2 {
   height: 34px;
   width: 100%;
-  margin-top: 5%;
-  margin-left: 10%;
-  margin-bottom: 25px;
+  margin: 5% auto 25px 10%;
   color: $heading3;
   font-size: 1.4em;
   position: relative;
   @include ten_24 {
     height: 27px;
     font-size: large;
+    margin: 25px auto 25px 5%;
     margin-top: 25px;
-    margin-left: 5%;
   }
   @include four_80 {
-    margin-left: 25px;
+    margin: 25px auto 25px 25px;
   }
   &::before {
     position: absolute;
@@ -65,19 +63,7 @@ h2 {
     left: -15px;
     bottom: 0;
     right: 0;
-    animation: blink 1.75s infinite ease-out;
     clip: rect(auto, 10px, auto, auto);
-    @keyframes blink {
-      from {
-        opacity: 1;
-        border-top: 7.5px solid $c6;
-      }
-
-      to {
-        opacity: 0;
-        border-top: 7.5px solid $c1;
-      }
-    }
   }
 }
 

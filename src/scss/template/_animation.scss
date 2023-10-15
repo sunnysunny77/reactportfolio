@@ -8,6 +8,10 @@
   animation: fadeInBack 0.3s ease-in-out;
 }
 
+h2::before {
+  animation: blink 1.75s infinite ease-out;
+}
+
 .template-img-0 .circle-progress .opacity {
   animation: opacity 1.5s;
 }
@@ -53,7 +57,7 @@
 .ani4 {
   &.template-img-0 b {
     color: $c2;
-    background-color: unset;
+    background-color: initial;
   }
   &.template-img-0 .circle-progress,
   &.template-img-0 p {
@@ -217,5 +221,17 @@
   100% {
     z-index: 1;
     opacity: 1;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+    border-top: 7.5px solid $c6;
+  }
+
+  to {
+    opacity: 0;
+    border-top: 7.5px solid $c1;
   }
 }

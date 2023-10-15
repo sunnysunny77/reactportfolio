@@ -22,9 +22,39 @@ const Home = () => {
           <PageScroll>
             <div ref={ref} className="template-p ani2">
               <p>
-              Sports
+                <br />
+                <br />
+                Objective outcomes.
+                <br />
+                <i className="fas fa-bullseye"></i>
+                <br />
+                <br />
+                <br />
+                &bull; Secure &amp; Bug Free
+                <br />
+                <i className="fas fa-lock"></i> &nbsp; <i className="fas fa-bug"></i>
+                <br />
+                <br />
+                &bull; Semantic &amp; Recyclable &amp; Responsive
+                <br />
+                <i className="fas fa-tasks"></i> &nbsp; <i className="fas fa-recycle"></i> &nbsp; <i className="fas fa-compress-alt"></i>
+                <br />
+                <br />
+                &bull; Balanced Composition
+                <br />
+                <i className="fas fa-divide"></i>
+                <br />
+                <br />
+                &bull; Try get it right... Try try again
+                <br />
+                <i className="fas fa-check-circle"></i>
+                <br />
+                <br />
+                <br />
+                Sports
                 <br />
                 <i className="fas fa-sun"></i>
+                <br />
                 <br />
                 <br />
                 &bull; Sailing Windsurfing Swimming Motorsport Fishing
@@ -36,6 +66,7 @@ const Home = () => {
                 <i className="fas fa-dice-six"></i>
                 <br />
                 <br />
+                <br />
                 &bull; Music Reading Games Pets Camping
                 <br />
                 Fitness Socializing Study
@@ -45,6 +76,7 @@ const Home = () => {
                 Certifications
                 <br />
                 <i className="fas fa-star"></i>
+                <br />
                 <br />
                 <br />
                 &bull; Certificate
@@ -74,6 +106,7 @@ const Home = () => {
                 <i className="fas fa-mountain"></i>
                 <br />
                 <br />
+                <br />
                 &bull; Currently working as
                 <br />
                 an overflow front end developer.
@@ -94,32 +127,6 @@ const Home = () => {
                 forklifts and C class
                 <br />
                 vehicles and managing stores.
-                <br />
-                <br />
-                <br />
-                Objective outcomes.
-                <br />
-                <i className="fas fa-bullseye"></i>
-                <br />
-                <br />
-                &bull; Secure &amp; Bug Free
-                <br />
-                <i className="fas fa-lock"></i> &nbsp; <i className="fas fa-bug"></i>
-                <br />
-                <br />
-                &bull; Semantic &amp; Recyclable &amp; Responsive
-                <br />
-                <i className="fas fa-tasks"></i> &nbsp; <i className="fas fa-recycle"></i> &nbsp; <i className="fas fa-compress-alt"></i>
-                <br />
-                <br />
-                &bull; Balanced Composition
-                <br />
-                <i className="fas fa-divide"></i>
-                <br />
-                <br />
-                &bull; Try get it right... Try try again
-                <br />
-                <i className="fas fa-check-circle"></i>
                 <br />
                 <br />
               </p>

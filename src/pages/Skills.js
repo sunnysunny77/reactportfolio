@@ -197,8 +197,6 @@ const Skills = () => {
                   role="img"
                   aria-label="Github">
                 </span>
-                <br />
-                <br />
               </p>
             </div>
           </PageScroll>

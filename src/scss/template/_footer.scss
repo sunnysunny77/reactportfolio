@@ -2,46 +2,46 @@
 
 footer {
     height: 125px;
-    background-image: url(../../images/template/wave.svg);
-    background-size: 100%;
+    background-image: url(../../images/template/handmade-paper.png);
     border-top: 4px solid $mainbg;
-    background-color: $c10;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    background-repeat: no-repeat;
-    background-blend-mode: multiply;
+    background-color: $c9;
     display: flex;
     position: relative;
+    z-index: 1;
     @include ten_24 {
         border-top: 4px solid $mainbg;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
+        border-radius: initial;
     }
     &::after {
         content: "";
-        background-image: url(../../images/template/handmade-paper.png);
+        background-image: url(../../images/template/wave.svg);
+        background-color: $c10;
+        background-size: cover;
+        background-position: top;
+        background-blend-mode: multiply;
+        background-repeat: no-repeat;
         top: 0;
         left: 0;
         bottom: 0;
         right: 0;
-        background-color: $c9;
         position: absolute;
-        z-index: -999;
+        z-index: -1;
         border-bottom-left-radius: 25px;
         border-bottom-right-radius: 25px;
         @include ten_24 {
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
+            border-radius: initial;
         }
     }
     ul {
         text-align: center;
         width: 47.5%;
         padding: 0;
-        margin: 7% 3.4% 5% 50%;
+        margin: 85px 3.4% auto 50%;
         letter-spacing: 0.75px;
         @include ten_24 {
-            margin: 63px auto 24px auto;
+            margin:  auto auto 10px auto;
             width: 100%;
         }
         li {
@@ -63,10 +63,11 @@ footer {
             }
         }
         li.sm {
-            padding-right: 1%;
+            padding: 0 1% 0 0;
             opacity: 0.5;
             @include ten_24 {
                 display: block;
+                padding: 0;
             }
             h3 {
                 font-size: small;

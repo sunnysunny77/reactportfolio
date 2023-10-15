@@ -12,8 +12,7 @@ header {
     justify-content: flex-end;
     align-items: center;
     @include ten_24 {
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
+    border-radius: initial;
         border-bottom: 4px solid $mainbg;
     }
     > a {
