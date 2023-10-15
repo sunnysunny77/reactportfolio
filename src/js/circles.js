@@ -1,11 +1,9 @@
 import { eventListner } from '../js/utilities.js';
 
 let width;
-let arraySrc = [];
-let arrayHref = [];
-let arrayText = [];
 
 const percentageCalc = (counter, staticCount) => {
+  
   return (counter + 1) / staticCount.length * 100 / 1;
 }
 
@@ -25,7 +23,7 @@ const progress = (percent, percentage) => {
   const id = setInterval(frame, 20);
 }
 
-const iteration = (counter,staticCount, inner, image1, image2, imageFillLeft, imageFillRight, openRight, openLeft, percentage) => {
+const iteration = (counter, arraySrc, arrayHref, arrayText, staticCount, inner, image1, image2, imageFillLeft, imageFillRight, openRight, openLeft, percentage) => {
 
   inner.classList.add("opacity");
   openRight.disabled = true;
@@ -102,7 +100,9 @@ const iteration = (counter,staticCount, inner, image1, image2, imageFillLeft, im
 export const circleInit = () => {
 
   let counter = 0;
-
+  let arraySrc = [];
+  let arrayHref = [];
+  let arrayText = [];
   const inner = document.querySelector(".inner");
   const image1 = document.querySelector(".image-1");
   const image2 = document.querySelector(".image-2");
@@ -112,12 +112,15 @@ export const circleInit = () => {
   const openLeft = document.querySelector(".open-left");
   const percentage = document.querySelector(".percentage-change");
   const staticCount = document.querySelectorAll(".static-count");
+  width = percentageCalc(counter, staticCount)
 
   for (const item of staticCount) {
+
     arraySrc.push(item.children[0].src);
     arrayHref.push([item.children[1].children[0].href, item.children[1].children[0].innerHTML]);
     arrayText.push(item.children[1].innerHTML);
   }
+
   eventListner(openLeft, "click", (event) => {
 
     event.preventDefault();
@@ -125,7 +128,7 @@ export const circleInit = () => {
 
     if (counter === - 1) { counter = staticCount.length - 1; }
 
-    iteration(counter, staticCount, inner, image1, image2, imageFillLeft, imageFillRight, openRight, openLeft, percentage);
+    iteration(counter, arraySrc, arrayHref, arrayText, staticCount, inner, image1, image2, imageFillLeft, imageFillRight, openRight, openLeft, percentage);
 
     image1.classList.add("opacity");
     imageFillRight.classList.add("right");
@@ -138,7 +141,7 @@ export const circleInit = () => {
 
     if (counter === staticCount.length) { counter = 0; }
 
-    iteration(counter, staticCount, inner, image1, image2, imageFillLeft, imageFillRight, openRight, openLeft, percentage);
+    iteration(counter, arraySrc, arrayHref, arrayText, staticCount, inner, image1, image2, imageFillLeft, imageFillRight, openRight, openLeft, percentage);
 
     image2.classList.add("opacity");
     imageFillLeft.classList.add("left");
@@ -157,7 +160,5 @@ export const circleInit = () => {
   imageFillRight.href = arrayHref[0][0];
   imageFillRight.innerHTML = '<span class="hidden">' + arrayHref[0][1] + '</span>';
   inner.innerHTML = arrayText[0];
-
-  width = percentageCalc(counter, staticCount);
   percentage.style.width = `${width}%`;
 }
