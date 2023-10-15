@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { fromOverlay } from '../js/overlay.js';
 import { circleInit } from '../js/circles.js';
+import { click } from '../js/animation.js';
 import { reply, send } from '../js/forms.js';
 import linkedin from '../images/contact/linkedin.png';
 import telephone from '../images/contact/telephone.png';
@@ -187,7 +188,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="percentage"><div className="percentage-change"></div></div>
-          <b>Get in touch ..</b>
+          <b className='template-b'  onClick={click}>Get in touch ..</b>
         </div>
       </div>
     </>

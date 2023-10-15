@@ -40,8 +40,14 @@ $imgSkills: (
   background-image: url(../images/skills/skills.png);
 }
 
-a[target="git"] {
+.template-img-0 p a[target="git"] {
+  margin: 5% auto auto 5%;
+  opacity: 0;
+  transition: opacity 0.75s linear;
+  max-width: 180px;
+  z-index: -1;
   color: $c1;
+  text-decoration: none;
   &:hover,
   &:focus {
     color: $c4;

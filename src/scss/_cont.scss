@@ -101,117 +101,115 @@
   }
 }
 
-.circle-progress {
-  @include seven_20_portrait {
-    border-radius: 10px;
+.template-img-0 .circle-progress .slider {
+  height: 100%;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  z-index: -1;
+  align-items: center;
+  transition: opacity 0.75s linear;
+  opacity: 0;
+  .a {
+    border-radius: 100%;
+    background-size: cover;
+    padding: 75px 75px;
   }
-  .slider {
-    height: 100%;
-    width: 90%;
-    margin: auto;
+  .button-next {
+    position: absolute;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    top: 7.5%;
+    color: $c2;
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    &:hover {
+      @include ten_24_min {
+        opacity: 0.5;
+      }
+    }
+  }
+  .open-left {
+    background-image: url(../images/contact/left.png);
+    left: 2%;
+  }
+  .open-right {
+    background-image: url(../images/contact/right.png);
+    right: 2%;
+  }
+  .image-fill-right {
+    z-index: 0;
     position: relative;
-    display: flex;
-    align-items: center;
-    transition: opacity 1s linear;
-    opacity: 0;
-    .a {
-      border-radius: 100%;
-      background-size: cover;
-      padding: 75px 75px;
-    }
-    .button-next {
+    margin: auto 12.5% auto 12.5%;
+    padding: 15%;
+    height: initial;
+    @include ten_24_min {
       position: absolute;
-      background-color: transparent;
-      outline: none;
-      border: none;
-      top: 7.5%;
-      color: $c2;
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: 20px;
-      height: 20px;
-      &:hover {
-        @include ten_24_min {
-          opacity: 0.5;
-        }
-      }
-    }
-    .open-left {
-      background-image: url(../images/contact/left.png);
-      left: 2%;
-    }
-    .open-right {
-      background-image: url(../images/contact/right.png);
-      right: 2%;
-    }
-    .image-fill-right {
-      z-index: 0;
-      position: relative;
-      margin: auto 12.5% auto 12.5%;
-      padding: 15%;
-      height: initial;
-      @include ten_24_min {
-        position: absolute;
-        margin: initial;
-        z-index: -1;
-        opacity: 0;
-        padding: 75px 75px;
-      }
-    }
-    .image-1 {
-      z-index: 0;
-      position: relative;
-      display: none;
-      @include ten_24_min {
-        display: block;
-      }
-    }
-    .image-fill-left {
-      right: 0;
+      margin: initial;
       z-index: -1;
       opacity: 0;
-      position: absolute;
-      display: none;
-      @include ten_24_min {
-        display: block;
-      }
-    }
-    .image-2 {
-      right: 0;
-      z-index: 0;
-      position: absolute;
-      display: none;
-      @include ten_24_min {
-        display: block;
-      }
-    }
-    .inner {
-      margin: auto;
-      width: 50%;
-      @include ten_24_min {
-        width: 100%;
-        margin: auto auto auto 2%;
-      }
-      a {
-        color: $c1;
-        text-decoration: none;
-        &:hover,
-        &:focus {
-          color: $c4;
-        }
-      }
-    }
-    .static-count {
-      display: none;
+      padding: 75px 75px;
     }
   }
+  .image-1 {
+    z-index: 0;
+    position: relative;
+    display: none;
+    @include ten_24_min {
+      display: block;
+    }
+  }
+  .image-fill-left {
+    right: 0;
+    z-index: -1;
+    opacity: 0;
+    position: absolute;
+    display: none;
+    @include ten_24_min {
+      display: block;
+    }
+  }
+  .image-2 {
+    right: 0;
+    z-index: 0;
+    position: absolute;
+    display: none;
+    @include ten_24_min {
+      display: block;
+    }
+  }
+  .inner {
+    margin: auto;
+    width: 50%;
+    @include ten_24_min {
+      width: 100%;
+      margin: auto auto auto 2%;
+    }
+    a {
+      color: $c1;
+      text-decoration: none;
+      &:hover,
+      &:focus {
+        color: $c4;
+      }
+    }
+  }
+  .static-count {
+    display: none;
+  }
 }
+
 .percentage {
   height: 2px;
   position: relative;
   width: 90%;
   margin: 2% auto;
-  transition: opacity 1s linear;
+  transition: opacity 0.75s linear;
   opacity: 0;
   background-color: $c4;
   .percentage-change {

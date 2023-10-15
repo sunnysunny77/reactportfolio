@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import PageScroll from '../js/auto.js';
+import { click } from '../js/animation.js';
 
 const Skills = () => {
 
@@ -205,9 +206,9 @@ const Skills = () => {
       <div role="img" aria-label="glowing keyboard" id="skills-template-img-0" className="template-img-0">
         <p>
           <a target="git" href="https://github.com/sunnysunny77">
-            Git <i className="far fa-heart"></i>
+          github.com <i className="far fa-heart"></i>
           </a>
-          <b>GitHub ..</b>
+          <b className='template-b' onClick={click}>View code ..</b>
         </p>
       </div>
     </>
