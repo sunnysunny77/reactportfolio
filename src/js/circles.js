@@ -1,172 +1,163 @@
 import { eventListner } from '../js/utilities.js';
 
-let width = [];
+let width;
+let arraySrc = [];
+let arrayHref = [];
+let arrayText = [];
 
 const percentageCalc = (counter, staticCount) => {
   return (counter + 1) / staticCount.length * 100 / 1;
 }
 
-const progress = (i, percent, percentage) => {
+const progress = (percent, percentage) => {
 
   const frame = () => {
 
-    if (Math.round(width[i]) === Math.round(percent)) {
+    if (Math.round(width) === Math.round(percent)) {
       return clearInterval(id);
     }
 
-    width[i] = percent > width[i] ? width[i] + 1 : width[i] - 1;
+    width = percent > width ? width + 1 : width - 1;
 
-    percentage[i].style.width = `${width[i]}%`;
+    percentage.style.width = `${width}%`;
   };
 
   const id = setInterval(frame, 20);
 }
 
-const iteration = (i, arraySrc, arrayHref, arrayText, staticCount, inner, image1, image2, imageFillLeft, imageFillRight, openRight, openLeft, percentage, counter) => {
+const iteration = (counter,staticCount, inner, image1, image2, imageFillLeft, imageFillRight, openRight, openLeft, percentage) => {
 
-  inner[i].classList.add("opacity");
-  openRight[i].disabled = true;
-  openLeft[i].disabled = true;
-  progress(i, percentageCalc(counter[i], staticCount), percentage);
-
+  inner.classList.add("opacity");
+  openRight.disabled = true;
+  openLeft.disabled = true;
+  progress(percentageCalc(counter, staticCount), percentage);
 
   setTimeout(() => {
 
-    imageFillLeft[i].classList.remove("left");
-    imageFillRight[i].classList.remove("right");
+    imageFillLeft.classList.remove("left");
+    imageFillRight.classList.remove("right");
 
     setTimeout(() => {
 
-      image1[i].classList.remove("opacity");
-      image2[i].classList.remove("opacity");
-      inner[i].classList.remove("opacity");
-      openRight[i].disabled = false;
-      openLeft[i].disabled = false;
+      image1.classList.remove("opacity");
+      image2.classList.remove("opacity");
+      inner.classList.remove("opacity");
+      openRight.disabled = false;
+      openLeft.disabled = false;
     }, 750);
 
-    if (counter[i] + 1 === staticCount.length) {
+    if (counter + 1 === staticCount.length) {
 
-      image1[i].style.backgroundImage = `url(${arraySrc[counter[i]]}`;
-      image1[i].href = arrayHref[counter[i]][0];
-      image1[i].innerHTML = '<span class="hidden">' + arrayHref[counter[i]][1] + '</span>';
-      image2[i].style.backgroundImage = `url(${arraySrc[0]}`;
-      image2[i].href = arrayHref[0][0];
-      image2[i].innerHTML = '<span class="hidden">' + arrayHref[0][1] + '</span>';
-      imageFillLeft[i].style.backgroundImage = `url(${arraySrc[0]}`;
-      imageFillLeft[i].href = arrayHref[0][0];
-      imageFillLeft[i].innerHTML = '<span class="hidden">' + arrayHref[0][1] + '</span>';
-      imageFillRight[i].style.backgroundImage = `url(${arraySrc[counter[i]]}`;
-      imageFillRight[i].href = arrayHref[counter[i]][0];
-      imageFillRight[i].innerHTML = '<span class="hidden">' + arrayHref[counter[i]][1] + '</span>';
-      inner[i].innerHTML = arrayText[counter[i]];
-
-      return;
-    }
-
-    if (counter[i] + 2 === staticCount.length) {
-
-      image1[i].style.backgroundImage = `url(${arraySrc[counter[i]]}`;
-      image1[i].href = arrayHref[counter[i]][0];
-      image1[i].innerHTML = '<span class="hidden">' + arrayHref[counter[i]][1] + '</span>';
-      image2[i].style.backgroundImage = `url(${arraySrc[counter[i] + 1]}`;
-      image2[i].href = arrayHref[counter[i] + 1][0];
-      image2[i].innerHTML = '<span class="hidden">' + arrayHref[counter[i] + 1][1] + '</span>';
-      imageFillLeft[i].style.backgroundImage = `url(${arraySrc[counter[i] + 1]}`;
-      imageFillLeft[i].href = arrayHref[counter[i] + 1][0];
-      imageFillLeft[i].innerHTML = '<span class="hidden">' + arrayHref[counter[i] + 1][1] + '</span>';
-      imageFillRight[i].style.backgroundImage = `url(${arraySrc[counter[i]]}`;
-      imageFillRight[i].href = arrayHref[counter[i]][0];
-      imageFillRight[i].innerHTML = '<span class="hidden">' + arrayHref[counter[i]][1] + '</span>';
-      inner[i].innerHTML = arrayText[counter[i]];
+      image1.style.backgroundImage = `url(${arraySrc[counter]}`;
+      image1.href = arrayHref[counter][0];
+      image1.innerHTML = '<span class="hidden">' + arrayHref[counter][1] + '</span>';
+      image2.style.backgroundImage = `url(${arraySrc[0]}`;
+      image2.href = arrayHref[0][0];
+      image2.innerHTML = '<span class="hidden">' + arrayHref[0][1] + '</span>';
+      imageFillLeft.style.backgroundImage = `url(${arraySrc[0]}`;
+      imageFillLeft.href = arrayHref[0][0];
+      imageFillLeft.innerHTML = '<span class="hidden">' + arrayHref[0][1] + '</span>';
+      imageFillRight.style.backgroundImage = `url(${arraySrc[counter]}`;
+      imageFillRight.href = arrayHref[counter][0];
+      imageFillRight.innerHTML = '<span class="hidden">' + arrayHref[counter][1] + '</span>';
+      inner.innerHTML = arrayText[counter];
 
       return;
     }
 
-    image1[i].style.backgroundImage = `url(${arraySrc[counter[i]]}`;
-    image1[i].href = arrayHref[counter[i]][0];
-    image1[i].innerHTML = '<span class="hidden">' + arrayHref[counter[i]][1] + '</span>';
-    image2[i].style.backgroundImage = `url(${arraySrc[counter[i] + 1]}`;
-    image2[i].href = arrayHref[counter[i] + 1][0];
-    image2[i].innerHTML = '<span class="hidden">' + arrayHref[counter[i] + 1][1] + '</span>';
-    imageFillLeft[i].href = arrayHref[counter[i] + 1][0];
-    imageFillLeft[i].innerHTML = '<span class="hidden">' + arrayHref[counter[i] + 1][1] + '</span>';
-    imageFillRight[i].style.backgroundImage = `url(${arraySrc[counter[i]]}`;
-    imageFillRight[i].href = arrayHref[counter[i]][0];
-    imageFillRight[i].innerHTML = '<span class="hidden">' + arrayHref[counter[i]][1] + '</span>';
-    inner[i].innerHTML = arrayText[counter[i]];
+    if (counter + 2 === staticCount.length) {
+
+      image1.style.backgroundImage = `url(${arraySrc[counter]}`;
+      image1.href = arrayHref[counter][0];
+      image1.innerHTML = '<span class="hidden">' + arrayHref[counter][1] + '</span>';
+      image2.style.backgroundImage = `url(${arraySrc[counter + 1]}`;
+      image2.href = arrayHref[counter + 1][0];
+      image2.innerHTML = '<span class="hidden">' + arrayHref[counter + 1][1] + '</span>';
+      imageFillLeft.style.backgroundImage = `url(${arraySrc[counter + 1]}`;
+      imageFillLeft.href = arrayHref[counter + 1][0];
+      imageFillLeft.innerHTML = '<span class="hidden">' + arrayHref[counter + 1][1] + '</span>';
+      imageFillRight.style.backgroundImage = `url(${arraySrc[counter]}`;
+      imageFillRight.href = arrayHref[counter][0];
+      imageFillRight.innerHTML = '<span class="hidden">' + arrayHref[counter][1] + '</span>';
+      inner.innerHTML = arrayText[counter];
+
+      return;
+    }
+
+    image1.style.backgroundImage = `url(${arraySrc[counter]}`;
+    image1.href = arrayHref[counter][0];
+    image1.innerHTML = '<span class="hidden">' + arrayHref[counter][1] + '</span>';
+    image2.style.backgroundImage = `url(${arraySrc[counter + 1]}`;
+    image2.href = arrayHref[counter + 1][0];
+    image2.innerHTML = '<span class="hidden">' + arrayHref[counter + 1][1] + '</span>';
+    imageFillLeft.href = arrayHref[counter + 1][0];
+    imageFillLeft.innerHTML = '<span class="hidden">' + arrayHref[counter + 1][1] + '</span>';
+    imageFillRight.style.backgroundImage = `url(${arraySrc[counter]}`;
+    imageFillRight.href = arrayHref[counter][0];
+    imageFillRight.innerHTML = '<span class="hidden">' + arrayHref[counter][1] + '</span>';
+    inner.innerHTML = arrayText[counter];
   }, 750);
 };
 
 export const circleInit = () => {
 
-  const sliderCount = document.querySelectorAll(".slider-count");
-  const inner = document.querySelectorAll(".inner");
-  const image1 = document.querySelectorAll(".image-1");
-  const image2 = document.querySelectorAll(".image-2");
-  const imageFillLeft = document.querySelectorAll(".image-fill-left");
-  const imageFillRight = document.querySelectorAll(".image-fill-right");
-  const openRight = document.querySelectorAll(".open-right");
-  const openLeft = document.querySelectorAll(".open-left");
-  const percentage = document.querySelectorAll(".percentage-change");
-  let counter = [];
+  let counter = 0;
 
-  for (const [i, item] of [...sliderCount].entries()) {
+  const inner = document.querySelector(".inner");
+  const image1 = document.querySelector(".image-1");
+  const image2 = document.querySelector(".image-2");
+  const imageFillLeft = document.querySelector(".image-fill-left");
+  const imageFillRight = document.querySelector(".image-fill-right");
+  const openRight = document.querySelector(".open-right");
+  const openLeft = document.querySelector(".open-left");
+  const percentage = document.querySelector(".percentage-change");
+  const staticCount = document.querySelectorAll(".static-count");
 
-    let arraySrc = [];
-    let arrayHref = [];
-    let arrayText = [];
-
-    const staticCount = item.querySelectorAll(".static-count");
-
-    for (const item of staticCount) {
-      arraySrc.push(item.children[0].src);
-      arrayHref.push([item.children[1].children[0].href, item.children[1].children[0].innerHTML]);
-      arrayText.push(item.children[1].innerHTML);
-    }
-
-    eventListner(openLeft[i], "click", (event) => {
-
-      event.preventDefault();
-      counter[i]--;
-
-      if (counter[i] === - 1) { counter[i] = staticCount.length - 1; }
-
-      iteration(i, arraySrc, arrayHref, arrayText, staticCount, inner, image1, image2, imageFillLeft, imageFillRight, openRight, openLeft, percentage, counter);
-
-      image1[i].classList.add("opacity");
-      imageFillRight[i].classList.add("right");
-    }, null);
-
-    eventListner(openRight[i], "click", (event) => {
-
-      event.preventDefault();
-      counter[i]++;
-
-      if (counter[i] === staticCount.length) { counter[i] = 0; }
-
-      iteration(i, arraySrc, arrayHref, arrayText, staticCount, inner, image1, image2, imageFillLeft, imageFillRight, openRight, openLeft, percentage, counter);
-
-      image2[i].classList.add("opacity");
-      imageFillLeft[i].classList.add("left");
-    }, null);
-
-    image1[i].style.backgroundImage = `url(${arraySrc[0]}`;
-    image1[i].href = arrayHref[0][0];
-    image1[i].innerHTML = '<span class="hidden">' + arrayHref[0][1] + '</span>';
-    image2[i].style.backgroundImage = `url(${arraySrc[1]}`;
-    image2[i].href = arrayHref[1][0];
-    image2[i].innerHTML = '<span class="hidden">' + arrayHref[1][1] + '</span>';
-    imageFillLeft[i].style.backgroundImage = `url(${arraySrc[1]}`;
-    imageFillLeft[i].href = arrayHref[1][0];
-    imageFillLeft[i].innerHTML = '<span class="hidden">' + arrayHref[1][1] + '</span>';
-    imageFillRight[i].style.backgroundImage = `url(${arraySrc[0]}`;
-    imageFillRight[i].href = arrayHref[0][0];
-    imageFillRight[i].innerHTML = '<span class="hidden">' + arrayHref[0][1] + '</span>';
-    inner[i].innerHTML = arrayText[0];
-
-    width.push(percentageCalc(counter, staticCount));
-    counter.push(0);
-
-    percentage[i].style.width = `${width[i]}%`;
+  for (const item of staticCount) {
+    arraySrc.push(item.children[0].src);
+    arrayHref.push([item.children[1].children[0].href, item.children[1].children[0].innerHTML]);
+    arrayText.push(item.children[1].innerHTML);
   }
+  eventListner(openLeft, "click", (event) => {
+
+    event.preventDefault();
+    counter--;
+
+    if (counter === - 1) { counter = staticCount.length - 1; }
+
+    iteration(counter, staticCount, inner, image1, image2, imageFillLeft, imageFillRight, openRight, openLeft, percentage);
+
+    image1.classList.add("opacity");
+    imageFillRight.classList.add("right");
+  }, null);
+
+  eventListner(openRight, "click", (event) => {
+
+    event.preventDefault();
+    counter++;
+
+    if (counter === staticCount.length) { counter = 0; }
+
+    iteration(counter, staticCount, inner, image1, image2, imageFillLeft, imageFillRight, openRight, openLeft, percentage);
+
+    image2.classList.add("opacity");
+    imageFillLeft.classList.add("left");
+  }, null);
+
+  image1.style.backgroundImage = `url(${arraySrc[0]}`;
+  image1.href = arrayHref[0][0];
+  image1.innerHTML = '<span class="hidden">' + arrayHref[0][1] + '</span>';
+  image2.style.backgroundImage = `url(${arraySrc[1]}`;
+  image2.href = arrayHref[1][0];
+  image2.innerHTML = '<span class="hidden">' + arrayHref[1][1] + '</span>';
+  imageFillLeft.style.backgroundImage = `url(${arraySrc[1]}`;
+  imageFillLeft.href = arrayHref[1][0];
+  imageFillLeft.innerHTML = '<span class="hidden">' + arrayHref[1][1] + '</span>';
+  imageFillRight.style.backgroundImage = `url(${arraySrc[0]}`;
+  imageFillRight.href = arrayHref[0][0];
+  imageFillRight.innerHTML = '<span class="hidden">' + arrayHref[0][1] + '</span>';
+  inner.innerHTML = arrayText[0];
+
+  width = percentageCalc(counter, staticCount);
+  percentage.style.width = `${width}%`;
 }
