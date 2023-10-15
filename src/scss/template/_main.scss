@@ -120,7 +120,7 @@ main {
     background-position: top;
     height: fit-content;
     width: 80%;
-    margin: 6% auto;
+    margin: 3% auto 6% auto;
     background-size: cover;
     border-top-right-radius: 25px;
     border-top-left-radius: 5px;
@@ -131,6 +131,7 @@ main {
     min-height: 450px;
     box-sizing: border-box;
     @include ten_24 {
+        margin: 6% auto;
         min-height: initial;
         padding: 20% 0;
         width: calc(65% - 10px);
