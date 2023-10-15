@@ -183,8 +183,7 @@ main {
             width: fit-content;
             transition: color 0.2s ease;
             cursor: pointer;
-            &:hover,
-            &:focus {
+            &:hover {
                 color: $c4;
             }
         }
