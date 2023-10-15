@@ -171,19 +171,19 @@ const Contact = () => {
             <div className="static-count">
               <img src={mail} alt="mail" />
               <div>
-                <a href="mailto:shlooby07@gmail.com">Mail me</a>
+                <a href="mailto:shlooby07@gmail.com" rel="noreferrer" target="_blank">Mail me</a>
               </div>
             </div>
             <div className="static-count">
               <img src={telephone} alt="telephone" />
               <div>
-                <a href="tel:0434-984-983">Phone me</a>
+                <a  href="tel:0434-984-983" rel="noreferrer" target="_blank">Phone me</a>
               </div>
             </div>
             <div className="static-count">
               <img src={linkedin} alt="LinkedIn" />
               <div>
-                <a href="https://www.linkedin.com/in/daniel-costello-579b10259/">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/daniel-costello-579b10259/" rel="noreferrer" target="_blank">LinkedIn</a>
               </div>
             </div>
           </div>
