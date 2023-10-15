@@ -41,10 +41,10 @@ $imgSkills: (
 }
 
 a[target="git"] {
-  color: $c2;
+  color: $c1;
   &:hover,
   &:focus {
-    color: $aHover;
+    color: $c4;
   }
 }
 
