@@ -184,7 +184,9 @@ main {
             transition: color 0.2s ease;
             cursor: pointer;
             &:hover {
-                color: $c4;
+                @include ten_24_min {
+                    color: $c4;
+                }
             }
         }
     }
