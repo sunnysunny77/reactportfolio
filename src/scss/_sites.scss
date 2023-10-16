@@ -145,11 +145,11 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       @include ten_24 {
         font-size: small;
         top: initial;
-        bottom: 0;
+        bottom: 5px;
         left: 0;
         background-color: $c2;
         border-bottom-left-radius: 25px;
-        padding: 0 15px;
+        padding: 5px 15px;
       }
       &:hover,
       &:focus {
