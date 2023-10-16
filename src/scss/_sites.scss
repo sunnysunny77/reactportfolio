@@ -128,7 +128,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       height: 100%;
       box-sizing: border-box;
       @include ten_24 {
-        padding: 25%;
+        padding: 440.750px 0 0 0;
       }
       @include ten_24_660_landscape {
         padding: 12.5%;
