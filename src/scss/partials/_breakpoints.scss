@@ -22,7 +22,7 @@
     }
 }
 
-@mixin four_80_portrait  {
+@mixin four_80_portrait {
     @media only screen and (max-width: 480px) and (orientation: portrait) {
         @content;
     }

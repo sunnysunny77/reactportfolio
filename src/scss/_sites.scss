@@ -32,7 +32,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
     @include ten_24 {
       position: relative;
       width: 95%;
-      height: 120px;
+      height: 150px;
       padding: 5px 0;
       border-radius: 0;
       border-top: 3px solid $c4;
@@ -78,7 +78,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
           display: block;
           margin: 50px 75px;
           @include ten_24 {
-            margin: 15px 10%;
+            margin: 20px 10%;
             width: 55px;
             height: 55px;
           }
@@ -114,35 +114,38 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
     border-bottom-right-radius: 25px;
     @include ten_24 {
       margin: auto;
-      width: 95%;
+      width: calc(95% - 20px);
       height: initial;
       border-top-right-radius: 0;
       border-bottom-left-radius: 25px;
       border-top: 3px solid $c11;
-      padding: 35px;
-      box-sizing: border-box;
+      padding: 10px 10px 30px 10px;
     }
     span {
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
       height: 100%;
+      min-height: 115.188px;
+      box-sizing: border-box;
       @include ten_24 {
-        padding: 17vh 0;
+        padding: 18vh;
       }
       @include four_80_portrait {
         padding: 100% 0 0 0;
       }
+      
     }
     a {
       position: absolute;
       top: 5%;
-      left: 5%;
       color: $c5;
       font-size: large;
       @include ten_24 {
         font-size: small;
-        top: 7.5px;
+        top: initial;
+        left: 15px;
+        bottom: 5px;
       }
       &:hover,
       &:focus {
@@ -164,9 +167,10 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       border-radius: 100%;
       padding: 2.5px 5px;
       @include ten_24 {
+        padding: 1.5px 4px;
         top: initial;
-        right: 10px;
-        bottom: 10px;
+        right: 15px;
+        bottom: 5px;
       }
     }
   }

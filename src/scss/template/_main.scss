@@ -21,6 +21,9 @@ main {
         background-color: $main;
         background-blend-mode: color-burn;
         background-attachment: fixed;
+        @include ten_24 {
+            background-blend-mode: hue;
+        }
     }
     > section {
         display: flex;
