@@ -172,9 +172,9 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       padding: 2.5px 5px;
       @include ten_24 {
         top: initial;
-        right: 10px;
-        bottom: 2.5px;
-        font-size: small;
+        right: 5px;
+        bottom: 5px;
+        font-size: x-small;
         border: none;
         opacity: 1;
         border-radius: initial;
