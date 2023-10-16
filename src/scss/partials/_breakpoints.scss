@@ -22,14 +22,14 @@
     }
 }
 
-@mixin ten_24_landscape {
-    @media only screen and (max-width: 1024px) and (max-height: 500px) and (orientation: landscape) {
+@mixin ten_24_660_landscape {
+    @media only screen and (max-width: 1024px) and (max-height: 660px) and (orientation: landscape) {
         @content;
     }
 }
 
-@mixin four_80_portrait {
-    @media only screen and (max-width: 480px) and (orientation: portrait) {
+@mixin five_0_portrait {
+    @media only screen and (max-width: 500px) and (orientation: portrait) {
         @content;
     }
 }
