@@ -9,7 +9,7 @@ $main: #94b8b8;
 $mainbg: white;
 
 $c1: #EEFFED;
-$c2:rgba(245, 252, 252, 0.875);
+$c2: #f5f5f5;
 $c3: #2E86AB;
 $c4: #F07F31;
 $c5: black;
@@ -19,9 +19,11 @@ $c8: #24b14d;
 $c9: slategrey;
 $c10: darkslategrey;
 $c11: rgba($c10,0.1);
+$c12:rgba(245, 252, 252, 0.875);
+$c13: #f2f2f2;
 
-$heading2: #f5fcfc;
-$heading3: $heading2;
+$heading2: $c2;
+$heading3: $c2;
 $heading4: $c8;
 
 $tempBoarder: rgba($main, 0.4);

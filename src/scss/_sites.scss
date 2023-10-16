@@ -28,11 +28,11 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
     border-bottom-left-radius: 5px;
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;
-    background-blend-mode: multiply;
+    background-blend-mode: darken;
     @include ten_24 {
       position: relative;
       width: 95%;
-      height: 150px;
+      height: 130px;
       padding: 5px 0;
       border-radius: 0;
       border-top: 3px solid $c4;
@@ -78,7 +78,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
           display: block;
           margin: 50px 75px;
           @include ten_24 {
-            margin: 20px 10%;
+            margin: 10px 10%;
             width: 55px;
             height: 55px;
           }
@@ -109,7 +109,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
     position: relative;
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;
-    background-blend-mode: multiply;
+    background-blend-mode: darken;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     @include ten_24 {
@@ -119,7 +119,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       border-top-right-radius: 0;
       border-bottom-left-radius: 25px;
       border-top: 3px solid $c11;
-      padding: 10px 10px 30px 10px;
+      padding: 10px;
     }
     span {
       background-size: contain;
@@ -129,12 +129,11 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       min-height: 115.188px;
       box-sizing: border-box;
       @include ten_24 {
-        padding: 18vh;
+        padding: 22vh;
       }
       @include four_80_portrait {
         padding: 100% 0 0 0;
       }
-      
     }
     a {
       position: absolute;
@@ -144,8 +143,11 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       @include ten_24 {
         font-size: small;
         top: initial;
-        left: 15px;
-        bottom: 5px;
+        bottom: 0;
+        left: 0;
+        background-color: $c2;
+        border-bottom-left-radius: 25px;
+        padding: 0 15px;
       }
       &:hover,
       &:focus {
@@ -167,10 +169,15 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       border-radius: 100%;
       padding: 2.5px 5px;
       @include ten_24 {
-        padding: 1.5px 4px;
         top: initial;
-        right: 15px;
-        bottom: 5px;
+        right: 10px;
+        bottom: 2.5px;
+        font-size: small;
+        border: none;
+        opacity: 1;
+        border-radius: initial;
+        border-bottom-right-radius: 25px;
+        background-color: $c2;
       }
     }
   }

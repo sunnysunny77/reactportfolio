@@ -8,9 +8,9 @@ html {
 
 body {
   font-family: $font;
-  background-color: $mainbg;
+  background-color: $c12;
   background-image: url(../../images/template/natural-paper.png);
-  background-blend-mode: darken;
+  background-blend-mode: multiply;
   overflow-y: scroll;
   @include ten_24 {
     margin: auto;

@@ -22,7 +22,7 @@ main {
         background-blend-mode: color-burn;
         background-attachment: fixed;
         @include ten_24 {
-            background-blend-mode: hue;
+            background-blend-mode: color;
         }
     }
     > section {
@@ -38,7 +38,7 @@ main {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     background-image: url(../../images/template/natural-paper.png);
-    background-blend-mode: multiply;
+    background-blend-mode: darken;
     background-color: $c2;
     padding: 50px;
     @include ten_24 {
@@ -66,7 +66,7 @@ main {
     border-bottom-right-radius: 25px;
     background-image: url(../../images/template/natural-paper.png);
     background-color: $c2;
-    background-blend-mode: multiply;
+    background-blend-mode: darken;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -118,7 +118,7 @@ main {
     background-image: url(../../images/template/tempimg.jpg);
     background-color: $c3;
     background-blend-mode: difference;
-    border: 20px solid $c2;
+    border: 20px solid $c13;
     background-repeat: no-repeat;
     background-position: top;
     height: fit-content;
