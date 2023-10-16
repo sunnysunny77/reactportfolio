@@ -170,6 +170,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       opacity: 0.15;
       border-radius: 100%;
       padding: 2.5px 5px;
+      color: $c5;
       @include ten_24 {
         top: initial;
         right: 5px;
