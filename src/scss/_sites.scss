@@ -126,10 +126,12 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       background-repeat: no-repeat;
       background-position: center;
       height: 100%;
-      min-height: 115.188px;
       box-sizing: border-box;
       @include ten_24 {
-        padding: 22vh;
+        padding: 25%;
+      }
+      @include ten_24_landscape {
+        padding: 12.5%;
       }
       @include four_80_portrait {
         padding: 100% 0 0 0;
