@@ -78,9 +78,9 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
           display: block;
           margin: 50px 75px;
           @include ten_24 {
-            margin: 10px 10%;
-            width: 55px;
-            height: 55px;
+            margin: 15px 10%;
+            width: 40px;
+            height: 40px;
           }
         }
         ol li {
@@ -130,8 +130,8 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       @include ten_24 {
         padding: 440.750px 0 0 0;
       }
-      @include ten_24_660_landscape {
-        padding: 12.5%;
+      @include ten_24_630_landscape {
+        padding: calc(100vh - 180px) 0 0 0;
       }
       @include five_0_portrait {
         padding: 100% 0 0 0;
