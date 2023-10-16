@@ -151,15 +151,15 @@ main {
     .circle-progress,
     p {
         display: flex;
-        border-radius: 25px;
+        border-radius: 5px;
         flex-direction: column;
         justify-content: flex-end;
         color: $c2;
         position: absolute;
         top: 2%;
-        right: 2%;
+        right: 1%;
         bottom: 2%;
-        left: 2%;
+        left: 1%;
         margin: initial;
         transition:
             background-color 0.75s linear,
@@ -168,9 +168,6 @@ main {
             right 0.75s linear,
             bottom 0.75s linear,
             left 0.75s linear;
-        @include seven_20_portrait {
-            border-radius: 10px;
-        }
         .template-b {
             margin: auto auto 5% 5%;
             color: $c3;
