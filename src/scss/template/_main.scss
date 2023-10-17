@@ -6,6 +6,9 @@ main {
     flex-direction: column;
     min-height: calc(100vh - 290px);
     justify-content: center;
+    @include nineteen_21 {
+        min-height: 700px;
+    }
     @include ten_24 {
         justify-content: initial;
         min-height: calc(100vh - 192px);
@@ -130,12 +133,15 @@ main {
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
     position: relative;
-    padding: 25vh 0;
+    height: 50vh;
     min-height: 450px;
+    max-height: 600px;
     box-sizing: border-box;
     @include ten_24 {
         margin: 6% auto;
+        height: initial;
         min-height: initial;
+        max-height: initial;
         padding: 18% 0;
         width: 65%;
         border-top-right-radius: 5px;
