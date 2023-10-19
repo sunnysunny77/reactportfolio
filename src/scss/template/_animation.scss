@@ -17,14 +17,14 @@ h2::before {
 }
 
 .template-img-0 .circle-progress .left {
-  @include ten_24_min {
+  @include nine_92_min {
     animation: leftcompact 0.75s;
     animation-fill-mode: forwards;
   }
 }
 
 .template-img-0 .circle-progress .right {
-  @include ten_24_min {
+  @include nine_92_min {
     animation: rightcompact 0.75s;
     animation-fill-mode: forwards;
   }
@@ -43,13 +43,13 @@ h2::before {
 }
 
 .ani2 {
-  @include ten_24 {
+  @include nine_92 {
     animation: fadeInBack 0.75s ease-in;
   }
 }
 
 .ani3 {
-  @include ten_24 {
+  @include nine_92 {
     animation: scale3 0.75s ease-in;
   }
 }

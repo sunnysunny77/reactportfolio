@@ -17,12 +17,12 @@
       border: none;
       padding: 0;
       margin: 0;
-      @include ten_24 {
+      @include nine_92 {
         padding: 0 5%;
       }
       legend {
         padding: 0;
-        margin: 0;
+        margin: 0 0 25px 0;
       }
       ul {
         padding: 0;
@@ -34,7 +34,7 @@
           padding-bottom: 50px;
           &:nth-child(1) {
             padding-right: 2%;
-            @include ten_24 {
+            @include nine_92 {
               padding-right: initial;
             }
           }
@@ -42,7 +42,7 @@
           &:nth-child(2) {
             width: 49%;
             display: inline-block;
-            @include ten_24 {
+            @include nine_92 {
               width: 100%;
             }
           }
@@ -87,7 +87,7 @@
     }
     .msg {
       color: $c7;
-      font-size: 0.825rem;
+      font-size: 0.75rem;
       padding-left: 2.5px;
       display: block;
     }
@@ -122,7 +122,7 @@
     width: 20px;
     height: 20px;
     &:hover {
-      @include ten_24_min {
+      @include nine_92_min {
         opacity: 0.5;
       }
     }
@@ -141,7 +141,7 @@
     margin: auto 12.5% auto 12.5%;
     padding: 15%;
     height: initial;
-    @include ten_24_min {
+    @include nine_92_min {
       position: absolute;
       margin: initial;
       z-index: -1;
@@ -153,7 +153,7 @@
     z-index: 0;
     position: relative;
     display: none;
-    @include ten_24_min {
+    @include nine_92_min {
       display: block;
     }
   }
@@ -163,7 +163,7 @@
     opacity: 0;
     position: absolute;
     display: none;
-    @include ten_24_min {
+    @include nine_92_min {
       display: block;
     }
   }
@@ -172,14 +172,14 @@
     z-index: 0;
     position: absolute;
     display: none;
-    @include ten_24_min {
+    @include nine_92_min {
       display: block;
     }
   }
   .inner {
     margin: auto;
     width: 50%;
-    @include ten_24_min {
+    @include nine_92_min {
       width: 100%;
       margin: auto auto auto 2%;
     }

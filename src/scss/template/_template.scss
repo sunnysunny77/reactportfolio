@@ -12,7 +12,7 @@ body {
   background-image: url(../../images/template/natural-paper.png);
   background-blend-mode: multiply;
   overflow-y: scroll;
-  @include ten_24 {
+  @include nine_92 {
     margin: auto;
   }
 }
@@ -47,12 +47,12 @@ h2 {
   color: $heading3;
   font-size: 1.4em;
   position: relative;
-  @include ten_24_min {
+  @include nine_92_min {
     &.heading {
       margin-top: 50px;
     }
   }
-  @include ten_24 {
+  @include nine_92 {
     height: 27px;
     font-size: large;
     margin: 25px auto 25px 5%;

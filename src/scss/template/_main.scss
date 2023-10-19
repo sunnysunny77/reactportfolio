@@ -9,7 +9,7 @@ main {
     @include nineteen_21 {
         min-height: 700px;
     }
-    @include ten_24 {
+    @include nine_92 {
         justify-content: initial;
         min-height: calc(100vh - 192px);
     }
@@ -24,7 +24,7 @@ main {
         background-color: $main;
         background-blend-mode: color-burn;
         background-attachment: fixed;
-        @include ten_24 {
+        @include nine_92 {
             background-blend-mode: color;
         }
     }
@@ -43,7 +43,7 @@ main {
     background-blend-mode: darken;
     background-color: $c2;
     padding: 0 50px;
-    @include ten_24 {
+    @include nine_92 {
         margin: auto auto 50px auto;
         width: 160px;
         height: 160px;
@@ -74,7 +74,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    @include ten_24 {
+    @include nine_92 {
         width: 100%;
         height: 50vh;
         min-height: 170px;
@@ -91,7 +91,7 @@ main {
         font-size: large;
         word-wrap: break-word;
         overflow: hidden;
-        @include ten_24 {
+        @include nine_92 {
             text-align: center;
             font-size: medium;
             padding: 0 10px;
@@ -111,7 +111,7 @@ main {
     margin: 25px auto;
     padding: 13px 0;
     opacity: 0.5;
-    @include ten_24 {
+    @include nine_92 {
         width: 60%;
         padding: 3% 0;
         margin: 21vh auto 25px auto;
@@ -138,7 +138,7 @@ main {
     min-height: 450px;
     max-height: 600px;
     box-sizing: border-box;
-    @include ten_24 {
+    @include nine_92 {
         margin: 6% auto;
         height: initial;
         min-height: initial;
@@ -188,7 +188,7 @@ main {
             transition: color 0.2s ease;
             cursor: pointer;
             &:hover {
-                @include ten_24_min {
+                @include nine_92_min {
                     color: $c4;
                 }
             }
