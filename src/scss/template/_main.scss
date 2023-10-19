@@ -64,7 +64,7 @@ main {
 .template-p-cont {
     height: 37vh;
     max-height: 350px;
-    min-height: 195px;
+    min-height: 205px;
     width: calc(80% - 350px);
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -122,7 +122,7 @@ main {
     background-image: url(../../images/template/tempimg.jpg);
     background-color: $c3;
     background-blend-mode: difference;
-    border: 20px solid $c13;
+    border: 20px solid $c2;
     background-repeat: no-repeat;
     background-position: top;
     height: fit-content;

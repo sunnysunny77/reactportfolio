@@ -24,8 +24,8 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
   #s4 {
     height: 37vh;
     max-height: 350px;
-    min-height: 195px;
-    width: calc(80% - 360px);
+    min-height: 205px;
+    width: calc(80% - 350px);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     background-image: url(../images/template/natural-paper.png);
@@ -115,7 +115,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
   }
 
   #s5 {
-    width: 300px;
+    width: 290px;
     padding: 30px;
     position: relative;
     background-image: url(../images/template/natural-paper.png);
@@ -175,18 +175,18 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       background: transparent;
       position: absolute;
       top: 7.5px;
-      right: 12.5px;
+      right: 10px;
       opacity: 0.15;
       border-radius: 100%;
       padding: 2.5px 4px;
       color: $c5;
       border: 1px solid;
-      font-size: x-small;
+      font-size: xx-small;
       @include nine_92 {
         top: initial;
         border: none;
         right: 5px;
-        bottom: 5px;
+        bottom: 3px;
         opacity: 1;
         border-radius: initial;
         border-bottom-right-radius: 25px;
