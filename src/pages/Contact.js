@@ -103,6 +103,7 @@ const Contact = () => {
             <form onSubmit={validation} id="contact-form">
               <fieldset>
                 <legend>Email Us:</legend>
+                <br />
                 <ul>
                   <li>
                     <label htmlFor="name">Names:</label>

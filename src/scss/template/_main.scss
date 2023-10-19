@@ -37,13 +37,12 @@ main {
 
 .template-img-cont {
     width: 250px;
-    height: 250px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     background-image: url(../../images/template/natural-paper.png);
     background-blend-mode: darken;
     background-color: $c2;
-    padding: 50px;
+    padding: 0 50px;
     @include ten_24 {
         margin: auto auto 50px auto;
         width: 160px;
@@ -63,7 +62,9 @@ main {
 }
 
 .template-p-cont {
-    height: 350px;
+    height: 50vh;
+    max-height: 350px;
+    min-height: 190px;
     width: calc(80% - 350px);
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -83,7 +84,7 @@ main {
         position: relative;
     }
     .template-p {
-        height: 40%;
+        height: 150px;
         padding: 0 40px;
         color: $c3;
         text-align: right;
@@ -94,7 +95,6 @@ main {
             text-align: center;
             font-size: medium;
             padding: 0 10px;
-            height: 150px;
         }
         p {
             margin: initial;
