@@ -81,12 +81,18 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
           margin: 7vh 0 110px 20%;
           width: 12vh;
           height: 12vh;
+          min-width: 75px;
+          min-height: 75pxpx;
           max-width: 100px;
           max-height: 100px;
           @include nine_92 {
             margin: 15px 10%;
             width: 40px;
             height: 40px;
+            min-width: initial;
+            min-height: initial;
+            max-width: initial;
+            max-height: initial;
           }
         }
         ol li {
