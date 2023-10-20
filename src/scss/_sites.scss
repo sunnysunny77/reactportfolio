@@ -155,11 +155,13 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       font-size: 12.5px;
       @include nine_92 {
         top: initial;
+        font-size: 10.5px;
         background-color: $c2;
         bottom: 0;
         left: 0;
         border-bottom-left-radius: 25px;
         padding: 5px 15px;
+        line-height: 20px;
       }
       &:hover,
       &:focus {

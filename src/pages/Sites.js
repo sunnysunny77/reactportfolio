@@ -168,7 +168,7 @@ const Sites = () => {
           </span>
           <span role="img" className="sitesImg" aria-label="site 2" id="s53" style={{ display: "none" }}>
             <a target="fas" href="https://www.fasera.com/">
-              Fasera.com
+              fasera.com
             </a>
           </span>
           <span role="img" className="sitesImg" aria-label="site 3" id="s54" style={{ display: "none" }}>
