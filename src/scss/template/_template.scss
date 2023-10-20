@@ -59,7 +59,7 @@ main {
   min-height: calc(100vh - 290px);
   justify-content: space-around;
   @include nineteen_21 {
-      min-height: 575px;
+      min-height: 750px;
   }
   @include nine_92 {
       justify-content: initial;
