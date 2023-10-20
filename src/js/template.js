@@ -23,11 +23,11 @@ export const start = () => {
     if (!menu0.classList.contains("disp")) {
 
       const button = document.querySelector(".click");
-      menu0.classList.remove("ani1");
+      menu0.classList.remove("slideIn1");
       menu0.classList.add("disp");
-      menu0.classList.add("ani5");
-      button.classList.remove("ani");
-      button.classList.add("ani6");
+      menu0.classList.add("slideIn2");
+      button.classList.remove("scale1");
+      button.classList.add("scale2");
     }
   }
 }
@@ -46,19 +46,19 @@ export const toggle = (event) => {
 
   const menu0 = document.querySelector(".menu0");
 
-  if (menu0.classList.contains("ani1")) {
+  if (menu0.classList.contains("slideIn1")) {
 
-    menu0.classList.add("ani5");
-    event.target.classList.add("ani6");
-  } else if (menu0.classList.contains("ani5")) {
+    menu0.classList.add("slideIn2");
+    event.target.classList.add("scale2");
+  } else if (menu0.classList.contains("slideIn2")) {
 
-    menu0.classList.remove("ani5");
-    event.target.classList.remove("ani6");
+    menu0.classList.remove("slideIn2");
+    event.target.classList.remove("scale2");
   }
 
-  event.target.classList.toggle("ani");
+  event.target.classList.toggle("scale1");
   menu0.classList.toggle("disp");
-  menu0.classList.toggle("ani1");
+  menu0.classList.toggle("slideIn1");
 
   if (!menu0.classList.contains("disp")) {
     vivus();

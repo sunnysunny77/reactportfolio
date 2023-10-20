@@ -32,8 +32,8 @@ const iteration = (counter, arraySrc, arrayHref, arrayText, staticCount, inner, 
 
   setTimeout(() => {
 
-    imageFillLeft.classList.remove("left");
-    imageFillRight.classList.remove("right");
+    imageFillLeft.classList.remove("leftcompact");
+    imageFillRight.classList.remove("rightcompact");
 
     setTimeout(() => {
 
@@ -131,7 +131,7 @@ export const circleInit = () => {
     iteration(counter, arraySrc, arrayHref, arrayText, staticCount, inner, image1, image2, imageFillLeft, imageFillRight, openRight, openLeft, percentage);
 
     image1.classList.add("opacity");
-    imageFillRight.classList.add("right");
+    imageFillRight.classList.add("rightcompact");
   }, null);
 
   eventListner(openRight, "click", (event) => {
@@ -144,7 +144,7 @@ export const circleInit = () => {
     iteration(counter, arraySrc, arrayHref, arrayText, staticCount, inner, image1, image2, imageFillLeft, imageFillRight, openRight, openLeft, percentage);
 
     image2.classList.add("opacity");
-    imageFillLeft.classList.add("left");
+    imageFillLeft.classList.add("leftcompact");
   }, null);
 
   image1.style.backgroundImage = `url(${arraySrc[0]}`;

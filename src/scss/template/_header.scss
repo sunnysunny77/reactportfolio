@@ -49,9 +49,7 @@ header {
     nav {
         width: 67%;
         @include nine_92 {
-            transition: height;
             width: 100%;
-            height: 209px;
             overflow: hidden;
             &.disp {
                 height: 0;
@@ -104,9 +102,9 @@ header {
                     &::after {
                         content: "";
                         position: absolute;
-                        top: 95%;
+                        top: 94%;
                         right: 0;
-                        bottom: 2.5%;
+                        bottom: 0%;
                         left: 0;
                         background-color: $aHover;
                         width: 0;

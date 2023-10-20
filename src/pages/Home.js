@@ -15,12 +15,12 @@ const Home = () => {
             role="img"
             aria-label="house icon"
             id="home-template-img"
-            className="template-img ani3">
+            className="template-img scale3">
           </div>
         </div>
         <div className="template-p-cont">
           <PageScroll>
-            <div ref={ref} className="template-p ani2">
+            <div ref={ref} className="template-p fadeInBack">
               <p>
                 <br />
                 <br />

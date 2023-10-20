@@ -1,39 +1,4 @@
-/* MAIN */
-
-main {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-height: calc(100vh - 290px);
-    justify-content: center;
-    @include nineteen_21 {
-        min-height: 575px;
-    }
-    @include nine_92 {
-        justify-content: initial;
-        min-height: calc(100vh - 192px);
-    }
-    #after {
-        background-image: url(../../images/template/handmade-paper.png);
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        position: absolute;
-        z-index: -999;
-        background-color: $main;
-        background-blend-mode: color-burn;
-        background-attachment: fixed;
-        @include nine_92 {
-            background-blend-mode: color;
-        }
-    }
-    > section {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
+/* BODY */
 
 .template-img-cont {
     width: 250px;
@@ -152,14 +117,13 @@ main {
         border-radius: 0;
         width: 100%;
         padding: 31% 0;
-        border-top: 3px solid $c2;
+        border-top: 3px solid $mainbg;
         border-right: initial;
         border-bottom: initial;
         border-left: initial;
         margin: auto;
     }
-    .circle-progress,
-    p {
+    .template-shrink {
         display: flex;
         border-radius: 5px;
         flex-direction: column;
@@ -180,13 +144,15 @@ main {
             left 0.75s linear;
         .template-b {
             margin: auto auto 5% 5%;
+            font-family: inherit;
             color: $c3;
             background-color: $c2;
             padding: 1% 2%;
             border-radius: 5px;
-            width: fit-content;
-            transition: color 0.2s ease;
-            cursor: pointer;
+            border: none;
+            font-size: inherit;
+            font-weight: 700;
+            transition: color 0.75s ease;
             &:hover {
                 @include nine_92_min {
                     color: $c4;

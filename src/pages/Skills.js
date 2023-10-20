@@ -15,12 +15,12 @@ const Skills = () => {
             role="img"
             aria-label="info icon"
             id="skills-template-img"
-            className="template-img ani3">
+            className="template-img scale3">
           </div>
         </div>
         <div className="template-p-cont">
           <PageScroll>
-            <div ref={ref} className="template-p ani2">
+            <div ref={ref} className="template-p fadeInBack">
               <p>
                 &bull; HTML - JavaScript - CSS - SASS
                 <br />
@@ -204,11 +204,11 @@ const Skills = () => {
         </div>
       </section>
       <div role="img" aria-label="glowing keyboard" id="skills-template-img-0" className="template-img-0">
-        <p>
+        <p className="template-shrink">
           <a target="git" href="https://github.com/sunnysunny77">
           github.com <i className="far fa-heart"></i>
           </a>
-          <b className='template-b' onClick={click}>View code ..</b>
+          <button className='template-b' onClick={click}>View code ..</button>
         </p>
       </div>
     </>

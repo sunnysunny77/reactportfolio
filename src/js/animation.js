@@ -6,9 +6,9 @@ export const click = (event) => {
 
   const obj = document.querySelector(".template-img-0");
 
-  obj.classList.toggle("ani4");
+  obj.classList.toggle("shrink");
 
-  if (obj.classList.contains("ani4")) {
+  if (obj.classList.contains("shrink")) {
 
     inner = event.target.innerHTML;
     event.target.innerHTML = "Close";
@@ -35,7 +35,7 @@ export const animation = () => {
         if (tempImg0 && stopbool && scroll_pos > getPosition(tempImg0) + tempImg0.clientHeight + Number(window.getComputedStyle(tempImg0).getPropertyValue("border-bottom-width").slice(0, -2))) {
           stopbool = false;
           setTimeout(() => {
-            tempImg0.classList.add("ani4");
+            tempImg0.classList.add("shrink");
             tempB.innerHTML = "Close";
           }, 750);
         }

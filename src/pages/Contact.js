@@ -95,11 +95,11 @@ const Contact = () => {
             role="img"
             aria-label="phone icon"
             id="contact-template-img"
-            className="template-img ani3">
+            className="template-img scale3">
           </div>
         </div>
         <div className="template-p-cont">
-          <div id="overlay" className="template-p ani2">
+          <div id="overlay" className="template-p fadeInBack">
             <form onSubmit={validation} id="contact-form">
               <fieldset>
                 <legend>Email Us:</legend>
@@ -159,7 +159,7 @@ const Contact = () => {
         </div>
       </section>
       <div role="img" aria-label="email notifications" id="contact-template-img-0" className="template-img-0">
-        <div className="circle-progress">
+        <div className="circle-progress template-shrink">
           <div className="slider slider-count">
             <button aria-label="open-left" className="button-next open-left"></button>
             <a href="mailto:shlooby07@gmail.com" rel="noreferrer" target="_blank" className="a image-1"><span className='hidden'>Mail me</span></a>
@@ -188,7 +188,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="percentage"><div className="percentage-change"></div></div>
-          <b className='template-b'  onClick={click}>Get in touch ..</b>
+          <button onClick={click} className='template-b'>Get in touch ..</button>
         </div>
       </div>
     </>

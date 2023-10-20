@@ -20,9 +20,9 @@ const pictureDisplay = (item) => {
         if (obj.id === item) {
             if (window.getComputedStyle(obj).getPropertyValue("display") === "none") {
                 obj.style.display = "block";
-                obj.classList.add("an");
+                obj.classList.add("fadeInOpacity");
                 setTimeout(() => {
-                    obj.classList.remove("an");
+                    obj.classList.remove("fadeInOpacity");
                 }, 750);
             }
         } else {

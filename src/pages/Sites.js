@@ -19,11 +19,11 @@ const Sites = () => {
             role="img"
             aria-label="light bulb icon"
             id="sites-template-img"
-            className="template-img ani3">
+            className="template-img scale3">
           </div>
         </div>
         <div id="s4">
-          <div id="ob0" className="ani2">
+          <div id="ob0" className="fadeInBack">
             <ul id="ob0ul">
               <li>
                 Scroll preview
@@ -160,7 +160,7 @@ const Sites = () => {
           </div>
         </div>
         <div id="s5">
-          <span id="s51" role="img" className="sitesImg ani2" aria-label="site default"></span>
+          <span id="s51" role="img" className="sitesImg fadeInBack" aria-label="site default"></span>
           <span role="img" className="sitesImg" aria-label="site 1" id="s52" style={{ display: "none" }}>
             <a target="furniture" href="https://furniture.sunnyhome.site/">
               furniture.sunnyhome

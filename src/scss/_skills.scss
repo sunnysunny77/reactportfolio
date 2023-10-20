@@ -40,7 +40,7 @@ $imgSkills: (
   background-image: url(../images/skills/skills.png);
 }
 
-.template-img-0 p a[target="git"] {
+a[target="git"] {
   margin: 5% auto auto 5%;
   opacity: 0;
   transition: opacity 0.75s linear;

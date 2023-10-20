@@ -7,20 +7,20 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
   }
 }
 
-#site-img {
-  display: none;
-  @include nine_92 {
-    display: block;
-  }
-  #sites-template-img {
-    background-image: url(../images/sites/site.png);
-  }
+#sites-template-img {
+  background-image: url(../images/sites/site.png);
 }
 
 /* Scroll */
 
 #site {
   position: relative;
+  #site-img {
+    display: none;
+    @include nine_92 {
+      display: block;
+    }
+  }  
   #s4 {
     height: 37vh;
     max-height: 350px;
@@ -71,6 +71,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
           padding: 0;
           li ol {
             padding-left: 20px;
+            padding-right: 20px;
           }
           li ol li h3 a {
             font-size: initial;
@@ -99,11 +100,10 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
         }
         ol li {
           padding-top: 20px;
-          padding-right: 20px;
           h3 {
             margin: 5% 0;
             a {
-              color: $heading4;
+              color: $heading2;
               text-decoration: none;
               font-size: x-large;
               &:hover,

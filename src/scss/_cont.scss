@@ -5,13 +5,13 @@
 #overlay {
   text-align: initial;
   form {
+    color: $c3;
     .os-host-textarea {
       font: inherit;
       margin: 5px 0 0 0;
       font-size: inherit;
       border: 1px solid $c3;
       border-bottom-right-radius: 5px;
-      color: $c3;
     }
     fieldset {
       border: none;
@@ -60,9 +60,9 @@
       margin: 5px 0 0 0;
       border-bottom-right-radius: 5px;
       font: inherit;
+      color: inherit;
       background-color: transparent;
       border: 1px solid $c3;
-      color: $c3;
       outline: none;
       &::placeholder {
         color: $c3;
@@ -94,7 +94,7 @@
   }
 }
 
-.template-img-0 .circle-progress .slider {
+.slider {
   height: 100%;
   width: 90%;
   margin: auto;
