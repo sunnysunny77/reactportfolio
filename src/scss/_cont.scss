@@ -121,6 +121,8 @@
     background-repeat: no-repeat;
     width: 20px;
     height: 20px;
+    opacity: 1;
+    transition: opacity 0.75s ease;
     &:hover {
       @include nine_92_min {
         opacity: 0.5;
