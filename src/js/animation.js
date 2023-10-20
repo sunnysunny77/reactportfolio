@@ -32,7 +32,7 @@ export const animation = () => {
     if (!cached) {
       setTimeout(() => {
         let scroll_pos = window.scrollY + window.innerHeight;
-        if (tempImg0 && stopbool && scroll_pos > getPosition(tempImg0) + tempImg0.clientHeight + Number(window.getComputedStyle(tempImg0).getPropertyValue("border-bottom-width").slice(0, -2))) {
+        if (tempImg0 && stopbool && scroll_pos > getPosition(tempImg0) + tempImg0.offsetHeight) {
           stopbool = false;
           setTimeout(() => {
             tempImg0.classList.add("shrink");
