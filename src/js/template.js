@@ -1,5 +1,10 @@
 import Vivus from "vivus";
 
+const vivus = () => {
+
+  new Vivus("my-svg");
+}
+
 export const start = () => {
 
   const after = document.querySelector("#after");
@@ -8,7 +13,7 @@ export const start = () => {
     after.style.animationName = "";
   }, 0);
 
-  if (window.innerWidth > 1024 ) {
+  if (window.innerWidth > 992 ) {
 
     const logo = document.querySelector("#logo");
 
@@ -16,6 +21,8 @@ export const start = () => {
     setTimeout(() => {
       logo.style.animationName = "";
     }, 0);
+    
+    vivus();
   } else {
     
     const menu0 = document.querySelector(".menu0");
@@ -35,11 +42,6 @@ export const start = () => {
 export const top = () => {
 
   window.scrollTo(0, 0)
-}
-
-export const vivus = () => {
-
-  new Vivus("my-svg");
 }
 
 export const toggle = (event) => {

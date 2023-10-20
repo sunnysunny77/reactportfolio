@@ -1,5 +1,5 @@
 import { Outlet, NavLink, Link, useNavigate } from "react-router-dom";
-import { toggle, top, start, vivus } from '../js/template.js';
+import { toggle, top, start } from '../js/template.js';
 import { useEffect } from 'react';
 import { animation } from '../js/animation.js';
 
@@ -11,7 +11,6 @@ const Layout = () => {
 
         start();
         animation();
-        vivus();
     }, [navigate]);
     return (
         <>
