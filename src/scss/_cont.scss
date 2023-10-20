@@ -186,6 +186,7 @@
       margin: auto auto auto 2%;
     }
     a {
+      transition: color 0.75s ease;
       color: $c1;
       text-decoration: none;
       &:hover,
