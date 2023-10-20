@@ -185,8 +185,9 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       @include nine_92 {
         top: initial;
         border: none;
-        right: 5px;
-        bottom: 3px;
+        font-size: small;
+        right: 8px;
+        bottom: 4px;
         opacity: 1;
         border-radius: initial;
         border-bottom-right-radius: 25px;
