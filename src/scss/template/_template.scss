@@ -12,14 +12,22 @@ body {
   background-image: url(../../images/template/natural-paper.png);
   background-blend-mode: multiply;
   overflow-y: scroll;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 8px;
   @include nine_92 {
-    margin: auto;
+    padding: 0;
   }
 }
 
 .outer {
   max-width: 1200px;
-  margin: auto;
+  width: 100%;
 }
 
 .hidden {

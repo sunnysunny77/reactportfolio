@@ -67,7 +67,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
         padding: 0 7px 0 40px;
         list-style-type: none;
         @include nine_92 {
-          width: 87%;
+          width: 100%;
           padding: 0;
           li ol {
             padding-left: 20px;
@@ -78,25 +78,28 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
         }
         li img {
           display: block;
-          margin: 7vh 0 110px 20%;
+          margin-left: 5%;
+          padding-top: 17px;
           width: 12vh;
           height: 12vh;
-          min-width: 70px;
-          min-height: 70px;
+          min-width: 60px;
+          min-height: 60px;
           max-width: 100px;
           max-height: 100px;
           @include nine_92 {
-            margin: 15px 10%;
-            width: 40px;
-            height: 40px;
-            min-width: initial;
-            min-height: initial;
-            max-width: initial;
-            max-height: initial;
+            margin-left: 0;
+            width: 60px;
+            height: 60px;
+          }
+        }
+        ol li:nth-child(1) {
+          @include nine_92_min {
+            padding-top: min(16vh, 175px);
           }
         }
         ol li {
           padding-top: 20px;
+          padding-right: 20px;
           h3 {
             margin: 5% 0;
             a {
@@ -139,7 +142,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       background-repeat: no-repeat;
       box-sizing: border-box;
       @include nine_92 {
-        padding: 440.750px 0 0 0;
+        padding: 440.75px 0 0 0;
       }
       @include nine_92_630_landscape {
         padding: calc(100vh - 180px) 0 0 0;
