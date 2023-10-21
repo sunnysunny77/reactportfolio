@@ -4,7 +4,9 @@
 
 #overlay {
   text-align: initial;
-  padding: 0 20px;
+  @include nine_92 {
+    padding: 0 10px;
+  }
   form {
     color: $c3;
     .os-host-textarea {
