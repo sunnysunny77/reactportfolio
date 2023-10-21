@@ -4,16 +4,11 @@
 
 #overlay {
   text-align: initial;
-  width: 100%;
-  box-sizing: border-box;
+  padding: 0 20px;
   form {
-    width: 100%;
-    box-sizing: border-box;
     color: $c3;
     .os-host-textarea {
-      font: inherit;
-      margin: 5px 0 0 0;
-      font-size: inherit;
+      box-sizing: border-box;
       border: 1px solid $c3;
       border-bottom-right-radius: 5px;
     }
@@ -21,9 +16,6 @@
       border: none;
       padding: 0;
       margin: 0;
-      @include nine_92 {
-        padding: 0 5%;
-      }
       legend {
         padding: 0;
         margin: 0 0 25px 0;
@@ -33,13 +25,12 @@
         margin: 0;
         list-style-type: none;
         li {
-          margin: auto;
-          width: 100%;
+          box-sizing: border-box;
           padding-bottom: 50px;
           &:nth-child(1) {
-            padding-right: 2%;
+            margin-right: 2%;
             @include nine_92 {
-              padding-right: initial;
+              margin-right: initial;
             }
           }
           &:nth-child(1),
@@ -49,6 +40,9 @@
             @include nine_92 {
               width: 100%;
             }
+          }
+          &:last-child {
+            
           }
         }
       }
@@ -80,7 +74,7 @@
       margin: 0 auto;
     }
     #sub {
-      width: auto;
+      width: fit-content;
       cursor: pointer;
       display: block;
       margin: auto;
