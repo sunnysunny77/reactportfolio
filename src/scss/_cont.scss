@@ -4,7 +4,11 @@
 
 #overlay {
   text-align: initial;
+  width: 100%;
+  box-sizing: border-box;
   form {
+    width: 100%;
+    box-sizing: border-box;
     color: $c3;
     .os-host-textarea {
       font: inherit;
@@ -56,7 +60,8 @@
     input {
       width: 100%;
       font-style: inherit;
-      padding: 0 0 2px 1px;
+      box-sizing: border-box;
+      padding: 2px;
       margin: 5px 0 0 0;
       border-bottom-right-radius: 5px;
       font: inherit;
