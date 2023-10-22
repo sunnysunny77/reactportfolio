@@ -27,7 +27,7 @@ const Contact = () => {
     const nameObj = event.target.name;
     const phoneObj = event.target.phone;
     const emailObj = event.target.email;
-    const messageObj = event.target.children[4].querySelector(".os-host-textarea");
+    const messageObj = document.querySelector(".os-host-textarea");
     const sub = event.target.children[6];
 
     if (/^[ '.a-z-]{2,40}$/i.test(name)) {
