@@ -176,7 +176,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
     #s51 {
       display: block;
       @include nine_92 {
-        background-size: 190px;
+        background-size: auto 50%;
       }
     }
     #close {
