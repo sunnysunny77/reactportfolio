@@ -175,6 +175,9 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
     }
     #s51 {
       display: block;
+      @include nine_92 {
+        background-size: 190px;
+      }
     }
     #close {
       outline: none;
@@ -193,7 +196,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
         top: initial;
         border: none;
         font-size: small;
-        right: 8px;
+        right: 7px;
         bottom: 4px;
         opacity: 1;
         border-radius: initial;
