@@ -22,8 +22,8 @@
     }
 }
 
-@mixin three_20_portrait {
-    @media only screen and (max-width: 320px) and (orientation: portrait) {
+@mixin two_40_portrait {
+    @media only screen and (max-width: 240px) and (orientation: portrait) {
         @content;
     }
 }

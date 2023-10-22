@@ -94,8 +94,8 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
           @include nine_92 {
             padding: 22.5px 0 0 0;
             margin-left: 0;
-            min-width: initial;
-            min-height: initial;
+            min-width: 25px;
+            min-height: 25px;
             max-width: 50px;
             max-height: 50px;
           }
@@ -156,7 +156,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       @include five_0_portrait {
         padding: 100% 0 0 0;
       }
-      @include three_20_portrait {
+      @include two_40_portrait {
         padding: 70% 0 0 0;
       }
     }
