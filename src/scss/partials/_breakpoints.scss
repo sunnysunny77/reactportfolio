@@ -22,8 +22,8 @@
     }
 }
 
-@mixin four_80 {
-    @media only screen and (max-width: 480px) {
+@mixin three_20_portrait {
+    @media only screen and (max-width: 320px) and (orientation: portrait) {
         @content;
     }
 }
