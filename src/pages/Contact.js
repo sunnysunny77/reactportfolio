@@ -27,8 +27,8 @@ const Contact = () => {
     const nameObj = event.target.name;
     const phoneObj = event.target.phone;
     const emailObj = event.target.email;
-    const messageObj = event.target.children[0].children[1].children[3].children[1];
-    const sub = event.target.children[2];
+    const messageObj = event.target.children[4].querySelector(".os-host-textarea");
+    const sub = event.target.children[6];
 
     if (/^[ '.a-z-]{2,40}$/i.test(name)) {
 
@@ -72,7 +72,7 @@ const Contact = () => {
       }, 5000);
     } else {
 
-      send(formData, event.target.children[1], sub);
+      send(formData, event.target.children[5], sub);
       setName("");
       setPhone("");
       setEmail("");
@@ -101,56 +101,47 @@ const Contact = () => {
         <div className="template-p-cont">
           <div id="overlay" className="template-p fadeInBack">
             <form onSubmit={validation} id="contact-form">
-              <fieldset>
-                <legend>Email Us:</legend>
-                <ul>
-                  <li>
-                    <label htmlFor="name">Names:</label>
-                    <input
-                      onChange={(e) => { setName(e.target.value) }}
-                      value={name}
-                      type="text"
-                      name="name"
-                      id="name"
-                      placeholder="&nbsp;First Last"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="phone">Phone:</label>
-                    <input
-                      onChange={(e) => { setPhone(e.target.value) }}
-                      value={phone}
-                      type="tel"
-                      name="phone"
-                      id="phone"
-                      placeholder="&nbsp;#"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="email">Email:</label>
-                    <input
-                      onChange={(e) => { setEmail(e.target.value) }}
-                      value={email}
-                      type="email"
-                      name="email"
-                      id="email"
-                      placeholder="&nbsp;eg@example.com"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="message">Message:</label>
-                    <textarea
-                      onChange={(e) => { setMessage(e.target.value) }}
-                      value={message}
-                      name="message"
-                      id="message"
-                      maxLength="1000"
-                      rows="3"
-                    >
-                    </textarea>
-                  </li>
-                </ul>
-              </fieldset>
+              <h3>Email Us:</h3>
+              <label htmlFor="name">Names:
+                <input
+                  onChange={(e) => { setName(e.target.value) }}
+                  value={name}
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="&nbsp;First Last"
+                />
+              </label>
+              <label htmlFor="phone">Phone:
+                <input
+                  onChange={(e) => { setPhone(e.target.value) }}
+                  value={phone}
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="&nbsp;#"
+                />
+              </label>
+              <label htmlFor="email">Email:
+                <input
+                  onChange={(e) => { setEmail(e.target.value) }}
+                  value={email}
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="&nbsp;eg@example.com"
+                />
+              </label>
+              <label htmlFor="message">Message:
+                <textarea
+                  onChange={(e) => { setMessage(e.target.value) }}
+                  value={message}
+                  name="message"
+                  id="message"
+                  maxLength="1000"
+                >
+                </textarea>
+              </label>
               <p id="sent"></p>
               <input type="submit" value="Send" id="sub" />
               <br />
@@ -177,7 +168,7 @@ const Contact = () => {
             <div className="static-count">
               <img src={telephone} alt="telephone" />
               <div>
-                <a  href="tel:0434-984-983" rel="noreferrer" target="_blank">Phone me</a>
+                <a href="tel:0434-984-983" rel="noreferrer" target="_blank">Phone me</a>
               </div>
             </div>
             <div className="static-count">

@@ -6,59 +6,43 @@
   text-align: initial;
   @include nine_92 {
     padding: 0 20px;
+    margin: 0 7px;
   }
   form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     color: $c3;
-    .os-host-textarea {
-      box-sizing: border-box;
-      border: 1px solid $c3;
-      border-bottom-right-radius: 5px;
+    padding-bottom: 40px;
+    h3 {
+      font-size: inherit;
+      width: 100%;
+      font-weight: normal;
+      margin: 0 0 25px 0;
     }
-    fieldset {
-      border: none;
-      padding: 0;
-      margin: 0;
-      legend {
-        padding: 0;
-        margin: 0 0 25px 0;
+    label {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      height: 80px;
+      margin: 0 0 40px 0;
+    }
+    label:nth-child(2),
+    label:nth-child(3) {
+      width: 48%;
+      @include nine_92 {
+        width: 100%;
       }
-      ul {
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-        li {
-          box-sizing: border-box;
-          padding-bottom: 50px;
-          &:nth-child(1) {
-            margin-right: 2%;
-            @include nine_92 {
-              margin-right: initial;
-            }
-          }
-          &:nth-child(1),
-          &:nth-child(2) {
-            width: 49%;
-            display: inline-block;
-            @include nine_92 {
-              width: 100%;
-            }
-          }
-          &:last-child {
-            
-          }
-        }
-      }
-      label {
-        height: 50px;
-        display: block;
-      }
+    }
+    label:nth-child(5) {
+      height: 133px;
     }
     input {
       width: 100%;
       font-style: inherit;
       box-sizing: border-box;
       padding: 2px;
-      margin: 5px 0 0 0;
       border-bottom-right-radius: 5px;
       font: inherit;
       color: inherit;
@@ -68,6 +52,13 @@
       &::placeholder {
         color: $c3;
       }
+    }
+    .os-host-textarea {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid $c3;
+      border-bottom-right-radius: 5px;
+      height: 80px;
     }
     #sent {
       text-align: center;

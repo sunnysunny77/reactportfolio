@@ -35,14 +35,14 @@ export const send = (formData, sent, sub) => {
 }
 
 export const reply = (bool, obj, msg) => {
-  const node = document.getElementById(`msg${obj.id}`);
+  const node = obj.parentElement.querySelector(".msg");
+
   if (!node && bool) {
     obj.classList.add("red");
     const newNode = document.createElement("span");
     newNode.className = "msg";
-    newNode.id = `msg${obj.id}`;
     newNode.innerHTML = msg;
-    obj.previousElementSibling.append(newNode);
+    obj.parentElement.insertBefore(newNode, obj);
   } else if (node && !bool) {
     node.remove();
     obj.classList.remove("red");
