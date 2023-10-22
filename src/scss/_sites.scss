@@ -41,6 +41,9 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       border-radius: 0;
       border-top: 3px solid $c4;
     }
+    @include nine_92_620_landscape {
+      height: calc(40vh - 25px);
+    }
     #ob0 {
       color: #4193bc;
       text-align: left;
@@ -80,28 +83,29 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
         li img {
           display: block;
           margin-left: 5%;
-          padding-top: 17px;
-          width: 12vh;
-          height: 12vh;
-          min-width: 60px;
-          min-height: 60px;
+          padding: 30px 0 min(10vh, 90px) 0;
+          width: 10.5vh;
+          height: 10.5vh;
+          min-width: 50px;
+          min-height: 50px;
           max-width: 100px;
           max-height: 100px;
           @include nine_92 {
+            padding: min(5vh, 25px) 0;
             margin-left: 0;
-            width: 60px;
-            height: 60px;
+            min-width: 20px;
+            min-height: 20px;
+            max-width: 50px;
+            max-height: 50px;
           }
-        }
-        ol li:nth-child(1) {
-          @include nine_92_min {
-            padding-top: min(16vh, 175px);
+          @include nine_92_620_landscape {
+            padding: min(8.5vh, 55px) 0;
           }
         }
         ol li {
-          padding-top: 20px;
+          padding-top: min(5vh, 20px);
           h3 {
-            margin: 5% 0;
+            margin: min(5vh, 20px) 0;
             font-weight: normal;
             a {
               color: $heading2;
@@ -145,8 +149,8 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       @include nine_92 {
         padding: 440.75px 0 0 0;
       }
-      @include nine_92_630_landscape {
-        padding: calc(100vh - 180px) 0 0 0;
+      @include nine_92_620_landscape {
+        padding: calc(60vh - 25px) 0 0 0;
       }
       @include five_0_portrait {
         padding: 100% 0 0 0;

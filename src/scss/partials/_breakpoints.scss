@@ -40,8 +40,8 @@
     }
 }
 
-@mixin nine_92_630_landscape {
-    @media only screen and (max-width: 992px) and (max-height: 630px)  and (orientation: landscape) {
+@mixin nine_92_620_landscape {
+    @media only screen and (max-width: 992px) and (max-height: 620px)  and (orientation: landscape) {
         @content;
     } 
 }
