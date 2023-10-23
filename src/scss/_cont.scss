@@ -112,8 +112,7 @@
     cursor: pointer;
     background-size: contain;
     background-repeat: no-repeat;
-    width: 20px;
-    height: 20px;
+    padding: clamp(6px, 3%, 10px);
     opacity: 1;
     transition: opacity 0.75s ease;
     &:hover {
@@ -134,7 +133,7 @@
     z-index: 0;
     position: relative;
     margin: auto 12.5% auto 12.5%;
-    padding: 15%;
+    padding: 14%;
     height: initial;
     @include nine_92_min {
       position: absolute;
