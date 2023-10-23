@@ -42,8 +42,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       border-top: 3px solid $c4;
     }
     @include nine_92_620_landscape {
-      min-height: 80px;
-      height: calc(40vh - 25px);
+      height: max(calc(40vh - 25px), 80px);
     }
     #ob0 {
       color: #4193bc;
@@ -100,7 +99,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
             max-height: 50px;
           }
           @include nine_92_620_landscape {
-            padding: 8vh 0;
+            padding: max(8vh, 20px) 0;
           }
         }
         ol li {
@@ -151,8 +150,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
         padding: 440.75px 0 0 0;
       }
       @include nine_92_620_landscape {
-        padding: calc(60vh - 25px) 0 0 0;
-        min-height: 119px;
+        padding: max(calc(60vh - 25px), 119px) 0 0 0;
       }
       @include five_0_portrait {
         padding: 100% 0 0 0;
