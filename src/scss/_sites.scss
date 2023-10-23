@@ -105,7 +105,8 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
         }
         ol li {
           h3 {
-            margin: 40px 0 20px 0;
+            padding: 40px 0 20px 0;
+            margin: 0;
             font-weight: normal;
             a {
               color: $heading2;
