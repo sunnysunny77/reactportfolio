@@ -200,6 +200,7 @@
   transition: opacity 0.75s linear;
   opacity: 0;
   background-color: $c4;
+  overflow: hidden;
   .percentage-change {
     position: absolute;
     height: 2px;
