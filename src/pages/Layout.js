@@ -25,10 +25,10 @@ const Layout = () => {
                 </button>
                 <nav className="disp menu0">
                     <ul>
-                        <li><NavLink to="/contact">Contact<span>01</span></NavLink></li>
-                        <li><NavLink to="/skills">Skills<span>02</span></NavLink></li>
-                        <li><NavLink to="/sites">Sites<span>03</span></NavLink></li>
-                        <li><NavLink to="/">Home<span>04</span></NavLink></li>
+                    <li><NavLink to="/">Home<span>01</span></NavLink></li>
+                    <li><NavLink to="/sites">Sites<span>02</span></NavLink></li>
+                    <li><NavLink to="/skills">Skills<span>03</span></NavLink></li>
+                    <li><NavLink to="/contact">Contact<span>04</span></NavLink></li>
                     </ul>
                     <div className="heading">
                         <a href="tel:0434-984-983" rel="noreferrer" target="_blank" className="fas fa-phone-square-alt"><span className="hidden">tel</span></a>
@@ -55,10 +55,10 @@ const Layout = () => {
                     <li className="sm">
                         <h3>D.C</h3>
                     </li>
-                    <li><Link onClick={top} to="/contact"> CONTACT </Link></li>
-                    <li><Link onClick={top} to="/skills"> SKILLS </Link></li>
-                    <li><Link onClick={top} to="/sites"> SITES </Link></li>
                     <li><Link onClick={top} to="/"> HOME </Link></li>
+                    <li><Link onClick={top} to="/sites"> SITES </Link></li>
+                    <li><Link onClick={top} to="/skills"> SKILLS </Link></li>
+                    <li><Link onClick={top} to="/contact"> CONTACT </Link></li>
                 </ul>
             </footer>
         </>

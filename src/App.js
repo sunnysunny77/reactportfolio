@@ -15,8 +15,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="Sites" element={<Sites />}> {preloadImage(tempimg)} </Route>
-          <Route path="Skills" element={<Skills />} />
+          <Route path="Sites" element={<Sites />} />
+          <Route path="Skills" element={<Skills />}> {preloadImage(tempimg)} </Route>
           <Route path="Contact" element={<Contact />}> {preloadImage(tempimg)} </Route>
         </Route>
       </Routes>
