@@ -53,12 +53,15 @@
         color: $c3;
       }
     }
+    textarea {
+      line-height: 1;
+    }
     .os-host-textarea {
       width: 100%;
       box-sizing: border-box;
       border: 1px solid $c3;
       border-bottom-right-radius: 5px;
-      height: 80px;
+      height: 74px;
     }
     #sent {
       text-align: center;

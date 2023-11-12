@@ -139,6 +139,7 @@ const Contact = () => {
                   name="message"
                   id="message"
                   maxLength="1000"
+                  rows="4"
                 >
                 </textarea>
               </label>

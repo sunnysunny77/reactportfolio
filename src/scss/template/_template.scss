@@ -59,59 +59,56 @@ main {
   min-height: calc(100vh - 290px);
   justify-content: space-around;
   @include nineteen_21 {
-      min-height: 750px;
+    min-height: 750px;
   }
   @include nine_92 {
-      justify-content: initial;
-      min-height: calc(100vh - 192px);
+    justify-content: initial;
+    min-height: calc(100vh - 192px);
   }
   #after {
-      background-image: url(../../images/template/handmade-paper.png);
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      position: absolute;
-      z-index: -999;
-      background-color: $main;
-      background-blend-mode: color-burn;
-      background-attachment: fixed;
-      @include nine_92 {
-          background-blend-mode: color;
-      }
+    background-image: url(../../images/template/handmade-paper.png);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -999;
+    background-color: $main;
+    background-blend-mode: color;
+    background-attachment: fixed;
   }
   > section {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      h2 {
-        height: 34px;
-        font-weight: normal;
-        width: 100%;
-        margin: 25px auto 25px 10%;
-        color: $heading1;
-        font-size: 1.4em;
-        position: relative;
-        @include nine_92_min {
-          &.heading {
-            margin-top: 50px;
-          }
-        }
-        @include nine_92 {
-          height: 27px;
-          font-size: large;
-          margin: 25px auto 25px max(5%, 25px);
-        }
-        &::before {
-          position: absolute;
-          content: "";
-          top: calc(50% - 3.25px);
-          left: -15px;
-          bottom: 0;
-          right: 0;
-          clip: rect(auto, 10px, auto, auto);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    h2 {
+      height: 34px;
+      font-weight: 600;
+      width: 100%;
+      margin: 25px auto 25px 10%;
+      color: $heading1;
+      font-size: 1.4em;
+      position: relative;
+      @include nine_92_min {
+        &.heading {
+          margin-top: 50px;
         }
       }
+      @include nine_92 {
+        height: 27px;
+        font-size: large;
+        margin: 25px auto 25px max(5%, 25px);
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        top: calc(50% - 3.25px);
+        left: -15px;
+        bottom: 0;
+        right: 0;
+        clip: rect(auto, 10px, auto, auto);
+      }
+    }
   }
 }
 

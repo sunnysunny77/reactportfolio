@@ -85,8 +85,8 @@
 
 .template-img-0 {
     background-image: url(../../images/template/tempimg.jpg);
-    background-color: $c3;
-    background-blend-mode: difference;
+    background-color: $main;
+    background-blend-mode: soft-light;
     border: 20px solid $c2;
     background-repeat: no-repeat;
     background-position: top;
@@ -136,9 +136,9 @@
         bottom: 2%;
         left: 1%;
         margin: initial;
+        z-index: 0;
         transition:
             background-color 0.75s linear,
-            opacity 0.75s linear,
             top 0.75s linear,
             right 0.75s linear,
             bottom 0.75s linear,
