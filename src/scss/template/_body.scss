@@ -22,7 +22,7 @@
         height: 100%;
         background-size: contain;
         background-repeat: no-repeat;
-        opacity: 0.75;
+        opacity: 0.875;
     }
 }
 
@@ -85,8 +85,8 @@
 
 .template-img-0 {
     background-image: url(../../images/template/tempimg.jpg);
-    background-color: $main;
-    background-blend-mode: soft-light;
+    background-color: darken($main, 30%);
+    background-blend-mode: luminosity;
     border: 20px solid $c2;
     background-repeat: no-repeat;
     background-position: top;
