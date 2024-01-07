@@ -115,7 +115,13 @@ const Home = () => {
                 <br />
                 Developing WordPress themes
                 <br />
-                and solutions.
+                and solutions. While working as
+                <br />
+                Customer Service Officer
+                <br />
+                assisting customers with enquiries
+                <br />
+                in a call center.
                 <br />
                 <br />
                 &bull; Eight years in an
