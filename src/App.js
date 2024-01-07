@@ -5,7 +5,7 @@ import Sites from "./pages/Sites";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Skills from "./pages/Skills";
-import tempimg from './images/template/tempimg.jpg';
+import tempimg from './images/template/3px-tile.png';
 import './scss/app.scss';
 import './css/all.min.css';
 
