@@ -1,5 +1,5 @@
-$img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/home/fas.jpg", "../images/home/dave.jpg",
-  "../images/home/bus.jpg", "../images/home/candid.jpg", "../images/home/stick.jpg", "../images/home/login.jpg";
+$img: "../images/sites/global.png", "../images/sites/furniture.jpg", "../images/sites/fas.jpg", "../images/sites/dave.jpg",
+  "../images/sites/bus.jpg", "../images/sites/candid.jpg", "../images/sites/stick.jpg", "../images/sites/login.jpg";
 
 @for $i from 1 through length($img) {
   #s5#{$i} {
@@ -167,12 +167,13 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
       @include nine_92 {
         top: initial;
         font-size: 10.5px;
-        background-color: $c2;
+        background-color: $Acolor;
         bottom: 0;
         left: 0;
         border-bottom-left-radius: 25px;
         padding: 5px 15px;
         line-height: 20px;
+        background-image: url(../images/template/natural-paper.png);
       }
       &:hover,
       &:focus {
@@ -209,6 +210,7 @@ $img: "../images/home/global.png", "../images/home/furniture.jpg", "../images/ho
         border-radius: initial;
         border-bottom-right-radius: 25px;
         background-color: $c2;
+        background-image: url(../images/template/natural-paper.png);
       }
     }
   }
