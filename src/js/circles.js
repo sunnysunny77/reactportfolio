@@ -159,6 +159,7 @@ export const circleInit = () => {
   imageFillLeft.innerHTML = '<span class="hidden">' + arrayHref[1][1] + '</span>';
   imageFillRight.innerHTML = '<span class="hidden">' + arrayHref[0][1] + '</span>';
   inner.innerHTML = arrayText[0];
+  counter = 0;
   width = (counter + 1) / staticCount.length * 100 / 1;
   percentage.style.width = `${width}%`;
 }
