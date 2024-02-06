@@ -13,20 +13,24 @@ h2::before {
 }
 
 .template-img-0 .circle-progress .opacity {
-  animation: opacity 1.5s;
+  opacity: 0;
 }
 
 .template-img-0 .circle-progress .leftcompact {
   @include nine_92_min {
-    animation: leftcompact 0.75s;
-    animation-fill-mode: forwards;
+    transition: 0.75s right cubic-bezier(0.215, 0.61, 0.355, 1);
+    will-change: right;
+    right: calc(100% - 150px);
+    z-index: 1;
   }
 }
 
 .template-img-0 .circle-progress .rightcompact {
   @include nine_92_min {
-    animation: rightcompact 0.75s;
-    animation-fill-mode: forwards;
+    transition: 0.75s left cubic-bezier(0.215, 0.61, 0.355, 1);
+    will-change: left;
+    left: calc(100% - 150px);
+    z-index: 1;
   }
 }
 
@@ -167,47 +171,6 @@ h2::before {
   }
   100% {
     transform: scale(1);
-  }
-}
-
-@keyframes rightcompact {
-  0% {
-    z-index: 1;
-    opacity: 1;
-    left: 0;
-  }
-  100% {
-    z-index: 1;
-    opacity: 1;
-    left: calc(100% - 150px);
-  }
-}
-
-@keyframes leftcompact {
-  0% {
-    z-index: 1;
-    opacity: 1;
-    right: 0;
-  }
-  100% {
-    z-index: 1;
-    opacity: 1;
-    right: calc(100% - 150px);
-  }
-}
-
-@keyframes opacity {
-  0% {
-    z-index: 1;
-    opacity: 1;
-  }
-  50% {
-    z-index: 1;
-    opacity: 0;
-  }
-  100% {
-    z-index: 1;
-    opacity: 1;
   }
 }
 

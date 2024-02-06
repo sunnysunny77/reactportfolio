@@ -104,6 +104,9 @@
     border-radius: 100%;
     background-size: cover;
     padding: 75px 75px;
+    transition: opacity 0.75s;
+    will-change: opacity;
+    opacity: 1;
   }
   .button-next {
     position: absolute;
@@ -133,16 +136,15 @@
     right: 2%;
   }
   .image-fill-right {
-    z-index: 0;
     position: relative;
     margin: auto 12.5% auto 12.5%;
     padding: 14%;
     height: initial;
+    left: 0;
+    z-index: 0;
     @include nine_92_min {
       position: absolute;
       margin: initial;
-      z-index: -1;
-      opacity: 0;
       padding: 75px 75px;
     }
   }
@@ -156,8 +158,7 @@
   }
   .image-fill-left {
     right: 0;
-    z-index: -1;
-    opacity: 0;
+    z-index: 0;
     position: absolute;
     display: none;
     @include nine_92_min {
@@ -176,6 +177,9 @@
   .inner {
     margin: auto;
     width: 50%;
+    transition: opacity 0.75s;
+    will-change: opacity;
+    opacity: 1;
     @include nine_92_min {
       width: 100%;
       margin: auto auto auto 2%;
