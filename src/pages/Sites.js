@@ -54,6 +54,18 @@ const Sites = () => {
                     <br />
                   </li>
                   <li className="scrollPreview">
+                    <h3><a target="access" href="https://access.vm1.lateralaspect.com.au/">Access Robotics</a></h3>
+                    Wordpress theme
+                    <br />
+                    <br />
+                    <br />
+                    &copy; Lateral Aspect
+                    <br />
+                    <br />
+                    Design copy
+                    <br />
+                  </li>
+                  <li className="scrollPreview">
                     <h3><a target="dave" href="https://davesblog.sunnyhome.site/">Daves Blog</a></h3>
                     Design copy
                     <br />
@@ -172,26 +184,31 @@ const Sites = () => {
             </a>
           </span>
           <span role="img" className="sitesImg" aria-label="site 3" id="s54" style={{ display: "none" }}>
+            <a target="access" href="https://access.vm1.lateralaspect.com.au/">
+              Access Robotics
+            </a>
+          </span>
+          <span role="img" className="sitesImg" aria-label="site 4" id="s55" style={{ display: "none" }}>
             <a target="dave" href="https://davesblog.sunnyhome.site/">
               davesblog.sunnyhome
             </a>
           </span>
-          <span role="img" className="sitesImg" aria-label="site 4" id="s55" style={{ display: "none" }}>
+          <span role="img" className="sitesImg" aria-label="site 5" id="s56" style={{ display: "none" }}>
             <a target="business" href="https://business.sunnyhome.site/">
               business.sunnyhome
             </a>
           </span>
-          <span role="img" className="sitesImg" aria-label="site 5" id="s56" style={{ display: "none" }}>
+          <span role="img" className="sitesImg" aria-label="site 6" id="s57" style={{ display: "none" }}>
             <a target="candid" href="https://candidcleaning.sunnyhome.site">
               candidcleaning.sunnyhome
             </a>
           </span>
-          <span role="img" className="sitesImg" aria-label="site 6" id="s57" style={{ display: "none" }}>
+          <span role="img" className="sitesImg" aria-label="site 7" id="s58" style={{ display: "none" }}>
             <a target="sticky" href="https://sticky.sunnyhome.site/">
               sticky.sunnyhome
             </a>
           </span>
-          <span role="img" className="sitesImg" aria-label="site 7" id="s58" style={{ display: "none" }}>
+          <span role="img" className="sitesImg" aria-label="site 8" id="s59" style={{ display: "none" }}>
             <a target="login" href="https://login.sunnyhome.site/">
               login.sunnyhome
             </a>
