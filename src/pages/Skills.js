@@ -203,13 +203,15 @@ const Skills = () => {
           </PageScroll>
         </div>
       </section>
-      <div role="img" aria-label="glowing keyboard" id="skills-template-img-0" className="template-img-0">
-        <p className="template-shrink">
-          <a target="git" href="https://github.com/sunnysunny77">
-          github.com <i className="far fa-heart"></i>
-          </a>
-          <button className='template-b' onClick={click}>View code ..</button>
-        </p>
+      <div className="template-border-img">
+        <div role="img" aria-label="glowing keyboard" id="skills-template-img-0" className="template-img-0">
+          <p className="template-shrink">
+            <a target="git" href="https://github.com/sunnysunny77">
+            github.com <i className="far fa-heart"></i>
+            </a>
+            <button className='template-b' onClick={click}>View code ..</button>
+          </p>
+        </div>
       </div>
     </>
   );

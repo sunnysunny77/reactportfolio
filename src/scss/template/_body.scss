@@ -83,42 +83,59 @@
     }
 }
 
-.template-img-0 {
-    background-image: url(../../images/template/3px-tile.png);
-    background-color: $main;
-    background-blend-mode: luminosity;
-    border: 20px solid $c2;
-    width: 80%;
-    margin: 3% auto 6% auto;
+.template-border-img {
+    background-image: url(../../images/template/natural-paper.png);
+    background-blend-mode: darken;
     border-top-right-radius: 25px;
     border-top-left-radius: 5px;
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
-    position: relative;
-    height: 50vh;
-    min-height: 450px;
-    max-height: 600px;
+    background-color: $c2;
+    padding: 15px;
+    width: 80%;
     box-sizing: border-box;
+    margin: 3% auto 6% auto;
     @include nine_92 {
-        border: 3px solid $c2;
         margin: 6% auto;
-        height: initial;
-        min-height: initial;
-        max-height: initial;
-        padding: 18% 0;
+        padding: 3px;
         width: 65%;
         border-top-right-radius: 5px;
         border-top-left-radius: 5px;
     }
     @include seven_20_portrait {
+        padding: 3px 0 0 0;
         border-radius: 0;
         width: 100%;
+        margin: auto auto 0 auto;
+    }
+}
+
+.template-img-0 {
+    background-image: url(../../images/template/3px-tile.png);
+    background-color: $main;
+    background-blend-mode: luminosity;
+    position: relative;
+    height: 50vh;
+    min-height: 450px;
+    max-height: 600px;
+    box-sizing: border-box;
+    border-top-right-radius: 12.5px;
+    border-top-left-radius: 2.5px;
+    border-bottom-right-radius: 12.5px;
+    border-bottom-left-radius: 12.5px;
+    @include nine_92 {
+        height: initial;
+        min-height: initial;
+        max-height: initial;
+        padding: 28.05% 0;
+        border-top-right-radius: 2.5px;
+        border-top-left-radius: 2.5px;
+        border-bottom-right-radius: 22.5px;
+        border-bottom-left-radius: 22.5px;
+    }
+    @include seven_20_portrait {
+        border-radius: 0;
         padding: 31% 0;
-        border-top: 3px solid $mainbg;
-        border-right: initial;
-        border-bottom: initial;
-        border-left: initial;
-        margin:  auto auto 0 auto;
     }
     .template-shrink {
         display: flex;

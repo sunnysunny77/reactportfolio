@@ -10,7 +10,7 @@ body {
   font-family: $font;
   background-color: $mainbg;
   background-image: url(../../images/template/natural-paper.png);
-  background-blend-mode: multiply;
+  background-blend-mode: darken;
   overflow-y: scroll;
   min-height: 100vh;
   display: flex;
@@ -74,7 +74,7 @@ main {
     position: absolute;
     z-index: -999;
     background-color: $main;
-    background-blend-mode: color;
+    background-blend-mode: saturation;
     background-attachment: fixed;
   }
   > section {

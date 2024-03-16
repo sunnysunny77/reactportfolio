@@ -43,6 +43,7 @@
       font-style: inherit;
       box-sizing: border-box;
       padding: 2px;
+      -webkit-appearance: none;
       border-bottom-right-radius: 5px;
       font: inherit;
       color: inherit;
@@ -60,6 +61,7 @@
       width: 100%;
       box-sizing: border-box;
       border: 1px solid $c3;
+      -webkit-appearance: none;
       border-bottom-right-radius: 5px;
       height: 74px;
     }
