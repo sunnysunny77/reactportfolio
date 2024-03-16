@@ -43,6 +43,9 @@
       font-style: inherit;
       box-sizing: border-box;
       padding: 2px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0;
       border-bottom-right-radius: 5px;
       font: inherit;
       color: inherit;
@@ -50,6 +53,7 @@
       border: 1px solid $c3;
       outline: none;
       -webkit-appearance: none;
+      -webkit-border-radius: 0px;
       &::placeholder {
         color: $c3;
       }
@@ -64,6 +68,7 @@
       border-bottom-right-radius: 5px;
       height: 74px;
       -webkit-appearance: none;
+      -webkit-border-radius: 0px;
     }
     #sent {
       text-align: center;
