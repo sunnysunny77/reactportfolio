@@ -111,9 +111,12 @@ $img: "../images/sites/global.png", "../images/sites/furniture.jpg", "../images/
               color: $heading2;
               text-decoration: none;
               font-size: x-large;
+              transition: text-decoration-color 0.2s ease;
+              text-decoration: underline;
+              text-decoration-color: transparent;
               &:hover,
               &:focus {
-                text-decoration: underline;
+                text-decoration-color: $heading2;
               }
             }
           }

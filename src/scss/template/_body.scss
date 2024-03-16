@@ -134,7 +134,7 @@
         margin: initial;
         z-index: 0;
         transition:
-            background-color 0.75s linear,
+            background-color 0.5s linear,
             top 0.75s linear,
             right 0.75s linear,
             bottom 0.75s linear,
@@ -150,7 +150,7 @@
             border: none;
             font-size: inherit;
             font-weight: 700;
-            transition: color 0.75s ease;
+            transition: color 0.2s ease;
             &:hover {
                 @include nine_92_min {
                     color: $c4;

@@ -77,8 +77,8 @@ header {
                     color: $Acolor;
                     border-left: 4px solid $mainbg;
                     position: relative;
-                    transition: color 1s;
-                    transition-delay: 250ms;
+                    transition: color 0.375s;
+                    transition-delay: 375ms;
                     @include nine_92_min {
                         &:hover::after {
                             width: 100%;
