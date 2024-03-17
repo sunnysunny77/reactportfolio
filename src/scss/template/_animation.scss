@@ -5,6 +5,7 @@
 }
 
 .after {
+  will-change: opacity;
   animation: fadeInBack 0.3s ease-in-out;
 }
 
@@ -54,10 +55,13 @@ h2::before {
 
 .slideIn1 {
   animation: slideIn1 0.75s;
+  will-change: height;
+
 }
 
 .slideIn2 {
   animation: slideIn2 0.75s;
+  will-change: height;
 }
 
 .fadeInBack {
