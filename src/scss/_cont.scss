@@ -52,8 +52,7 @@
       background-color: transparent;
       border: 1px solid $c3;
       outline: none;
-      -webkit-appearance: none;
-      -webkit-border-radius: 0px;
+
       &::placeholder {
         color: $c3;
       }
@@ -67,8 +66,6 @@
       border: 1px solid $c3;
       border-bottom-right-radius: 5px;
       height: 74px;
-      -webkit-appearance: none;
-      -webkit-border-radius: 0px;
     }
     #sent {
       text-align: center;
@@ -94,6 +91,12 @@
       padding-left: 2.5px;
       display: block;
     }
+  }
+  input,
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    -webkit-appearance: none;
   }
 }
 
