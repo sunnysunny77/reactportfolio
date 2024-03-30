@@ -1,12 +1,11 @@
 import { eventListner } from '../js/utilities.js';
 
-let counter = 0;
 let arraySrc = [];
 let arrayHref = [];
 let arrayText = [];
 let width = 0;
 
-const progress = (staticCount, percentage) => {
+const progress = (staticCount, percentage, counter) => {
 
   let percent = (counter + 1) / staticCount.length * 100 / 1;
 
@@ -30,7 +29,7 @@ const iterationEnd = (openRight, openLeft) => {
   openLeft.disabled = false;
 };
 
-const iterationStart = (staticCount, inner, image1, image2, imageFillLeft, imageFillRight)=> {
+const iterationStart = (staticCount, inner, image1, image2, imageFillLeft, imageFillRight, counter)=> {
 
   image1.classList.remove("opacity");
   image2.classList.remove("opacity");
@@ -102,6 +101,7 @@ export const circleInit = () => {
   const openLeft = document.querySelector(".open-left");
   const percentage = document.querySelector(".percentage-change");
   const staticCount = document.querySelectorAll(".static-count");
+  let counter = 0;
 
   for (const item of staticCount) {
 
@@ -122,9 +122,9 @@ export const circleInit = () => {
     inner.classList.add("opacity");
     image1.classList.add("opacity");
     imageFillRight.classList.add("rightcompact");
-    setTimeout(iterationStart, 750, staticCount, inner, image1, image2, imageFillLeft, imageFillRight);
+    setTimeout(iterationStart, 750, staticCount, inner, image1, image2, imageFillLeft, imageFillRight, counter);
     setTimeout(iterationEnd, 1500, openRight, openLeft);
-    width = progress(staticCount, percentage);
+    width = progress(staticCount, percentage, counter);
 
   }, null);
 
@@ -140,9 +140,9 @@ export const circleInit = () => {
     inner.classList.add("opacity");
     image2.classList.add("opacity");
     imageFillLeft.classList.add("leftcompact");
-    setTimeout(iterationStart, 750, staticCount, inner, image1, image2, imageFillLeft, imageFillRight);
+    setTimeout(iterationStart, 750, staticCount, inner, image1, image2, imageFillLeft, imageFillRight, counter);
     setTimeout(iterationEnd, 1500, openRight, openLeft);
-    width = progress(staticCount, percentage);
+    width = progress(staticCount, percentage, counter);
 
   }, null);
 
