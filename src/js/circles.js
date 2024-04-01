@@ -39,6 +39,7 @@ export const circleInit = () => {
     percentage.style.width = `${width}%`;
 
     if (percent === width) {
+
       clearInterval(intervalId);
     } 
   }
@@ -116,7 +117,6 @@ export const circleInit = () => {
     counter--;
     if (counter === - 1) { counter = staticCount.length - 1; };
     percentClac(counter);
-
     openRight.disabled = true;
     openLeft.disabled = true;
     inner.classList.add("opacity");
@@ -133,7 +133,6 @@ export const circleInit = () => {
     counter++;
     if (counter === staticCount.length) { counter = 0; };
     percentClac(counter);
-
     openRight.disabled = true;
     openLeft.disabled = true;
     inner.classList.add("opacity");
