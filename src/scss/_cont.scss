@@ -158,11 +158,10 @@
     margin: auto 12.5% auto 12.5%;
     padding: 14%;
     height: initial;
-    transition: opacity 0.375s ease-out;
-    will-change: opacity;
-    opacity: 1;
     @include nine_92_min {
       transition: opacity 0.375s ease-in;
+      will-change: opacity;
+      opacity: 1;
       margin: initial;
       padding: 75px 75px;
     }

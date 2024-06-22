@@ -12,8 +12,15 @@ h2::before {
   animation: blink 1.75s infinite ease-out;
 }
 
-.template-img-0 .circle-progress .opacity {
+.template-img-0 .circle-progress .opacity-inner {
   opacity: 0.0375;
+  @include nine_92_min {
+    opacity: 0;
+  }
+}
+
+.template-img-0 .circle-progress .opacity-image {
+  opacity: 1;
   @include nine_92_min {
     opacity: 0;
   }

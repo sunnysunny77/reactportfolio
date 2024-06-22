@@ -87,9 +87,9 @@ export const circleInit = () => {
   };
 
   const iterationStart = () => {
-    image1.classList.remove("opacity");
-    image2.classList.remove("opacity");
-    inner.classList.remove("opacity");
+    image1.classList.remove("opacity-image");
+    image2.classList.remove("opacity-image");
+    inner.classList.remove("opacity-inner");
 
     if (counter + 1 === static_count.length) {
       image1.style.backgroundImage = `url(${arraySrc[counter]}`;
@@ -141,11 +141,10 @@ export const circleInit = () => {
       percentClac(counter);
       open_right.disabled = true;
       open_left.disabled = true;
-      inner.classList.add("opacity");
-      image1.classList.add("opacity");
-      image2.classList.add("opacity");
+      inner.classList.add("opacity-inner");
+      image1.classList.add("opacity-image");
+      image2.classList.add("opacity-image");
       image_fill_right.classList.add("rightcompact");
-    //  image_fill_right.classList.add("opacity");
       setTimeout(iterationStart, 750);
       setTimeout(iterationEnd, 1500);
       intervalId = setInterval(interval, 20);
@@ -165,11 +164,10 @@ export const circleInit = () => {
       percentClac(counter);
       open_right.disabled = true;
       open_left.disabled = true;
-      inner.classList.add("opacity");
-      image1.classList.add("opacity");
-      image2.classList.add("opacity");
+      inner.classList.add("opacity-inner");
+      image1.classList.add("opacity-image");
+      image2.classList.add("opacity-image");
       image_fill_left.classList.add("leftcompact");
-     // image_fill_left.classList.add("opacity");
       setTimeout(iterationStart, 750);
       setTimeout(iterationEnd, 1500);
       intervalId = setInterval(interval, 20);
