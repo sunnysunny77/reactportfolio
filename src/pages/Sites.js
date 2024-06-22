@@ -139,6 +139,18 @@ const Sites = () => {
                     <br />
                   </li>
                   <li className="scrollPreview">
+                    <h3><a target="sliders" href="https://sliders.sunnyhome.site/">Sliders Demo</a></h3>
+                    Three slider demo's
+                    <br />
+                    <br />
+                    <br />
+                    HTML5 - SCSS - JavaScript - PHP
+                    <br />
+                    <br />
+                    Bootstrap 
+                    <br />
+                  </li>
+                  <li className="scrollPreview">
                     <h3><a target="login" href="https://login.sunnyhome.site/">Login App</a></h3>
                     Caputcha signup
                     <br />
@@ -209,6 +221,11 @@ const Sites = () => {
             </a>
           </span>
           <span role="img" className="sitesImg" aria-label="site 8" id="s59" style={{ display: "none" }}>
+            <a target="sliders" href="https://sliders.sunnyhome.site/">
+              sliders.sunnyhome
+            </a>
+          </span>
+          <span role="img" className="sitesImg" aria-label="site 9" id="s510" style={{ display: "none" }}>
             <a target="login" href="https://login.sunnyhome.site/">
               login.sunnyhome
             </a>

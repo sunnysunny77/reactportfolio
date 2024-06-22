@@ -1,5 +1,5 @@
 $img: "../images/sites/global.png", "../images/sites/furniture.jpg", "../images/sites/fas.jpg", "../images/sites/access.jpg", "../images/sites/dave.jpg",
-  "../images/sites/bus.jpg", "../images/sites/candid.jpg", "../images/sites/stick.jpg", "../images/sites/login.jpg";
+  "../images/sites/bus.jpg", "../images/sites/candid.jpg", "../images/sites/stick.jpg", "../images/sites/sliders.jpg", "../images/sites/login.jpg";
 
 @for $i from 1 through length($img) {
   #s5#{$i} {
