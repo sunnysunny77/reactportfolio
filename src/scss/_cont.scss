@@ -146,29 +146,29 @@
     right: 2%;
   }
   .image-fill-right {
-    position: relative;
-    margin: auto 12.5% auto 12.5%;
-    padding: 14%;
-    height: initial;
-    left: 0;
-    z-index: 0;
-    @include nine_92_min {
-      position: absolute;
-      margin: initial;
-      padding: 75px 75px;
-    }
-  }
-  .image-1 {
-    z-index: 0;
-    position: relative;
+    position: absolute;
     display: none;
+    left: 0;
     @include nine_92_min {
       display: block;
     }
   }
+  .image-1 {
+    position: relative;
+    margin: auto 12.5% auto 12.5%;
+    padding: 14%;
+    height: initial;
+    transition: opacity 0.375s ease-out;
+    will-change: opacity;
+    opacity: 1;
+    @include nine_92_min {
+      transition: opacity 0.375s ease-in;
+      margin: initial;
+      padding: 75px 75px;
+    }
+  }
   .image-fill-left {
     right: 0;
-    z-index: 0;
     position: absolute;
     display: none;
     @include nine_92_min {
@@ -176,21 +176,24 @@
     }
   }
   .image-2 {
-    right: 0;
-    z-index: 0;
-    position: absolute;
     display: none;
     @include nine_92_min {
+      right: 0;
+      position: absolute;
+      transition: opacity 0.375s ease-in;
+      will-change: opacity;
+      opacity: 1;
       display: block;
     }
   }
   .inner {
     margin: auto;
     width: 50%;
-    transition: opacity 0.75s;
+    transition: 0.375s ease-out;
     will-change: opacity;
     opacity: 1;
     @include nine_92_min {
+      transition: 0.375s ease-in;
       width: 100%;
       margin: auto auto auto 2%;
     }
