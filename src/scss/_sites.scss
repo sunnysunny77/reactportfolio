@@ -136,6 +136,7 @@
       color: $c5;
       position: absolute;
       display: none;
+      background-image: url(../images/template/natural-paper.png);
       background-color: $c2;
       background-blend-mode: darken;
       border-bottom-left-radius: 25px;
@@ -146,6 +147,7 @@
         font-size: 12.5px;
         background-image: initial;
         background-color: transparent;
+        background-blend-mode: initial;
         bottom: initial;
         font-size: small;
         text-decoration: underline;
