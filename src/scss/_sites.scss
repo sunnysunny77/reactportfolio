@@ -135,18 +135,17 @@
       left: 0;
       color: $c5;
       position: absolute;
-      width: 0;
-      height: 0;
-      overflow: hidden;
-      background-image: url(../images/template/natural-paper.png);
+      display: none;
       background-color: $c2;
       background-blend-mode: darken;
       border-bottom-left-radius: 25px;
       @include nine_92_min {
         padding: 0;
-        top: 6.25px;
+        top: 20px;
         left: 25px;
         font-size: 12.5px;
+        background-image: initial;
+        background-color: transparent;
         bottom: initial;
         font-size: small;
         text-decoration: underline;
@@ -163,8 +162,7 @@
     width: 100%;
     opacity: 1;
     a {
-      width: initial;
-      height: initial;
+     display: block;
     }
   }
   .slider_5-close {
