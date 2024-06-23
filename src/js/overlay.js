@@ -1,35 +1,29 @@
 import OverlayScrollbars from "overlayscrollbars";
 import { eventListner } from '../js/utilities.js';
 
-let pictureID = [];
+let picture_id = [];
 
 export const picture = () => {
 
-    const img = document.querySelectorAll(".sitesImg");
-    for (let i = 1; i <= img.length; i++) {
-        let id = `s5${i}`;
-        pictureID.push(id);
-    }
+    const site_img = document.querySelectorAll(".site-img");
+    for (let index = 1; index <= site_img.length; index++) {
+        picture_id.push(`site-${index}`);
+      }
+    
 }
 
-const pictureDisplay = (item) => {
-
-    pictureID.forEach( (element) => {
-        
-        const obj = document.getElementById(element);
-        if (obj.id === item) {
-            if (window.getComputedStyle(obj).getPropertyValue("display") === "none") {
-                obj.style.display = "block";
-                obj.classList.add("fadeInOpacity");
-                setTimeout(() => {
-                    obj.classList.remove("fadeInOpacity");
-                }, 750);
-            }
-        } else {
-            obj.style.display = "none";
+const picture_display = (item) => {
+    for (const index of picture_id) {
+        const obj = document.querySelector(`#${index}`);
+        const bool = obj.id === item;
+        const contains = obj.classList.contains("d-has-display");
+        if (bool && !contains) {
+          obj.classList.add("d-has-display");
+        } else if (!bool && contains) {
+          obj.classList.remove("d-has-display");
         }
-    })
-}
+      }
+  };
 
 export const fromOverlay = (event) => {
 
@@ -45,39 +39,40 @@ export const fromOverlay = (event) => {
 export const sitesOverlay = (event) => {
 
     let cached = null;
-    let instance = OverlayScrollbars(document.querySelector("#ob0"), {
+    let instance = OverlayScrollbars(document.querySelector(".scroll-listener"), {
         className: "os-theme-dark os-theme-dark-edgy",
         callbacks: {
             onScroll: (event) => {
 
                 if (!cached) {
                     setTimeout(() => {
-
-                        let preview = document.querySelectorAll(".scrollPreview");
-                        let ranges = [...preview].map(item => item.offsetTop);
-
-                        const rangesLenght = ranges.length;
-                        let scroll_pos = event.target.scrollTop;
+                     
+                        const scroll_preview = document.querySelectorAll(".scroll-preview");
+                        const ranges = [...scroll_preview].map((item) => item.offsetTop);
+                        const scroll_pos = event.target.scrollTop;
 
                         if (scroll_pos < ranges[0]) {
-                            pictureDisplay(pictureID[0]);
+                          picture_display(picture_id[0]);
                         }
-                        for (let i = 0; i < rangesLenght - 1; i++) {
-                            let y = i + 1;
-                            if (scroll_pos > ranges[i] && scroll_pos < ranges[y]) {
-                                pictureDisplay(pictureID[y]);
-                            }
+                        for (const [i, index] of ranges.entries()) {
+                          if (
+                            i !== ranges.length &&
+                            scroll_pos > index &&
+                            scroll_pos < ranges[i + 1]
+                          ) {
+                            picture_display(picture_id[i + 1]);
+                          }
                         }
-                        if (scroll_pos > ranges[rangesLenght - 1]) {
-                            pictureDisplay(pictureID.at(-1));
+                        if (scroll_pos > ranges.at(-1)) {
+                          picture_display(picture_id.at(-1));
                         }
-
+                        
                         cached = null;
                     }, 300);
                 }
                 cached = true;
             },
-            onInitialized: eventListner(document.querySelector("#close"), "click", () => {
+            onInitialized: eventListner(document.querySelector(".slider-close"), "click", () => {
                 instance.scroll({ y: "0%" }, 2500);
             }, false)
         }

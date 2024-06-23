@@ -1,12 +1,3 @@
-$img: "../images/sites/global.png", "../images/sites/furniture.jpg", "../images/sites/fas.jpg", "../images/sites/access.jpg", "../images/sites/dave.jpg",
-  "../images/sites/bus.jpg", "../images/sites/candid.jpg", "../images/sites/stick.jpg", "../images/sites/sliders.jpg", "../images/sites/login.jpg";
-
-@for $i from 1 through length($img) {
-  #s5#{$i} {
-    background-image: url(nth($img, $i));
-  }
-}
-
 #sites-template-img {
   background-image: url(../images/sites/site.png);
 }
@@ -20,201 +11,183 @@ $img: "../images/sites/global.png", "../images/sites/furniture.jpg", "../images/
     @include nine_92 {
       display: block;
     }
-  }  
-  #s4 {
-    height: 37vh;
-    max-height: 350px;
-    min-height: 205px;
-    width: calc(80% - 350px);
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+  }
+  .slider_5-list-container {
+    position: relative;
+    width: 95%;
+    height: min(40vh, 250px);
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;
     background-blend-mode: darken;
-    @include nine_92 {
-      min-width: initial;
-      min-height: initial;
-      position: relative;
-      width: 95%;
-      height: 130px;
-      padding: 5px 0;
-      border-radius: 0;
-      border-top: 3px solid $c4;
+    overflow: hidden;
+    border-top: 3px solid $c4;
+    border-bottom: 3px solid $c4;
+    @include nine_92_min {
+      border: none;
+      height: 37vh;
+      max-height: 350px;
+      min-height: 205px;
+      width: calc(80% - 290px);
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
     }
-    @include nine_92_620_landscape {
-      height: max(calc(40vh - 25px), 80px);
+  }
+  .slider_5-scroll {
+    height: calc(min(40vh, 250px) - 40px);
+    margin: 20px 0;
+    @include nine_92_min {
+      height: calc(37vh - 40px);
+      max-height: 310px;
+      min-height: 165px;
     }
-    #ob0 {
-      color: #4193bc;
-      text-align: left;
+  }
+  .slider_5-list {
+    margin: 0;
+    padding: 0 20px;
+    list-style-type: none;
+    color: $c3;
+    width: 90%;
+    word-wrap: break-word;
+    font-size: medium;
+    @include nine_92_min {
+      padding: 0 7px 0 40px;
       font-size: large;
-      word-wrap: break-word;
-      position: absolute;
-      top: 109px;
-      bottom: 30px;
-      width: 80%;
-      z-index: 1;
-      @include nine_92 {
-        position: inherit;
-        height: 100%;
-        padding: 0 5%;
-        margin: auto;
-        font-size: initial;
-        top: initial;
-        width: initial;
-        bottom: initial;
+    }
+    li img {
+      display: block;
+      margin: 40px 0 min(10.5vh, 100px) 0;
+      width: 10.5vh;
+      height: 10.5vh;
+      min-width: 50px;
+      min-height: 50px;
+      max-width: 100px;
+      max-height: 100px;
+      @include nine_92_min {
+        margin: 40px 0 min(10.5vh, 100px) 4%;
       }
-      #ob0ul {
+    }
+    ol li {
+      h3 {
+        padding: 40px 0 7px 0;
         margin: 0;
-        width: 50%;
-        padding: 0 7px 0 40px;
-        list-style-type: none;
-        @include nine_92 {
-          width: 100%;
-          padding: 0;
-          li ol {
-            padding-left: 20px;
-            padding-right: 20px;
-          }
-          li ol li h3 a {
-            font-size: initial;
-          }
-        }
-        li img {
-          display: block;
-          margin-left: 5%;
-          padding: 30px 0 min(10vh, 90px) 0;
-          width: 10.5vh;
-          height: 10.5vh;
-          min-width: 50px;
-          min-height: 50px;
-          max-width: 100px;
-          max-height: 100px;
-          @include nine_92 {
-            padding: 22.5px 0 0 0;
-            margin-left: 0;
-            min-width: 25px;
-            min-height: 25px;
-            max-width: 50px;
-            max-height: 50px;
-          }
-          @include nine_92_620_landscape {
-            padding: max(8vh, 20px) 0;
+        font-weight: normal;
+        a {
+          color: $heading2;
+          text-decoration: none;
+          font-size: inherit;
+          transition: text-decoration-color 0.2s ease;
+          text-decoration: underline;
+          text-decoration-color: transparent;
+          &:hover,
+          &:focus {
+            text-decoration-color: $heading2;
           }
         }
-        ol li {
-          h3 {
-            padding: 40px 0 20px 0;
-            margin: 0;
-            font-weight: normal;
-            a {
-              color: $heading2;
-              text-decoration: none;
-              font-size: x-large;
-              transition: text-decoration-color 0.2s ease;
-              text-decoration: underline;
-              text-decoration-color: transparent;
-              &:hover,
-              &:focus {
-                text-decoration-color: $heading2;
-              }
-            }
-          }
-        }
+      }
+      &:last-child {
+        min-height: calc(45vh - 40px);
       }
     }
   }
-
-  #s5 {
-    width: 290px;
-    padding: 30px;
-    position: relative;
+  .slider_5-site-container {
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;
     background-blend-mode: darken;
-    border-top-right-radius: 25px;
+    height: 50vh;
+    width: 95%;
+    position: relative;
+    border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    @include nine_92 {
-      margin: auto;
-      width: calc(95% - 20px);
-      height: initial;
-      border-top-right-radius: 0;
-      border-bottom-left-radius: 25px;
-      border-top: 3px solid $c11;
-      padding: 10px;
+    box-sizing: border-box;
+    @include nine_92_min {
+      height: 37vh;
+      max-height: 350px;
+      min-height: 205px;
+      width: 290px;
+      padding: 30px;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
     }
-    span {
-      background-position: center;
+  }
+  .slider_5-site {
+    height: 0;
+    width: 0;
+    opacity: 0;
+    transition: opacity 0.375s;
+    will-change: opacity;
+    overflow: hidden;
+    img {
+      object-position: center;
+      object-fit: contain;
       height: 100%;
-      background-size: contain;
-      background-repeat: no-repeat;
-      box-sizing: border-box;
-      @include nine_92 {
-        padding: 440.75px 0 0 0;
-      }
-      @include nine_92_620_landscape {
-        padding: max(calc(60vh - 25px), 119px) 0 0 0;
-      }
-      @include five_0_portrait {
-        padding: 100% 0 0 0;
-      }
-      @include two_40_portrait {
-        padding: 70% 0 0 0;
+      width: 100%;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      @include nine_92_min {
+        border-radius: 0;
       }
     }
     a {
-      position: absolute;
-      top: 6.25px;
+      font-size: smaller;
+      bottom: 0;
+      padding: 3px 6px 3px 25px;
+      left: 0;
       color: $c5;
-      font-size: 12.5px;
-      @include nine_92 {
-        top: initial;
-        font-size: 10.5px;
-        background-color: $Acolor;
-        bottom: 0;
-        left: 0;
-        border-bottom-left-radius: 25px;
-        padding: 5px 15px;
-        line-height: 20px;
-        background-image: url(../images/template/natural-paper.png);
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      background-image: url(../images/template/natural-paper.png);
+      background-color: $c2;
+      background-blend-mode: darken;
+      border-bottom-left-radius: 25px;
+      @include nine_92_min {
+        padding: 0;
+        top: 6.25px;
+        left: 25px;
+        font-size: 12.5px;
+        bottom: initial;
+        font-size: small;
+        text-decoration: underline;
+        border-bottom-left-radius: initial;
       }
-      &:hover,
-      &:focus {
-        color: $c4;
+      &:hover {
+        color: $c5;
         text-decoration: none;
       }
     }
-    #s51 {
-      display: block;
-      @include nine_92 {
-        background-size: auto 50%;
-      }
+  }
+  .d-has-display {
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    a {
+      width: initial;
+      height: initial;
     }
-    #close {
-      outline: none;
-      background: transparent;
-      position: absolute;
+  }
+  .slider_5-close {
+    position: absolute;
+    font-size: 17px;
+    right: 25px;
+    bottom: 3px;
+    opacity: 1;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: $c5;
+    @include nine_92_min {
       top: 7.5px;
       right: 10px;
-      opacity: 0.15;
+      bottom: initial;
       border-radius: 100%;
-      padding: 2.5px 4px;
-      cursor: pointer;
-      color: $c5;
       border: 1px solid;
-      font-size: xx-small;
-      @include nine_92 {
-        top: initial;
-        border: none;
-        font-size: small;
-        right: 6px;
-        bottom: 3px;
-        opacity: 1;
-        border-radius: initial;
-        border-bottom-right-radius: 25px;
-        background-color: $c2;
-        background-image: url(../images/template/natural-paper.png);
-      }
+      padding: 4px 5px;
+      font-size: 10px;
+      line-height: 10px;
+      opacity: 0.125;
     }
   }
 }
