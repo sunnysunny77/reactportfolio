@@ -140,7 +140,7 @@ const Sites = () => {
                   </li>
                   <li className="scrollPreview">
                     <h3><a target="sliders" href="https://sliders.sunnyhome.site/">Sliders Demo</a></h3>
-                    Three slider demo's
+                    Five slider demo's
                     <br />
                     <br />
                     <br />
