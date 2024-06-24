@@ -186,6 +186,7 @@
     outline: none;
     border: none;
     color: $c5;
+    opacity: 0.125;
     @include nine_92_min {
       top: 8px;
       right: 11px;
@@ -196,7 +197,6 @@
       font-size: 10px;
       line-height: 10px;
       position: relative;
-      opacity: 0.125;
     }
   }
 }
