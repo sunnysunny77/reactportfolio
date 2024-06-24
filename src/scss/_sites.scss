@@ -44,7 +44,6 @@
   .slider_5-list {
     color: $c3;
     margin: 0;
-    width: 90%;
     padding: 0 20px;
     list-style-type: none;
     word-wrap: break-word;
@@ -65,29 +64,32 @@
         height: clamp(50px, 10.5vh, 100px);
       }
     }
-    ol li {
-      h3 {
-        padding: 40px 0 7px 0;
-        margin: 0;
-        font-weight: normal;
-        font-size: large;
-        @include nine_92_min {
-          font-size: larger;
-        }
-        a {
-          color: $heading2;
-          text-decoration: none;
-          transition: text-decoration-color 0.2s ease;
-          text-decoration: underline;
-          text-decoration-color: transparent;
-          &:hover,
-          &:focus {
-            text-decoration-color: $heading2;
+    ol {
+      padding-left: 10px;
+      li {
+        h3 {
+          padding: 40px 0 7px 0;
+          margin: 0;
+          font-weight: normal;
+          font-size: large;
+          @include nine_92_min {
+            font-size: larger;
+          }
+          a {
+            color: $heading2;
+            text-decoration: none;
+            transition: text-decoration-color 0.2s ease;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            &:hover,
+            &:focus {
+              text-decoration-color: $heading2;
+            }
           }
         }
-      }
-      &:last-child {
-        min-height: calc(45vh - 40px);
+        &:last-child {
+          min-height: calc(45vh - 40px);
+        }
       }
     }
   }
@@ -162,7 +164,7 @@
       }
     }
   }
-  
+
   .d-has-display {
     height: 100%;
     width: 100%;
@@ -178,25 +180,41 @@
   .slider_5-close {
     position: absolute;
     font-size: medium;
-    right: 25px;
-    bottom: 3px;
+    right: 0;
+    bottom: 0;
     opacity: 1;
     cursor: pointer;
     background: transparent;
     outline: none;
     border: none;
     color: $c5;
-    opacity: 0.125;
+    background-image: url(../images/template/natural-paper.png);
+    background-color: $c2;
+    background-blend-mode: darken;
+    border-bottom-right-radius: 25px;
+    height: 25px;
+    width: 25px;
+    font-size: 12.5px;
+    line-height: 12.5px;
+    text-align: left;
     @include nine_92_min {
+      background-image: initial;
+      background-color: transparent;
+      background-blend-mode: initial;
+      border-bottom-right-radius: initial;
+      text-align: initial;
+      height: initial;
+      width: initial;
+      opacity: 0.125;
       top: 8px;
       right: 11px;
       bottom: initial;
       border-radius: 100%;
       border: 1px solid;
       padding: 4px 5px;
+      position: relative;
       font-size: 10px;
       line-height: 10px;
-      position: relative;
     }
   }
 }
