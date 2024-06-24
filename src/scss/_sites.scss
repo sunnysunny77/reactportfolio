@@ -26,6 +26,7 @@
       width: calc(80% - 300px);
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
+      position: relative;
     }
   }
   .slider_5-scroll {
@@ -35,6 +36,8 @@
     @include nine_92_min {
       height: calc(clamp(205px, 35vh, 340px) - 60px);
       width: calc(100% + 300px);
+      position: absolute;
+      z-index: 1;
     }
   }
   .slider_5-list {
