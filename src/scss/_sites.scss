@@ -103,7 +103,6 @@
       border-bottom-left-radius: 0;
       border-top-right-radius: 25px;
       border-bottom-right-radius: 25px;
-      position: static;
       display: flex;
       align-items: flex-start;
       box-sizing: border-box;
@@ -147,7 +146,6 @@
         padding: 0;
         right: 0;
         bottom: 8px;
-        position: absolute;
         font-size: 12.5px;
         font-size: small;
         text-decoration: underline;
@@ -168,8 +166,8 @@
     max-height: 50vh;
     display: flex;
     @include nine_92_min {
-      padding: 30px 10px 30px 0;
-      flex-wrap: wrap;
+      padding: 35px 0;
+      justify-content: center;
     }
   }
 
