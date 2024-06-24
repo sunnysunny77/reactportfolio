@@ -4,12 +4,12 @@ import { picture, sitesOverlay } from '../js/overlay.js';
 import { useEffect } from 'react';
 import global  from "../images/sites/global.png"; 
 import furniture from "../images/sites/furniture.jpg";
-import fas from "../images/sites/fas.jpg";
-import access from "../images/sites/access.jpg";
-import dave from "../images/sites/dave.jpg";
-import bus from  "../images/sites/bus.jpg";
-import candid from  "../images/sites/candid.jpg";
-import stick from "../images/sites/stick.jpg";
+import fasera from "../images/sites/fasera.jpg";
+import access_robotics from "../images/sites/access-robotics.jpg";
+import daves_blog from "../images/sites/daves-blog.jpg";
+import business from  "../images/sites/business.jpg";
+import candid_cleaning from  "../images/sites/candid-cleaning.jpg";
+import sticky from "../images/sites/sticky.jpg";
 import sliders from "../images/sites/sliders.jpg";
 import login from "../images/sites/login.jpg";
 
@@ -34,7 +34,7 @@ const Sites = () => {
         </div>
         <div className="slider_5-list-container">
           <div className="slider_5-scroll scroll-listener">
-            <ul className="slider_5-list">
+            <ul className="slider_5-list fadeInBack">
               <li>
                 Scroll preview
                 <img alt="scroll down" width="100" height="100" src={Next} />
@@ -52,7 +52,7 @@ const Sites = () => {
                     <br />
                   </li>
                   <li className="scroll-preview">
-                    <h3><a target="fas" href="https://www.fasera.com/">Fasera</a></h3>
+                    <h3><a target="fasera" href="https://www.fasera.com/">Fasera</a></h3>
                     Wordpress theme
                     <br />
                     <br />
@@ -64,7 +64,7 @@ const Sites = () => {
                     <br />
                   </li>
                   <li className="scroll-preview">
-                    <h3><a target="access" href="https://access.vm1.lateralaspect.com.au/">Access Robotics</a></h3>
+                    <h3><a target="access_robotics" href="https://access.vm1.lateralaspect.com.au/">Access Robotics</a></h3>
                     Wordpress theme
                     <br />
                     <br />
@@ -76,7 +76,7 @@ const Sites = () => {
                     <br />
                   </li>
                   <li className="scroll-preview">
-                    <h3><a target="dave" href="https://davesblog.sunnyhome.site/">Daves Blog</a></h3>
+                    <h3><a target="daves_blog" href="https://davesblog.sunnyhome.site/">Daves Blog</a></h3>
                     Design copy
                     <br />
                     <br />
@@ -113,7 +113,7 @@ const Sites = () => {
                     <br />
                   </li>
                   <li className="scroll-preview">
-                    <h3><a target="candid" href="https://candidcleaning.sunnyhome.site">Candid Cleaning</a></h3>
+                    <h3><a target="candid_cleaning" href="https://candidcleaning.sunnyhome.site">Candid Cleaning</a></h3>
                     MERN stack
                     <br />
                     <br />
@@ -193,63 +193,63 @@ const Sites = () => {
             </ul>
           </div>
         </div>
-        <div className="slider_5-site-container site-container d-flex align-items-start">
+        <div className="slider_5-site-container site-container">
           <div id="site-1" className="slider_5-site site-img d-has-display">
-            <img src={ global } alt="Global"/>
+            <img src={global} alt="global"/>
           </div>
           <div id="site-2" className="slider_5-site site-img">
-            <img src={ furniture } alt="Furniture"/>
-            <a target="Furniture" href="https://furniture.sunnyhome.site/">
+            <a target="furniture" href="https://furniture.sunnyhome.site/">
               furniture.sunnyhome
             </a>
+            <img src={furniture} alt="furniture"/>
           </div>
           <div id="site-3" className="slider_5-site site-img">
-            <img src={ fas } alt="Fasera"/>
-            <a target="Fasera" href="https://www.fasera.com/">
+            <a target="fasera" href="https://www.fasera.com/">
               fasera.com 
             </a>
+            <img src={fasera} alt="fasera"/>
           </div>
           <div id="site-4" className="slider_5-site site-img">
-            <img src={ access } alt="Access-Robotics"/>
-            <a target="Access-Robotics" href="https://access.vm1.lateralaspect.com.au/">
+            <a target="access_robotics" href="https://access.vm1.lateralaspect.com.au/">
               access robotics
             </a>
+            <img src={access_robotics} alt="access_robotics"/>
           </div>
           <div id="site-5" className="slider_5-site site-img">
-            <img src={ dave } alt="Blog"/>
-            <a target="Blog" href="https://davesblog.sunnyhome.site/">
+            <a target="daves_blog" href="https://davesblog.sunnyhome.site/">
               davesblog.sunnyhome
             </a>
+            <img src={daves_blog} alt="daves_blog"/>
           </div>
           <div id="site-6" className="slider_5-site site-img">
-            <img src="../images/sites/bus.jpg" alt="Business"/>
-            <a target={ bus } href="https://business.sunnyhome.site/">
+            <a target="business" href="https://business.sunnyhome.site/">
               business.sunnyhome
             </a>
+            <img src={business}  alt="business"/>
           </div>
           <div id="site-7" className="slider_5-site site-img">
-            <img src={ candid } alt="Candid"/>
-            <a target="Candid" href="https://candidcleaning.sunnyhome.site">
+            <a target="candid_cleaning" href="https://candidcleaning.sunnyhome.site">
             candidcleaning.sunnyhome
             </a>
+            <img src={candid_cleaning} alt="candid_cleaning"/>
           </div>
           <div id="site-8" className="slider_5-site site-img">
-            <img src={ stick } alt="Sticky"/>
-            <a target="Sticky" href="https://sticky.sunnyhome.site/">
+            <a target="sticky" href="https://sticky.sunnyhome.site/">
             sticky.sunnyhome 
             </a>
+            <img src={sticky} alt="sticky"/>
           </div>
           <div id="site-9" className="slider_5-site site-img">
-            <img src={ sliders } alt="Sliders"/>
-            <a target="Sliders" href="https://sliders.sunnyhome.site/">
+            <a target="sliders" href="https://sliders.sunnyhome.site/">
               sliders.sunnyhome
             </a>
+            <img src={sliders} alt="sliders"/>
           </div>
           <div id="site-10" className="slider_5-site site-img">
-            <img src={ login } alt="Login"/>
-            <a target="Login" href="https://login.sunnyhome.site/">
+            <a target="login" href="https://login.sunnyhome.site/">
               login.sunnyhome
             </a>
+            <img src={login} alt="login"/>
           </div>
           <button aria-label="close" className="slider_5-close slider-close">X</button>
         </div>

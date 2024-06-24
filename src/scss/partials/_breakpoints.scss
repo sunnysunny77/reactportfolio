@@ -16,32 +16,8 @@
     }
 }
 
-@mixin nine_92 {
-    @media only screen and (max-width: 992px) {
-        @content;
-    }
-}
-
-@mixin two_40_portrait {
-    @media only screen and (max-width: 240px) and (orientation: portrait) {
-        @content;
-    }
-}
-
-@mixin five_0_portrait {
-    @media only screen and (max-width: 500px) and (orientation: portrait) {
-        @content;
-    }
-}
-
 @mixin seven_20_portrait {
     @media only screen and (max-width: 720px) and (orientation: portrait) {
         @content;
     }
-}
-
-@mixin nine_92_620_landscape {
-    @media only screen and (max-width: 992px) and (max-height: 620px)  and (orientation: landscape) {
-        @content;
-    } 
 }

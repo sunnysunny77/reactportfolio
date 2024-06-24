@@ -13,57 +13,55 @@
     }
   }
   .slider_5-list-container {
-    position: relative;
     width: 95%;
     height: min(40vh, 250px);
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;
     background-blend-mode: darken;
-    overflow: hidden;
     border-top: 3px solid $c4;
     border-bottom: 3px solid $c4;
     @include nine_92_min {
       border: none;
-      height: 37vh;
-      max-height: 350px;
+      height: 35vh;
+      max-height: 388px;
       min-height: 205px;
-      width: calc(80% - 290px);
+      width: calc(80% - 300px);
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
     }
   }
   .slider_5-scroll {
-    height: calc(min(40vh, 250px) - 40px);
-    margin: 20px 0;
+    position: relative;
+    height: calc(min(40vh, 250px) - 60px);
+    margin: 30px 0;
     @include nine_92_min {
-      height: calc(37vh - 40px);
-      max-height: 310px;
-      min-height: 165px;
+      height: calc(35vh - 60px);
+      min-height: 145px;
+      width: calc(100% + 300px);
     }
   }
   .slider_5-list {
+    color: $c3;
     margin: 0;
+    width: 90%;
     padding: 0 20px;
     list-style-type: none;
-    color: $c3;
-    width: 90%;
     word-wrap: break-word;
     font-size: medium;
     @include nine_92_min {
       padding: 0 7px 0 40px;
       font-size: large;
+      width: calc(100% - 340px);
     }
     li img {
       display: block;
-      margin: 40px 0 min(10.5vh, 100px) 0;
-      width: 10.5vh;
-      height: 10.5vh;
-      min-width: 50px;
-      min-height: 50px;
-      max-width: 100px;
-      max-height: 100px;
+      margin: 40px 0 clamp(0px, 10.5vh, 100px) 0;
+      width: clamp(50px, 10.5vh, 75px);
+      height: clamp(50px, 10.5vh, 75px);
       @include nine_92_min {
-        margin: 40px 0 min(10.5vh, 100px) 4%;
+        margin: 40px 0 clamp(0px, 10.5vh, 100px) 4%;
+        width: clamp(50px, 10.5vh, 100px);
+        height: clamp(50px, 10.5vh, 100px);
       }
     }
     ol li {
@@ -71,10 +69,13 @@
         padding: 40px 0 7px 0;
         margin: 0;
         font-weight: normal;
+        font-size: large;
+        @include nine_92_min {
+          font-size: larger;
+        }
         a {
           color: $heading2;
           text-decoration: none;
-          font-size: inherit;
           transition: text-decoration-color 0.2s ease;
           text-decoration: underline;
           text-decoration-color: transparent;
@@ -93,35 +94,40 @@
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;
     background-blend-mode: darken;
-    height: 50vh;
     width: 95%;
-    position: relative;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     box-sizing: border-box;
+    position: relative;
     @include nine_92_min {
-      height: 37vh;
-      max-height: 350px;
+      height: 35vh;
+      max-height: 388px;
       min-height: 205px;
-      width: 290px;
-      padding: 30px;
+      width: 300px;
+      padding: 0;
       border-bottom-left-radius: 0;
       border-top-right-radius: 25px;
       border-bottom-right-radius: 25px;
+      position: static;
+      display: flex;
+      align-items: flex-start;
+      box-sizing: border-box;
     }
   }
   .slider_5-site {
-    height: 0;
     width: 0;
+    height: 0;
+    overflow: hidden;
     opacity: 0;
     transition: opacity 0.375s;
     will-change: opacity;
-    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
     img {
       object-position: center;
       object-fit: contain;
-      height: 100%;
       width: 100%;
+      height: 100%;
       border-bottom-left-radius: 25px;
       border-bottom-right-radius: 25px;
       @include nine_92_min {
@@ -129,29 +135,29 @@
       }
     }
     a {
-      font-size: smaller;
+      font-size: medium;
       bottom: 0;
-      padding: 3px 6px 3px 25px;
+      padding: 3px 25px 3px 25px;
       left: 0;
       color: $c5;
       position: absolute;
-      display: none;
+      border-bottom-left-radius: 25px;
       background-image: url(../images/template/natural-paper.png);
       background-color: $c2;
       background-blend-mode: darken;
-      border-bottom-left-radius: 25px;
       @include nine_92_min {
-        padding: 0;
-        top: 20px;
-        left: 25px;
-        font-size: 12.5px;
         background-image: initial;
         background-color: transparent;
         background-blend-mode: initial;
-        bottom: initial;
+        padding: 0;
+        right: 0;
+        bottom: 8px;
+        position: absolute;
+        font-size: 12.5px;
         font-size: small;
         text-decoration: underline;
         border-bottom-left-radius: initial;
+        text-align: center;
       }
       &:hover {
         color: $c5;
@@ -159,17 +165,22 @@
       }
     }
   }
+  
   .d-has-display {
     height: 100%;
     width: 100%;
     opacity: 1;
-    a {
-     display: block;
+    max-height: 60vh;
+    display: flex;
+    @include nine_92_min {
+      padding: 30px 10px 30px 0;
+      flex-wrap: wrap;
     }
   }
+
   .slider_5-close {
     position: absolute;
-    font-size: 17px;
+    font-size: medium;
     right: 25px;
     bottom: 3px;
     opacity: 1;
@@ -179,14 +190,15 @@
     border: none;
     color: $c5;
     @include nine_92_min {
-      top: 7.5px;
-      right: 10px;
+      top: 8px;
+      right: 11px;
       bottom: initial;
       border-radius: 100%;
       border: 1px solid;
       padding: 4px 5px;
       font-size: 10px;
       line-height: 10px;
+      position: relative;
       opacity: 0.125;
     }
   }

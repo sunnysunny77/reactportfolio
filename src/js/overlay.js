@@ -4,25 +4,23 @@ import { eventListner } from '../js/utilities.js';
 let picture_id = [];
 
 export const picture = () => {
-
     const site_img = document.querySelectorAll(".site-img");
-    for (let index = 1; index <= site_img.length; index++) {
-        picture_id.push(`site-${index}`);
-      }
-    
+    for (const index of site_img) {
+      picture_id.push(index.id);
+    }
 }
 
 const picture_display = (item) => {
-    for (const index of picture_id) {
-        const obj = document.querySelector(`#${index}`);
-        const bool = obj.id === item;
-        const contains = obj.classList.contains("d-has-display");
-        if (bool && !contains) {
-          obj.classList.add("d-has-display");
-        } else if (!bool && contains) {
-          obj.classList.remove("d-has-display");
-        }
-      }
+  const site_img = document.querySelectorAll(".site-img");
+  for (const index of site_img) {
+    const bool = index.id === item;
+    const contains = index.classList.contains("d-has-display");
+    if (bool && !contains) {
+      index.classList.add("d-has-display");
+    } else if (!bool && contains) {
+      index.classList.remove("d-has-display");
+    }
+  }
   };
 
 export const fromOverlay = (event) => {
@@ -50,7 +48,7 @@ export const sitesOverlay = (event) => {
                         const scroll_preview = document.querySelectorAll(".scroll-preview");
                         const ranges = [...scroll_preview].map((item) => item.offsetTop);
                         const scroll_pos = event.target.scrollTop;
-
+                  
                         if (scroll_pos < ranges[0]) {
                           picture_display(picture_id[0]);
                         }
@@ -66,7 +64,6 @@ export const sitesOverlay = (event) => {
                         if (scroll_pos > ranges.at(-1)) {
                           picture_display(picture_id.at(-1));
                         }
-                        
                         cached = null;
                     }, 300);
                 }
