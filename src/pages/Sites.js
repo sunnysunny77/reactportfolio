@@ -194,7 +194,7 @@ const Sites = () => {
           </div>
         </div>
         <div className="slider_5-site-container site-container">
-          <div id="site-1" className="slider_5-site site-img d-has-display">
+          <div id="site-1" className="slider_5-site site-img d-has-display fadeInBack">
             <img src={global} alt="global"/>
           </div>
           <div id="site-2" className="slider_5-site site-img">
