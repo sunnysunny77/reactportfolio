@@ -166,6 +166,9 @@ const Sites = () => {
                     https://observatory.mozilla.org/ A+
                     <br />
                     <br />
+                    SSL A+
+                    <br />
+                    <br />
                     JavaScript SCSS minifier
                     <br />
                   </li>
