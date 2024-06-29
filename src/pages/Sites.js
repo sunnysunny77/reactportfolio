@@ -157,7 +157,13 @@ const Sites = () => {
                     HTML5 - SCSS - JavaScript - PHP
                     <br />
                     <br />
-                    Bootstrap 
+                    Bootstrap
+                    <br />
+                    <br />
+                    PWA 
+                    <br />
+                    <br />
+                    https://observatory.mozilla.org/ A+
                     <br />
                   </li>
                   <li className="scroll-preview">
