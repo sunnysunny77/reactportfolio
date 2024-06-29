@@ -52,8 +52,8 @@ export const circleInit = () => {
     image_fill_left.style.backgroundImage = `url(${array_src[next]}`;
     image_fill_right.href = array_href[counter];
     image_fill_left.href = array_href[next];
-    image_fill_right.innerHTML = `<span class="hidden">${array_text[counter]}</span>`;
-    image_fill_left.innerHTML = `<span class="hidden">${array_text[next]}</span>`;
+    image_fill_right.setAttribute("aria-label", array_text[counter]);
+    image_fill_left.setAttribute("aria-label", array_text[next]);
   };
 
   const iteiteration_start = () => {
@@ -65,8 +65,8 @@ export const circleInit = () => {
     image2.style.backgroundImage = `url(${array_src[next]}`;
     image1.href = array_href[counter];
     image2.href = array_href[next];
-    image1.innerHTML = `<span class="hidden">${array_text[counter]}</span>`;
-    image2.innerHTML = `<span class="hidden">${array_text[next]}</span>`;
+    image1.setAttribute("aria-label", array_text[counter]);
+    image2.setAttribute("aria-label", array_text[next]);
     inner.innerHTML = array_anchor[counter];
   };
 
@@ -124,10 +124,11 @@ export const circleInit = () => {
   image2.href = array_href[1];
   image_fill_right.href = array_href[0];
   image_fill_left.href = array_href[1];
-  image1.innerHTML = `<span class="hidden">${array_text[0]}</span>`;
-  image2.innerHTML = `<span class="hidden">${array_text[1]}</span>`;
-  image_fill_right.innerHTML = `<span class="hidden">${array_text[0]}</span>`;
-  image_fill_left.innerHTML = `<span class="hidden">${array_text[1]}</span>`;
+  image1.setAttribute("aria-label", array_text[0]);
+  image2.setAttribute("aria-label", array_text[1]);
+  image_fill_right.setAttribute("aria-label", array_text[0]);
+  image_fill_left.setAttribute("aria-label", array_text[1]);
+  inner.innerHTML = array_anchor[0];
   inner.innerHTML = array_anchor[0];
   width = percent;
   percentage.style.width = `${width}%`;
