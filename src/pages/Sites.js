@@ -160,10 +160,13 @@ const Sites = () => {
                     Bootstrap
                     <br />
                     <br />
-                    PWA 
+                    PWA service worker
                     <br />
                     <br />
                     https://observatory.mozilla.org/ A+
+                    <br />
+                    <br />
+                    JavaScript SCSS minifier
                     <br />
                   </li>
                   <li className="scroll-preview">
