@@ -41,10 +41,9 @@ $imgSkills: (
 }
 
 a[target="git"] {
-  margin: 5% auto auto 5%;
+  margin: 25px auto 0 5%;
   opacity: 0;
   transition: opacity 0.2s linear, color 0.2s ease;
-  max-width: 180px;
   z-index: -1;
   color: $c1;
   text-decoration: none;
