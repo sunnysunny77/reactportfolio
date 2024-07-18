@@ -19,7 +19,7 @@ body {
   align-items: center;
   box-sizing: border-box;
   margin: 0;
-  padding: 8px;
+  padding: 16px;
   @include nine_92 {
     padding: 0;
   }
@@ -56,8 +56,8 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 290px);
-  justify-content: space-around;
+  min-height: calc(100vh - 306px);
+  justify-content: space-evenly;
   @include nineteen_21 {
     min-height: 750px;
   }

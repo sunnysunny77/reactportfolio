@@ -27,7 +27,7 @@
 }
 
 .template-p-cont {
-    height: clamp(205px, 35vh, 340px);
+    height: clamp(205px, 35vh, 385px);
     width: calc(80% - 350px);
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -71,7 +71,7 @@
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    margin: 25px auto;
+    margin: 35px auto 25px auto;
     padding: 13px 0;
     opacity: 0.5;
     @include nine_92 {
@@ -92,7 +92,7 @@
     padding: 10px;
     width: 80%;
     box-sizing: border-box;
-    margin: 3% auto 6% auto;
+    margin: 6% auto;
     @include nine_92 {
         margin: 6% auto;
         padding: 3px;
@@ -113,9 +113,7 @@
     background-color: $main;
     background-blend-mode: luminosity;
     position: relative;
-    height: 50vh;
-    min-height: 450px;
-    max-height: 600px;
+    height: 500px;
     box-sizing: border-box;
     border-top-right-radius: 12.5px;
     border-top-left-radius: 2.5px;
