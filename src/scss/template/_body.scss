@@ -28,7 +28,7 @@
 
 .template-p-cont {
     height: clamp(205px, 35vh, 385px);
-    width: calc(80% - 350px);
+    width: calc(85% - 350px);
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     background-image: url(../../images/template/natural-paper.png);
@@ -71,7 +71,7 @@
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    margin: 35px auto 25px auto;
+    margin: 35px auto 0 auto;
     padding: 13px 0;
     opacity: 0.5;
     @include nine_92 {
