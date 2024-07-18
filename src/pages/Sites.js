@@ -1,5 +1,5 @@
 
-import Next from "../images/home/next.png";
+import Next from "../images/sites/next.png";
 import { picture, sitesOverlay } from '../js/overlay.js';
 import { useEffect } from 'react';
 import global  from "../images/sites/global.png"; 

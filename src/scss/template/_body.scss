@@ -9,20 +9,20 @@
     background-color: $c2;
     padding: 0 50px;
     @include nine_92 {
-        margin: auto auto 50px auto;
-        width: 160px;
-        height: 160px;
-        border-radius: initial;
+        margin: 25px auto 75px auto;
+        width: 90px;
+        height: 90px;
         padding: 0;
-        background-image: none;
-        background-color: initial;
+        border-radius: 50%;
     }
     .template-img {
         background-position: center;
         height: 100%;
         background-size: contain;
         background-repeat: no-repeat;
-        opacity: 0.7;
+        @include nine_92 {
+            background-size: 165%; 
+        }   
     }
 }
 
