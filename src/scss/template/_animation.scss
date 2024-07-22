@@ -14,20 +14,20 @@ h2::before {
 
 .template-img-0 .circle-progress .opacity-inner {
   opacity: 0.0375;
-  @include nine_92_min {
+  @include ten_25_min {
     opacity: 0;
   }
 }
 
 .template-img-0 .circle-progress .opacity-image {
   opacity: 1;
-  @include nine_92_min {
+  @include ten_25_min {
     opacity: 0;
   }
 }
 
 .template-img-0 .circle-progress .leftcompact {
-  @include nine_92_min {
+  @include ten_25_min {
     transition: 0.75s right cubic-bezier(0.215, 0.61, 0.355, 1);
     will-change: right;
     right: calc(100% - 150px);
@@ -36,7 +36,7 @@ h2::before {
 }
 
 .template-img-0 .circle-progress .rightcompact {
-  @include nine_92_min {
+  @include ten_25_min {
     transition: 0.75s left cubic-bezier(0.215, 0.61, 0.355, 1);
     will-change: left;
     left: calc(100% - 150px);
@@ -53,7 +53,7 @@ h2::before {
 }
 
 .scale3 {
-  @include nine_92 {
+  @include ten_24_max {
     animation: scale3 0.75s ease-in;
   }
 }
@@ -70,7 +70,7 @@ h2::before {
 }
 
 .fadeInBack {
-  @include nine_92 {
+  @include ten_24_max {
     animation: fadeInBack 0.75s ease-in;
   }
 }

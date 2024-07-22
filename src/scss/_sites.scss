@@ -8,7 +8,7 @@
   position: relative;
   #site-img {
     display: none;
-    @include nine_92 {
+    @include ten_24_max {
       display: block;
     }
   }
@@ -20,7 +20,7 @@
     background-blend-mode: darken;
     border-top: 3px solid $mainbg;
     border-bottom: 3px solid $mainbg;
-    @include nine_92_min {
+    @include ten_25_min {
       border: none;
       height: clamp(205px, 35vh, 385px);
       width: calc(85% - 300px);
@@ -33,7 +33,7 @@
     position: relative;
     height: calc(min(40vh, 250px) - 20px);
     margin: 10px 0;
-    @include nine_92_min {
+    @include ten_25_min {
       margin: 30px 0;
       height: calc(clamp(205px, 35vh, 385px) - 60px);
       width: calc(100% + 300px);
@@ -48,7 +48,7 @@
     list-style-type: none;
     word-wrap: break-word;
     font-size: medium;
-    @include nine_92_min {
+    @include ten_25_min {
       padding: 0 7px 0 40px;
       font-size: large;
       width: calc(100% - 340px);
@@ -58,7 +58,7 @@
       margin: clamp(15px, 4.75vh, 40px) 0 clamp(0px, 10.5vh, 100px) 0;
       width: clamp(50px, 10.5vh, 75px);
       height: clamp(50px, 10.5vh, 75px);
-      @include nine_92_min {
+      @include ten_25_min {
         margin: 40px 0 clamp(0px, 10.5vh, 110px) 4%;
         width: clamp(50px, 10.5vh, 100px);
         height: clamp(50px, 10.5vh, 100px);
@@ -72,7 +72,7 @@
           margin: 0;
           font-weight: normal;
           font-size: large;
-          @include nine_92_min {
+          @include ten_25_min {
             font-size: larger;
           }
           a {
@@ -102,7 +102,7 @@
     border-bottom-right-radius: 25px;
     box-sizing: border-box;
     position: relative;
-    @include nine_92_min {
+    @include ten_25_min {
       height: clamp(205px, 35vh, 385px);
       width: 300px;
       padding: 0;
@@ -130,7 +130,7 @@
       height: 100%;
       border-bottom-left-radius: 25px;
       border-bottom-right-radius: 25px;
-      @include nine_92_min {
+      @include ten_25_min {
         border-radius: 0;
       }
     }
@@ -145,7 +145,7 @@
       background-image: url(../images/template/natural-paper.png);
       background-color: $c2;
       background-blend-mode: darken;
-      @include nine_92_min {
+      @include ten_25_min {
         background-image: initial;
         background-color: transparent;
         background-blend-mode: initial;
@@ -174,7 +174,7 @@
     @include seven_20_portrait {
       max-height: initial;
     }
-    @include nine_92_min {
+    @include ten_25_min {
       padding: 35px 0;
       justify-content: center;
     }
@@ -202,7 +202,7 @@
     align-items: center;
     justify-content: center;
     padding: 0;
-    @include nine_92_min {
+    @include ten_25_min {
       background-image: initial;
       background-color: transparent;
       background-blend-mode: initial;

@@ -20,7 +20,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 16px;
-  @include nine_92 {
+  @include ten_24_max {
     padding: 0;
   }
 }
@@ -61,7 +61,7 @@ main {
   @include nineteen_21 {
     min-height: 750px;
   }
-  @include nine_92 {
+  @include ten_24_max {
     justify-content: initial;
     min-height: calc(100vh - 192px);
   }
@@ -89,12 +89,12 @@ main {
       color: $heading1;
       font-size: 1.4em;
       position: relative;
-      @include nine_92_min {
+      @include ten_25_min {
         &.heading {
           margin-top: 50px;
         }
       }
-      @include nine_92 {
+      @include ten_24_max {
         height: 27px;
         font-size: large;
         margin: 25px auto 25px max(5%, 25px);

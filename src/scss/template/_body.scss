@@ -8,7 +8,7 @@
     background-blend-mode: darken;
     background-color: $c2;
     padding: 0 50px;
-    @include nine_92 {
+    @include ten_24_max {
         margin: 25px auto 75px auto;
         width: 90px;
         height: 90px;
@@ -20,7 +20,7 @@
         height: 100%;
         background-size: contain;
         background-repeat: no-repeat;
-        @include nine_92 {
+        @include ten_24_max {
             background-size: 165%; 
         }   
     }
@@ -37,7 +37,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    @include nine_92 {
+    @include ten_24_max {
         width: 100%;
         height: 50vh;
         min-height: 170px;
@@ -54,7 +54,7 @@
         font-size: large;
         word-wrap: break-word;
         overflow: hidden;
-        @include nine_92 {
+        @include ten_24_max {
             text-align: center;
             font-size: medium;
             padding: 0 10px;
@@ -71,10 +71,10 @@
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    margin: 30px  auto;
+    margin: 25px  auto;
     padding: 10px 0;
     opacity: 0.5;
-    @include nine_92 {
+    @include ten_24_max {
         width: 60%;
         padding: 3% 0;
         margin: 20vh auto 10vh auto;
@@ -93,7 +93,7 @@
     width: 85%;
     box-sizing: border-box;
     margin: 6% auto;
-    @include nine_92 {
+    @include ten_24_max {
         margin: 6% auto;
         padding: 3px;
         width: 65%;
@@ -119,7 +119,7 @@
     border-top-left-radius: 2.5px;
     border-bottom-right-radius: 12.5px;
     border-bottom-left-radius: 12.5px;
-    @include nine_92 {
+    @include ten_24_max {
         height: initial;
         min-height: initial;
         max-height: initial;
@@ -165,7 +165,7 @@
             font-weight: 700;
             transition: color 0.2s ease;
             &:hover {
-                @include nine_92_min {
+                @include ten_25_min {
                     color: $c4;
                 }
             }

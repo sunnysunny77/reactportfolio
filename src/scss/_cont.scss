@@ -4,7 +4,7 @@
 
 #overlay {
   text-align: initial;
-  @include nine_92 {
+  @include ten_24_max {
     padding: 0 20px;
     margin: 0 7px;
   }
@@ -31,7 +31,7 @@
     label:nth-child(2),
     label:nth-child(3) {
       width: 48%;
-      @include nine_92 {
+      @include ten_24_max {
         width: 100%;
       }
     }
@@ -133,7 +133,7 @@
     opacity: 1;
     transition: opacity 0.2s ease;
     &:hover {
-      @include nine_92_min {
+      @include ten_25_min {
         opacity: 0.5;
       }
     }
@@ -150,7 +150,7 @@
     position: absolute;
     display: none;
     left: 0;
-    @include nine_92_min {
+    @include ten_25_min {
       display: block;
     }
   }
@@ -159,7 +159,7 @@
     margin: auto 12.5% auto 12.5%;
     padding: 14%;
     height: initial;
-    @include nine_92_min {
+    @include ten_25_min {
       transition: opacity 0.375s ease-in;
       will-change: opacity;
       opacity: 1;
@@ -171,13 +171,13 @@
     right: 0;
     position: absolute;
     display: none;
-    @include nine_92_min {
+    @include ten_25_min {
       display: block;
     }
   }
   .image-2 {
     display: none;
-    @include nine_92_min {
+    @include ten_25_min {
       right: 0;
       position: absolute;
       transition: opacity 0.375s ease-in;
@@ -192,7 +192,7 @@
     transition: 0.375s ease-out;
     will-change: opacity;
     opacity: 1;
-    @include nine_92_min {
+    @include ten_25_min {
       transition: 0.375s ease-in;
       width: 100%;
       margin: auto auto auto 2%;

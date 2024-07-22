@@ -11,13 +11,13 @@ header {
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
-    @include nine_92 {
+    @include ten_24_max {
     border-radius: initial;
         border-bottom: 4px solid $mainbg;
     }
     > a {
         margin: auto;
-        @include nine_92 {
+        @include ten_24_max {
             display: none;
         }
         div {
@@ -30,7 +30,7 @@ header {
     }
     button {
         display: none;
-        @include nine_92 {
+        @include ten_24_max {
             background-image: url(../../images/template/menu.png);
             width: 50px;
             height: 50px;
@@ -48,7 +48,7 @@ header {
     }
     nav {
         width: 67%;
-        @include nine_92 {
+        @include ten_24_max {
             width: 100%;
             overflow: hidden;
             &.disp {
@@ -64,7 +64,7 @@ header {
             li {
                 list-style-type: none;
                 width: 25%;
-                @include nine_92 {
+                @include ten_24_max {
                     width: 50%;
                 }
                 a {
@@ -79,7 +79,7 @@ header {
                     position: relative;
                     transition: color 0.375s;
                     transition-delay: 375ms;
-                    @include nine_92_min {
+                    @include ten_25_min {
                         &:hover::after {
                             width: 100%;
                         }
@@ -87,7 +87,7 @@ header {
                             color: $aHover;
                         }
                     }
-                    @include nine_92 {
+                    @include ten_24_max {
                         border-top: 1px solid $mainbg;
                         &.active {
                             color: $Acolor;
@@ -114,12 +114,12 @@ header {
                     }
                 }
                 &:nth-child(even) a {
-                    @include nine_92 {
+                    @include ten_24_max {
                         border-left: 1px solid $mainbg;
                     }
                 }
                 &:nth-child(odd) a {
-                    @include nine_92 {
+                    @include ten_24_max {
                         border-left: none;
                     }
                 }
@@ -135,7 +135,7 @@ header {
             justify-content: flex-end;
             align-items: center;
             padding: 13px;
-            @include nine_92 {
+            @include ten_24_max {
                 border-top: 1px solid $mainbg;
                 border-left: none;
                 justify-content: flex-end;

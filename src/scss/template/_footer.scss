@@ -10,7 +10,7 @@ footer {
     display: flex;
     position: relative;
     z-index: 1;
-    @include nine_92 {
+    @include ten_24_max {
         border-top: 4px solid $mainbg;
         border-radius: initial;
     }
@@ -30,7 +30,7 @@ footer {
         z-index: -1;
         border-bottom-left-radius: 25px;
         border-bottom-right-radius: 25px;
-        @include nine_92 {
+        @include ten_24_max {
             border-radius: initial;
         }
     }
@@ -40,7 +40,7 @@ footer {
         padding: 0;
         margin: 85px 3.4% auto 50%;
         letter-spacing: 0.75px;
-        @include nine_92 {
+        @include ten_24_max {
             margin:  auto auto 10px auto;
             width: 100%;
         }
@@ -51,7 +51,7 @@ footer {
                 margin: 0.75%;
                 text-decoration: none;
                 padding: 4px 10px;
-                @include nine_92 {
+                @include ten_24_max {
                     color: $c2;
                     margin: 0;
                     padding: 4px 0px;
@@ -65,7 +65,7 @@ footer {
         li.sm {
             padding: 0 1% 0 0;
             opacity: 0.5;
-            @include nine_92 {
+            @include ten_24_max {
                 display: block;
                 padding: 0;
             }
