@@ -57,7 +57,7 @@ main {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 306px);
-  justify-content: space-evenly;
+  justify-content: space-around;
   @include nineteen_21 {
     min-height: 750px;
   }
