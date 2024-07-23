@@ -67,10 +67,10 @@ h2::before {
 .shrink.template-img-0 {
   .template-b {
     background-color: initial;
-    color: darken($main, 7.5%);
+    color: darken($main, 15%);
     &:hover,
     &:focus {
-      color: darken($main, 7.5%);
+      color: darken($main, 15%);
     }
   }
   .template-shrink {
