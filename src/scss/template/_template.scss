@@ -56,14 +56,14 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 306px);
+  min-height: calc(92vh - 230px);
   justify-content: space-evenly;
   @include nineteen_21 {
-    min-height: 750px;
+    min-height:calc(42vh - 230px);
   }
   @include ten_24_max {
     justify-content: initial;
-    min-height: calc(100vh - 192px);
+    min-height: calc(100vh - 212px);
   }
   #after {
     background-image: url(../../images/template/handmade-paper.png);

@@ -1,7 +1,6 @@
 /* FOOTER */
 
 footer {
-    height: 125px;
     background-image: url(../../images/template/handmade-paper.png);
     border-top: 4px solid $mainbg;
     border-bottom-left-radius: 25px;
@@ -9,6 +8,7 @@ footer {
     background-color: $c9;
     display: flex;
     position: relative;
+    overflow: hidden;
     z-index: 1;
     @include ten_24_max {
         border-top: 4px solid $mainbg;
@@ -18,30 +18,29 @@ footer {
         content: "";
         background-image: url(../../images/template/wave.svg);
         background-color: $c10;
-        background-size: cover;
-        background-position: top;
         background-blend-mode: multiply;
+        background-position: center;
         background-repeat: no-repeat;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
+        background-size: cover;
+        width: 100%;
+        height: 220%;
         position: absolute;
         z-index: -1;
         border-bottom-left-radius: 25px;
         border-bottom-right-radius: 25px;
         @include ten_24_max {
             border-radius: initial;
+            height: 120%;
         }
     }
     ul {
         text-align: center;
         width: 47.5%;
         padding: 0;
-        margin: 85px 3.4% auto 50%;
+        margin: min(8vh, 86px) 3.4% 20px 50%;
         letter-spacing: 0.75px;
         @include ten_24_max {
-            margin:  auto auto 10px auto;
+            margin:  60px auto 10px auto;
             width: 100%;
         }
         li {

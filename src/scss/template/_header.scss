@@ -73,7 +73,7 @@ header {
                     padding: 10px;
                     text-decoration: none;
                     box-sizing: border-box;
-                    height: 75px;
+                    height: clamp(46px ,8vh,75px);
                     color: $Acolor;
                     border-left: 4px solid $mainbg;
                     position: relative;
@@ -89,6 +89,7 @@ header {
                     }
                     @include ten_24_max {
                         border-top: 1px solid $mainbg;
+                        height: 75px;
                         &.active {
                             color: $Acolor;
                             span {
