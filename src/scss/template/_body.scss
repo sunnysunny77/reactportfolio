@@ -7,7 +7,7 @@
     background-image: url(../../images/template/natural-paper.png);
     background-blend-mode: darken;
     background-color: $c2;
-    padding: 0 50px;
+    padding: 0 25px 0 50px;
     @include ten_24_max {
         margin: 25px auto 75px auto;
         width: 90px;
@@ -28,7 +28,7 @@
 
 .template-p-cont {
     height: clamp(205px, 40vh, 430px);
-    width: calc(85% - 350px);
+    width: calc(87.5% - 350px);
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     background-image: url(../../images/template/natural-paper.png);

@@ -23,7 +23,7 @@
     @include ten_25_min {
       border: none;
       height: clamp(205px, 40vh, 430px);
-      width: calc(85% - 300px);
+      width: calc(87.5% - 400px);
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
       position: relative;
@@ -36,7 +36,7 @@
     @include ten_25_min {
       margin: 30px 0;
       height: calc(clamp(205px, 40vh, 430px) - 60px);
-      width: calc(100% + 300px);
+      width: calc(100% + 400px);
       position: absolute;
       z-index: 1;
     }
@@ -104,7 +104,7 @@
     position: relative;
     @include ten_25_min {
       height: clamp(205px, 40vh, 430px);
-      width: 300px;
+      width: 400px;
       padding: 0;
       border-bottom-left-radius: 0;
       border-top-right-radius: 25px;
