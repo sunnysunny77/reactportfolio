@@ -122,15 +122,11 @@
   }
   .button-next {
     position: absolute;
-    background-color: transparent;
-    outline: none;
-    border: none;
-    top: 7.5%;
-    color: $c2;
+    top: 2.5%;
+    color: darken($main, 7.5%);
     cursor: pointer;
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding: clamp(6px, 3%, 10px);
+    padding: clamp(4px, 1.5vw, 10px);
+    font-size: clamp(12px, 5vw, 25px);
     opacity: 1;
     transition: opacity 0.2s ease;
     &:hover {
@@ -141,12 +137,10 @@
     }
   }
   .open-left {
-    background-image: url(../images/contact/left.png);
-    left: 2%;
+    left: 4%;
   }
   .open-right {
-    background-image: url(../images/contact/right.png);
-    right: 2%;
+    right: 4%;
   }
   .image-fill-right {
     position: absolute;
@@ -176,11 +170,11 @@
     will-change: opacity;
     a {
       transition: color 0.2s ease;
-      color: $c1;
+      color: darken($main, 7.5%);
       text-decoration: none;
       &:hover,
       &:focus {
-        color: $c4;
+        color: $c3;
       }
     }
   }
@@ -196,12 +190,12 @@
   margin: 2% auto;
   transition: opacity 0.5s linear;
   opacity: 0;
-  background-color: $c4;
+  background-color: $main;
   overflow: hidden;
   .percentage-change {
     position: absolute;
     height: 2px;
     left: 0;
-    background-color: $c1;
+    background-color: darken($main, 15%);
   }
 }

@@ -66,16 +66,14 @@ h2::before {
 
 .shrink.template-img-0 {
   .template-b {
-    color: $c1;
-    @include seven_20_portrait {
-      &:hover {
-        color: $c1;
-      }
-    }
     background-color: initial;
+    &:hover,
+    &:focus {
+      color: $c3;
+    }
   }
   .template-shrink {
-    background-color: $c3;
+    background-color: $c2;
     top: 6%;
     right: 3.75%;
     bottom: 6%;

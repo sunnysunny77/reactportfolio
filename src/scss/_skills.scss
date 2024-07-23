@@ -45,11 +45,11 @@ a[target="git"] {
   opacity: 0;
   transition: opacity 0.2s linear, color 0.2s ease;
   z-index: -1;
-  color: $c1;
+  color: darken($main, 7.5%);
   text-decoration: none;
   &:hover,
   &:focus {
-    color: $c4;
+    color: $c3;
   }
 }
 
