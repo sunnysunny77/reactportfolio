@@ -151,7 +151,7 @@
         background-color: transparent;
         background-blend-mode: initial;
         padding: 0;
-        right: 0;
+        right: 25px;
         bottom: 8px;
         font-size: 12.5px;
         font-size: small;
@@ -176,7 +176,7 @@
       max-height: initial;
     }
     @include ten_25_min {
-      padding: 35px 0;
+      padding: 35px 25px 35px 0;
       justify-content: center;
     }
   }
@@ -218,7 +218,6 @@
       border-radius: 100%;
       border: 1px solid;
       padding: 4px 5px;
-      position: relative;
       font-size: 10px;
       line-height: 10px;
     }
