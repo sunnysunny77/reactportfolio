@@ -154,13 +154,13 @@ const Contact = () => {
         <div role="img" aria-label="email notifications" id="contact-template-img-0" className="template-img-0">
           <div className="circle-progress template-shrink">
             <div className="slider slider-count">
-              <i aria-label="open-left" class="fas fa-arrow-alt-circle-left button-next open-left"></i>
+              <button aria-label="open-left" class="fas fa-arrow-alt-circle-left button-next open-left"></button>
               <a href="mailto:shlooby07@gmail.com" rel="noreferrer" target="_blank" className="a image-1"></a>
               <a href="mailto:shlooby07@gmail.com" rel="noreferrer" target="_blank" className="a image-fill-right"></a>
               <div className="inner"></div>
               <a href="tel:0434-984-983" rel="noreferrer" target="_blank" className="a image-2"></a>
               <a href="tel:0434-984-983" rel="noreferrer" target="_blank" className="a image-fill-left"></a>
-              <i aria-label="open-right" class="fas fa-arrow-alt-circle-right button-next open-right"></i>
+              <button aria-label="open-right" class="fas fa-arrow-alt-circle-right button-next open-right"></button>
               <div className="static-count">
                 <img src={mail} alt="mail" />
                 <div>

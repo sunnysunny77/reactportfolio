@@ -122,6 +122,8 @@
   }
   .button-next {
     position: absolute;
+    border: none;
+    background-color: transparent;
     top: 2.5%;
     color: darken($main, 7.5%);
     cursor: pointer;
