@@ -113,17 +113,13 @@
     background-color: $main;
     background-blend-mode: luminosity;
     position: relative;
-    height: 500px;
+    padding: 33% 0;
     box-sizing: border-box;
     border-top-right-radius: 12.5px;
     border-top-left-radius: 2.5px;
     border-bottom-right-radius: 12.5px;
     border-bottom-left-radius: 12.5px;
     @include ten_24_max {
-        height: initial;
-        min-height: initial;
-        max-height: initial;
-        padding: 28.05% 0;
         border-top-right-radius: 2.5px;
         border-top-left-radius: 2.5px;
         border-bottom-right-radius: 22.5px;
@@ -165,9 +161,7 @@
             font-weight: 700;
             transition: color 0.2s ease;
             &:hover {
-                @include ten_25_min {
-                    color: $c4;
-                }
+                color: $c4;
             }
         }
     }

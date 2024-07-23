@@ -98,6 +98,7 @@
   input[type="email"],
   input[type="tel"] {
     -webkit-appearance: none;
+    appearance: none;
   }
 }
 
@@ -114,10 +115,10 @@
   .a {
     border-radius: 100%;
     background-size: cover;
-    padding: 75px 75px;
     transition: opacity 0.5s;
     will-change: opacity;
     opacity: 1;
+    padding: 8.5%;
   }
   .button-next {
     position: absolute;
@@ -133,8 +134,9 @@
     opacity: 1;
     transition: opacity 0.2s ease;
     &:hover {
-      @include ten_25_min {
-        opacity: 0.5;
+      opacity: 0.5;
+      @include seven_20_portrait {
+        opacity: 1;
       }
     }
   }
@@ -148,55 +150,30 @@
   }
   .image-fill-right {
     position: absolute;
-    display: none;
     left: 0;
-    @include ten_25_min {
-      display: block;
-    }
   }
   .image-1 {
     position: relative;
-    margin: auto 12.5% auto 12.5%;
-    padding: 14%;
-    height: initial;
-    @include ten_25_min {
-      transition: opacity 0.375s ease-in;
-      will-change: opacity;
-      opacity: 1;
-      margin: initial;
-      padding: 75px 75px;
-    }
+    transition: opacity 0.375s ease-in;
+    will-change: opacity;
+    opacity: 1;
   }
   .image-fill-left {
     right: 0;
     position: absolute;
-    display: none;
-    @include ten_25_min {
-      display: block;
-    }
   }
   .image-2 {
-    display: none;
-    @include ten_25_min {
-      right: 0;
-      position: absolute;
-      transition: opacity 0.375s ease-in;
-      will-change: opacity;
-      opacity: 1;
-      display: block;
-    }
-  }
-  .inner {
-    margin: auto;
-    width: 50%;
-    transition: 0.375s ease-out;
+    right: 0;
+    position: absolute;
+    transition: opacity 0.375s ease-in;
     will-change: opacity;
     opacity: 1;
-    @include ten_25_min {
-      transition: 0.375s ease-in;
-      width: 100%;
-      margin: auto auto auto 2%;
-    }
+  }
+  .inner {
+    margin: auto auto auto 4%;
+    width: 50%;
+    transition: 0.375s ease-in;
+    will-change: opacity;
     a {
       transition: color 0.2s ease;
       color: $c1;

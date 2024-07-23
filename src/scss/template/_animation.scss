@@ -13,35 +13,25 @@ h2::before {
 }
 
 .template-img-0 .circle-progress .opacity-inner {
-  opacity: 0.0375;
-  @include ten_25_min {
-    opacity: 0;
-  }
+  opacity: 0;
 }
 
 .template-img-0 .circle-progress .opacity-image {
-  opacity: 1;
-  @include ten_25_min {
-    opacity: 0;
-  }
+  opacity: 0;
 }
 
 .template-img-0 .circle-progress .leftcompact {
-  @include ten_25_min {
-    transition: 0.75s right cubic-bezier(0.215, 0.61, 0.355, 1);
-    will-change: right;
-    right: calc(100% - 150px);
-    z-index: 1;
-  }
+  transition: 0.75s right cubic-bezier(0.215, 0.61, 0.355, 1);
+  will-change: right;
+  right: 83%;
+  z-index: 1;
 }
 
 .template-img-0 .circle-progress .rightcompact {
-  @include ten_25_min {
-    transition: 0.75s left cubic-bezier(0.215, 0.61, 0.355, 1);
-    will-change: left;
-    left: calc(100% - 150px);
-    z-index: 1;
-  }
+  transition: 0.75s left cubic-bezier(0.215, 0.61, 0.355, 1);
+  will-change: left;
+  left: 83%;
+  z-index: 1;
 }
 
 .scale1 {
@@ -61,7 +51,6 @@ h2::before {
 .slideIn1 {
   animation: slideIn1 0.75s;
   will-change: height;
-
 }
 
 .slideIn2 {
@@ -77,15 +66,20 @@ h2::before {
 
 .shrink.template-img-0 {
   .template-b {
-    color: $c2;
+    color: $c1;
+    @include seven_20_portrait {
+      &:hover {
+        color: $c1;
+      }
+    }
     background-color: initial;
   }
   .template-shrink {
     background-color: $c3;
-    top: 8%;
-    right: 5%;
-    bottom: 8%;
-    left: 5%;
+    top: 6%;
+    right: 3.75%;
+    bottom: 6%;
+    left: 3.75%;
     a[target="git"],
     .slider,
     .percentage {

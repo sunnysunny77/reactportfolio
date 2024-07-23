@@ -124,7 +124,7 @@
     position: relative;
     box-sizing: border-box;
     img {
-      object-position: center;
+      object-position: right;
       object-fit: contain;
       width: 100%;
       height: 100%;
@@ -156,7 +156,7 @@
         font-size: small;
         text-decoration: underline;
         border-bottom-left-radius: initial;
-        text-align: center;
+        text-align: right;
       }
       &:hover {
         color: $c5;
