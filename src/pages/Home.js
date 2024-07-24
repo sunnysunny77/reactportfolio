@@ -117,7 +117,7 @@ const Home = () => {
                 and solutions. 
                 <br />
                 <br />
-                Involvment in working as
+                &bull; Involvment in working as
                 <br />
                 Customer Service Officer
                 <br />
