@@ -145,6 +145,9 @@ const Sites = () => {
                     PHP - XML
                     <br />
                     <br />
+                    PWA
+                    <br />
+                    <br />
                     Position sticky - Flex
                     <br />
                   </li>

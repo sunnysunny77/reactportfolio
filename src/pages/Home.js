@@ -107,15 +107,17 @@ const Home = () => {
                 <br />
                 <i className="fas fa-mountain"></i>
                 <br />
-                <br />
-                <br />
+              
                 &bull; Currently working as
                 <br />
                 an overflow front end developer.
                 <br />
                 Developing WordPress themes
                 <br />
-                and solutions. While working as
+                and solutions. 
+                <br />
+                <br />
+                Involvment in working as
                 <br />
                 Customer Service Officer
                 <br />
