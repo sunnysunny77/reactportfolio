@@ -41,12 +41,14 @@ $imgSkills: (
 }
 
 a[target="git"] {
-  margin: 2.5% 50% 0 5%;
+  margin: 0 auto 0 5%;
   opacity: 0;
   transition: opacity 0.2s linear, color 0.2s ease;
   z-index: -1;
+  padding-top: 2.5%;
   color: darken($main, 15%);
   text-decoration: none;
+  font-size: clamp(12px, 1.3vw, 16px);
   &:hover,
   &:focus {
     color: $c3;

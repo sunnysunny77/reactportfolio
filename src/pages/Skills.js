@@ -210,9 +210,11 @@ const Skills = () => {
             github.com <i className="far fa-heart"></i>
             </a>
             <a target="git" href="https://github.com/sunnysunny77/template">
-            Checkout my Rollup theme
+            Ceckout my Rollup theme
             </a>
-            <br/>
+            <a target="git" href="https://github.com/sunnysunny77/bsv3">
+            Also Rollup for Wordpress
+            </a>
             <button className='template-b' onClick={click}>View code ..</button>
           </p>
         </div>
