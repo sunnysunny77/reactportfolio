@@ -1,17 +1,16 @@
 export const send = (formData, sent, sub) => {
-  let promise = new Promise((resolve, reject) => {
-    let req = new XMLHttpRequest();
-    req.open("POST", "form.php", true);
-    req.addEventListener("load", () => {
-      if (req.status === 200) {
-        resolve(req.responseText);
-      } else {
-        reject("File not Found");
-      }
-    });
-    req.send(formData);
-  });
-  promise.then((value) => {
+  fetch(
+    "./form.php",
+    {
+      method: "POST",
+      body: formData
+    }
+  ).then((res) => {
+    if (!res.ok) {
+      throw new Error("File not Found");
+    }
+    return res.text();
+  }).then((value) => {
     sent.innerHTML = value;
     sub.style.display = "none";
     sent.style.display = "block";
@@ -20,8 +19,7 @@ export const send = (formData, sent, sub) => {
       sent.innerHTML = "";
       sub.style.display = "block";
     }, 5000);
-  }
-  ).catch((error) => {
+  }).catch((error) => {
     sent.innerHTML = error;
     sub.style.display = "none";
     sent.style.display = "block";
@@ -30,8 +28,7 @@ export const send = (formData, sent, sub) => {
       sent.innerHTML = "";
       sub.style.display = "block";
     }, 5000);
-  }
-  );
+  }); 
 }
 
 export const reply = (bool, obj, msg) => {
