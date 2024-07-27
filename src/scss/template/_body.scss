@@ -149,7 +149,7 @@
             bottom 0.5s linear,
             left 0.5s linear;
         .template-b {
-            margin: auto auto 5% 5%;
+            margin: auto auto 3% 5%;
             cursor: pointer;
             font-family: inherit;
             color: $c3;
@@ -157,7 +157,7 @@
             padding: 1% 2%;
             border-radius: 5px;
             border: none;
-            font-size: inherit;
+            font-size: clamp(12px, 3.5vw, 16px);
             font-weight: 500;
             transition: color 0.2s ease;
             &:hover {
