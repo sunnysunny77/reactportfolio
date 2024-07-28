@@ -15,12 +15,13 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   box-sizing: border-box;
   margin: 0;
   padding: 16px;
   @include ten_24_max {
+    justify-content: center;
     padding: 0;
   }
 }
