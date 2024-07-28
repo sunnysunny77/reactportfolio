@@ -59,10 +59,10 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: calc(84vh - 151px);
+  min-height: calc(84vh - 162px);
   justify-content: space-evenly;
   @include nineteen_21 {
-    min-height:calc(42vh - 151px);
+    min-height:calc(42vh - 162px);
   }
   @include ten_24_max {
     min-height: calc(100vh - 212px);
