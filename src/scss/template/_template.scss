@@ -15,13 +15,16 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   box-sizing: border-box;
   margin: 0;
   padding: 16px;
+  @include nineteen_21 {
+    justify-content: center;
+  }
   @include ten_24_max {
     padding: 0;
+    flex-direction: fle;
   }
 }
 
@@ -59,10 +62,10 @@ main {
   min-height: calc(84vh - 151px);
   justify-content: space-evenly;
   @include nineteen_21 {
-    min-height:calc(42vh - 230px);
+    min-height:calc(42vh - 151px);
   }
   @include ten_24_max {
-    min-height: calc(84vh - 151px);
+    min-height: calc(100vh - 212px);
   }
   #after {
     background-image: url(../../images/template/handmade-paper.png);
