@@ -144,7 +144,7 @@
   .inner {
     margin: auto auto auto 4%;
     width: 50%;
-    transition: 0.375s ease-in;
+    transition: opacity 0.375s ease-in, color 0.2s ease;;
     will-change: opacity;
     font-size: clamp(12px, 3.5vw, 16px);
     a {
