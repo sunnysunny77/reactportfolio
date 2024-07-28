@@ -212,7 +212,7 @@ const Skills = () => {
             <a target="git" href="https://github.com/sunnysunny77/template">
             Ceckout my Rollup theme
             </a>
-            <a target="git" href="https://github.com/sunnysunny77/bsv3">
+            <a target="git" href="https://github.com/sunnysunny77/bootstrapwordpresstemplate">
             Also Rollup for Wordpress
             </a>
             <a target="git" href="https://bsv3.sunnyhome.site/">
