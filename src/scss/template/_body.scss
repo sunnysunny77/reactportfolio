@@ -86,8 +86,8 @@
     background-blend-mode: darken;
     border-top-right-radius: 25px;
     border-top-left-radius: 5px;
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
     background-color: $c2;
     padding: 7.5px;
     width: 87.5%;
@@ -97,8 +97,8 @@
         margin: 6% auto;
         padding: 3px;
         width: 65%;
-        border-top-right-radius: 5px;
-        border-top-left-radius: 5px;
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
     }
     @include seven_20_portrait {
         padding: 3px 0 0 0;
@@ -110,20 +110,20 @@
 
 .template-img-0 {
     background-image: url(../../images/template/3px-tile.png);
-    background-color: $main;
-    background-blend-mode: luminosity;
+    background-color: darken($main, 7.25%);
+    background-blend-mode: overlay;
     position: relative;
     padding: 33% 0;
     box-sizing: border-box;
     border-top-right-radius: 17px;
     border-top-left-radius: 2.5px;
-    border-bottom-right-radius: 17px;
-    border-bottom-left-radius: 17px;
+    border-bottom-right-radius: 2.5px;
+    border-bottom-left-radius: 2.5px;
     @include ten_24_max {
-        border-top-right-radius: 2.5px;
-        border-top-left-radius: 2.5px;
-        border-bottom-right-radius: 22.5px;
-        border-bottom-left-radius: 22.5px;
+        border-top-right-radius:22.5px;
+        border-top-left-radius: 22.5px;
+        border-bottom-right-radius: 2.5px;
+        border-bottom-left-radius: 2.5px;
     }
     @include seven_20_portrait {
         border-radius: 0;
