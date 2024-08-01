@@ -110,8 +110,8 @@
 
 .template-img-0 {
     background-image: url(../../images/template/3px-tile.png);
-    background-color: darken($main, 7.25%);
-    background-blend-mode: overlay;
+    background-color: lighten($main, 17%);
+    background-blend-mode: hard-light;
     position: relative;
     padding: 33% 0;
     box-sizing: border-box;
