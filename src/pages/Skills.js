@@ -218,6 +218,9 @@ const Skills = () => {
             <a target="git" href="https://bsv3.sunnyhome.site/">
             Demo
             </a>
+            <a target="git" href="https://github.com/sunnysunny77/wptheme">
+            Theme link
+            </a>
             <button className='template-b' onClick={click}>View code ..</button>
           </p>
         </div>
