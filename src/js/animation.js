@@ -4,7 +4,7 @@ let inner;
 
 export const click = (event) => {
 
-  const obj = document.querySelector(".template-img-0");
+  const obj = document.querySelector(".template-img-overlay");
 
   obj.classList.toggle("shrink");
 
@@ -20,7 +20,7 @@ export const click = (event) => {
 
 export const animation = () => {
 
-  const tempImg0 = document.querySelector(".template-img-0");
+  const tempImg0 = document.querySelector(".template-img-overlay");
   const tempB = document.querySelector(".template-b");
   const tempBorder = document.querySelector(".template-border-img")
   if (tempB) inner = tempB.innerHTML;

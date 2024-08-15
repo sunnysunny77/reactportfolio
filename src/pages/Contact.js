@@ -151,40 +151,41 @@ const Contact = () => {
         </div>
       </section>
       <div className="template-border-img">
-        <div role="img" aria-label="email notifications" id="contact-template-img-0" className="template-img-0">
-          <div className="circle-progress template-shrink">
-            <div className="button-container">
-              <button aria-label="open-left" className="fas fa-arrow-alt-circle-left button-next open-left"></button>
-              <button aria-label="open-right" className="fas fa-arrow-alt-circle-right button-next open-right"></button>
+        <div className="template-img">
+          <div role="img" aria-label="email notifications" id="contact-template-img-overlay" className="template-img-overlay">
+            <div className="circle-progress template-shrink">
+              <div className="button-container">
+                <button aria-label="open-left" className="fas fa-arrow-alt-circle-left button-next open-left"></button>
+                <button aria-label="open-right" className="fas fa-arrow-alt-circle-right button-next open-right"></button>
+              </div>
+              <div className="slider slider-count">
+                <a href="mailto:shlooby07@gmail.com" rel="noreferrer" target="_blank" className="a image-1"></a>
+                <a href="mailto:shlooby07@gmail.com" rel="noreferrer" target="_blank" className="a image-fill-right"></a>
+                <div className="inner"></div>
+                <a href="tel:0434-984-983" rel="noreferrer" target="_blank" className="a image-2"></a>
+                <a href="tel:0434-984-983" rel="noreferrer" target="_blank" className="a image-fill-left"></a>
+                <div className="static-count">
+                  <img src={mail} alt="mail" />
+                  <div>
+                    <a href="mailto:shlooby07@gmail.com" rel="noreferrer" target="_blank">Mail me</a>
+                  </div>
+                </div>
+                <div className="static-count">
+                  <img src={telephone} alt="telephone" />
+                  <div>
+                    <a href="tel:0434-984-983" rel="noreferrer" target="_blank">Phone me</a>
+                  </div>
+                </div>
+                <div className="static-count">
+                  <img src={linkedin} alt="LinkedIn" />
+                  <div>
+                    <a href="https://www.linkedin.com/in/daniel-costello-579b10259/" rel="noreferrer" target="_blank">LinkedIn</a>
+                  </div>
+                </div>
+              </div>
+              <div className="percentage"><div className="percentage-change"></div></div>
+              <button onClick={click} className='template-b'>Get in touch ..</button>
             </div>
-            <div className="slider slider-count">
-
-              <a href="mailto:shlooby07@gmail.com" rel="noreferrer" target="_blank" className="a image-1"></a>
-              <a href="mailto:shlooby07@gmail.com" rel="noreferrer" target="_blank" className="a image-fill-right"></a>
-              <div className="inner"></div>
-              <a href="tel:0434-984-983" rel="noreferrer" target="_blank" className="a image-2"></a>
-              <a href="tel:0434-984-983" rel="noreferrer" target="_blank" className="a image-fill-left"></a>
-              <div className="static-count">
-                <img src={mail} alt="mail" />
-                <div>
-                  <a href="mailto:shlooby07@gmail.com" rel="noreferrer" target="_blank">Mail me</a>
-                </div>
-              </div>
-              <div className="static-count">
-                <img src={telephone} alt="telephone" />
-                <div>
-                  <a href="tel:0434-984-983" rel="noreferrer" target="_blank">Phone me</a>
-                </div>
-              </div>
-              <div className="static-count">
-                <img src={linkedin} alt="LinkedIn" />
-                <div>
-                  <a href="https://www.linkedin.com/in/daniel-costello-579b10259/" rel="noreferrer" target="_blank">LinkedIn</a>
-                </div>
-              </div>
-            </div>
-            <div className="percentage"><div className="percentage-change"></div></div>
-            <button onClick={click} className='template-b'>Get in touch ..</button>
           </div>
         </div>
       </div>

@@ -12,22 +12,22 @@ h2::before {
   animation: blink 1.75s infinite ease-out;
 }
 
-.template-img-0 .circle-progress .opacity-inner {
+.template-img-overlay .circle-progress .opacity-inner {
   opacity: 0;
 }
 
-.template-img-0 .circle-progress .opacity-image {
+.template-img-overlay .circle-progress .opacity-image {
   opacity: 0;
 }
 
-.template-img-0 .circle-progress .leftcompact {
+.template-img-overlay .circle-progress .leftcompact {
   transition: 0.75s right cubic-bezier(0.215, 0.61, 0.355, 1);
   will-change: right;
   right: 83%;
   z-index: 1;
 }
 
-.template-img-0 .circle-progress .rightcompact {
+.template-img-overlay .circle-progress .rightcompact {
   transition: 0.75s left cubic-bezier(0.215, 0.61, 0.355, 1);
   will-change: left;
   left: 83%;
@@ -64,7 +64,7 @@ h2::before {
   }
 }
 
-.shrink.template-img-0 {
+.shrink.template-img-overlay {
   .template-b {
     background-color: initial;
     color: darken($main, 15%);
@@ -74,7 +74,7 @@ h2::before {
     }
   }
   .template-shrink {
-    background-color: $c2;
+    background-color: $c12;
     top: 6%;
     right: 3.75%;
     bottom: 6%;

@@ -5,7 +5,7 @@ import Sites from "./pages/Sites";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Skills from "./pages/Skills";
-import tempimg from './images/template/3px-tile.png';
+import paint from './images/template/paint.png';
 import './scss/app.scss';
 import './css/all.min.css';
 
@@ -16,8 +16,8 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="Sites" element={<Sites />} />
-          <Route path="Skills" element={<Skills />}> {preloadImage(tempimg)} </Route>
-          <Route path="Contact" element={<Contact />}> {preloadImage(tempimg)} </Route>
+          <Route path="Skills" element={<Skills />}> {preloadImage(paint)} </Route>
+          <Route path="Contact" element={<Contact />}> {preloadImage(paint)} </Route>
         </Route>
       </Routes>
     </BrowserRouter>

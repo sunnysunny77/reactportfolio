@@ -105,13 +105,19 @@
         border-radius: 0;
         width: 100%;
         margin: auto auto 0 auto;
+        background-image: initial;
+        background-color: $mainbg;
+        background-blend-mode: initial;
     }
 }
 
-.template-img-0 {
-    background-image: url(../../images/template/3px-tile.png);
-    background-color: lighten($main, 17%);
-    background-blend-mode: hard-light;
+.template-img {
+    background-image: url(../../images/template/paint.png);
+    background-size: cover;
+}
+
+.template-img-overlay {
+    background-color: lighten(rgba($main, 0.125), 12.25%);
     position: relative;
     padding: 33% 0;
     box-sizing: border-box;
