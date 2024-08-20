@@ -65,7 +65,7 @@ const Contact = () => {
     if (error) {
 
       sub.classList.add("red");
-      sub.value = "Validation Error ⇡";
+      sub.value = "Validation Error ↑";
       setTimeout(() => {
         sub.value = "Send";
         sub.classList.remove("red");
@@ -139,7 +139,7 @@ const Contact = () => {
                   name="message"
                   id="message"
                   maxLength="1000"
-                  rows="4"
+                  rows="3"
                 >
                 </textarea>
               </label>

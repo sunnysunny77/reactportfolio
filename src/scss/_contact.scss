@@ -80,8 +80,13 @@
       display: block;
       margin: auto;
       padding: 0 10px;
-      color: $c8;
+      color: $c3;
       border-radius: 10px;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: transparentize($c3, 0.25);
+      }
     }
     .red {
       border-color: $c7;
