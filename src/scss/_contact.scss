@@ -26,147 +26,150 @@
   }
 }
 
-.template-p-form {
+.template-form {
   border-radius: 25px;
   background-image: url(../images/template/natural-paper.png);
   background-color: $c2;
   background-blend-mode: darken;
-  width: 87.5%;
+  width: calc(87.5% - 80px);
   padding: 40px;
-  box-sizing: border-box;
-  font-size: large;
-  color: $c3;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
   @include ten_24_max {
     width: 100%;
     border-radius: 0;
     border-top: 3px solid $mainbg;
-    padding: 40px 20px;
-    font-size: medium;
   }
-  h3 {
-    font-size: inherit;
-    width: 100%;
-    font-weight: normal;
-    margin: 0 0 25px 0;
-  }
-  label {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    height: 80px;
-    @include ten_24_max {
-      margin: 0 0 40px 0;
-    }
-  }
-  label:nth-child(2),
-  label:nth-child(3) {
-    width: 48%;
-    @include seven_20_portrait {
-      width: 100%;
-    }
-  }
-  label:nth-child(4) {
-    width: 48%;
-    margin: 0 0 80px 0;
-    @include ten_24_max {
-      width: 100%;
-      margin: 0 0 40px 0;
-    }
-  }
-  .template-img-form {
-    background-position: center;
-    height: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding: 125px;
-    @include ten_24_max {
-      display: none;
-    }
-  }
-  label:nth-child(6) {
-    height: 230px;
-  }
-  input {
-    width: 100%;
-    font-style: inherit;
+  form {
     box-sizing: border-box;
-    padding: 2px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 5px;
-    font: inherit;
-    color: inherit;
-    background-color: transparent;
-    border: 1px solid $c3;
-    outline: none;
-    &::placeholder {
-      color: $c3;
-    }
-  }
-  textarea {
-    line-height: 1;
-    background-color: transparent;
-  }
-  .os-host-textarea {
-    width: 100%;
-    box-sizing: border-box;
-    border: 1px solid $c3;
-    border-bottom-right-radius: 5px;
-    padding: 4px;
-    height: 184px;
-  }
-  #sent {
-    text-align: center;
-    height: 39px;
-    display: none;
-    @include ten_24_max {
-      height: 37px;
-    }
-  }
-  #sub {
-    width: 194px;
-    height: fit-content;
-    cursor: pointer;
-    display: block;
-    padding: 5px 25px;
+    font-size: large;
     color: $c3;
-    border-radius: 5px;
-    transition: color 0.2s ease-in-out;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     @include ten_24_max {
-      width: 174px;
+      font-size: medium;
     }
-    &:hover {
-      color: transparentize($c3, 0.25);
+    h3 {
+      font-size: inherit;
+      width: 100%;
+      font-weight: normal;
+      margin: 0 0 25px 0;
     }
-  }
-  #sub,
-  #sent {
-    margin: 40px 0 0 0;
-    @include ten_24_max {
-      margin: auto;
+    label {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      height: 80px;
+      @include ten_24_max {
+        margin: 0 0 40px 0;
+      }
     }
-  }
-  .red {
-    border-color: $c7;
-  }
-  .msg {
-    color: $c7;
-    font-size: 0.75rem;
-    padding-left: 2.5px;
-    display: block;
-  }
-  input,
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"] {
-    -webkit-appearance: none;
-    appearance: none;
+    label:nth-child(2),
+    label:nth-child(3) {
+      width: 48%;
+      @include seven_20_portrait {
+        width: 100%;
+      }
+    }
+    label:nth-child(4) {
+      width: 48%;
+      margin: 0 0 80px 0;
+      @include ten_24_max {
+        width: 100%;
+        margin: 0 0 40px 0;
+      }
+    }
+    .template-img-form {
+      background-position: center;
+      height: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      padding: 125px;
+      @include ten_24_max {
+        display: none;
+      }
+    }
+    label:nth-child(6) {
+      height: 230px;
+    }
+    input {
+      width: 100%;
+      font-style: inherit;
+      box-sizing: border-box;
+      padding: 2px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 5px;
+      font: inherit;
+      color: inherit;
+      background-color: transparent;
+      border: 1px solid $c3;
+      outline: none;
+      &::placeholder {
+        color: $c3;
+      }
+    }
+    textarea {
+      line-height: 1;
+      background-color: transparent;
+    }
+    .os-host-textarea {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid $c3;
+      border-bottom-right-radius: 5px;
+      padding: 4px;
+      height: 184px;
+    }
+    #sent {
+      text-align: center;
+      height: 39px;
+      display: none;
+      @include ten_24_max {
+        height: 37px;
+      }
+    }
+    #sub {
+      width: 194px;
+      height: fit-content;
+      cursor: pointer;
+      display: block;
+      padding: 5px 25px;
+      color: $c3;
+      border-radius: 5px;
+      transition: color 0.2s ease-in-out;
+      @include ten_24_max {
+        width: 174px;
+      }
+      &:hover {
+        color: transparentize($c3, 0.25);
+      }
+    }
+    #sub,
+    #sent {
+      margin: 40px 0 0 0;
+      @include ten_24_max {
+        margin: auto;
+      }
+    }
+    .red {
+      border-color: $c7;
+    }
+    .msg {
+      color: $c7;
+      font-size: 0.75rem;
+      padding-left: 2.5px;
+      display: block;
+    }
+    input,
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      -webkit-appearance: none;
+      appearance: none;
+    }
   }
 }
 
