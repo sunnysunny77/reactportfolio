@@ -166,7 +166,7 @@ const Sites = () => {
                     PWA service worker
                     <br />
                     <br />
-                    https://observatory.mozilla.org/ A+
+                    https://developer.mozilla.org/en-US/observatory A+
                     <br />
                     <br />
                     SSL A+
@@ -187,7 +187,7 @@ const Sites = () => {
                     Bootstrap - SCSS - JavaScript
                     <br />
                     <br />
-                    https://observatory.mozilla.org/ A+ CSP
+                    https://developer.mozilla.org/en-US/observatory A+ CSP
                     <br />
                     <br />
                     PayPal smart button sandbox:
