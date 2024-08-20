@@ -98,60 +98,58 @@ const Contact = () => {
             className="scale3">
           </div>
         </div>
-        <div className="template-p-form">
-          <form onSubmit={validation} id="contact-form"  className="fadeInBack">
-            <h3>Email Us:</h3>
-            <label htmlFor="name">Names:
-              <input
-                onChange={(e) => { setName(e.target.value) }}
-                value={name}
-                type="text"
-                name="name"
-                id="name"
-                placeholder="&nbsp;First Last"
-              />
-            </label>
-            <label htmlFor="phone">Phone:
-              <input
-                onChange={(e) => { setPhone(e.target.value) }}
-                value={phone}
-                type="tel"
-                name="phone"
-                id="phone"
-                placeholder="&nbsp;#"
-              />
-            </label>
-            <label htmlFor="email">Email:
-              <input
-                onChange={(e) => { setEmail(e.target.value) }}
-                value={email}
-                type="email"
-                name="email"
-                id="email"
-                placeholder="&nbsp;eg@example.com"
-              />
-            </label>
-            <div
-              role="img"
-              aria-label="phone icon"
-              id="contact-template-img"
-              className="template-img-form scale3">
-            </div>
-            <label htmlFor="message">Message:
-              <textarea
-                onChange={(e) => { setMessage(e.target.value) }}
-                value={message}
-                name="message"
-                id="message"
-                maxLength="1000"
-              >
-              </textarea>
-            </label>
-            <p id="sent"></p>
-            <input type="submit" value="Send" id="sub" />
-            <br />
-          </form>
-        </div>
+        <form onSubmit={validation} id="contact-form"  className="template-p-form fadeInBack">
+          <h3>Email Us:</h3>
+          <label htmlFor="name">Names:
+            <input
+              onChange={(e) => { setName(e.target.value) }}
+              value={name}
+              type="text"
+              name="name"
+              id="name"
+              placeholder="&nbsp;First Last"
+            />
+          </label>
+          <label htmlFor="phone">Phone:
+            <input
+              onChange={(e) => { setPhone(e.target.value) }}
+              value={phone}
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="&nbsp;#"
+            />
+          </label>
+          <label htmlFor="email">Email:
+            <input
+              onChange={(e) => { setEmail(e.target.value) }}
+              value={email}
+              type="email"
+              name="email"
+              id="email"
+              placeholder="&nbsp;eg@example.com"
+            />
+          </label>
+          <div
+            role="img"
+            aria-label="phone icon"
+            id="contact-template-img"
+            className="template-img-form scale3">
+          </div>
+          <label htmlFor="message">Message:
+            <textarea
+              onChange={(e) => { setMessage(e.target.value) }}
+              value={message}
+              name="message"
+              id="message"
+              maxLength="1000"
+            >
+            </textarea>
+          </label>
+          <p id="sent"></p>
+          <input type="submit" value="Send" id="sub" />
+          <br />
+        </form>
       </section>
       <div className="template-border-img">
         <div className="template-img">
