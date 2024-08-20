@@ -13,14 +13,7 @@ export const start = () => {
     after.style.animationName = "";
   }, 0);
 
-  if (window.innerWidth > 992 ) {
-
-    const logo = document.querySelector("#logo");
-
-    logo.style.animationName = "none";
-    setTimeout(() => {
-      logo.style.animationName = "";
-    }, 0);
+  if (window.innerWidth > 1024 ) {
     
     vivus();
   } else {
