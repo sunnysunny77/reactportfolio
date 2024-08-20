@@ -1,19 +1,52 @@
-#contact-template-img {
-  background-image: url(../images/contact/contact.png);
+.template-img-cont-form {
+  display: none;
+  @include ten_24_max {
+    display: block;
+    margin: 25px auto 75px auto;
+    width: 90px;
+    height: 90px;
+    padding: 0;
+    border-radius: 50%;
+    background-image: url(../images/template/natural-paper.png);
+    background-blend-mode: darken;
+    background-color: $c2;
+  }
 }
 
-#overlay {
-  text-align: initial;
+#contact-template-img {
+  background-image: url(../images/contact/contact.png);
+  background-position: center;
+  height: 100%;
+  background-size: 165%;
+  background-size: contain;
+  background-repeat: no-repeat;
   @include ten_24_max {
-    padding: 0 20px;
-    margin: 0 7px;
+    background-size: 165%;
+  }
+}
+
+.template-p-form {
+  border-radius: 25px;
+  background-image: url(../images/template/natural-paper.png);
+  background-color: $c2;
+  background-blend-mode: darken;
+  width: 87.5%;
+  padding: 40px;
+  box-sizing: border-box;
+  font-size: large;
+  @include ten_24_max {
+    width: 100%;
+    border-radius: 0;
+    border-top: 3px solid $mainbg;
+    padding: 40px 20px;
+    font-size: medium;
   }
   form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-end;
     color: $c3;
-    padding-bottom: 40px;
     h3 {
       font-size: inherit;
       width: 100%;
@@ -26,17 +59,37 @@
       justify-content: space-between;
       width: 100%;
       height: 80px;
-      margin: 0 0 40px 0;
+      @include ten_24_max {
+        margin: 0 0 40px 0;
+      }
     }
     label:nth-child(2),
     label:nth-child(3) {
       width: 48%;
-      @include ten_24_max {
+      @include seven_20_portrait {
         width: 100%;
       }
     }
-    label:nth-child(5) {
-      height: 133px;
+    label:nth-child(4) {
+      width: 48%;
+      margin: 0 0 80px 0;
+      @include ten_24_max {
+        width: 100%;
+        margin: 0 0 40px 0;
+      }
+    }
+    .template-img-form {
+      background-position: center;
+      height: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      padding: 125px;
+      @include ten_24_max {
+        display: none;
+      }
+    }
+    label:nth-child(6) {
+      height: 230px;
     }
     input {
       width: 100%;
@@ -52,40 +105,47 @@
       background-color: transparent;
       border: 1px solid $c3;
       outline: none;
-
       &::placeholder {
         color: $c3;
       }
     }
     textarea {
       line-height: 1;
+      background-color: transparent;
     }
     .os-host-textarea {
       width: 100%;
       box-sizing: border-box;
       border: 1px solid $c3;
       border-bottom-right-radius: 5px;
-      height: 74px;
       padding: 4px;
+      height: 184px;
     }
     #sent {
       text-align: center;
       height: 23px;
       display: none;
-      margin: 0 auto;
     }
     #sub {
-      width: fit-content;
+      width: 194px;
       cursor: pointer;
       display: block;
-      margin: auto;
-      padding: 0 10px;
+      padding: 5px 25px;
       color: $c3;
-      border-radius: 10px;
+      border-radius: 5px;
       transition: color 0.2s ease-in-out;
-
+      @include ten_24_max {
+        width: 174px;
+      }
       &:hover {
         color: transparentize($c3, 0.25);
+      }
+    }
+    #sub,
+    #sent {
+      margin: 40px 0 0 0;
+      @include ten_24_max {
+        margin: auto;
       }
     }
     .red {
@@ -149,7 +209,9 @@
   .inner {
     margin: auto auto auto 4%;
     width: 50%;
-    transition: opacity 0.375s ease-in, color 0.2s ease;;
+    transition:
+      opacity 0.375s ease-in,
+      color 0.2s ease;
     will-change: opacity;
     font-size: clamp(12px, 3.5vw, 16px);
     a {

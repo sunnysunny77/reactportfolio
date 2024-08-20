@@ -28,7 +28,7 @@ const Contact = () => {
     const phoneObj = event.target.phone;
     const emailObj = event.target.email;
     const messageObj = document.querySelector(".os-host-textarea");
-    const sub = event.target.children[6];
+    const sub = event.target.children[7];
 
     if (/^[ '.a-z-]{2,40}$/i.test(name)) {
 
@@ -65,14 +65,14 @@ const Contact = () => {
     if (error) {
 
       sub.classList.add("red");
-      sub.value = "Validation Error ↑";
+      sub.value = "Validation Error";
       setTimeout(() => {
         sub.value = "Send";
         sub.classList.remove("red");
       }, 5000);
     } else {
 
-      send(formData, event.target.children[5], sub);
+      send(formData, event.target.children[6], sub);
       setName("");
       setPhone("");
       setEmail("");
@@ -90,64 +90,67 @@ const Contact = () => {
     <>
       <section>
         <h2 className="heading">Contact</h2>
-        <div className="template-img-cont">
+        <div className="template-img-cont-form">
           <div
             role="img"
             aria-label="phone icon"
             id="contact-template-img"
-            className="template-img scale3">
+            className="scale3">
           </div>
         </div>
-        <div className="template-p-cont">
-          <div id="overlay" className="template-p fadeInBack">
-            <form onSubmit={validation} id="contact-form">
-              <h3>Email Us:</h3>
-              <label htmlFor="name">Names:
-                <input
-                  onChange={(e) => { setName(e.target.value) }}
-                  value={name}
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="&nbsp;First Last"
-                />
-              </label>
-              <label htmlFor="phone">Phone:
-                <input
-                  onChange={(e) => { setPhone(e.target.value) }}
-                  value={phone}
-                  type="tel"
-                  name="phone"
-                  id="phone"
-                  placeholder="&nbsp;#"
-                />
-              </label>
-              <label htmlFor="email">Email:
-                <input
-                  onChange={(e) => { setEmail(e.target.value) }}
-                  value={email}
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="&nbsp;eg@example.com"
-                />
-              </label>
-              <label htmlFor="message">Message:
-                <textarea
-                  onChange={(e) => { setMessage(e.target.value) }}
-                  value={message}
-                  name="message"
-                  id="message"
-                  maxLength="1000"
-                  rows="3"
-                >
-                </textarea>
-              </label>
-              <p id="sent"></p>
-              <input type="submit" value="Send" id="sub" />
-              <br />
-            </form>
-          </div>
+        <div className="template-p-form">
+          <form onSubmit={validation} id="contact-form"  className="fadeInBack">
+            <h3>Email Us:</h3>
+            <label htmlFor="name">Names:
+              <input
+                onChange={(e) => { setName(e.target.value) }}
+                value={name}
+                type="text"
+                name="name"
+                id="name"
+                placeholder="&nbsp;First Last"
+              />
+            </label>
+            <label htmlFor="phone">Phone:
+              <input
+                onChange={(e) => { setPhone(e.target.value) }}
+                value={phone}
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="&nbsp;#"
+              />
+            </label>
+            <label htmlFor="email">Email:
+              <input
+                onChange={(e) => { setEmail(e.target.value) }}
+                value={email}
+                type="email"
+                name="email"
+                id="email"
+                placeholder="&nbsp;eg@example.com"
+              />
+            </label>
+            <div
+              role="img"
+              aria-label="phone icon"
+              id="contact-template-img"
+              className="template-img-form scale3">
+            </div>
+            <label htmlFor="message">Message:
+              <textarea
+                onChange={(e) => { setMessage(e.target.value) }}
+                value={message}
+                name="message"
+                id="message"
+                maxLength="1000"
+              >
+              </textarea>
+            </label>
+            <p id="sent"></p>
+            <input type="submit" value="Send" id="sub" />
+            <br />
+          </form>
         </div>
       </section>
       <div className="template-border-img">

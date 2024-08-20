@@ -25,10 +25,6 @@ const picture_display = (item) => {
 
 export const fromOverlay = (event) => {
 
-    OverlayScrollbars(document.querySelector("#overlay"), {
-        className: "os-theme-dark os-theme-dark-edgy"
-    });
-
     OverlayScrollbars(document.querySelector("#message"), {
         className: "os-theme-dark os-theme-dark-edgy"
     });
