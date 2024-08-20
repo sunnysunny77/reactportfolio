@@ -123,8 +123,11 @@
     }
     #sent {
       text-align: center;
-      height: 23px;
+      height: 39px;
       display: none;
+      @include ten_24_max {
+        height: 37px;
+      }
     }
     #sub {
       width: 194px;
