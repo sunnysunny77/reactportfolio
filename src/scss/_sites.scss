@@ -22,7 +22,7 @@
     border-bottom: 3px solid $mainbg;
     @include ten_25_min {
       border: none;
-      height: clamp(205px, 44vh, 430px);
+      height: clamp(205px, 43vh, 430px);
       width: calc(87.5% - 380px);
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
@@ -35,7 +35,7 @@
     margin: 10px 0;
     @include ten_25_min {
       margin: 30px 0;
-      height: calc(clamp(205px, 44vh, 430px) - 60px);
+      height: calc(clamp(205px, 43vh, 430px) - 60px);
       width: calc(100% + 380px);
       position: absolute;
       z-index: 1;
@@ -103,7 +103,7 @@
     box-sizing: border-box;
     position: relative;
     @include ten_25_min {
-      height: clamp(205px, 44vh, 430px);
+      height: clamp(205px, 43vh, 430px);
       width: 380px;
       padding: 0;
       border-bottom-left-radius: 0;
