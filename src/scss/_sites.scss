@@ -17,7 +17,7 @@
     height: min(40vh, 250px);
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;
-    background-blend-mode: darken;
+    background-blend-mode: lighten;
     border-top: 3px solid $mainbg;
     border-bottom: 3px solid $mainbg;
     @include ten_25_min {
@@ -96,7 +96,7 @@
   .slider_5-site-container {
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;
-    background-blend-mode: darken;
+    background-blend-mode: lighten;
     width: 95%;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -145,7 +145,7 @@
       border-bottom-left-radius: 25px;
       background-image: url(../images/template/natural-paper.png);
       background-color: $c2;
-      background-blend-mode: darken;
+      background-blend-mode: lighten;
       @include ten_25_min {
         background-image: initial;
         background-color: transparent;
@@ -194,7 +194,7 @@
     color: $c5;
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;
-    background-blend-mode: darken;
+    background-blend-mode: lighten;
     border-bottom-right-radius: 25px;
     height: 25px;
     width: 25px;

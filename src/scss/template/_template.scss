@@ -10,7 +10,7 @@ body {
   font-family: $font;
   background-color: $mainbg;
   background-image: url(../../images/template/natural-paper.png);
-  background-blend-mode: luminosity;
+  background-blend-mode: lighten;
   overflow-y: scroll;
   min-height: 100vh;
   display: flex;
