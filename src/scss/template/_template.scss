@@ -59,7 +59,7 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: calc(84vh - 162px);
+  min-height: calc(100vh - 286px);
   justify-content: space-evenly;
   @include nineteen_21 {
     min-height:calc(42vh - 162px);

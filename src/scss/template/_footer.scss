@@ -23,7 +23,7 @@ footer {
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
-        height: 220%;
+        height: 210%;
         position: absolute;
         z-index: -1;
         border-bottom-left-radius: 25px;
@@ -37,7 +37,7 @@ footer {
         text-align: center;
         width: 47.5%;
         padding: 0;
-        margin: min(10vh, 112px) 3.4% 20px 50%;
+        margin: 70px 3.4% 20px 50%;
         letter-spacing: 0.75px;
         @include ten_24_max {
             margin:  60px auto 10px auto;
