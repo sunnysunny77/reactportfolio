@@ -73,7 +73,7 @@ header {
                     padding: 10px;
                     text-decoration: none;
                     box-sizing: border-box;
-                    height: 65px;
+                    height: 62px;
                     color: $Acolor;
                     border-left: 4px solid $mainbg;
                     position: relative;
@@ -135,7 +135,7 @@ header {
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            padding: 13px;
+            padding: 10px;
             @include ten_24_max {
                 border-top: 1px solid $mainbg;
                 border-left: none;

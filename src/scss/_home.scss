@@ -1,3 +1,9 @@
 #home-template-img {
   background-image: url(../images/home/home.png);
 }
+
+#home-p {
+  @include ten_25_min {
+    margin-bottom: 50px;
+  }
+}

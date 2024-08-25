@@ -27,7 +27,7 @@
 }
 
 .template-p-cont {
-    height: clamp(205px, 43vh, 430px);
+    height: clamp(205px, 43vh, 440px);
     width: calc(87.5% - 325px);
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -66,18 +66,17 @@
 }
 
 .template-div {
-    background-image: url(../../images/template/div1.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    margin: 25px  auto;
-    padding: 10px 0;
-    opacity: 0.5;
+    display: none;
     @include ten_24_max {
+        display: block;
         width: 60%;
         padding: 3% 0;
         margin: 20vh auto 10vh auto;
+        background-image: url(../../images/template/div1.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.5;
     }
 }
 

@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <>
-      <section>
+      <section id="home-p">
         <h2>Home</h2>
         <div className="template-img-cont">
           <div
