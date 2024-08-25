@@ -47,7 +47,7 @@ header {
         }
     }
     nav {
-        width: 67%;
+        width: 60%;
         @include ten_24_max {
             width: 100%;
             overflow: hidden;
@@ -73,13 +73,14 @@ header {
                     padding: 10px;
                     text-decoration: none;
                     box-sizing: border-box;
-                    height: 62px;
+                    height: 72px;
                     color: $Acolor;
                     border-left: 4px solid $mainbg;
                     position: relative;
                     transition: color 0.375s;
                     transition-delay: 375ms;
                     @include ten_25_min {
+                        padding: 5px 8px;
                         &:hover::after {
                             width: 100%;
                         }
@@ -135,7 +136,7 @@ header {
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            padding: 10px;
+            padding: 14px;
             @include ten_24_max {
                 border-top: 1px solid $mainbg;
                 border-left: none;

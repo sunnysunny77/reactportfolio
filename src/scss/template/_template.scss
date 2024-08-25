@@ -29,7 +29,7 @@ body {
 }
 
 .outer {
-  max-width: 1150px;
+  max-width: 1300px;
   width: 100%;
 }
 
@@ -59,8 +59,8 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 272px);
-  justify-content: space-evenly;
+  min-height: calc(100vh - 320px);
+  justify-content: center;
   @include nineteen_21 {
     min-height: 29vh;
   }
