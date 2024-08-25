@@ -27,7 +27,10 @@
 }
 
 .template-form {
-  border-radius: 25px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
   background-image: url(../images/template/natural-paper.png);
   background-color: $c2;
   background-blend-mode: multiply;

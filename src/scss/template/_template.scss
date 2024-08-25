@@ -83,33 +83,15 @@ main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 6% 0;
+    @include ten_24_max {
+      margin: 6% 0 0 0;
+    }
     h2 {
-      height: 34px;
-      font-weight: 500;
-      width: 100%;
-      margin: 25px auto 25px 7.5%;
-      color: $heading1;
-      font-size: 1.4em;
+      width: 0;
+      height: 0;
+      overflow: hidden;
       position: relative;
-      @include ten_25_min {
-        &.heading {
-          margin-top: 50px;
-        }
-      }
-      @include ten_24_max {
-        height: 27px;
-        font-size: large;
-        margin: 25px auto 25px max(5%, 25px);
-      }
-      &::before {
-        position: absolute;
-        content: "";
-        top: calc(50% - 3.25px);
-        left: -15px;
-        bottom: 0;
-        right: 0;
-        clip: rect(auto, 10px, auto, auto);
-      }
     }
   }
 }

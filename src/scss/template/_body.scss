@@ -27,7 +27,7 @@
 }
 
 .template-p-cont {
-    height: clamp(205px, 43vh, 440px);
+    height: clamp(205px, 43vh, 463px);
     width: calc(87.5% - 325px);
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -65,21 +65,6 @@
     }
 }
 
-.template-div {
-    display: none;
-    @include ten_24_max {
-        display: block;
-        width: 60%;
-        padding: 3% 0;
-        margin: 20vh auto 10vh auto;
-        background-image: url(../../images/template/div1.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        opacity: 0.5;
-    }
-}
-
 .template-border-img {
     background-image: url(../../images/template/natural-paper.png);
     background-blend-mode: multiply;
@@ -91,9 +76,9 @@
     padding: 7.5px;
     width: 87.5%;
     box-sizing: border-box;
-    margin: 6% auto;
+    margin: 0 auto 6% auto;
     @include ten_24_max {
-        margin: 6% auto;
+        margin: 12% auto;
         padding: 3px;
         width: 65%;
         border-top-right-radius: 25px;

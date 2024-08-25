@@ -6,8 +6,8 @@
 
 #site {
   position: relative;
-  @include ten_25_min {
-    margin-bottom: 50px;
+  @include ten_24_max {
+    margin: 6% 0 12% 0;
   }
   #site-img {
     display: none;
@@ -16,7 +16,8 @@
     }
   }
   .slider_5-list-container {
-    width: 95%;
+    width: 90%;
+    margin: 0 5%;
     height: min(40vh, 250px);
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;
@@ -24,8 +25,9 @@
     border-top: 3px solid $mainbg;
     border-bottom: 3px solid $mainbg;
     @include ten_25_min {
+      margin: 0;
       border: none;
-      height: clamp(205px, 43vh, 440px);
+      height: clamp(205px, 43vh, 463px);
       width: calc(87.5% - 380px);
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
@@ -38,7 +40,7 @@
     margin: 10px 0;
     @include ten_25_min {
       margin: 30px 0;
-      height: calc(clamp(205px, 43vh, 440px) - 60px);
+      height: calc(clamp(205px, 43vh, 463px) - 60px);
       width: calc(100% + 380px);
       position: absolute;
       z-index: 1;
@@ -62,7 +64,7 @@
       width: clamp(50px, 10.5vh, 75px);
       height: clamp(50px, 10.5vh, 75px);
       @include ten_25_min {
-        margin: 40px 0 clamp(0px, 16vh, 166px) 4%;
+        margin: 40px 0 clamp(0px, 17.5vh, 190px) 4%;
         width: clamp(50px, 10.5vh, 100px);
         height: clamp(50px, 10.5vh, 100px);
       }
@@ -100,13 +102,13 @@
     background-image: url(../images/template/natural-paper.png);
     background-color: $c2;
     background-blend-mode: multiply;
-    width: 95%;
+    width: 90%;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     box-sizing: border-box;
     position: relative;
     @include ten_25_min {
-      height: clamp(205px, 43vh, 440px);
+      height: clamp(205px, 43vh, 463px);
       width: 380px;
       padding: 0;
       border-bottom-left-radius: 0;

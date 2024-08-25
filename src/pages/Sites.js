@@ -269,11 +269,6 @@ const Sites = () => {
           <button aria-label="close" className="slider_5-close slider-close">X</button>
         </div>
       </section>
-      <div
-        role="img"
-        aria-label="divider"
-        className="template-div">
-      </div>
     </>
   );
 }

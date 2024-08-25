@@ -2,8 +2,17 @@
   background-image: url(../images/home/home.png);
 }
 
-#home-p {
-  @include ten_25_min {
-    margin-bottom: 50px;
+.template-div {
+  display: none;
+  @include ten_24_max {
+      display: block;
+      width: 50%;
+      padding: 3% 0;
+      margin: 17vh auto 10vh auto;
+      background-image: url(../images/template/div1.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.5;
   }
 }

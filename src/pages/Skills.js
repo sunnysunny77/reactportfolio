@@ -9,7 +9,7 @@ const Skills = () => {
   return (
     <>
       <section>
-        <h2 className="heading">Skills</h2>
+        <h2>Skills</h2>
         <div className="template-img-cont">
           <div
             role="img"
