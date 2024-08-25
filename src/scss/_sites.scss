@@ -62,7 +62,7 @@
       width: clamp(50px, 10.5vh, 75px);
       height: clamp(50px, 10.5vh, 75px);
       @include ten_25_min {
-        margin: 40px 0 clamp(0px, 15.5vh, 166px) 4%;
+        margin: 40px 0 clamp(0px, 16vh, 166px) 4%;
         width: clamp(50px, 10.5vh, 100px);
         height: clamp(50px, 10.5vh, 100px);
       }
